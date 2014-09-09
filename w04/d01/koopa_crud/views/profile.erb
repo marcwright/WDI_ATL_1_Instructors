@@ -1,0 +1,8 @@
+<h1><%= @koopa.name %></h1>
+<a href="/koopas/<%= @koopa.id %>/edit">edit</a>
+<!-- here, we use the @koopa instance variable from the get '/koopa/:id' route to push values into the profile -->
+<p>Color: <%= @koopa.color %></p>
+<p>Has shell? <%= @koopa.has_shell.to_s %></p>
+<img src="<%= @koopa.photo_url %>" alt="">
+
+

@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+img.empty {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+div.marpdarp {
+  color: #i REALLY like dogs;
+}
+
+div.puppy {
+  position: absolute;
+}

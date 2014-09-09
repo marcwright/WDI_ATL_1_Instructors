@@ -1,0 +1,13 @@
+<h1><%= @band.name %></h1>
+
+<p>Genre: <%= @band.genre %></p>
+<p><%= @band.explicit_lyrics ? "Adults Only" : "Family Friendly" %></p>
+
+<iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/<%= @band.video_embed_url %>" frameborder="0"/>
+</iframe>
+
+<ul>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Return to All Bands", bands_path %></li>
+</ul>
+

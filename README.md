@@ -1,5 +1,4 @@
-This repo is rockingly maintained by the WDI DC Gang-o-Three:
+This repo is rockingly maintained by the ATL Gang-o-Two:
 
-- Peter
-- Travis
-- Greg
+- Marc
+- Gerry

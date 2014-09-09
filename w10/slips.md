@@ -1,0 +1,31 @@
+- Explain what DOM event propagation is, and why clicking an element registers with all parents.
+  - Event propagation is a browser event's journey up through it's regular parents. Why does it happen? Well, imagine a scenario in which you want to register all clicks on the page because you're a tyrant and want to know the coordinates of user's clicks. But you also have more localized clicks.
+- Explain what an event's `.preventDefault` method does.
+  - preventDefault does exactly what you'd expect it to, which is prevent the default behavior of an element after an event. The most common example is preventing the submission of a form.
+- Explain the benefit of pre-rendered HTML strings rather than adding new DOM elements individually.
+  - repainting the browser is computationally taxing, so building a single block of HTML and adding it to the DOM is preferred
+- Replace existing content with newly created HTML content.
+- Explain the difference between synchronous and asynchronous program execution.
+  - Synchronous execution means the execution happens in a single series. A->B->C->D, where A will run, then finish, then B will start, then finish, then C will start, etc.
+
+- Explain why synchronous program execution is not conducive to the front-end
+- Describe what a Callback is.
+  - a callback is a function that you want executed after an event is triggered or a certain amount of time has elapsed
+- Explain what AJAX is
+  - AJAX (Asynchronous JavaScript and XML) allows web applications to send information to and receive information from servers.
+- Explain what "serialization" refers to in regards to form submission.
+- Compare and contrast Ruby and JavaScript as programming languages.
+  - classical versus prototypal inheritance, and in JavaScript treats functions as first class citizens.
+- Explain the difference between referencing and invoking a function.
+- Describe what first-class functions are.
+- Use jQuery to create a *new* h1 element. Give it the text "Chocolate!!!"
+- Write a Ruby class, "Racecar", and make it so that every instance of Racecar has 4 wheels by default. Once the class is written, instantiate it.
+- why would we store jQuery objects in variables as opposed to re-querying the DOM?
+- when and why should a view update?
+  - when the view's model data changes
+- Generally speaking, what do Backbone.Model.extend() and Backbone.View.extend() return? 
+- compare and contrast Ruby and JavaScript inheritance patterns
+  - Ruby makes use of classical inheritance where JavaScript makes use of prototypal inheritance. prototypal inheritance is dynamic in that you can write methods to an objects prototype AFTER its instantiation, and the instance will automatically inherit and have access to that method.
+
+- Describe what model/view separation is, and why it's important
+  - model/view separation is the decoupling of business logic from presentation. It's important because A) separation of concerns (views often change), B) organization, and C) workflow

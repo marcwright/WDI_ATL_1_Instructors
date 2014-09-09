@@ -1,0 +1,32 @@
+$yellow: #FF0;
+
+body {
+  background: black image-url("skyline.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  font: 16px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: $yellow;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.page {
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  padding: 15px;
+  width: 600px;
+
+  h1 {
+    color: lighten($yellow, 35);
+  }
+
+  img.hero {
+    width: 100%;
+  }
+}

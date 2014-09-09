@@ -1,0 +1,17 @@
+Don’t use things like Bootstrap or Devise unless I am sure that it will end up being more helpful than hurtful...more research surrounding technologies 
+
+Investing time to go back and read docs can ultimately be more productive than trying to find a quick fix on StackOverflow...javascript!!
+
+I would like to be more aware of when something isn’t going to work out quickly, move it to the back burner and move to something that I may be able to complete effeciently.
+
+Splitting between two factions of front end and back end made us more separated and less able to realize what was going on for the other respective end.
+
+Our end product is mostly functional, but not completely reliable.
+
+We should have tested things on Heroku earlier and more consistently.
+
+Focused a lot on making the product pretty and less about making it functional
+
+Focus more on MVP rather than views.
+
+Establishing firmer expectations for everyone’s working hours and workload.

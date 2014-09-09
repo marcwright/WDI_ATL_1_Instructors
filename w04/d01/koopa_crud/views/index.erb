@@ -1,0 +1,8 @@
+<h1>Koopas</h1>
+<ul>
+  <!-- the 'koopas' instance variable is brought into the ERB file from the get '/' route in server.rb -->
+  <% @koopas.each do |koopa| %>
+    <!-- for each koopa, we're going to create a line item that links to that koopa's profile -->
+    <li><a href="/koopas/<%= koopa.id %>"><%= koopa.name %></a></li>
+  <% end %>
+</ul>

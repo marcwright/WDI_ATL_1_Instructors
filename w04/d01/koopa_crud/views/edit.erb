@@ -1,0 +1,9 @@
+<form action="/koopa/<%= @koopa.id %>/" method="">
+  <input type="text" name="name" value="<%= @koopa.name %>">
+  <input type="text" name="color" value="<%= @koopa.color %>">
+
+  <label for="has-shell-input">Has Shell?</label>
+  <input type="radio" id="has-shell-input" name="has_shell" value="true">true
+  <input type="radio" name="has_shell" value="false">false
+  <input type="submit">
+</form>

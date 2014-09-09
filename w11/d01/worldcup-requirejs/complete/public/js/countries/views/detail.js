@@ -1,0 +1,36 @@
+define(function(require) {
+
+  // Imports:
+
+  var _ = require('underscore');
+  var Backbone = require('backbone');
+
+
+  // Implementation:
+
+  var CountryDetailView = Backbone.View.extend({
+    template: _.template( require('text!../templates/detail.html') ),
+
+    render: function() {
+      var rendered = this.template(this.model.toJSON());
+      return this.$el.html(rendered);
+    },
+
+    events: {
+      'change [name="playing"]': 'onPlaying',
+      'change [name="eliminated"]': 'onEliminated'
+    },
+
+    onPlaying: function() {
+      var checked = this.$('[name="playing"]').prop('checked');
+      this.model.set('isPlaying', checked);
+    },
+
+    onEliminated: function() {
+      var checked = this.$('[name="eliminated"]').prop('checked');
+      this.model.set('isEliminated', checked);
+    }
+  });
+
+  return CountryDetailView;
+});

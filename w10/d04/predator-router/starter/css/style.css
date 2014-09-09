@@ -1,0 +1,77 @@
+body {
+  background: #000 url('../images/apocalypse.jpg') no-repeat;
+  background-size: 100% auto;
+  font: 200 16px/1.3 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a {
+  color: #213662;
+  text-decoration: none;
+}
+
+h1, h2, .predator-detail a {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+img {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page {
+  margin: 25px auto;
+  width: 500px;
+}
+
+.page img {
+  width: 100%;
+}
+
+.predator-list {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.predator-list li {
+  border-top: 1px solid #ccc;
+}
+
+.predator-list li:first-child {
+  border-top: none;
+}
+
+.predator-list a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.predator-list a:hover {
+  background-color: #eee;
+}
+
+.predator-detail a,
+.predator-detail h2 {
+  display: inline;
+  line-height: 50px;
+}
+
+.predator-detail a {
+  color: #fff;
+}
+
+.predator-detail a:hover {
+  text-decoration: underline;
+}
+
+.predator-detail h2:before {
+  content: '>';
+  margin: 0 0.25em;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+}

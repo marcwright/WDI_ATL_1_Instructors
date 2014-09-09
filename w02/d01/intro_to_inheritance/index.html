@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lte IE 6 ]><html lang="en" class="oldie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="oldie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+  <title>OOP Inheritance</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+  <link rel="stylesheet" media="screen,projection" href="style/screen.css"/>
+</head>
+<body>
+<div class="page">
+	<div class="slide section">
+		<h1>OOP: Inheritance</h1>
+	</div>
+
+  <div class="slide">
+    <img src="images/abstraction.png" alt="" style="width:100%;">
+  </div>
+
+  <div class="slide">
+    <img src="images/abstraction.png" alt="" class="right" style="width: 50%;">
+    <h2>Abstraction</h2>
+    <ul>
+      <li><i>Abstract classes</i> loosely define a conceptual object role.</li>
+      <li><i>Specific implementations</i> build upon these abstractions.</li>
+      <li>Common code is shared among these related objects.</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Extending Objects</h2>
+    <blockquote>By <b>replacing aspects</b> of an object, we can take advantage of its original behavior while modifying its <b>specific role</b> within the application.</blockquote>
+  </div>
+
+  <div class="slide section" style="padding-top:50px;">
+    <h2 style="padding-top:0;">Inheritance</h2>
+    <img src="images/inheretance.png" alt="" class="matte">
+  </div>
+
+	<div class="slide">
+    <img src="images/inheretance.png" alt="" class="right">
+		<h2>Inheritance</h2>
+		<ul>
+			<li>The characteristics of one object provide the basis for another.</li>
+			<li>Descendant objects may add-to or modify traits of their ancestors.</li>
+			<li><em>Abstract classes</em> become the basis for many <i>specific implementations</i>.</li>
+		</ul>
+	</div>
+	
+	
+	<div class="slide code">
+		<img src="images/inheretance1.png" alt="" class="right" style="padding-top:75px;">
+		<h2>Sub-classing</h2>
+
+<pre style="width:500px;"><code class="js"> class Animal
+   def initialize
+     @brain = true
+     @legs = 0
+   end
+
+   def legs
+     return @legs
+   end
+ end
+
+ class Human &lt; Animal
+   def initialize
+     super
+     @legs = 2
+   end
+ end
+
+ class Pet &lt; Animal
+   def initialize
+     super
+     @legs = 4
+     @fleas = 0
+   end
+ end
+</code></pre>
+	</div>
+
+
+	<div class="slide code">
+		<img src="images/inheretance2.png" alt="" class="right" style="padding-top:75px;">
+		<h2>Further Sub-classing</h2>
+
+<pre style="width:500px;"><code class="js"> class Pet &lt; Animal
+   def initialize
+     super
+     @legs = 4
+     @fleas = 0
+   end
+
+   def fleas
+     return @fleas
+   end
+ end
+
+ class Dog &lt; Pet
+   def initialize
+     super
+     @fleas = 8;
+   end
+ end
+
+ class Cat &lt; Pet
+   def initialize
+     super
+     @fleas = 4;
+   end
+ end
+</code></pre>
+	</div>
+
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+</body>
+</html>

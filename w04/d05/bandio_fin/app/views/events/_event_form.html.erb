@@ -1,0 +1,15 @@
+<!-- Notice here that I'm passing the form_for an array. -->
+<!-- This is because the event needs to belong to a particular venue (It's a nested resource) -->
+<%= form_for [@venue, @event] do |f| %>
+  <%= f.label :band %>
+  <%= f.select :band_id do |o| %>
+    <% @bands.each do |band| %>
+      <option value="<%= band.id %>"><%= band.name %></option>
+    <% end %>
+  <% end %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <%= f.label :time %>
+  <%= f.time_field :time %>
+  <%= f.submit "Create Event" %>
+<% end %>

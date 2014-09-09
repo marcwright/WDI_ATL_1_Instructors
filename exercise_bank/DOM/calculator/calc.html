@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="calc.css" type="text/css" media="screen" />
+<script src="calc.js" type="text/javascript"></script>
+</head>
+<body>
+
+<ul id="calc">
+	<li id="display"></li>
+	<li class="num col1 row4"><a href="javascript:addDigit(0);">0</a></li>
+	<li class="num col1 row3"><a href="javascript:addDigit(1);">1</a></li>
+	<li class="num col2 row3"><a href="javascript:addDigit(2);">2</a></li>
+	<li class="num col3 row3"><a href="javascript:addDigit(3);">3</a></li>
+	<li class="num col1 row2"><a href="javascript:addDigit(4);">4</a></li>
+	<li class="num col2 row2"><a href="javascript:addDigit(5);">5</a></li>
+	<li class="num col3 row2"><a href="javascript:addDigit(6);">6</a></li>
+	<li class="num col1 row1"><a href="javascript:addDigit(7);">7</a></li>
+	<li class="num col2 row1"><a href="javascript:addDigit(8);">8</a></li>
+	<li class="num col3 row1"><a href="javascript:addDigit(9);">9</a></li>
+	<li class="op col4" id="op1"><a href="javascript:setOperation('+');">+</a></li>
+	<li class="op col4" id="op2"><a href="javascript:setOperation('-');">-</a></li>
+	<li class="op col4" id="op3"><a href="javascript:setOperation('*');">x</a></li>
+	<li class="op col4" id="op4"><a href="javascript:setOperation('/');">/</a></li>
+	<li class="num col2 row4"><a href="javascript:evalOperation();">=</a></li>
+	<li class="clear col3 row4"><a href="javascript:clear();">clear</a></li>
+</ul>
+
+<script type="text/javascript">
+clear();
+</script>
+</body>
+</html>

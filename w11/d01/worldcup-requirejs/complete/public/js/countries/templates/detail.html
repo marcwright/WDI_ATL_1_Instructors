@@ -1,0 +1,16 @@
+<h1><%= name %></h1>
+<img src="http://www.geonames.org/flags/x/<%= alpha2Code.toLowerCase() %>.gif" alt="<%= name %>">
+<ul>
+  <li>
+    <label>
+      <input type="checkbox" name="playing" <%= isPlaying ? 'checked="checked"' : '' %>>
+      Competing in the World Cup
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="checkbox" name="eliminated" <%= isEliminated ? 'checked="checked"' : '' %>>
+      Has been eliminated
+    </label>
+  </li>
+</ul>

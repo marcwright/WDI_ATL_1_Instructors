@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <title>Predator Router</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="page">
+    <h1>Predator Router</h1>
+    <noscript>This application requires JavaScript.</noscript>
+    <div id="predator-container"></div>
+  </div>
+  
+  
+  <script type="template" id="predator-list">
+    <% predators.each(function(predator) { %>
+    <li>
+      <a href="#predators/<%= predator.get('id') %>">
+        <%= predator.get('name') %>
+      </a>
+    </li>
+    <% }) %>
+  </script>
+
+
+  <script type="template" id="predator-detail">
+    <a href="#predators">Predators</a>
+    <h2><%= name %></h2>
+    <img src="<%= image %>">
+  </script>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/underscore.js"></script>
+  <script src="js/vendor/backbone.js"></script>
+
+  <script src="js/predators/model.js"></script>
+  <script src="js/predators/view.js"></script>
+  <script src="js/predators/router.js"></script>
+</body>
+</html>

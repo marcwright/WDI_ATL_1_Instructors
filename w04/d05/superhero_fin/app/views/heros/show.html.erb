@@ -1,0 +1,8 @@
+<p><%= link_to "Superheros", heros_path %></p>
+<h1><%= @hero.name %></h1>
+
+<p><%= @hero.secret_identity %></p>
+
+<%= image_tag @hero.image_url, alt: "#{@hero.name}.", class: "hero" %>
+
+<p><%= link_to "Edit", edit_hero_path(@hero) %></p>
