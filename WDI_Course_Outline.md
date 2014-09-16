@@ -1,7 +1,6 @@
 #WDI
 
 ##Week 1 - Intro to Ruby & Git
-*4/21*
 
 - Intro to web development
 	- Languages (and their unique strengths)
@@ -30,7 +29,6 @@
   - Scope
   
 ##Week 2 - OOP
-*4/28*
 
 - Advanced OOP
   - Classes
@@ -51,7 +49,6 @@
 - Data modeling/ERD
 
 ##Week 3 - Database & ActiveRecord
-*5/5*
 
 - Database
 	- SQL
@@ -70,7 +67,6 @@
 	- pip
 	- npm
 - Intro to web apps
-	- Sinatra
 	- Networking
 	- HTTP Requests
 	- Routing
@@ -78,7 +74,6 @@
 	- curl
 	
 ##Week 4 - Web Applications
-*5/12*
 
 - HTML/CSS basics
 	- HTML5
@@ -90,7 +85,7 @@
 	- Cross-browser considerations
 	- Accessibility practices
 - Server-side templating (ERB)
-- Sinatra
+- Rails
 	- REST
 	- JSON
 	- APIs
@@ -101,7 +96,6 @@
 	- Migration files
 
 ##Week 5 - Rails
-*5/19*
 
 - Requirements gathering
 	- Browser specification
@@ -126,10 +120,7 @@
 	- bcrypt
 	- Sessions
 
-**Memorial Day 5/26**
-
 ##Week 6 - Project 1
-*5/27*
 
 - PROJECT 1
 - Deployment/Heroku
@@ -137,7 +128,6 @@
 - Github Issues
 
 ##Week 7 - Intro to JavaScript
-*6/2*
 
 - Programming Concepts (JS)
 	- Functional vs. imperative
@@ -171,7 +161,6 @@
 		- Refresh/Reflow
 
 ##Week 8 - Async/Ajax & Teams
-*6/9*
 
 - Async Programming
 	- Callbacks
@@ -197,14 +186,12 @@
 - PROJECT 2 KICKOFF
 
 ##Week 9 - Project 2
-*6/16*
 
 - PROJECT 2
 
-**Võidupüha (Estonian Victory Day) 6/23** (job shadowing?)
+**Võidupüha (Estonian Victory Day) (job shadowing?)
 
 ##Week 10 - Backbone
-*6/24*
 
 - Model/View Separation
 	- Examples & diagramming
@@ -222,7 +209,6 @@
 	- Client-side routes / pushState
 
 ##Week 11 - Single Page Apps
-*6/30*
 
 - Modular architecture
 	- AMD & RequireJS
@@ -237,10 +223,7 @@
 	- D3 Primer
 	- Data.gov
 
-**Independency Day 7/4**
-
 ##Week 12
-*7/7*
 
 - ComSci 101
 	- Big O
@@ -262,7 +245,6 @@
 - PROJECT 3
 
 ##Week 13 - Project 3
-*7/14*
 
 - PROJECT 3
 
