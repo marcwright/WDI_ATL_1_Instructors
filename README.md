@@ -1,4 +1,4 @@
-This repo is rockingly maintained by the ATL Gang-o-Two:
+This repo is rockingly maintained by the ATL Gang-o-Three:
 
 - Gerry
 - Mike
