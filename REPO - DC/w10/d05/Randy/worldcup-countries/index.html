@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <title>World Cup Soccer Countries</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <ul class="countries-list" id="countries-list"></ul>
+  <div class="country-main" id="country-main"></div>
+<!-- alpha2Code.toLowerCase() -->
+<!-- this.model.get('isPlaying') -->
+<!-- this.model.get('isEliminated') -->
+
+  <script type="template" id="country-detail">
+    <h1><%=name%></h1>
+    <img src="http://www.geonames.org/flags/x/<%=alpha2Code.toLowerCase()%>.gif" alt="<%=name%>">
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" name="playing" <%= isPlaying ? 'checked="checked"' : '' %>>
+          Competing in the World Cup
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" name="eliminated" <%= isEliminated ? 'checked="checked"' : '' %>>
+          Has been eliminated
+        </label>
+      </li>
+    </ul>
+  </script>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/underscore.js"></script>
+  <script src="js/vendor/backbone.js"></script>
+
+  <script src="js/countries/model.js"></script>
+  <script src="js/countries/view.js"></script>
+  <script src="js/countries/router.js"></script>
+  <script src="js/countries/main.js"></script>
+</body>
+</html>

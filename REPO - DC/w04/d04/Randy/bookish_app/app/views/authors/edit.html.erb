@@ -1,0 +1,22 @@
+<h1>Edit Your Author Here</h1>
+
+
+<form action="/authors/<%=@author.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input name="authenticity_token" type="hidden" value="<%form_authenticity_token%>"
+
+    <label for="name-attribute">Name:</label>
+  <input id="name-attribute" type="text" name="name" value="<%= @author.name %>">
+
+    <label for="dob-attribute">Date of Birth:</label>
+  <input id="dob-attribute" type="date" name="dob" value="<%= @author.dob %>">
+
+    <label for="gender-attribute">Gender: </label>
+  <input id="gender-attribute" type="text" name="gender" value="<%= @author.gender %>" >
+
+    <label for="pseudo-attribute">Pseudonym?</label>
+  <input id="pseudo-attribute" type="checkbox" name="has_psuedonym" <%= @author.has_pseudonym ? "checked" : "" %> >
+
+  <input type="submit" value="Authorize!">
+
+</form>

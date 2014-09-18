@@ -1,0 +1,7 @@
+<h1><img src="<%= @entry.photo_url %>"></h1>
+Taken by <%= @entry.author %> on <%= @entry.date_taken %>
+  <form action="/entries/<%= @entry.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+    <button>Delete</button>
+</form>

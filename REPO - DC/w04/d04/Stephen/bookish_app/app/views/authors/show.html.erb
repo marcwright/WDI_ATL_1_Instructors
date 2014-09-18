@@ -1,0 +1,33 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:17:24
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 07:48:07
+
+ -->
+
+<h2>Viewin' an Author</h2>
+
+<h3><a href="/authors/<%= @author.id %>"><%= @author.name %></a>, <%= @author.gender %> born on <%= @author.dob %>,
+<%= @author.has_pseudonym ? "has a pseudonym " : "doesn't have a pseudonym" %></h3>
+
+<h4>Books:</h4>
+
+<ul>
+  <% @author.books.each do |b| %>
+  <li><a href="/authors/<%= @author.id %>/books/<%= b.id %>"><%= b.title %></a>, released <%= b.release_date %>, genre: <%= b.genre %></li>
+<% end %>
+</ul>
+
+<form action="/authors/<%= @author.id %>/books/new" method="get">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="submit" value="New Book">
+</form>
+
+<form action="/authors/<%= @author.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="submit" value="Delete">
+</form>

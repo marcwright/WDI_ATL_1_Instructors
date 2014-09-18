@@ -1,0 +1,36 @@
+<a href='/portfolios/new'>new portfolio</a>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <% @portfolios.each do |portfolio| %>
+      <tr>
+        <td>
+          <%= portfolio.name %>
+        </td>
+        <td>
+          <%= portfolio.category.name if portfolio.category %> 
+        </td>
+        <td>
+          <%= '%.2f' % portfolio.value %> 
+        </td>
+        <td>
+        <a href='/portfolios/<%=portfolio.id%>'>show
+        </td>
+        <td>
+        <a href='/portfolios/<%=portfolio.id%>/edit'>edit      
+        </td>
+        <td>
+        <a href='/portfolios/<%=portfolio.id%>/delete'>delete</a>
+      </tr>
+    <% end %>
+  </tr>
+</table>
+

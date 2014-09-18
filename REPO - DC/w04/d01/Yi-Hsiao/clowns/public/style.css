@@ -1,0 +1,37 @@
+body {
+  color: rgb(63, 63, 63);
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+img {
+  margin: 8px;
+  width: 500px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 64px;
+  margin: 64px;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.clown {
+  display: block;
+  width: 500px;
+  margin: 64px;
+}
+
+.submit {
+  background: rgb(63, 63, 63);
+  border: 0;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin: 8px;
+  padding: 16px;
+}

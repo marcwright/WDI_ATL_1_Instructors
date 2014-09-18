@@ -1,0 +1,8 @@
+<h1><%= "#{@dog.name}'s Toys" %></h1>
+
+<dl>
+<% @toys.each do |toy| %>
+  <dt><%= toy.name %></dt>
+  <dd><%= link_to image_tag(toy.photo_url), toy %></dd>
+<% end %>  
+</dl>

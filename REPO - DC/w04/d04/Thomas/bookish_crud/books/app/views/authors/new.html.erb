@@ -1,0 +1,26 @@
+<h1>Add a new author</h1>
+
+<form action="/authors" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+  <label>
+    Name:
+    <input type="string" name="name">
+  </label>
+
+  <label>
+    Birth:
+    <input type="date" name="birth">
+  </label>
+
+  <label>
+    Gender:
+    <input type="string" name="gender">
+
+  <label>
+    Pseudonym:
+    <input type="checkbox" name="has_pseudo">
+  </label>
+
+  <input type="submit" value="Add Author">
+</form>

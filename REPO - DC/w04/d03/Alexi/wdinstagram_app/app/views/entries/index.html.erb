@@ -1,0 +1,11 @@
+<h1>All Authors</h1>
+<a href="/">Home</a>
+<br>
+<br>
+<% @entries.each do |entry| %>
+<h2> <%= entry.author %> </h2>
+<br>
+<%= link_to image_tag(entry.photo_url), entry %>
+<% end %>
+
+

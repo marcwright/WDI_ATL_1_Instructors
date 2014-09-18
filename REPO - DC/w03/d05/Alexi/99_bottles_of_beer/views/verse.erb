@@ -1,0 +1,14 @@
+<% if @bottles > 0 %>
+
+<h1>
+  <%= @bottles %> bottle <% if @plural > 1%>s<% end %>
+  of beer on the wall, 
+  <%= @bottle %><% if @plural > 1%>s<% end %> bottles of beer
+</h1>
+
+<a href="/refrain/<%= @bottles %>" class="yes">Next...</a>
+<a href="/" class="no">Stop</a>
+
+<h1>No bottles of beer on the wall, no bottles of beer</h1>
+
+

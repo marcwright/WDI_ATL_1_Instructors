@@ -1,0 +1,191 @@
+*, *:after, *:before { 
+  -moz-box-sizing: border-box; 
+  -ms-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+html {
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+}
+
+section {
+  height: 2000px;
+  margin: 0 auto;
+}
+
+
+a {
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+
+.center-div {
+  margin: 0 auto;
+}
+
+
+/*----- Css for Waypoints ------*/
+
+.sticky {
+  position: fixed;
+  top: 20%;
+  left:40%;
+}
+
+.fix-it {
+  position: relative;
+  top: -10px;
+  float: right;
+}
+
+
+
+/*-----NAV-----*/
+
+nav {
+  background-color: #6ec861;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999999999;
+}
+
+nav a {
+  color: #fef7ff;
+  line-height: 2em;
+  display: inline-block;
+}
+
+a:hover {
+  background: #3c7337;
+}
+
+.active {
+  background: #4e9246;
+}
+
+
+/*------Backgrounds------*/
+
+.sky {
+  background: #8cc2ff;
+}
+
+/*#sun-set{
+  width: 100%;
+  height: 2000px;
+  background: linear-gradient(rgba(140,194,255,0) 200px, #f29300 );
+  position: relative;
+}*/
+
+
+.sea {
+  background: #2376c4;
+}
+
+#sea-top {
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(rgba(35,118,196,1) 300px, rgba(35,118,196,0) );;
+  position: relative;
+  top:-60;
+  z-index: 10000;
+}
+
+#sea-bottom {
+  height: 1400px;
+  width: 100%;
+  background: linear-gradient(rgba(35,118,196,0), rgba(10,38,65,1) );;
+  position: relative;
+  bottom:0;
+  z-index: 10000;
+}
+
+
+.deep_sea {
+  background: #0a2641;
+}
+
+#deep-sea-top {
+  height: 1400px;
+  width: 100%;
+  background: linear-gradient(rgba(10,38,65,1) 250px, rgba(10,38,65,0) );;
+  position: relative;
+  bottom:0;
+  z-index: 10000;
+}
+
+
+
+/*-------SUN------*/
+
+#sun {
+  background: #f0d825;
+  width: 250px;
+  height: 250px;
+  border-radius: 200;
+}
+
+
+
+/*-------???------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------Deep Sea ???------*/
+
+/*#sub-dark {
+  z-index: 2000;
+  width: 250px;
+  height: 250px;
+  border-radius: 200;
+}
+
+.peephole-dark {
+  background: radial-gradient(#f1eeee, #0a2641 50%, #0a2641 );
+  width: 40px;
+  height: 40px;
+  border-radius: 400;
+  position: absolute;
+  top: 102;
+}
+
+#left-dark {
+  left: 50;
+}
+
+#middle-dark {
+  left: 90;
+}
+
+#middle-2-dark {
+  left: 130;
+}
+
+#right-dark {
+  left: 170;
+}
+
+
+*/
+

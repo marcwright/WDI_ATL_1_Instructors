@@ -1,0 +1,10 @@
+<h1>Here are the current koopas!</h1>
+
+<ul>
+
+<% @koopas.each do |koopa| %>
+  <li><%= koopa.to_s %> (<a href="/koopas/<%= koopa.id %>">profile</a>)
+    <img src="<%= koopa.photo_url %>" height="100" width="100"></li>
+  <% end %>
+
+  </ul>

@@ -1,0 +1,10 @@
+<h1><%= @venue.name %></h1>
+<p><%= @venue.city %>, <%= @venue.state %></p>
+<p>Explicit Content Allowed: <%= @venue.allows_explicit_lyrics %></p>
+
+<p><%= link_to "View events for this venue", "/venues/#{@venue.id}/events" %></p>
+
+<p><%= link_to "All Venues", venues_path %></p>
+<%= form_for @venue, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>

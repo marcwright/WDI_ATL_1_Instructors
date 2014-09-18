@@ -1,0 +1,75 @@
+<h2>Pony Form</h2>
+<form action="/ponies" method="post">
+  <label>
+    Name
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Breed
+    <input type="text" name="breed">
+  </label>
+
+  <button>Submit</button>
+</form>
+
+<h2>Flight Form</h2>
+<form action="/booking" method="post">
+  <label>
+    Origin City
+    <input type="text" name="origin">
+  </label>
+
+  <label>
+    Arrival City
+    <input type="text" name="arrival">
+  </label>
+
+  <label>
+    Date
+    <input type="date" name="date">
+  </label>
+
+  <button>Submit</button>
+</form>
+
+<h2>Login Form</h2>
+
+<form action="/logins" method="post">
+  <label>
+    email
+    <input type="email" name="login">
+  </label>
+
+  <label>
+    password
+    <input type="password" name="password">
+  </label>
+
+  <button>Submit</button>
+</form>
+
+
+<h2>Pizza Form</h2>
+<form action="/pizza_delivery" method="post">
+    <label for="pizza-size">
+      Pizza Size<br>
+    </label>
+    <input id="pizza-size" type="text" name="pizza_slice" list="sizes">
+
+    <datalist id="sizes">
+      <label>
+        <select name="size">
+          <option value="S"> Small
+          <option value="M"> Medium
+          <option value="L"> Large
+        </select>
+      </label>
+    </datalist>
+
+    <label> Cheese
+      <input type="checkbox" name="toppings" value="cheese">
+    </label>
+
+    <button>Submit</button>
+</form>

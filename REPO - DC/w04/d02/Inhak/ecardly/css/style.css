@@ -1,0 +1,77 @@
+body{
+  background-color: #D1D1D1;
+}
+
+.page {
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page .header {
+  height: 170px;
+  border: 40px;
+  text-align: center;
+  background-image: url("../images/background.jpg");
+}
+
+.page .main {
+  background-color: white;
+  float: left;
+  padding: 25px;
+  margin: 90px 0px 60px 170px;
+  width: 600px;
+}
+
+.page .main p{
+  line-height: 20px;
+}
+
+.page .main a{
+  color: #cc6633;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.page .main .comment{
+  border-top: 1px dotted black;
+  border-bottom: 1px solid black;
+  margin: 20px 0px 40px 0px;
+  padding: 10px 0px;
+}
+
+.page h2{
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 20px 0px;
+}
+
+.page .sidebar {
+  background-color: white;
+  height: 700px;
+  font-weight: bold;
+  float: left;
+  line-height: 25px;
+  margin: 90px 0px 0px 30px;
+  padding: 10px 30px 30px 30px;
+  width: 210px;
+}
+
+.page .sidebar h3{
+  padding: 15px 0px 0px 0px;
+}
+
+.page .sidebar img{
+  text-align: center;
+}
+
+.page .footer {
+  float: left;
+  margin: 10px 100px 30px 600px;
+  text-align: center;
+}
+
+.page .footer ul li{
+  display: inline;
+}

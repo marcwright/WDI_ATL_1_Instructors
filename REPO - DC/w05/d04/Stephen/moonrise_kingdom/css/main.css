@@ -1,0 +1,112 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+body {
+  background-image: url("../images/wood.jpg");
+  font-family: Courier, monospaced;
+}
+
+h1 {
+  margin-bottom: 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: smaller;
+}
+
+p .disclaimer {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: smaller;
+}
+
+.photo {
+  margin-bottom: 20px;
+}
+
+.photo img {
+  -webkit-transform:rotate(-4deg);
+}
+
+.photo img {
+  border: 20px solid #e1c49a;
+  box-shadow: 0 0 10px rgba(0,0,0,0.35);
+}
+
+.field {
+  margin: 5px;
+  overflow: auto;
+  text-align: left;
+}
+
+.field-title {
+  float: left;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.field-response {
+  border-bottom: 2px solid black;
+  overflow: hidden;
+  padding-left: 8px;
+}
+
+.form {
+  background-color: #e8ba6d;
+  border:5px solid #000000;
+  overflow: auto;
+  padding: 20px;
+}
+
+.form .profile {
+  float: right;
+  margin-left: 60px;
+  padding-right: 30px;
+  width: 300px;
+}
+
+.form .info {
+  border-right: 5px solid black;
+  float: right;
+  padding-right: 30px;
+  width: 300px;
+}
+
+.outer-border {
+  background-color: #e8ba6d;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 10px;
+  width: 800px;
+}
+
+.signature {
+  border-bottom: 2px solid black;
+  font-family: 'Crafty Girls', script;
+}
+
+.signature-block p {
+  margin-top: 0px;
+  text-align: center;
+}

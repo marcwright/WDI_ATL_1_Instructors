@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Air Conditioning</title>
+  </head>
+
+<body>
+  <script type='text/javascript'>
+    var functional = prompt('Is the A/C functional?')
+    
+    if (functional != null && functional === 'yes') {
+      var des_temp = prompt('What temperature do you desire?');
+      var curr_temp = prompt('What is the current temperature?');
+    }
+    else if (functional != null && functional === 'no') {
+      var des_temp = prompt('What temperature do you desire?');
+      var curr_temp = prompt('What is the current temperature?');
+      if (des_temp != null && des_temp < curr_temp) {
+        prompt('Fix A/C now!')
+      else
+        prompt('Fix A/C soon')
+      }
+    }
+     else (des_temp != null && des_temp < curr_temp) {
+      prompt('Turn on A/C please');
+    }
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!doctype>
+<html>
+<script type="text/javascript">
+
+//runs through fibonacci sequence
+function sequence(){
+    var total = 2;
+    var x = 1;
+    var y = 2;
+    var z = 0;
+    //we only want values that are less than 4,000,000
+    var max = 4000000;
+ 
+    while(x &lt; max) {
+        z = x + y;
+            //make sure the value of Z is even and less than 4 million
+            if (z % 2 === 0 &amp;&amp; z &lt; max){
+                total += z;
+            }
+        x = z + y;
+            //make sure the value of X is even and less than 4 million
+            if (x % 2 === 0 &amp;&amp; x &lt; mac){
+                total += x;
+            }
+        y = x + z;
+            //make sure the value of Y is even and less than 4 million
+            if (y % 2 === 0 &amp;&amp; y &lt; max){
+            total += y;
+            } 
+        }
+        //Print out the answer
+        document.write(total);
+    };
+ 
+//call the function
+sequence();
+</script>
+</html>
+
+
+
+function findhighprime(x) {
+    var max = Math.round(Math.sqrt(x));
+    for (var i = max; i &gt;=2; i--){
+        if(x % i === 0 &amp;&amp; findhighprime(i) === 1) {
+            return i;
+        }
+    }
+    return 1;
+};
+ 
+document.write(findhighprime(600851475143);

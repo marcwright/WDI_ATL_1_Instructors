@@ -1,0 +1,7 @@
+<h1>Here are your koopas:</h1>
+
+<ul>
+  <% @koopas.each do |koopa| %>
+  <li><a href="/koopas/<%= koopa.id %>"><%= koopa.color.capitalize %> <%= koopa.name %></a></li>
+  <% end %>
+</ul>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @car.name %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @car.colour %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @car.image, width: 300 %>
+</p>
+
+<p>
+  <b>Max speed:</b>
+  <%= @car.max_speed %>
+</p>
+
+<p>
+  <b>Released year:</b>
+  <%= @car.released_year %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @car.brand %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

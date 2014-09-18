@@ -1,0 +1,11 @@
+<h1>Add a song for this artist</h1>
+
+<%= form_for [@artist, @song] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :year %>
+  <%= f.number_field :year %>
+  <%= f.hidden_field :artist_id, value: @artist.id %>
+
+  <%= f.submit "Submit" %>
+<% end %>

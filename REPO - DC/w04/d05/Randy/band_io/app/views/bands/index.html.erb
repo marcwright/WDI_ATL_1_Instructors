@@ -1,0 +1,10 @@
+<%= link_to "Home", root_path %>
+
+
+<h1>Bands</h1>
+
+<% @bands.each do |band|%>
+<h2> <%=link_to band.name, band %> </h2>
+<%end%>
+
+<%= link_to "Add a Band", new_band_path(@bands) %>

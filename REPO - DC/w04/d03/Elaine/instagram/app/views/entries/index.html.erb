@@ -1,0 +1,12 @@
+<h1>All of the Entries:</h1>
+
+<div class="main" role="main">
+  <% @entries.each do |entry| %>
+    <h2>By <a href="/entries/<%= entry.id %>"><%= entry.author %></h2>
+    <img src="<%= entry.photo_url %>"></a>
+    <p>Date Taken: <%= entry.date_taken %></p>
+  <% end %>
+</div>
+
+<p><a href="/">Home</a></p>
+<p><a href="/entries/new">Create Entry</a></p>

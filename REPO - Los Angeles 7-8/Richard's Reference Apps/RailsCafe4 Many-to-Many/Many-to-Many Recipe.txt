@@ -1,0 +1,215 @@
+MANY-TO-MANY RECIPE
+
+This recipe is a generic instruction set for connecting to existing tables via a linking table.  One possible good
+point to use this recipe is after you have created the CRUD for two tables, and have that working.
+
+"Generic" means that instead of using the name of an actual table from an actual application, "generic" names
+are used.  The "code cook" then adapts the recipes with the actual names from their application.
+
+HOW TO SUBSTITUTE YOUR APP MODELS WITH THE GENERIC NAMES IN THE RECIPE
+
+MASTER is the parent table/collection, 
+DETAIL is the child table/collection,
+MASTER_DETAIL_LINK will be the new join table (aka link table aka junction table)
+
+The recipe assumes that master and detail models exist and there is CRUD for them already.
+
+STEP 1
+Generate the link model.
+
+rails g model Master_detail_link master:references detail:references
+
+So for example:
+
+rails g model Bean_pastry bean:references pastry:references
+or
+rails g model Pairing bean:references pastry:references
+
+The Linktable starts with a cap
+The master and detail tables are singular and lowercase
+
+After you run, you will have these models:
+
+master.rb         master model
+master_detail.rb  link model
+detail.rb         detail model
+
+For example:
+
+bean.rb
+bean_pastry.rb or pairing.rb
+pastry.rb
+
+
+STEP 2
+Use the models to tell Rails about the relationship between the models (tables)
+
+You will do this using:  has_many and belongs_to AFTER any fields and BEFORE the final END
+
+In all three tables, if you see 
+embedded:
+change it to
+field:
+
+--> detail.rb
+Add:
+has_many master_detail_links
+
+--> master_detail_link.rb
+Add:
+belongs_to master
+belongs_to detail
+
+--> master.rb
+has_many master_detail_links
+
+
+STEP 3
+For mongodb using mongoid, some extra code is needed that will not be needed for Active Record
+apps.  You will the following code.
+
+Modify the master model for Mongoid by adding this code, after the fields and "has_many" and "belongs_to" 
+statements and before the final END statement:
+
+    def details
+      Detail.find detail_ids
+    end
+    # For this recipe, you will not need the following line:
+    # accepts_nested_attributes_for :masters
+
+    def detail_ids
+      detail_ids_array = []
+      self.master_detail_links.each do |one_master_detail_link|
+        if one_link.detail_id
+          detail_ids_array.push one_master_detail_links.detail_id
+        end 
+      end
+      detail_ids_array 
+    end
+
+    def detail_ids=(list)
+      self.master_detail_links.destroy
+      list.each do |detail_id|
+        self.master_detail_links.create(detail_id: detail_id)
+      end
+    end
+
+    # some way of showing a list
+    def detail_list
+      details_string = ""
+      details.each do |one_detail|
+        details_string += ", " + one_detail.name
+      end
+      details_string.slice(2,details_string.length - 1)
+      details_string
+    end
+
+    
+STEP 4
+You need to make a small modification to the master_controller.rb.
+
+Create this code at the bottom before the final end:
+
+--> MASTER CONTROLLER (master.rb)
+
+private
+  def master_params
+    params.require(:master).permit(YOUR FIELD NAMES HERE i.e.:  :name, ... then add:
+    , detail_ids: [])
+  end
+  
+Don't forget to change "master" to your master model name, and "detail" to your detail model name.
+
+Notice "detail_ids: [] ".  This makes all the detail records that belong to the master record show up as though
+they are in the master table.
+
+Now where you see (params.require...)
+
+Change that to:
+
+(master_params)
+
+Do not change anything that reads params(:id) or anything other than params.require..
+Note that master_params replaces the parmas.require part to.
+
+For example, the new action (method) will say something like:
+
+def Create
+  @master = Master.new(master_params)
+  etc...
+  
+Your models and controllers are all set now.
+
+All of the views you had previously should still work.  Check that and fix as reuqired 
+before the next setp.
+
+
+STEP 5
+
+We want to use this new linking capability.  For this example, we modify the master view.
+
+The last thing we did in step 3 was create a method that returns a string that lists all
+of the detail info that belongs to the current master data.
+
+Here's one example but it is one of many - this is where creativity in data and styling
+comes in.
+
+--> SHOW ViEW EXAMPLE
+<h1><%= @master.name %></h1>
+
+<p>Here is data from the master record <b>
+<%= @master.some_field_from_the_master_model%></b> </p>
+<p>Here is data from all the detail records that match: <%=@master_detail_list%></p>
+
+Recall that "master_detail_list" is a method we created and wrote at the end of the master.rb
+model.
+
+--> EDIT VIEW EXAMPLE
+<h1> Edit this master record and detail records together</h1>
+
+<%= form_for @bmaster do |f| %>
+   Here is some data from the master that can be edited.
+	 Some_data: <%= f.text_field :master_some_field_from_the_master_model, placeholder: "Master Field" %><br><br>
+   
+   And here is some data from the detail record that can be edited:
+    <%= f.collection_check_boxes :detail_ids, Detail.all, :id, :some_data_field_from_detail_tabl %>
+  <br><br>
+	<%= f.submit "Save changes" %>
+
+<% end %>
+
+
+STEP 6
+
+ROUTES.RB
+No changes needed
+
+There are no special routes required for this recipe.  However in general:
+
+If you created routes using RESOURCE or RESOURCES, should be okay.
+
+But if at any time you get a "no such path" or similar message, you may need to 
+add a route or simply an
+, as: :[MODELNAME]
+in your routes.db to create as specific path.
+
+
+NOTES
+Look at RAILSCAFE3 and RAILSCAFE4.  
+
+RAILSCAFE3 does NOT contain a linking table nor the ability to link Bean to Pastry
+
+RAILSCAFE4 DOES contain a linking table and it links Bean to Pastry (Pairing, ie recommended food pairings for coffee
+beans).
+
+FURTHERMORE, the ONLY differences between RAILSCAFE3 and RAILSCAFE4 are the changes described in this recipe.  If 
+you are unclear on how to apply the recipe at any point, look at the differences between RAILSCAFE3 and RAILSCAFE4
+in your editor.
+
+Recipe created by:  Richard 
+RAILSCAFE1 was created by Meredith
+RAILSFE3 and RAILSCAFE4 created by Richard & Lorin
+
+
+
+

@@ -1,0 +1,7 @@
+<h1>Here are the roller coasters!</h1>
+
+<ul>
+  <% @coaster.each do |coaster| %>
+    <li><%= coaster.name %> reaches a top speed of <%= coaster.top_speed %> MPH.  You must be at least <%= coaster.min_height %> inches tall to ride. </li>
+  <% end %>
+</ul>

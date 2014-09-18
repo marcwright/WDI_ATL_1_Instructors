@@ -1,0 +1,24 @@
+<div class= "container">
+<h1>Add a pic</h1>
+
+ <form action="/entries" method="post">
+    <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+    <label>
+      Name:
+      <input type="text" name="author">
+    </label>
+
+    <label>
+      Link to pic:
+      <input type="text" name="photo_url">
+    </label>
+
+    <label>
+      Date:
+    <input type="date" name="date_taken">
+    </label>
+
+    <input type="submit" value="Add!">
+
+  </form>
+</div>

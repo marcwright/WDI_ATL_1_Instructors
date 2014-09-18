@@ -1,0 +1,12 @@
+<h1>Events</h1>
+
+<ul>
+<!-- list heros -->
+  <% @events.each do |event| %>
+    <%= link_to event.name, event %>
+  <% end %>
+</ul>
+
+<!-- Add a hero -->
+<p><%= link_to "Add an Event", new_venue_event_path %></p>
+<p><%= link_to "Home", root_path %></p>

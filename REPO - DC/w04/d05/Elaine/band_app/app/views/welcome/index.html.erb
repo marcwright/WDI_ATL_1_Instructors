@@ -1,0 +1,17 @@
+<div class="page">
+  <h1>Welcome to Band.io</h1>
+
+  <p><a href="/venues">All Venues</a></p>
+  <p><a href="/venues/new">Add a Venue</a></p>
+  <br>
+  <p><a href="/bands">All Bands</a></p>
+  <p><a href="/bands/new">Add a Band</a></p>
+  <p>
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </p>
+
+</div>

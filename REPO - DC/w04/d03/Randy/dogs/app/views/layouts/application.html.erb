@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dogs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <style>
+    body {
+      text-align: center;
+      background-image: url("http://www.photographybyrichelle.net/wp-content/uploads/2013/07/pet-background1.jpg");
+      color: #fff;
+      font-weight: bold;
+    }
+    img {
+      border: 4px solid #fff;
+      border-radius: 20px;
+      margin: 0 auto;
+      width: 50%;
+
+    }
+  </style>
+
+<%= yield %>
+
+</body>
+</html>

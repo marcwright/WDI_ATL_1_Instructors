@@ -1,0 +1,27 @@
+<h1> Edit <%= @roller.name %> </h1>
+
+<form action="/rollers/<%= @roller.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @roller.name %>">
+  </label>
+
+  <label>
+    Talent:
+    <input type="text" name="speed" value="<%= @roller.speed %>">
+  </label>
+
+  <label>
+    Creepy?:
+    <input type="checkbox" name="height" <%= @roller.height ? "checked" : "" %> >
+  </label>
+
+  <label>
+    Image URL:
+    <input type="text" name="image_url" value="<%= @roller.image_url %>">
+  </label>
+
+  <button> Update this roller! </button>
+</form>

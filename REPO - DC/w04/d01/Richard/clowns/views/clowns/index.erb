@@ -1,0 +1,9 @@
+<h1>CLOWN TIME!!!!</h1>
+<ul>
+<% @clowns.each do |clown| %>
+<li>
+  <%= clown.name %>
+  <img src="<%=clown.image_url%>">
+  <% end %>
+</li>
+</ul>

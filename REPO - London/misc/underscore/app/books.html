@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Books Underscore Practice</title>
+    <script src="underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js "></script>
+
+    <style>
+      .hot {
+        background-image: url('http://2.bp.blogspot.com/-KMFq0fNr_Zo/TosiqJSk1RI/AAAAAAAABEI/Bbq_qiKyhZs/s200/flames.jpg');
+        background-repeat: no-repeat;
+        color:sienna;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <div>
+      <button id='addBooksToBookshelf'>populate bookshelf</button>
+      <button id='addImageTags'>add image tags</button>
+      <button id='highlightHotItems'>highlight hot</button>
+    <div>
+    <div id="bookshelf"></div>
+
+    <div id="todo">
+      <ol>
+        <li>store the response in local storage</li>
+        <li>add a link that will iterate over each book and display it in the bookshelf</li>
+        <li>add a link to pull out the web reader URL and create a link around the book image, so that when I click it I can see inside the book.</li>
+        <li>add a link to find all the books with a rating of 4 or more, and add a CSS class to them called hot. Add CSS so that the hot class is a snazzy star shape or something.</li>
+      </ol>
+    </div>
+
+    <script>
+      function handleResponse(response) {
+        localStorage.responseItems = JSON.stringify(response.items);
+        $('#addBooksToBookshelf').on('click', function() {addBooksToBookshelf()});
+        $('#addImageTags').on('click', function() {addImageTags()});
+        $('#highlightHotItems').on('click', function() {highlightHotItems()});
+      }
+
+      function responseItems() {
+        return JSON.parse(localStorage.responseItems)
+      }
+
+      function addBooksToBookshelf() {
+        _(responseItems()).each(addBookToBookshelf);
+      }
+
+      function addImageTags() {
+        _(_(responseItems()).map(formatImageAsLink)).each(addImageToBook);
+      }
+
+      function highlightHotItems() {
+        var hotItems = _(responseItems()).select(function(item) {return item.volumeInfo.averageRating >= 4});
+        _(hotItems).each(markAsHot);
+      }
+
+      function markAsHot(item) {
+        book = $('#'+item.id);
+        book.addClass('hot');
+      }
+
+      function addImageToBook(item) {
+        book = $('#' + item.id);
+        book.append(item.imageAsLinkText);
+      }
+
+      function formatImageAsLink(item) {
+        var readerUrl = item.accessInfo.webReaderLink;
+        var imageSrc = item.volumeInfo.imageLinks.smallThumbnail;
+        var altText = item.volumeInfo.title;
+
+        var template = "<a href='<%= readerUrl %>'><image src='<%= imageSrc %>' alt='<%= altText %>'></a>";
+        var parsedTemplate = _.template(template, {readerUrl: readerUrl, imageSrc: imageSrc, altText: altText});
+
+        return { id: item.id, imageAsLinkText: parsedTemplate }
+      }
+
+      function addBookToBookshelf(item) {
+        bookshelf = $('#bookshelf');
+        var template = "<article id='<%= id %>'><h1><%= volumeInfo.title %></h1></article>";
+        var parsedTemplate = _.template(template, item);
+        bookshelf.append(parsedTemplate);
+      }
+
+    </script>
+
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<h2><%= @roller.name %></h2>
+
+<p><%= @roller.name %> is good at <%= @roller.speed %></p>
+<img src="<%= @roller.image_url %>" >
+
+<form action="/rollers/<%= @roller.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Get this roller outta here!</button>
+</form>

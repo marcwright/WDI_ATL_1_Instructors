@@ -1,0 +1,48 @@
+<div class="page">
+  <h1>Edit <%= @author.name %></h1>
+
+  <div class="form" role="form">
+    <form action="/authors/<%= @author.id %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <ul>
+        <li>
+          <label>
+            Name:
+            <input type="text" name="name" value="<%= @author.name %>">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            Date of Birth:
+            <input type="date" name="dob" value="<%= @author.dob %>">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            Gender:
+            <input type="radio" name="gender" value="<%= @author.gender ? "male" : "" %>">male
+            <input type="radio" name="gender" value="<%= @author.gender ? "female" : "" %>">female
+          </label>
+        </li>
+
+        <li>
+          <label>
+            Has a pseudonym
+            <input type="checkbox" name="has_pseudonym" value="true" <%= @author.has_pseudonym ? "checked" : "" %>">
+          </label>
+        </li>
+
+      </ul>
+
+      <p><input type="submit" value="Save Changes"></p>
+    </form>
+
+  </div>
+
+  <p><a href="/authors/<%= @author.id %>/books">Back to All Books by <%= @author.name %></a></p>
+  <p><a href="/">Home</a></p>
+</div>

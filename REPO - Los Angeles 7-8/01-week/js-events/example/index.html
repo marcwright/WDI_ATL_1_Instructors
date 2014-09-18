@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Noteworthy happenings</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="js/events.js"></script>
+  </head>
+  <body>
+    <h1 onmouseover="eek()" id="test">Test</h1>
+    <p onclick="clickme()">Click Me!</p>
+    <div class="jumbotron" onmouseout="no()">Don't leave me!</div>
+    <form onsubmit="checkform()">
+      <input type="text" onfocus="losefocus()" name="answer" id="answer" placeholder="What's the meaning of all this JS non-sense?!" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

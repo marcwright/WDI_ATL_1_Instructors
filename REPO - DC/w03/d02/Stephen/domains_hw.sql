@@ -1,0 +1,140 @@
+-- Stephen Stanwood (stephen@stanwoodsolutions.com)
+
+-- Travel Log --
+
+DROP TABLE IF EXISTS users CASCADE;
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(300) NOT NULL,
+  name VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS entries CASCADE;
+CREATE TABLE entries (
+  id SERIAL PRIMARY KEY,
+  city VARCHAR(100) NOT NULL,
+  body TEXT NOT NULL,
+  user_id INTEGER REFERENCES users(id) NOT NULL
+);
+
+-- Photo Management App --
+
+DROP TABLE IF EXISTS clients CASCADE;
+CREATE TABLE clients (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(300) NOT NULL,
+  phone VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS events CASCADE;
+CREATE TABLE events (
+  id SERIAL PRIMARY KEY,
+  event_date TIMESTAMP NOT NULL,
+  event_type VARCHAR(100) NOT NULL,
+  client_id INTEGER REFERENCES clients(id) NOT NULL
+);
+
+DROP TABLE IF EXISTS photos CASCADE;
+CREATE TABLE photos (
+  id SERIAL PRIMARY KEY,
+  url VARCHAR(300) NOT NULL,
+  event_id INTEGER REFERENCES events(id) NOT NULL
+);
+
+-- Figure Skating --
+
+DROP TABLE IF EXISTS skaters CASCADE;
+CREATE TABLE skaters (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  country VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS scores CASCADE;
+CREATE TABLE scores (
+  id SERIAL PRIMARY KEY,
+  points INTEGER NOT NULL,
+  judge VARCHAR(100) NOT NULL,
+  skater_id INTEGER REFERENCES skaters(id) NOT NULL
+);
+
+-- SnapChat --
+
+DROP TABLE IF EXISTS users CASCADE;
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(300) NOT NULL,
+  username VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS snapchats CASCADE;
+CREATE TABLE snapchats (
+  id SERIAL PRIMARY KEY,
+  time TIMESTAMP NOT NULL,
+  view_status BOOLEAN DEFAULT FALSE NOT NULL
+);
+
+-- The Bachelor --
+
+DROP TABLE IF EXISTS seasons CASCADE;
+CREATE TABLE seasons (
+  id SERIAL PRIMARY KEY,
+  bachelor_name VARCHAR(100) NOT NULL,
+  season_name VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS episodes CASCADE;
+CREATE TABLE episodes (
+  id SERIAL PRIMARY KEY,
+  num INTEGER NOT NULL,
+  airdate TIMESTAMP NOT NULL
+);
+
+DROP TABLE IF EXISTS women CASCADE;
+CREATE TABLE women (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS episodes_women CASCADE;
+CREATE TABLE episodes_women (
+  id SERIAL PRIMARY KEY,
+  episode_id INTEGER REFERENCES episodes(id) NOT NULL,
+  woman_id INTEGER REFERENCES women(id) NOT NULL
+);
+
+-- Jeopardy --
+
+DROP TABLE IF EXISTS episodes CASCADE;
+CREATE TABLE episodes (
+  id SERIAL PRIMARY KEY,
+  num INTEGER NOT NULL,
+  airdate TIMESTAMP NOT NULL
+);
+
+DROP TABLE IF EXISTS contestants CASCADE;
+CREATE TABLE contestants (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS rounds CASCADE;
+CREATE TABLE rounds (
+  id SERIAL PRIMARY KEY,
+  type VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS categories CASCADE;
+CREATE TABLE categories (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS questions CASCADE;
+CREATE TABLE questions (
+  id SERIAL PRIMARY KEY,
+  num INTEGER NOT NULL,
+  answer TEXT NOT NULL,
+  question TEXT NOT NULL
+);

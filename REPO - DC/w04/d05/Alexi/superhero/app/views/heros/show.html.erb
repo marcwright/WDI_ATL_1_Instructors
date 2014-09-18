@@ -1,0 +1,14 @@
+<!-- All Superheros Link -->
+
+<%= link_to "All Heros", heros_path %>
+
+<h1><%= @hero.name %></h1>
+<p><%= @hero.secret_identity %></p>
+
+<%= image_tag @hero.image_url, alt: "", class: "hero" %>
+
+<p><%= link_to "Edit", edit_her_path(@hero) %></p>
+
+<!-- Hero Image -->
+
+<!-- Hero Edit link -->

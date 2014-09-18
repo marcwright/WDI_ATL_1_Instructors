@@ -1,0 +1,12 @@
+<% link_to "All Venues", venues_path %>
+
+<h1><%= @venue.name %></h1>
+<p><%= @venue.city %>, <%= @venue.state %></p>
+<p>Allows Profanity: <%= @venue.allows_profanity %></p>
+
+
+<p><%= link_to "Edit", edit_venue_path %></p>
+
+<%= form_for @venue, method: 'delete' do |f| %>
+    <%= f.submit "Delete" %>
+<% end %>

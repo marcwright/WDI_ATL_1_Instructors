@@ -1,0 +1,23 @@
+<h1>Add a new city...</h1>
+
+<form action="/cities" method="post">
+  <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>">
+
+  <label>
+    City Name:
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Average Starting Salary:
+    <input type="integer" name="avg_salary">
+  </label>
+
+  <label>
+    City Image URL:
+    <input type="text" name="image_url">
+  </label>
+
+  <input type="submit" value="Add City!">
+
+</form>

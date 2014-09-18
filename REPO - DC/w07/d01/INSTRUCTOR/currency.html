@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+  // Currency Converter
+  // *** 1 pound is 1.6750 dollars
+
+  var money_input = prompt('how much money you got?');
+  var currency = prompt('what currency is that?')
+
+  function dollarsToPounds(dollars){
+    return (dollars / 1.675).toFixed(2);
+  }
+
+  function poundsToDollars(pounds){
+    return (pounds * 1.675).toFixed(2);
+  }
+
+  var convertedAmount;
+
+  if (currency === 'dollars'){
+    convertedAmount = dollarsToPounds(money_input);
+  } else {
+    convertedAmount = poundsToDollars(money_input);
+  }
+
+  console.log('that is ' + convertedAmount + ' when converted');
+
+  // var fxRate = {
+  //   dollars: 1,
+  //   pounds: 1.675,
+  //   pesos: 0.075,
+  //   exchange: function(currencyFrom, currencyTo, amount){
+  //     var dollars = amount * this[currencyFrom];
+  //     return (dollars / this[currencyTo]).toFixed(2);
+  //   }
+  // }
+
+  // var currencyConverter = function(){
+  //   var currencyFrom = prompt('What currency are you inputing?');
+  //   var currencyTo = prompt('What currency are you converting to?');
+  //   var amount = prompt('how much do you have?');
+
+  //   return fxRate.exchange(currencyFrom, currencyTo, amount);
+  // }
+
+
+  </script>
+</body>
+</html>

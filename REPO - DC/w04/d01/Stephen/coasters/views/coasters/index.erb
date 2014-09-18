@@ -1,0 +1,16 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-12 15:43:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-12 16:42:22
+
+ -->
+
+<h1>All of the roller coasters...</h1>
+
+<% @coasters.each do |c| %>
+  <div style="float:left; padding: 10px"><%= c.to_s %> (<a href="/coasters/<%= c.id %>">edit</a>)<br />
+
+  <img src="<%= c.image_url %>" width="500" border="5" /></div>
+<% end %>

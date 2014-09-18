@@ -1,0 +1,9 @@
+<h1>Welcome to Bowser's Castle</h1>
+<h1>Here are the koopas!</h1>
+
+<ul>
+  <% @koopas.each do |koopa| %>
+  <li><%= koopa.name %> is <%= koopa.color %>. It does <% if !koopa.has_shell %> not <% end %> have a shell.</li>
+  <li><a href='/koopas/<%= koopa.id.to_s %>' >See this koopa</a></li>
+  <% end %>
+</ul>

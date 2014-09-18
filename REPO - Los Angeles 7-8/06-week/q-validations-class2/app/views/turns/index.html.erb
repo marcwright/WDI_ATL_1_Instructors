@@ -1,0 +1,77 @@
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>
+        WDI Office Hours
+      </h1>
+      <h2>
+        Queue for office hours!
+        <br>
+        <%= Time.now.strftime("%A") %>, <%= Date.today %>
+      </h2>
+      Your Instructors and TAs tonight are:<br>
+      <strong><%= @office_hours_helpers %></strong>
+      <hr>
+      <ul class="list-group">
+
+        <% @turns.each do |t| %>
+
+          <li class="list-group-item">
+            <% if t.user == current_user %>
+              <%= link_to "Solved", turn_path(t.id), method: :delete, class: "btn btn-primary pull-right"%>
+            <% end %>
+            <h4 class="list-group-item-heading"><%= t.user.name %></h4>
+            <p class="list-group-item-text">Subject: <%= t.subject %></p>
+            <p class="list-group-item-text">Question: <%= t.question %></p>
+          </li>
+
+        <% end %>
+
+      </ul>
+    </div>
+    <div class="col-sm-5 col-sm-offset-1">
+      <h2>
+        Please wait your turn and add yourself to the queue
+      </h2>
+      <hr>
+
+      <% if current_user %>
+
+        <button class="btn btn-primary btn-success" data-toggle="modal" data-target="#myModal">
+          Add me to the Queue!
+        </button>
+
+
+      <% else %>
+        <%= link_to 'Log in to be added to the queue!', new_turn_path, class: 'btn btn-primary btn-large btn-success', disabled: true %>
+      <% end %>
+
+
+      <hr>
+      <h2>
+        Want a cool feature added in??!
+      </h2>
+      <%= link_to 'Request a Feature!', new_feature_path, class: 'btn btn-primary btn-large' %>
+      <hr>
+
+      <ul class="list-group">
+
+      <% @features.each do |feature| %>
+
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading">
+              <%= feature.name %>
+            </h4>
+            <p class="list-group-item-text">
+              <%= feature.description %>
+            </p>
+          </li>
+
+        <% end %>
+
+      </ul>
+
+      <%= render 'new_modal' %>
+
+    </div>
+
+  </div>

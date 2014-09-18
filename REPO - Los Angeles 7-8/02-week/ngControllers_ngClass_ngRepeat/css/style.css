@@ -1,0 +1,39 @@
+body {
+	background-image: url('../images/bg.jpeg');
+	font-family: helvetica;
+	text-align: center;
+}
+
+.shopname {
+  color: white;
+}
+
+.main-container {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.main-container img {
+  width: 220px;
+}
+
+.coffees {
+  padding: 5px;
+  margin: 10px 18px;
+  border: 2px dashed #D3D3D3;
+  background-color: #FFF;
+  width: 250px;
+  float: left;
+  width: 250px;
+}
+
+.dark {
+  background-color: #846C64;
+}
+
+.title {
+  font-size: 40px;
+  color: blue;
+}

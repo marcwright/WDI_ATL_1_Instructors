@@ -1,0 +1,22 @@
+<%= link_to "All Venues", venues_path %>
+
+
+<%= form_tag(venue_events_path(@venue), :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Events" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+
+<h1>Venues</h1>
+
+<ul>
+  <% @venue.each do |venue| %>
+  <li><%= link_to venue.name, venue %></li>
+  <% end %>
+</ul>
+
+<ul>
+  <% @band.each do |band| %>
+  <li><%= link_to band.name, band %></li>
+  <% end %>
+</ul>

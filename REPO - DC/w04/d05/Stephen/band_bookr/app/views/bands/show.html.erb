@@ -1,0 +1,25 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:44:45
+
+ -->
+
+<h1><%= @band.name %></h1>
+<p><%= @band.genre %></p>
+
+<% if @band.explicit_lyrics %><p>
+
+  <p>Explicit lyrics<p>
+
+<% else %>
+
+  <p>No explicit lyrics<p>
+
+<% end %>
+
+<div class="edit"><%= link_to "Edit", edit_band_path(@band) %></div>
+
+<div class="video_embed"><iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/<%= @youtube_embed %>" frameborder="0" allowfullscreen></iframe></div>

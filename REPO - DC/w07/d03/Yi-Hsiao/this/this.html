@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>this</title>
+  </head>
+  <body>
+    <h1>this</h1>
+    <script type='text/javascript'>
+
+      console.log('1');     //=> 1
+      console.log(this);    //=> Window object
+
+      var color = 'red';
+
+      var shmee = function(){
+        console.log(this);
+        console.log(this.color);
+      };
+
+      console.log('2');     //=> 2
+      shmee();              //=> Window object
+                            //=> "red"
+
+      var banana = { color: 'yellow' };
+      banana.shmee = shmee;
+
+      console.log('3');     //=> 3
+      console.log(banana);  //=> banana object
+
+      console.log('4');     //=> 4
+      banana.shmee();       //=> banana object
+                            //=> "yellow"
+
+      var puppy = {
+        name: 'fluffy',
+        bark: function(){
+          console.log(this);
+        },
+        sayName: function(){
+          console.log(this.name);
+        },
+      };
+
+      console.log('5');     //=> 5
+      console.log(puppy);   //=> puppy object
+
+      console.log('6');     //=> 6
+      puppy.bark();         //=> puppy object
+
+      console.log('7');     //=> 7
+      puppy.sayName();      //=> "fluffy"
+
+      var kitten = {
+        name: 'mittens',
+        friend: puppy,
+        introFriend: function() {
+          console.log(this);
+          this.friend.bark();
+          console.log(this);
+        }
+      };
+
+      console.log('8');     //=> 8
+      console.log(kitten);  //=> kitten object
+
+      console.log('9');     //=> 9
+      kitten.introFriend(); //=> kitten object
+                            //=> puppy object
+                            //=> kitten object
+    </script>
+  </body>
+</html>

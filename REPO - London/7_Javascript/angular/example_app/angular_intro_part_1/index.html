@@ -1,0 +1,58 @@
+<html ng-app="leatherLaneMarketApp">
+<head>
+  <title>My Angular App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Angular Leather Lane Market App</h1>
+  
+
+  <div ng-controller="MarketController">
+  
+   <nav>
+     <h2>Stalls</h2> 
+      <input ng-model="search" />
+        <ul>
+          <li ng-repeat="stall in stalls | filter: {name: search} | orderBy: 'name'" ng-click="selectStall(stall)" ng-class="{ highlighted: stall === selectedStall }"> {{  stall.name  }}</li>
+        </ul>
+      </nav>
+
+  <section ng-show="selectedStall">
+      <div ng-click="clearSelectedStall()">  
+        <img src="http://www.sirrahmj.co.uk/close.png" />  
+      </div>   
+      <h2>Selected Stall Details</h2>   
+      <table>  
+        <tr>   
+          <td>Name:</td>  
+          <td>{{ selectedStall.name }}</td>   
+        </tr>  
+        <tr>  
+          <td>Price:</td>  
+          <td> {{ selectedStall.price}}</td>   
+        </tr>  
+        <tr>  
+          <td>Description:</td>  
+          <td> {{ selectedStall.description}}</td>  
+        </tr>  
+      </table>  
+    </section>
+
+    <section ng-hide="selectedStall">
+      <h2>Leather Lane Market</h2>
+      <p>Leather lane market is in clerkenwell and is awesome. It has a wide variety of stalls.  Select a stall from the left to see more details.</p>
+    </section>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

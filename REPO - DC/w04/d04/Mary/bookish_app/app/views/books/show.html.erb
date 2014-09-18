@@ -1,0 +1,21 @@
+<h1>All about <%= @book.title %></h1>
+
+<h2>Release Date: <%= @book.release_date %></h2>
+<h2>Genre: <%= @book.genre %></h2>
+
+<h2><%= @book.title %>'s Characters:</h2>
+<% @characters.each do |character| %>
+<ul>
+<li><a href="character/<%=character.id %>"><%= character.name %></a></li>
+</ul>
+<% end %>
+
+<a href="/books/<%=@book.id%>/characters/new">Add another character to this book</a>
+
+
+<form action="/books/<%= @book.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+    <button>Delete this book</button>
+</form>
+

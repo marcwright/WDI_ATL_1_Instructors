@@ -1,0 +1,8 @@
+<h2><%= @ride.name %></h2>
+<p><%= @ride.name %> goes up to <%= @ride.top_speed %> miles per hour!</p>
+<img src="<%= @ride.image_url %>">
+
+<form action="/rides/<%= @ride.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Get this ride outta here!</button>
+</form>

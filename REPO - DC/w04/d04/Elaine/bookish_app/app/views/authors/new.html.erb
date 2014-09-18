@@ -1,0 +1,42 @@
+<div class="page">
+  <h1>Add an Author:</h1>
+
+  <form action="/authors" method="post">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+    <ul>
+      <li>
+        <label>
+          Name:
+          <input type="text" name="name">
+        </label>
+      </li>
+
+      <li>
+        <label>
+          Date of Birth:
+          <input type="date" name="dob">
+        </label>
+      </li>
+
+      <li>
+        <label>
+          Gender:
+          <input type="radio" name="gender" value="male">male
+          <input type="radio" name="gender" value="female">female
+        </label>
+      </li>
+
+      <li>
+        <label>
+          Has a pseudonym
+          <input type="checkbox" name="has_pseudonym">
+        </label>
+      </li>
+    </ul>
+
+    <p><input type="submit" value="Add Author"></p>
+  </form>
+
+  <p><a href="/">Home</a></p>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app='tic-tac-toe'>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:900' rel='stylesheet' type='text/css' />
+  </head>
+  <body ng-controller='gameCtrl' ng-class="{gameon: boardcreated}">
+    <div class="col-sm-2"></div>
+    <div class="container col-sm-8">
+      <h1>Recursive tinkering with Tic Tac Toe</h1>
+
+      <section id="player_select" class="form-group" ng-hide="boardcreated">
+        <label for="inp_player1">Player 1</label>
+        <input type="text" class="form-control" id="inp_player1" ng-model="players[0]" ng-focus="players[0] =''" placeholder="Please enter a name for Player 1" />
+        <label for="inp_player2">Player 2</label>
+        <input type="text" class="form-control" id="inp_player2" ng-model="players[1]" ng-focus="players[1] =''" placeholder="Please enter a name for Player 2" />
+      </section>
+
+      <section ng-hide="boardcreated" class="boardcreation">
+      <input min="3" max="10" type="number" ng-model="size" />
+        <button class="btn btn-warning" ng-click="createBoard(size)"><span ng-hide="end">Create</span><span ng-show="end">Reset</span> Game Board</button>
+      </section>
+
+      <section id="gameboard">
+        <div ng-repeat="row in board">
+          <span ng-repeat="field in row track by $index">
+            <span ng-show="field == defaultSymbol"><a ng-class="{xmark: field == 'X', omark: field == 'O'}" ng-click="takefield($parent.$index, $index, currentSymbol());">{{field}}</a></span>
+            <span ng-show="field != defaultSymbol" ng-class="{xmark: field == 'X', omark: field == 'O'}">{{field}}</span>
+          </span>
+        </div>
+      </section>
+
+      <h1 ng-show="end" class="winning"><span ng-hide="tie">{{ currentPlayer }} wins!</span><span ng-show="tie">It's a tie!</span></h1>
+      <section id="wincounter">
+        <h2>Wins</h2>
+        <ul>
+          <li>{{ players[0] }} has won {{ playerwins[0] }} games.</li>
+          <li>{{ players[1] }} has won {{ playerwins[1] }} games.</li>
+        </ul>
+      </section>
+
+    </div>
+    <div class="col-sm-2"></div>
+
+  </body>
+</html>
+

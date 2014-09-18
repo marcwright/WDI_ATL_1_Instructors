@@ -1,0 +1,24 @@
+<h1>Post a new photo!</h1>
+
+<form action='/entries' method='post'>
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <label>
+    Author:
+    <input type="text" name="author">
+  </label>
+<br>
+  <label>
+    PhotoURL:
+    <input type="text" name="photo_url">
+  </label>
+<br>
+  <label>
+    Caption:
+    <input type="text" name="caption">
+  </label>
+
+  <input type="submit" value="Post!">
+
+
+</form>

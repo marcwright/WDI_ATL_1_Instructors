@@ -1,0 +1,10 @@
+<h1><%= @coaster.name %></h1>
+
+<h2>Max Height:  <%= @coaster.max_height %> miles</h2>
+<h2>Top Speed:  <%= @coaster.top_speed %> MPH</h2>
+<img src="<%= @coaster.image_url %>">
+
+<form action="/coasters/<%= @coaster.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Get this coaster outta here!</button>
+</form>

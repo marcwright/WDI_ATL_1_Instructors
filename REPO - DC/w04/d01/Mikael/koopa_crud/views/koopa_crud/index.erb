@@ -1,0 +1,7 @@
+<h1>Here are the koopas!</h1>
+
+<ul>
+  <% @koopas.each do |koopa| %>
+  <li><%= koopa.name %> is <%= koopa.color %>. It does <% if !koopa.has_shell %> not <% end %> have a shell.</li>
+  <% end %>
+</ul>

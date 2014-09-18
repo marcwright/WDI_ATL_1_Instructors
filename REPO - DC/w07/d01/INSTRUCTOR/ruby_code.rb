@@ -1,0 +1,61 @@
+# Ruby
+# This is a Ruby comment
+
+# Variables
+beep = "beep"
+multi_word_variable = "some string"
+
+#Console Output
+puts beep
+
+#Conditionals
+number = 5
+if number > 5
+  puts "BIG NUMBER!"
+elsif number < 5
+  puts "little number"
+else
+  puts "must be 5 then"
+end
+
+#Case Statements
+day = "Salilday"
+case day
+when "Monday"
+  puts "Get Haircut!"
+when "Tuesday"
+  puts "Dont get a haircut"
+when "Friday"
+  puts "Get 3 Haircuts!"
+else
+  puts "Im in limbo"
+end
+
+#While Loop
+count = 10
+while count > 0
+  puts count
+  count -= 1
+end
+
+#Methods
+def add(x, y)
+  x + y
+end
+
+#Arrays
+my_name_array = ["Adam", "Elaine", "Travis"]
+my_name_array[0]
+my_name_array << "Matt"
+
+#Enumeration
+dwarves = ["Doc", "Sleepy", "Bashful", "Grumpy", "Dopey", "Sneezy", "Happy"]
+
+dwarves.each_with_index do |dwarf, index|
+  puts dwarf
+end
+
+#Hashes
+my_hash = {name: "Snow White", age: 17, weakness: "apples"}
+my_hash[:name]
+my_hash[:age] = 29

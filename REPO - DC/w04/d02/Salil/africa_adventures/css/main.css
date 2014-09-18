@@ -1,0 +1,40 @@
+body {
+  background-color: gray;
+  background-image: url("http://www.bhmpics.com/wallpapers/batman_word-800x480.jpg");
+  font: 14px/3.0em Calibri, Arial, sans-serif;
+  text-align: center;
+}
+
+
+.container {
+  background-color: white;
+  border: 5px solid black;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.container h1{
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  margin-bottom: 0 0 10px 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container h2 {
+  font-size: 20px;
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 5px  5px 10px black;
+}
+
+.container p {
+  line-height: 2em;
+}

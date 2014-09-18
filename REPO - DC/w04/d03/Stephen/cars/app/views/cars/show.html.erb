@@ -1,0 +1,24 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:17:24
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 17:11:17
+
+ -->
+
+<h2>Here is a car</h2>
+
+<h2><%= @car.color %> <%= @car.year %> <%= @car.make %> <%= @car.model %></h2>
+<a href="/cars/<%= @car.id %>"><img src="<%= @car.image_url %>" alt=""></a>
+
+<form action="/cars/<%= @car.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <button>Delete this car :(</button>
+</form>
+
+<form method="get" action="/cars/<%= @car.id %>/edit">
+  <button>Edit this car :)</button>
+</form>

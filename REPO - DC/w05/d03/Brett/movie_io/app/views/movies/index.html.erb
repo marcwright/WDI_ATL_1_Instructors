@@ -1,0 +1,6 @@
+<h1>Saved movies</h1>
+<ul>
+<% @movies.each do |movie| %>
+  <li><%= movie.title %>, <%= movie.year %>, Rating: <%= movie.imdb_rating %><%= button_to "delete", movie, method: :delete %></li>
+<% end %>
+</ul>

@@ -1,0 +1,12 @@
+<%= form_for @froyo do |f| %>
+
+	<%= f.text_field :flavor, 
+	placeholder: 'flavor' %>
+	<%= f.text_field :topping, 
+	placeholder: 'topping' %>
+	<%= f.number_field :quantity,
+	placeholder: 'oz' %>
+
+	<%= f.submit 'froyo me!!!' %>
+
+<% end %>

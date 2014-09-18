@@ -1,0 +1,30 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:17:24
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 08:19:54
+
+ -->
+
+<h2>Viewin' a Book</h2>
+
+<h3><%= @book.title %>, release <%= @book.release_date %>, genre: <%= @book.genre %></h3>
+
+<form action="/books/<%= @book.id %>/characters" method="get">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="submit" value="Character List">
+</form>
+
+<form action="/books/<%= @book.id %>/characters/new" method="get">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="submit" value="New Character">
+</form>
+
+<form action="/authors/<%= @author.id %>/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="submit" value="Delete">
+</form>
+

@@ -1,0 +1,21 @@
+<%= form_for @planet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+  <%= f.label :orbit %>
+  <%= f.text_field :orbit %>
+  <br>
+  <%= f.label :diameter %>
+  <%= f.text_field :diameter %>
+  <br>
+  <%= f.label :mass %>
+  <%= f.text_field :mass %>
+  <br>
+  <%= f.label :moons %>
+  <%= f.text_field :moons %>
+  <br>
+  <%= f.submit 'planet me!' %>
+<% end %>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html x-ng-app="kittiesApp"> <!-- This is where we use the ng-app directive to auto-bootstrap the Angular app that we named in app.js, kittiesApp -->
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/angular.min.js"></script> <!-- Angular first because app.js depends on it -->
+	<script src="js/app.js"></script>
+</head>
+	<body>
+		<div id ="main" x-ng-controller="KittiesController"> <!-- This is where we use the ng-controller directive to bring in the controller we constructed in app.js, KittiesController -->
+
+			<div id="left-container"> 
+				<h1>Kitties for Adoption</h1>
+				<div class="kitties" x-ng-repeat="k in kitties | filter: false"> <!-- Here, we're filtering kitties based on the 'adopted' boolean (looking for 'false'). Only kitties with 'false' present as a value will appear in this column. -->
+					<h2>My name is {{k.catName}}</h2> <!-- Displays the cat's name based on the object in $scope.kitties. -->
+					<p>I am {{k.monthsOld}} months old.</p> <!-- Displays the cat's age based on the object in $scope.kitties. -->
+					<p>I'm a {{k.gender}}.</p> <!-- Displays the cat's gender based on the object in $scope.kitties. -->
+					<img x-ng-src={{k.image}}> <!-- Displays an image with a path noted in the object in $scope.kitties. -->
+					<p>Adopt? <input type="checkbox" x-ng-model="k.adopted"></p> <!-- Allows user to set boolean value of 'adopted' in $scope.kitties[k]. -->
+				</div>
+			</div>
+
+			<div id="right-container">
+				<h1>At their forever homes! <3</h1>
+				<div class="kitties" x-ng-repeat="k in kitties | filter: true"> <!-- Here, we're filtering kitties based on the 'adopted' boolean (looking for 'true'). Only kitties with 'true' present as a value will appear in this column. -->
+					<h2>My name is {{k.catName}}</h2>
+					<p>I am {{k.monthsOld}} months old.</p>
+					<p>I'm a {{k.gender}}.</p>
+					<img x-ng-src={{k.image}}>
+					<p>Send back to the pound by un-checking this! <input type="checkbox" x-ng-model="k.adopted"></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

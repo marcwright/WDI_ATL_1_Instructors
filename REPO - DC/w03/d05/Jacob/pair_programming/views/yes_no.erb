@@ -1,0 +1,10 @@
+<% if @yes_no_index < 2 %>
+<h1><%= @yes_no_string %></h1>
+<a href="/interrogative/<%= @next_index %>">YES</a>
+<a href="/declarative/<%= @yes_no_index %>">NO</a>
+
+<% else %>
+<h1><%= @yes_no_string %></h1>
+<a href="/declarative/2">YES</a>
+<a href="/declarative/3">NO</a>
+<% end %>

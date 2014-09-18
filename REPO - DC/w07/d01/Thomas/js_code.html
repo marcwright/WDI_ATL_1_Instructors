@@ -1,0 +1,138 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>I &hearts; JavaScript</title>
+  </head>
+
+  <body>
+    <script type='text/javascript'>
+
+    // JavaScript!
+    // This is a JavaScript comment
+    /* this is
+        a JavaScript
+        block comment
+    */
+
+    // variables
+    var beep = 'beep';
+
+    //Console Output
+    console.log(beep);
+
+    //Conditionals
+    var number = 5;
+    if (number > 5) {
+      console.log('BIG NUMBER');
+    } else if (number < 5) {
+      console.log('little number');
+    } else {
+      console.log('must be 5 then');
+    }
+
+    var day = 'Monday';
+    switch (day) {
+      case 'Monday' :
+      console.log('get haircut');
+      break;
+      case 'Tuesday' :
+      console.log('dont get a haircut');
+      break;
+      case 'Friday' :
+      console.log('get 3 haircuts');
+      default :
+      console.log('Im in limbo')
+    }
+
+    //while loop
+
+    var count = -10;
+    while (count < 0) {
+      console.log(count);
+      count++;
+    }
+
+// functions (like methods)
+
+//name
+
+function add(x, y){
+  return x + y;
+}
+
+// anonymous
+var add = function(x, y) {
+  return x + y;
+};
+
+//function with no arguments
+var scream = function() {
+  return 'AAAHHHHHHHHHHHH';
+};
+
+//arrays
+var myNameArray = ['Adam', 'Elaine', 'Travis'];
+
+//iteration
+var dwarves = ['Doc', 'Grumpy', 'Sleepy', 'Bashful', 'Dopey', 'Sneezy', 'Happy']
+
+//for loop
+for(var i = 0; i <= dwarves.length; i++) {
+  console.log ('Hi HO! I am' + dwarves[i]);
+}
+
+//enumeration
+dwarves.forEach(function(dwarf, index){
+  console.log(dwarves[index] + ' says hi');
+});
+
+  //object (literal notation)
+  var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+
+  var myBird = {name: "Tweety",
+                chirp: function(){
+                  console.log('tweet tweet tweet');
+                },
+                greet: function() {
+                  console.log('Hi my name is ' + this.name);
+                }
+              }
+
+  var person = {name: "Boonter",
+                hometown: "Jawbone",
+                sing: function() {
+                  console.log("I've been working on my BAAANNNjo");
+                },
+                greet: function() {
+                  console.log("Greetings, my name is " + this.name + ", is this your first time to " + this.hometown + "?" );
+                }
+              }
+
+  function dollarsToPounds(dollarValue) {
+      console.log('$' + dollarValue + ' is ' + "L" + (dollarValue * 0.5971));
+  }
+
+  function poundsToDollars(poundValue) {
+      console.log('L' + poundValue + ' is ' + "$" + (poundValue * 1.6748));
+  }
+
+  var currencyFrom = prompt("what currency are we converting from?");
+  var currencyTo = prompt("what currency are we converting to?");
+  var amount = prompt("what amount in " + currencyFrom + " do you have?")
+
+  function currencyConverter() {
+  var currencyFrom = prompt("what currency are we converting from?");
+  var currencyTo = prompt("what currency are we converting to?");
+  var amount = prompt("what amount in " + currencyFrom + " do you have?");
+    if (currencyFrom === "pounds") {
+      console.log('L' + amount + ' is ' + "$" + (amount * 1.6748));
+    } else {
+      console.log('$' + amount + ' is ' + "L" + (amount * 0.5971));
+    }
+  }
+
+
+  </script>
+  </body>
+
+</html>

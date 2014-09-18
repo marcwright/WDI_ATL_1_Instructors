@@ -1,0 +1,14 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-19 18:22:11
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-19 19:45:06
+
+ -->
+
+<h1><%= @song.title %></h1>
+
+<%= form_tag artist_song_path(@song.artist, @song), method: "delete" do %>
+  <%= submit_tag("destroy") %>
+<% end %>

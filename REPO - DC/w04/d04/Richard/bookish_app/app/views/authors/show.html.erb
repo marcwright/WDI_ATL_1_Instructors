@@ -1,0 +1,24 @@
+<h1>Here is <%= @author.name %></h1>
+<a href="/books/new"><button>Add a Book for The Author!</button><br></a>
+  <br>
+<img src="<%= @author.image_url %>" >
+
+
+
+<h2>Book's Written:</h2>
+<ul>
+  <li style="list-style-type: none; text-decoration: none">
+    <% @book.each do |book| %>
+  <a href="/authors/<%= @author.id %>/books/<%= book.id %>"><h2><%= book.title %></h2></a></li>
+<% end %>
+</ul>
+
+
+<form action="/authors/<%= @author.id %>" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="hidden" name="_method" value="delete">
+
+  <button>Remove Author</button>
+</form>

@@ -1,0 +1,13 @@
+<h1>Users#show</h1>
+<p><%= @user.name %> </p>
+<p><%= @user.email %> </p>
+
+
+<!--
+Form for requesting a delete action form out controller for a User.
+ -->
+<%= form_for @user, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>
+
+<%= link_to "Cancel", users_path %>

@@ -1,0 +1,92 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  background-image: url("../images/bgtile.png");
+  background-repeat: repeat-x;
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  text-align: center;
+  width: 850px;
+}
+
+.downloads a {
+  margin: 10px;
+}
+
+.footer {
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer li {
+  display:inline;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.footer a {
+  color: #1C5388;
+  font-size: smaller;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .copyright {
+  color: #C0C0C0;
+  font-size: smaller;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 150px;
+}
+
+.intro {
+  background-image: url("../images/frame.png");
+  background-repeat: no-repeat;
+  min-height: 284px;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.intro p {
+  text-align: left;
+}
+
+.phones {
+  float: left;
+}
+
+.phones img {
+  width: 280px;
+}
+
+.right_content {
+  float: left;
+  margin-left: 15px;
+  text-align: left;
+  width: 510px;
+}
+
+.right_content h2 {
+  color: #4B789E;
+}
+
+.right_content .downloads {
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+<form action='/items/<%=@item['id']%>' method='post'>
+  <dl>
+    <dt><label for='item'>Item :</label></dt>
+    <dd><input id='item' type='text' name='item' value='<%=@item['item']%>' autofocus></dd>
+  </dl>
+  <dl>
+    <dt><label for='details'>Details :</label></dt>
+    <dd><textarea id='details' name='details'><%=@item['details']%></textarea></dd>
+  </dl>
+  <button>Save Task</button>
+</form>

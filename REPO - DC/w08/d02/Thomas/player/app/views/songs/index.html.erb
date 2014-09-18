@@ -1,0 +1,21 @@
+<h1>Your Songs:</h1>
+
+<p>
+  <form id="search">
+    <input type="search" placeholder="Search for a song..." id="song-search">
+    <input type="submit" value="Submit">
+  </form>
+</p>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <% if song.preview_url %>
+      <%= song.title %>
+        <audio controls>
+          <source src="<%= song.preview_url %>">
+        </audio>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

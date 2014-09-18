@@ -1,0 +1,24 @@
+<% content_for :head do %>
+  <script type="text/template" id="tmpl_note">
+    <div class="note">
+      <h2><%%= note.get('title') %></h2>
+    </div>
+  </script>
+
+  <script type="text/template" id="tmpl_newnote">
+    <form>
+      <input name="title" placeholder="Note title" />
+      <input type="submit" value="Save note" />
+    </form>
+  </script>
+<% end %>
+
+<h1>My notes</h1>
+
+<a href="#new">Create new note</a>
+
+<div id="container">
+  <p>Please wait, application loading...</p>
+</div>
+
+

@@ -1,0 +1,26 @@
+<center><h1>WDInstagram</h1></center>
+<center><h3>"The social media phenomenon with a name like a 'Windows 98' virus."</h3></center>
+<br>
+<hr>
+  <center><a href="entries/new">
+  <button>POST AN ENTRY</button></a></center>
+  <br>
+  <hr>
+<% @entry.each do |entry| %>
+
+<hr>
+<img src="<%= entry.photo_url %>" width="200px" height="200px">
+<br>
+<h2>Author: </h2>
+<%= entry.author %><br>
+<h2>Date Taken: </h2>
+<%= entry.date_taken %><br>
+
+<a href="entries/<%= entry.id %>">
+  <button>SEE THIS ENTRY</button></a><br>
+  <hr>
+
+
+<% end %>
+
+

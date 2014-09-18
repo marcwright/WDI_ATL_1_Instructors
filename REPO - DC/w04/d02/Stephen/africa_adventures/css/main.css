@@ -1,0 +1,56 @@
+/*
+* @Author: stephenstanwood
+* @Date:   2014-05-13 14:08:21
+* @Last Modified by:   stephenstanwood
+* @Last Modified time: 2014-05-13 15:34:55
+*/
+
+body {
+  background: url(http://stanwoodsolutions.com/sandbox/cat_eye.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font: 14px/1.4em Arial, Helvetica, sans-serif, serfi;
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  width: 600px;
+}
+
+div p {
+  margin-bottom: 15px;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  font-size: 48px;
+  line-height: 120px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-decoration: blink;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 30px;
+
+}
+
+img {
+  -webkit-filter: blur(40px);
+  border-radius: 5px;
+
+  /*-webkit-filter: grayscale(100%);*/
+}
+
+img:hover {
+  -webkit-filter: blur(0px);
+}

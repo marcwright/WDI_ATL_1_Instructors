@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head><title>I &hearts; JavaScript</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+  /*
+  var currentTemp = prompt("What is the current temp?");
+  var functional = prompt("Does the A/C work? (y/n)");
+  var desiredTemp = prompt("What temp would you like it to be?");
+
+switch (functional) {
+  case "y" :
+    if (desiredTemp < currentTemp) {
+      console.log("Turn on the A/C Please.");
+      break;
+    }
+  case "n" :
+    if (currentTemp > desiredTemp){      console.log("Fix the A/C NOW!");
+      } else if (currentTemp < desiredTemp) {
+      console.log("Fix it whenevs");
+  }
+}
+*/
+var randomNum = Math.floor(Math.random()*9 + 1)
+var guess = prompt("Guess a Number 1- 10!!!")
+var count = 1
+
+while (randomNum !== guess ) {
+
+  if (guess > randomNum) {
+      guess = parseInt(prompt("Too High, guess again"));
+
+    } else if (guess < randomNum) {
+      guess = parseInt(prompt("Too low, guess again"));
+
+    } else {
+      guess = parseInt(prompt("That isn't a number, try again."));
+    }
+    count ++;
+  };
+
+  alert("You are correct sir!, it only took you " + count + " tries")
+
+</script>
+
+</body>
+
+</html>

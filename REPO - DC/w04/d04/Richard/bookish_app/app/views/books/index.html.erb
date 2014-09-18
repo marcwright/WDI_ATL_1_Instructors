@@ -1,0 +1,9 @@
+<h1>Here is a list of all of the Books in our inventory!</h1>
+
+<% @books.each do |book| %>
+  <a href="/books/<%= book.id %>"><h2><%= book.title %></h2></a>
+<% end %>
+
+
+<a href="/books/new">Add a Book</a>
+

@@ -1,0 +1,51 @@
+/*
+  red: #F92672;
+  orange: #FD971F;
+  yellow: #E6DB74;
+  green: #A6E22E;
+  blue: #66D9EF;
+  purple: #AE81FF;
+  black: #272822;
+  white: #F8F8F0;
+  grey: #7C7865;
+*/
+
+body {
+  background: linear-gradient(to right, #272822, #7C7865, #272822);
+  color: #F8F8F0;
+  font-size: 62.5%;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6em;
+}
+
+h1 {
+  color: #66D9EF;
+  font-size: 3.2em;
+  font-weight: 900;
+  padding: 1.6em;
+}
+
+h2 {
+  color: #AE81FF;
+  font-size: 1.6em;
+  font-weight: 900;
+  padding: 0.8em;
+}
+
+img {
+  border: 8px solid #F8F8F0;
+}
+
+.container {
+  background: #272822;
+  background: rgba(39, 40, 34, 0.75);
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+}
+
+.trip {
+  padding: 16px 0;
+}

@@ -1,0 +1,7 @@
+<h1>Books By <%= Author.find(params[:author_id]).name %></h1>
+
+<% @books.each do |book| %>
+  <ul>
+    <li><%= book.title %></li>
+  </ul>
+  <% end %>

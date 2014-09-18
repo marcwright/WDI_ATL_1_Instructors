@@ -1,0 +1,22 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:53:10
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:13:17
+
+ -->
+
+<%= form_for @event do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :time %>
+  <%= f.time_field :time %>
+
+  <%= f.collection_select(:band_id, @bands, :id, :name, :include_blank => "Pick Band") %>
+
+  <%= f.collection_select(:venue_id, @venues, :id, :name, :include_blank => "Pick Venue") %>
+
+  <%= f.submit "Submit" %>
+<% end %>

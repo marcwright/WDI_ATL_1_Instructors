@@ -1,0 +1,4 @@
+shows=["Girls", "Silicon Valley", "House of Cards", "Star Trek"]
+
+while count < shows.length
+	puts "I love #{shows}

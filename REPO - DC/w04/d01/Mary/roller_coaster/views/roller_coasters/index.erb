@@ -1,0 +1,7 @@
+<h1>Here are the roller coasters:</h1>
+<ul>
+<% @roller_coasters.each do |ride| %>
+  <li><a href="/roller_coasters/<%=ride.id%>"><%= ride.name %></a></li>
+<% end %>
+</ul>
+

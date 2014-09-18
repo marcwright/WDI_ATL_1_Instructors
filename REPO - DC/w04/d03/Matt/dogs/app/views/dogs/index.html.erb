@@ -1,0 +1,6 @@
+<h1>Dog Controller Index</h1>
+
+<% @dogs.each do |dog| %>
+  <h2><%= dog.name %> &ndash; <%= dog.age %> - <%= dog.id %></h2>
+  <img src="<%= dog.image_url %>" alt="">
+<% end %>

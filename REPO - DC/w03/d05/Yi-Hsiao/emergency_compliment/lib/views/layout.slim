@@ -1,0 +1,10 @@
+html
+  head
+    link rel="stylesheet" href="/style.css"
+    / displays random background
+    css:
+      body {
+        background: #{ @rand_background };
+      }
+  body
+    == yield

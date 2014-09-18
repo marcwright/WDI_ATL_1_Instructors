@@ -1,0 +1,23 @@
+<h2>Category Details</h2>
+
+<div class="container2"> 
+
+  <h2>
+    <%= @category.name %>
+  </h2>
+
+
+  <h3>Recipes:</h3>
+  <%if @category_recipes%>
+    <%@category_recipes.each do |recipe| %>
+      <%= link_to recipe[0],recipe_path(recipe[1])%><br>
+
+          
+              
+      
+    <%end%>
+  <%end%>  
+
+  
+
+</div>  

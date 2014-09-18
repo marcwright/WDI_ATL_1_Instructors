@@ -1,0 +1,10 @@
+<h1>Photos:</h1>
+
+<% @photos.each do |pic|%>
+<h2>By: <%= pic.author %> </h2>
+<a href="/photos/<%= pic.id %>"> <img src="<%= pic.photo_url %>"></a>
+<h3>Taken on: <%= pic.date_taken %> </h3>
+<%end%>
+
+
+<br><a href="/photos/new">Create New Photo</a></br>

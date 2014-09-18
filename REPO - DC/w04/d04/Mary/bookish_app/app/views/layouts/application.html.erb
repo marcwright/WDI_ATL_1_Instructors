@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookishApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<ul style="display: inline; padding:10px">
+  <li style="display: inline;"><a href="/">Homepage</a></li>
+  <li style="display: inline;"><a href="/authors">Author List</a></li>
+  <li style="display: inline;"><a href="/books">Book List</a></li>
+  <li style="display: inline;"><a href="/characters">Character List</a></li>
+</ul>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<h1>Welcome to Koopaville!!</h1>
+<h2>Here are the koopas...drum roll please....:</h2>
+<ul>
+<% @koopas.each do |koopa| %>
+  <li><a href="/koopas/<%=koopa.id%>"><%= koopa.name %></a></li>
+<% end %>
+</ul>
+
+<a href='/koopas/new'>I wanna add another one!</a>

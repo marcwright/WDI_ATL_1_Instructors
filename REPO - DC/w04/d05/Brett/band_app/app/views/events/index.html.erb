@@ -1,0 +1,11 @@
+<h1>Events</h1>
+
+<ul>
+  <% @events.each do |event| %>
+  <!-- event refers to the model -->
+    <li><%= link_to event.date, event %></li>
+  <% end %>
+</ul>
+
+<!-- Add an event -->
+<p><%= link_to "Add an event", new_venue_event_path %></p>

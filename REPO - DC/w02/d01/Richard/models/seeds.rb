@@ -1,0 +1,5 @@
+  $new_shelter = Shelter.new("Wags and Tags")
+  $animal_1 = Animal.new("Romeo", "Dog", 15)
+  $animal_2 = Animal.new("Rascal", "Cat", 24)
+  $client_1 = Client.new("Richard Hessler", 26, $animal_1)
+  $client_2 = Client.new("Sara Hessler", 25, $animal_2)

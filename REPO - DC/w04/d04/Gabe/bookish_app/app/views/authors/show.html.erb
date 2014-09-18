@@ -1,0 +1,20 @@
+<center><h1>Author Details:</h1>
+<h2>
+</center><%= @author.id %>)<center><br>
+<img src="<%= @author.image_url %>" length="250" width="250"><br>
+Name: <b><%= @author.name %></b><br>
+Date of Birth: <b><%= @author.dob %></b><br>
+Gender: <b><%= @author.gender %></b><br>
+Pseudonym: <b>This <% if @author.has_pseudonym == true %>is not<% else %>is<% end %> their birth name.</b><br>
+
+</h2>
+</center>
+
+<hr>
+<a href="/authors"><button>Back to all Authors</button></a>
+<a href="/authors/<%= @author.id %>/books"><button>See <%= @author.name %>'s Books</button></a>
+<a href="/authors/<%= @author.id %>/books/new"><button>Add A Book</button></a>
+<a href="/authors/<%= @author.id %>/edit"><button>Edit this Author's Details</button></a>
+<a href="/authors/<%= @author.id %>/delete"><button>Delete this Author</button></a>
+
+<hr>

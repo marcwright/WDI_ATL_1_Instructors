@@ -1,0 +1,53 @@
+<html>
+  <head>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>        
+        go=(function() {
+// Initialize the datepicker with your desired options
+          $( "#datepicker" ).datepicker({
+            numberOfMonths: 4,
+            showButtonPanel: true,
+            showWeek: true,
+            firstDay: 1,
+//            dayNamesMin: ["britney", "michael", "gerry", "kim", "salman", "jizzy", "gordon"],
+            dateFormat: "yy-mm-dd"
+          });
+
+          $( "#from" ).datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 3,
+            onClose: function( selectedDate ) {
+              $( "#to" ).datepicker( "option", "minDate", selectedDate );
+            }
+          });
+          $( "#to" ).datepicker({
+            defaultDate: "+1m",
+            changeMonth: true,
+            numberOfMonths: 3,
+            onClose: function( selectedDate ) {
+              $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+            }
+          });
+
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Datepicker</h1>
+    <div>
+      <p>Date: <input type="text" id="datepicker" /></p>
+      <hr>
+      <p>
+        <label for="from">From</label>
+        <input type="text" id="from" name="from" />
+
+        <label for="to">to</label>
+        <input type="text" id="to" name="to" />
+      </p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+body {
+	background-color: gray;
+	background-image: url(http://upload.wikimedia.org/wikipedia/commons/d/da/Claude_Monet,_Saint-Georges_majeur_au_cr%C3%A9puscule.jpg);
+	background-repeat: repeat-y;
+
+
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	line-height: 14px;
+	font: 25px/1em Arial, Helvetica, sans-serif;
+}
+
+.container {
+	background-color: white;
+	margin: 0 auto;
+	text-align: center;
+	width: 600px;
+	padding: 20px;
+}
+.container h1 {
+	background-color: red;
+	border: 1px solid red;
+	color: white; 
+	margin: 0 auto;
+	width: 600px;
+}
+
+.container h2 {
+	color: red;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.container h3 {
+	background-color: red;
+	border: 5px solid red; 
+	margin: 0 auto;
+	width: 600px;
+}
+
+.container img {
+	border-radius: 10px;
+	box-shadow:  2px 2px 5px rgpa(0, 0, 0, 0.5);
+}
+
+.container ul {
+	list-style-type: disc inside none; 
+}

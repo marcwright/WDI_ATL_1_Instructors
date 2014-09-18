@@ -1,0 +1,18 @@
+<% if signed_in? %>
+  <p>Your score is <%= current_user.total_score %></p>
+  <p>This puts you <%= current_user.leaderboard_position.ordinalize %> in the leaderboard</p>
+<% end %>
+
+<h2>Leaderboard</h2>
+<table class='leaderboard'>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.total_score %></td>
+    </tr>
+  <% end %>
+</table>

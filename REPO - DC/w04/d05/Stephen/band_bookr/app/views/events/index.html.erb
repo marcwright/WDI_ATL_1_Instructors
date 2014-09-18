@@ -1,0 +1,25 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 20:25:08
+
+ -->
+
+<h1>Events</h1>
+
+<% if @events.empty? %>
+
+  <p>No events yet!</p>
+
+<% else %>
+
+  <!-- List -->
+  <ul>
+    <% @events.each do |event| %>
+      <li><%= link_to event.to_s, event %></li>
+    <% end %>
+  </ul>
+
+<% end %>

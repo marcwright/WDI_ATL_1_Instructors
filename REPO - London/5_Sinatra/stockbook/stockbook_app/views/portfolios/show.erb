@@ -1,0 +1,84 @@
+<dl>
+  <dt>
+    <label>Name:</label>
+  </dt>
+  <dd>
+    <%=@portfolio.name %>
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    <label>Description:</label>
+  </dt>
+  <dd>
+    <%=@portfolio.description %>
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    <label>Category:</label>
+  </dt>
+  <dd>
+    <%= @portfolio.category.name if @portfolio.category %>
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    <label>Stocks:</label>
+  </dt>
+  <dd>
+    <% if @portfolio.stocks.any? %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Buying price</th>
+          <th>Current price</th>
+          <th>Holding</th>
+          <th>Value</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <% @portfolio.stocks.each do |stock| %>
+          <tr>
+            <td><%= stock.name %></td>
+            <td><%= '%.2f' % stock.buying_price %></td>
+            <td><%= '%.2f' % stock.current_price %></td>
+            <td><%= stock.holding %></td>
+            <td><%= '%.2f' % stock.value %></td>
+            <td><a href="/portfolios/<%= @portfolio.id %>/stocks/<%= stock.id %>/edit">edit</a></td>
+            <td><a href="/portfolios/<%= @portfolio.id %>/stocks/<%= stock.id %>/delete">dump</a></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td>Total Value</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><%= '%.2f' % @portfolio.value %></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      </table>
+    <% end %>
+    <a href="/portfolios/<%= @portfolio.id %>/stocks/new">buy stock</a>
+  </dd>
+</dl>
+
+<div class='clear_both'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+

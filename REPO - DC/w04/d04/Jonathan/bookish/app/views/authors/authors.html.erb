@@ -1,0 +1,9 @@
+<h1>Author List</h1>
+
+<% @authors.each do |author| %>
+  <h2><%= author.name %></h2>
+  <p><%= author.dob %></p>
+  <p><%= author.gender %></p>
+  <p><%= author.has_pseudonym %></p>
+  <a href="<%= "/authors/#{params[:id]}" %>"></a>
+<% end %>

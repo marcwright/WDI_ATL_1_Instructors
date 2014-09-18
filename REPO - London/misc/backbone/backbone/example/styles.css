@@ -1,0 +1,32 @@
+body {
+    background-color: #aac;
+}
+
+#container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    text-align: center;
+    background-color: #004;
+    color: #eee;
+    min-height: 80px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+li {
+    display: inline-block;
+    border: 1px solid black;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+li h1 {
+    font-size: 120%;
+    text-align: center;
+}

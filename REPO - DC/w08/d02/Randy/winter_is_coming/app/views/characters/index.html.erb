@@ -1,0 +1,25 @@
+<h1>In the Game of Thrones, You Win or You Die...</h1>
+
+
+  <form>
+    <fieldset>
+      <legend>New Character</legend>
+      <label>
+        <input type="text" name="name" class="text-field">
+        <input type="submit" value="Dragons!" class="button">
+      </label>
+    </fieldset>
+  </form>
+
+  <ul>
+  <% @characters.each do |character| %>
+
+    <li data-character-id="<%= character.id %>" class="<%= character.dead ? "dead" : "" %> list-item">
+      <%= character.name %>
+      <%= check_box_tag :dead, 'yes', character.dead %>
+      <span>&times;</span>
+    </li>
+
+  <% end %>
+
+  </ul>

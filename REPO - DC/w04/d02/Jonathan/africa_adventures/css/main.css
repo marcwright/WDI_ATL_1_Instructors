@@ -1,0 +1,36 @@
+body {
+  background-color: gray;
+  background-image: url("https://www.moyodirectory.com/uploads/photos/de7558ea604cd7619f3c0cf1cd66eea491ce3c08.jpeg");
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+  line-height: 1.4em;
+  padding: 20px;
+
+}
+
+.container {
+  background-color: white;
+/*  border: 10px solid red;
+*/  margin: 0 auto;
+    text-align: center;
+    width: 600px;
+}
+
+h1 {
+  background-color: brown;
+  color: white;
+  font-size: 36px;
+  font-family: Pacifico, sans-serif;
+  line-height: 2.4em;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Pacifico, sans-serif;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+  margin-top: 24px;
+}

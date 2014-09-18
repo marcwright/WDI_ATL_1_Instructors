@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app="watch-app">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="commanderSally">
+    <input ng-init="watchme = 0" style="width:30%; background-color:#1234ef; color:silver;" type="text" ng-model="watchme" placeholder="Change me if you dare!" />
+    {{ somethingNew }}
+    <p>This will blow up in your face! Open the console and study the app.js</p>
+  </body>
+</html>

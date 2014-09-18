@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <p>
+        <% if current_user %>
+          hello <%= current_user.email %>
+          <%= link_to 'logout', logout_path %>
+        <% else %>
+          <%= link_to 'login', login_path %>
+        <% end %>
+      </p>
+
+      <nav>
+        <ul>
+          <li>
+            <%=link_to 'users', users_path %>
+          </li>
+          <li>
+            <%=link_to 'recipes', recipes_path %>
+          </li>
+          <li>
+            <%=link_to 'ingredients', ingredients_path %>
+          </li>
+          <li>
+            <%=link_to 'categories', categories_path %>
+          </li>
+        </ul>
+
+      </nav>
+
+      <%= content_tag :h1, yield(:title) if show_title? %>
+
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}", class: "flash-message flash-message-#{name}" %>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

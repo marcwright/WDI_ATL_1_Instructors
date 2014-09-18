@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lte IE 6 ]><html lang="en" class="oldie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="oldie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+  <title>OO Design</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+  <link rel="stylesheet" media="screen,projection" href="style/screen.css"/>
+</head>
+<body>
+<div class="page">
+	<div class="slide section">
+		<h1>Object-Oriented Design</h1>
+	</div>
+
+  <div class="slide">
+    <img src="images/procedure.jpg" alt="" class="right">
+    <h2>Procedures</h2>
+    <ul>
+      <li>Define a list of tasks to perform.</li>
+      <li>Tasks build upon one another.</li>
+    </ul>
+  </div>
+
+  <div class="slide section">
+    <h2>Procedures quickly hit critical mass.</h2>
+    <blockquote>As the size of a procedural program grows, it becomes increasingly difficult to understand, and thus harder to modify.</blockquote>
+  </div>
+
+  <div class="slide">
+    <img src="images/procedure.jpg" alt="" class="right">
+    <h2>Procedures fail because...</h2>
+    <ul>
+      <li>Small changes cascade down through the program.</li>
+      <li>Changing one thing breaks another.</li>
+      <li>Customization is difficult, which leads to repitition.</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>What is OO?</h2>
+
+    <blockquote>An object-oriented program is designed as a collection of <strong>interacting objects</strong>, rather than a <strong>list of tasks</strong> to perform.</blockquote>
+  </div>
+
+	<div class="slide section">
+		<h2>Two approaches to flight:</h2>
+		<img src="images/flight1.png" alt="" class="matte">
+		<img src="images/flight2.jpg" alt="" class="matte">
+	</div>
+	
+  <div class="slide">
+    <img src="images/flight1.png" alt="" class="right">
+    <h2>The procedural flight system</h2>
+
+    <ul class="notes">
+      <li>The application is dependent on all mechanics.</li>
+      <li>Parts are individually dysfunctional.</li>
+      <li>Does not support partial testing.</li>
+    </ul>
+  </div>
+
+	<div class="slide">
+		<img src="images/flight2.jpg" alt="" class="right">
+		<h2>The OO flight system</h2>
+
+		<ul class="notes">
+			<li>The application is the sum of its parts.</li>
+			<li>Individual objects are testable.</li>
+			<li>Easily scalable design.</li>
+			<li>Individual objects are customizable.</i>
+		</ul>
+	</div>
+	
+	<div class="slide section">
+		<h2>Core concepts of OO</h2>
+		<p>Role. <br>Interface. <br>Encapsulation.</p>
+	</div>
+	
+	<div class="slide">
+		<h2>Role</h2>
+		<ul>
+			<li>Objects should have a <b>single</b> role to play, or job to do.</li>
+      <li>They should only contain the code for their specific job.</li>
+		</ul>
+	</div>
+	
+  <div class="slide">
+    <h2>Interface</h2>
+    <ul>
+      <li>Objects expose a public <b>interface</b>, or <i>set of known methods</i>.</li>
+      <li>Objects communicate with each other using their respective interfaces.</li>
+    </ul>
+  </div>
+
+	<div class="slide">
+		<h2>Encapsulation</h2>
+		<ul>
+			<li>Objects are self-contained "black boxes" of code.</li>
+			<li>They conceal their internal methodologies.</li>
+			<li>They are not concerned with each other's <em>internal</em> workings.</li>
+		</ul>
+	</div>
+		
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+</body>
+</html>

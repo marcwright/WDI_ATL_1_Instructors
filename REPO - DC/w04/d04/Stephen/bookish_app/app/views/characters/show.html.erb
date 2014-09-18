@@ -1,0 +1,19 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:17:24
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 08:17:21
+
+ -->
+
+<h2>Viewin' a Character</h2>
+
+<h3><%= @character.name %>, a <%= @character.gender %> who <%= @character.quirk %> (from "<%= @book.title %>" by <%= @book.author.name %>)</h3>
+
+<form action="/books/<%= @character.book.id %>/characters/<%= @character.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="submit" value="Delete">
+</form>

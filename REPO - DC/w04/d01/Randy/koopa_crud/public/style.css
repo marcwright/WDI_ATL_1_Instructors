@@ -1,0 +1,43 @@
+body {
+  color: #5179D2;
+  text-align:center;
+  font-family: 'fantasy';
+  font-size: 24px;
+  background-color: #DEE262;
+}
+
+h1 {
+  margin: 55px;
+}
+
+a {
+    color: #ED9413;
+    text-decoration: underline;
+    margin: 20px;
+    padding: 10px;
+}
+
+a:hover {
+    color: #29DB27;
+}
+
+.done {
+    border: 3px #00d solid;
+    border-bottom: 3px #008 solid;
+    border-right: 3px #008 solid;
+    background: #00b;
+}
+
+.yes {
+    border: 3px #0a0 solid;
+    border-bottom: 3px #040 solid;
+    border-right: 3px #040 solid;
+    background: #080;
+}
+
+.no {
+    border: 3px #c00 solid;
+    border-bottom: 3px #600 solid;
+    border-right: 3px #600 solid;
+    background: #a00;
+}

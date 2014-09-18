@@ -1,0 +1,9 @@
+<h1>Movie Database</h1>
+
+<%= form_for :movie, url: movies_path, method: :get do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br><br>
+  <%= f.submit %>
+
+<% end %>

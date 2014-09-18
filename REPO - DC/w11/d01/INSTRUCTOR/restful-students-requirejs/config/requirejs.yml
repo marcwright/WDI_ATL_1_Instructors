@@ -1,0 +1,13 @@
+paths:
+  text: 'requirejs-text'
+
+shim:
+  jquery_ujs:
+    deps: ["jquery"]
+    exports: "$"
+  jquery_serialize_object:
+    deps: ["jquery"]
+    exports: "$"
+
+modules:
+  - name: 'students/main'

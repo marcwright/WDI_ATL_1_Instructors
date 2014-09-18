@@ -1,0 +1,85 @@
+<form action="/ponies" method="post">
+
+  <label>
+    Name
+    <input type="text" name="pony_name">
+  </label>
+
+  <label>
+    Breed
+    <input type="text" name="pony_breed">
+  </label>
+
+  <button>Submit</button>
+</form><br/>
+
+<h1> Book Your Flight</h1>
+<form action="/flight_site" method="post">
+  <label>
+    First Name
+    <input type="text" name="first_name">
+  </label>
+
+  <label>
+    Last Name
+    <input type="text" name="last_name">
+  </label><br/>
+
+  <label>
+    Origin
+    <input type="text" name="origin">
+  </label>
+
+  <label>
+    Destination
+    <input type="text" name="destination">
+  </label>
+
+  <label>
+    Date
+    <input type="date" name="date">
+  </label>
+  <button>Submit</button>
+</form><br/>
+
+<h1> Login Screen</h1>
+<form action="/login" method="post">
+  <label>
+    Email
+    <input type="email" name="email_address">
+  </label>
+
+  <label>
+    Password
+    <input type="password" name="password">
+  </label>
+  <button>Submit</button>
+</form><br/>
+
+<h1> Order Some Noms</h1>
+<form action="/pizza_delivery" method="post">
+  <label>
+    Pizza Size<br/>
+    <input type ="text" name="pizza_size" list="sizes">
+  </label>
+  <datalist id="sizes">
+    <label>
+      <select name="size">
+        <option> Small
+        <option> Medium
+        <option> Large
+      </select>
+    </label>
+  </datalist><br/>
+   <label>
+      Cheese
+    <input type="checkbox" checked="false"><br/>
+      Pepperoni
+    <input type="checkbox" checked="false"><br/>
+      Olives
+    <input type="checkbox" checked="false"><br/>
+      Mushrooms
+    <input type="checkbox" checked="false"><br/>
+  </label>
+<button>Submit</button>
+</form>

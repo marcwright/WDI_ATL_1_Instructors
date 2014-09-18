@@ -1,0 +1,8 @@
+<h1><%= @koopa.to_s %></h1>
+<p><img src="<%= @koopa.photo_url %>" height="250" width="250"><p>
+<p><a href="/koopas/<%= @koopa.id %>/edit">edit</a></p>
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete this koopa!</button>
+</form>

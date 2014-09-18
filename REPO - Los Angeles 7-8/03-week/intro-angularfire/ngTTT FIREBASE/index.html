@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html x-ng-app="TTTApp">
+<head>
+    <title>TTT REFERENCE WITH FIREBASE</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/ngTTT.css">	
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.18/firebase.js'></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>    
+</head>
+<body>
+    <div x-ng-controller="TTTController" ng-model = "gameContainer">
+        <p>TTT Reference with Firebase: {{gameContainer.clickCounter}} clicks</p>
+        <div class="theBox" >
+            <div x-ng-repeat="currentCell in gameContainer.cellListArray">
+                <div class="allCellsAlways" ng-click="playerPicks(currentCell)"
+                ng-class="{xclass: currentCell.status=='X', oclass: currentCell.status =='O'}">
+            </div>
+        </div>
+    </div>
+    <br>
+    {{testString}}
+    <p></p>
+    <button ng-click="testJS()">JS TEST BUTTON</button>  <button ng-click="testFB()">FB TEST BUTTON</button>
+</div>
+
+</body>
+</html>
+
+

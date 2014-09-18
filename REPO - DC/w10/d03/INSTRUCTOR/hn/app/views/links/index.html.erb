@@ -1,0 +1,21 @@
+<h1>Hacker News</h1>
+
+<form>
+  <fieldset>
+    <legend>Submit a Link</legend>
+    <label>
+      URL
+      <input type="text" name="url" />
+    </label>
+    <button>Submit</button>
+  </fieldset>
+</form>
+
+<ol id="container"></ol>
+
+<script type="template" id="link-html">
+  <h2><%%= link.get('title') %> -- <%%= link.get('votes') %> upvotes</h2>
+  <a href="<%%= link.get('url') %>"><%%= link.get('url') %></a>
+  <span class="upvote"> &hearts; </span>
+  <span class="destroy"> &times; </span>
+</script>

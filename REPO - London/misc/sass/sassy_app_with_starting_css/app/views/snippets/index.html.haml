@@ -1,0 +1,23 @@
+%h1 Sassy CSS Snippets
+
+%hr
+
+- @snippets.each do |snippet|
+  .grid
+    = link_to snippet do
+      %h2= snippet.title
+    .result.row
+      .col.result-panel
+        = snippet.result
+      .col
+        %pre.snippet.read-only-scss-snippet~ snippet.scss_input
+
+  %br
+    = link_to "Show", snippet
+    = link_to "Edit", edit_snippet_path(snippet)
+    = link_to "Delete", snippet, method: :delete, confirm: "Are you sure?"
+  %hr
+
+%br
+
+= link_to 'New Snippet', new_snippet_path

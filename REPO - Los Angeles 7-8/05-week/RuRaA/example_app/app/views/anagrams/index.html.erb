@@ -1,0 +1,34 @@
+<h1>Anagram of Palindrome Checker</h1>
+
+<input style="font-size:20px" type="text" ng-model="teststring" ng-change="is_anagram()" ng-class="{is_anagram: data == 1, not_anagram: data == 0}" autofocus />
+
+<p>A string is a palindrome if it has exactly the same sequence of characters when read left-to-right as it has when read right-to-left. For example, the following strings are palindromes:</p>
+
+<ul>
+  <li>"kayak"</li>
+  <li>"anna"</li>
+  <li>"neveroddoreven"</li>
+</ul>
+
+<p>A string is an anagram of a string B if A can be obtained from B by rearranging the characters. For example, in each of the following pairs one string is an anagram of the other:</p>
+
+<ul>
+  <li>"mary" and "army"</li>
+  <li>"rocketboys" and "octobersky"</li>
+  <li>"hogwarts" and "hogwarts"</li>
+</ul>
+
+<p>Write a function:</p>
+
+<pre>    def solution(s)</pre>
+
+<p>that, given a non-empty string s consisting of N characters, returns 1 if s is an anagram of some palindrome and returns 0 otherwise.</p>
+
+<p>Assume that:</p>
+<ul>
+  <li>N is an integer within the range [1..100,000]</li>
+  <li>string s consists only of lower-case letters (a-z)</li>
+</ul>
+
+<p>For example, given s = "dooernedeevrvn", the function should return 1, because "dooernedeevrvn" is an anagram of the palindrome "neveroddoreven". Given s = "aabcba", the function should return 0.</p>
+

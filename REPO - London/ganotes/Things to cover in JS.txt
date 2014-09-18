@@ -1,0 +1,4 @@
+Object literals
+DOM loading order
+$(document).ready
+Publish subscribe (not JS week)

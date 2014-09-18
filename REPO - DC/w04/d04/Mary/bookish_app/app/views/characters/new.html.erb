@@ -1,0 +1,22 @@
+<h1>Add another character to <%= Book.where(id: @book_id) %></h1>
+
+<form action="/books/<%=@book_id%>/characters" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <label for="name-attribute">
+    Name:
+    <input type="text" name="name" id="name-attribute">
+  </label>
+
+  <label for="gender-attribute">
+    Gender:
+    <input type="text" name="gender" id="gender-attribute" >
+  </label>
+
+  <label for="quirk-attribute">
+    Quirk:
+    <input type="text" name="quirk" id="quirk-attribute" >
+  </label>
+
+  <input type="submit" value="Add character">
+</form>

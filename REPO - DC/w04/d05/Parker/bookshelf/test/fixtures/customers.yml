@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  active: false
+  credit_limit: 9.99
+  last_contact_at: 2014-05-16 16:29:42
+
+two:
+  name: MyString
+  description: MyText
+  active: false
+  credit_limit: 9.99
+  last_contact_at: 2014-05-16 16:29:42

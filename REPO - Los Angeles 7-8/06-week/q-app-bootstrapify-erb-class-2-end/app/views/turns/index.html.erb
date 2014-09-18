@@ -1,0 +1,116 @@
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>
+        WDI Office Hours
+      </h1>
+      <h2>
+        Queue for office hours! <%= Time.now.strftime("%A") %> <%= Date.today %>
+      </h2>
+      Your Instructors and TAs tonight are:<br>
+      <strong><%= @office_hours_helpers %></strong>
+      <hr>
+      <ul class="list-group">
+
+        <% @turns.each do |t| %>
+
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading"><%= t.user.name %></h4>
+            <p class="list-group-item-text">Subject: <%= t.subject %></p>
+            <p class="list-group-item-text">Question: <%= t.question %></p>
+          </li>
+
+        <% end %>
+
+      </ul>
+    </div>
+
+    <div class="col-sm-5 col-sm-offset-1">
+      <h2>
+        Please wait your turn and add yourself to the queue
+      </h2>
+      <hr>
+
+      <% if current_user %>
+        <%= link_to 'Add me to the queue!', new_turn_path, class: 'btn btn-primary btn-large btn-success' %>
+      <% else %>
+        <%= link_to 'Log in to be added to the queue!', new_turn_path, class: 'btn btn-primary btn-large btn-success', disabled: true %>
+      <% end %>
+
+      <hr>
+      <h2>
+        Want a cool feature added in??!
+      </h2>
+      <%= link_to 'Request a Feature!', new_feature_path, class: 'btn btn-primary btn-large' %>
+      <hr>
+
+      <ul class="list-group">
+
+      <% @features.each do |feature| %>
+
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading">
+              <%= feature.name %>
+            </h4>
+            <p class="list-group-item-text">
+              <%= feature.description %>
+            </p>
+          </li>
+
+        <% end %>
+
+      </ul>
+
+              <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+
+            <div class="col-sm-4 col-sm-offset-4">
+              <h2>
+                Please wait your turn and add yourself to the queue
+              </h2>
+              <hr>
+
+              <%= form_for @turn, html: { class: 'form' } do |f| %>
+
+                <div class="form-group">
+                    <%= f.text_field :subject, placeholder: "Subject", class: 'form-control' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.text_field :question, placeholder: "Question", class: 'form-control' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.submit "Add me to the queue!", class: 'btn btn-primary btn-large' %>
+                </div>
+
+              <% end %>
+
+            </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+  </div>

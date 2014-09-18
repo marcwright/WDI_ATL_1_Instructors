@@ -1,0 +1,19 @@
+<h1> This is <%= @band.name %>'s page. Search events here.</h1>
+
+<p>This band is of the <%= @band.genre%> genre. They are
+  <% if @band.has_explicit_lyrics == true %>
+    NOT kid friendly.
+  <% else %>
+    kid friendly.
+  <% end %>
+</p>
+
+<p>Here is a performance of theirs </p>
+<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/<%= @band.video_embed_url %>?autoplay=1"
+  frameborder="0"/></iframe>
+
+
+<p><%= link_to "Edit this band?", edit_band_path(@band)%></p>
+<p><%= link_to "Return to all bands", bands_path %></p>
+

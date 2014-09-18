@@ -1,0 +1,15 @@
+<p>Lookup Stock Quotes</p>
+<form action="/" method="get">
+  <label for="stock_symbol">Stock Symbol</label>
+  <input id="stock_symbol" name="symbol" placeholder="Example: GOOGL" type="text">
+  <input type="submit" value="Get quote">
+</form>
+
+<% if @stock %>
+<dl>
+  <% @stock.each do |attribute, value| %>
+    <dt><%= attribute %></dt>
+    <dd><%= value %></dd>
+  <% end %>
+</dl>
+<% end %>

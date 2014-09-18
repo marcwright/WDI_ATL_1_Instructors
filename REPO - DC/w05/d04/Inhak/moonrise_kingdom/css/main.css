@@ -1,0 +1,59 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+body {
+  margin: 0;
+  background-image: url("../images/wood.jpg");
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+body .form{
+  background-color: #eabc6f;
+  height: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 710px;
+}
+
+body .form .border{
+  border-style: solid;
+  height: 480px;
+  padding: 10px;
+  width: 690px;
+}
+
+body .heading h1{
+  text-align: center;
+}
+
+body .heading{
+  text-transform: uppercase;
+}
+
+body .pictext{
+  background-color: #EDEB85;
+  box-shadow: 2px 2px black;
+  float: right;
+  padding: 20px;
+}
+
+body .form p {
+  font-size: 14px;
+}
+
+body .form .answers{
+  font-family: 'Crafty Girls', script;
+}

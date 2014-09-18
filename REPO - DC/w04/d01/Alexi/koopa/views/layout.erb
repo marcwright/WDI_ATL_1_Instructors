@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Koopas!</title>
+  <style>
+    body {
+      background-color: <%= @color %>;
+      font-family: helvetica;
+      color: gray;
+      width: 900px;
+      margin: 0 auto
+    }
+
+    div {
+      font: bold 72px helvetica;
+      margin-top: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+
+</html>

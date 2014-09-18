@@ -1,0 +1,9 @@
+h1 The Koopa Troops
+
+- for koopa in @koopas
+  div.koopa-row
+    h2 = koopa.name
+    a[class="profile-#{ koopa.id }" href="/koopas/#{ koopa.id }"]
+      img.profile-img[src = koopa.photo_url]
+
+a.add-new[href="/koopas/new"] Add A Koopa

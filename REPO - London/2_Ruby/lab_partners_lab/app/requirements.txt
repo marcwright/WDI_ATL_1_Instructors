@@ -1,0 +1,10 @@
+# Overview
+==========
+create an app that will randomly assign groups for the class
+
+## Tasks
+========
+Takes a group size as input and prints out what the groups are. 
+
+If the class does not divide evenly into the group size, decide and justify what should happen with the remaining students.
+

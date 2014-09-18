@@ -1,0 +1,39 @@
+body {
+  background-color: gray;
+  background-image: url(http://yamininaidu.com.au/wp/wp-content/uploads/2014/02/classic-batman-logo.jpg);
+  background-repeat: no-repeat;
+  font: 14px/1.4em Arial, Helvetica, sans-serif;
+}
+
+.container {
+  /*border: 5px solid red;*/
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+}
+
+.container h1 {
+  background-color: red;
+  color: white;
+  height: 120px;
+  line-height: 120px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.container h2 {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px green;
+}
+
+.container ul {
+  list-style_type: disc inside;
+}

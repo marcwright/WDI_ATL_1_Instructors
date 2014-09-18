@@ -1,0 +1,30 @@
+<h1> Edit <%= @clown.name %>
+
+  <form action="/clowns/<%= @clown.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <label>
+    Name:
+    <input type="text" name="name" value="<%= @clown.name %>">
+  </label>
+
+<label>
+    Talent:
+    <input type="text" name="talent" value="<%= @clown.talent %>">
+</label>
+
+<label>
+    Are they Creepy?:
+    <input type="checkbox" name="is_creepy" value="<%= @clown.is_creepy ? "checked" : "" %>">
+</label>
+
+<label>
+    Image URL :
+    <input type="text" name="image_url" value="<%= @clown.image_url %>">
+</label>
+
+    <button>SUBMIT EDITED CLOWN</button>
+
+</form>
+
+

@@ -1,0 +1,7 @@
+<h1><%= @character.name %></h1>
+<h2><%= @character.book.title %></h2>
+
+<form action="/characters/<%= @character.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete this character</button>
+</form>

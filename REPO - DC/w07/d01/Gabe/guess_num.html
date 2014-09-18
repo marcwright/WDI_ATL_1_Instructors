@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Three Games!</title>
+  </head>
+  <body>
+    <marquee> Games!</marquee>
+    <script type='text/javascript'>
+
+
+      var current = prompt("What is the current Temp?");
+      var functional = prompt("Is the AC functional? Enter Y or N");
+      var ideal = prompt("What is your desired temp?");
+      if (functional === "Y" && current > ideal)  {
+        console.log('Turn on the A/C please!');
+      } else if (functional === "Y" && current < ideal) {
+        console.log('Nice and cool in here, wut?');
+      } else if (functional === "N" && current > ideal) {
+        console.log('Fix the AC! Its hot in here!');
+      } else {
+          console.log('The AC busted!?...No sweat.');
+      }
+
+    var number = Math.floor(Math.random() * 10);
+    var guess;
+     while (number !== guess && guess < number) {
+        var guess = prompt("Hey Meatball, Guess my number:");
+          switch (guess) {
+            case(number > guess) :
+             console.log('Too low! Guess again.');
+            break;
+            case (number < guess) :
+             console.log('Too High! Guess again.');
+            break;
+            default:
+            console.log('You guessed it! Woop-de-do!');
+          }}
+
+
+
+
+
+    </script>
+
+  </body>
+  </html>

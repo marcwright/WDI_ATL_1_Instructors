@@ -1,0 +1,62 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+body {
+  background: url("../images/wood.jpg");
+  font-family: Courier, monospace;
+  margin: 0;
+}
+
+.card {
+  background: #eabc6f;
+  margin: 0 auto;
+  width: 710px;
+}
+
+.card-title {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+.card-title.heading {
+  font-size: 32px;
+  padding-top: 32px;
+}
+
+.card-title.subheading {
+  font-size: 12px;
+  padding-bottom: 32px;
+}
+
+.form-content {
+  font-family: Courier, monospace;
+  font-size: 12px;
+  padding: 16px;
+}
+
+.form-content.signature {
+  font-family: "Crafty Girls", curisve;
+}
+
+.additional-info {
+  float: right;
+  width: 50%;
+}
+
+.profile-photo {
+  border: 16px solid white;
+}

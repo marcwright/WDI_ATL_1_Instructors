@@ -1,0 +1,30 @@
+<h1>Hello </h1>
+
+<form>
+  <fieldset>
+    <legend>New Character</legend>
+    <label>
+      Name
+      <input type="text" name="name">
+      <input type="submit" value="Save">
+    </label>
+  </fieldset>
+</form>
+
+
+
+
+
+
+
+<ul>
+
+  <% @characters.each do |character| %>
+  <li data-character-id="<%= character.id %>">
+    <%= character.name %>
+    <%= check_box_tag :ded, 'yes', character.dead %>
+
+  </li>
+  <% end %>
+
+</ul>

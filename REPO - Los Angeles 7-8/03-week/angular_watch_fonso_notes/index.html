@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="MainController">
+		<input ng-model="mydata.val">
+		<h1>{{ mydata.val }}</h1>
+
+		<span ng-show="mydata.toolong">Name is too long!</span>
+	</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

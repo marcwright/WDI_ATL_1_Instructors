@@ -1,0 +1,8 @@
+<h1>Here are our Greatest Thinkers</h1>
+
+<% @thinkers.each do |thinker| %>
+<h2><%= thinker.name %> once said <%= thinker.quote %></h2>
+
+  <img src="<% thinker.image_url %>" >
+
+  <% end %>

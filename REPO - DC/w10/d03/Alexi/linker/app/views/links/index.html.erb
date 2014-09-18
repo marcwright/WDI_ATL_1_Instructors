@@ -1,0 +1,22 @@
+<h1>Linkr</h1>
+
+<form>
+  <fieldset>
+    <legend>Submit a Site</legend>
+      <label>
+        Site Name
+          <input type="text" name="title"/>
+      </label>
+      <label>
+        Site URL
+          <input type="text" name="url"/>
+      </label>
+    <button>SAVE</button>
+  </fieldset>
+</form>
+
+<ul id="container"></ul>
+
+<script type="template" id="link-html">
+  <li><button>X</button><%%= link.get('title') %><button>+1</button></li>
+</script>

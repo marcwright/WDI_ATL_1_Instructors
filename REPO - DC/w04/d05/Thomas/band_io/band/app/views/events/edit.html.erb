@@ -1,0 +1,11 @@
+<h1>Reschedule <%= @event.band %> at <%= @event.venue.name %></h1>
+
+<%= render "manage_form" %>
+
+<hr>
+
+<%= form_for @event, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>
+
+<p><%= link_to "Cancel", @event %></p>

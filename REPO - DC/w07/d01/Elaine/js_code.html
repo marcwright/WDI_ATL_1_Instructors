@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+    // JavaScript!
+    // This is a JavaScript Comment
+    /* This is a
+        JavaScript
+        Block Comment
+    */
+
+    // Variables
+    var beep = 'beep';
+
+    // Console Output
+    console.log(beep);
+
+    // Conditionals
+    var number = 5;
+    if (number > 5) {
+      console.log('BIG Number!');
+    } else if (number < 5) {
+      console.log('little number');
+    } else {
+      console.log('must be 5 then');
+    }
+
+    // Case Statements
+    var day = 'Saturday';
+    switch (day) {
+      case 'Monday' :
+        console.log('Get Haircut');
+        break;
+      case 'Tuesday' :
+        console.log('Don\'t get Haircut');
+        break;
+      case 'Friday' :
+        console.log('Eat pizza');
+        break;
+      default :
+        console.log('I\'m in limbo');
+    }
+
+    // While Loop
+    var count = 10
+    while (count > 0) {
+      console.log(count);
+      count--;
+    }
+
+    // Functions
+
+    // Named
+    function add(x,y) {
+      return x + y;
+    }
+
+    // Anonymous
+    var add = function(x,y) {
+      return x + y;
+    };
+
+    // Function with no arguments
+    var scream = function() {
+      return 'AHHHHHHHH';
+    };
+
+    // Arrays
+    var myNameArray = ['Adam', 'Elaine', 'Travis']
+    myNameArray[0];
+    myNameArray[0] = 'Inhak';
+    myNameArray.push('Matt');
+
+
+    // Iteration
+    var dwarves = ['Doc', 'Sleepy', 'Bashful', 'Grumpy', 'Dopey', 'Sneezy', 'Happy']
+
+    // for Loop
+    for(var i = 0; i < dwarves.length; i++) {
+      console.log('HI HO! I am ' + dwarves[i]);
+    }
+
+    // Enumeration
+    dwarves.forEach(function(dwarf, index){
+      console.log(dwarf + ' says hi');
+    });
+
+    // Object Literal Notation
+    var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+    myObject['name']
+    myObject['age']
+    myObject['age'] = 29;
+    myObject.name
+
+    var myBird = {
+      name: 'Tweety',
+      chirp: function(){
+        console.log('tweet tweet tweet');
+      },
+      greet: function(){
+        console.log('Hi my name is ' + this.name);
+      }
+    }
+    myBird.chirp();
+    myBird['chirp'];
+
+
+    var person = {
+      name: 'Bob',
+      hometown: 'Los Angeles',
+      sing: function(){
+        console.log('The sun will come out tomorrow...');
+      },
+      introduce: function(vistor){
+        console.log('Hi ' + vistor + ', my name is ' + this.name + '. I\'m from ' + this.hometown + '.');
+      }
+    }
+
+
+  </script>
+</body>
+</html>

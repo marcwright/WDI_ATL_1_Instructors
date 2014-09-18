@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Starwars</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<style>
+  body {
+    background-image: url("http://static.ddmcdn.com/gif/death-star-1.jpg");
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+  img {
+    border: 5px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+  }
+
+  a {
+  color: #fff;
+
+  font-weight: bold;
+  text-align: center;
+
+
+  }
+
+</style>
+<%= yield %>
+
+</body>
+</html>

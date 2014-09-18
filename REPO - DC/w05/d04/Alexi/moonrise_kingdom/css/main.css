@@ -1,0 +1,41 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0;
+  background-image: url("../images/wood.jpg")
+}
+
+.form {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.form_q {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: none;
+  font-size: 12px;
+}
+.type_writer {
+  font-family: 'Courier', sans-serif;
+  font-size: 12px;
+}

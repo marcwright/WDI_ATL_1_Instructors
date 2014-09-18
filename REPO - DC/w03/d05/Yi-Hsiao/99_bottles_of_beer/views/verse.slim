@@ -1,0 +1,9 @@
+h1
+  - if @num_bottles == 1
+    | #{ @num_bottles } bottle of beer on the wall,
+      #{ @num_bottles } bottle of beer on the wall.
+  - else
+    | #{ @num_bottles } bottles of beer on the wall,
+      #{ @num_bottles } bottles of beer on the wall.
+a.yes href="/refrain/#{ @num_bottles }" Next...
+a.no href="/" Stop

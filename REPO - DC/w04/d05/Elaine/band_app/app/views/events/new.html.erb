@@ -1,0 +1,41 @@
+<div class="page">
+  <h1>Add a New Event at <%= @venue.name %></h1>
+
+  <%= render "manage_form" %>
+
+<!--
+    <form action="/authors/<%= @author_id %>/books" method="post">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <ul>
+        <li>
+          <label>
+            Date:
+            <input type="date" name="date">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            Time:
+            <input type="time" name="time">
+          </label>
+        </li>
+
+      <li>
+          <label>
+          Band:
+          <input type="text" name="band">
+        </label>
+      </li>
+      </ul>
+
+      <input type="submit" value="Add Event">
+    </form>
+-->
+
+  <p><a href="/">Home</a></p>
+  <p><a href="/books">All Books</a></p>
+
+  <p><%= link_to "Home", root_path %></p>
+</div>

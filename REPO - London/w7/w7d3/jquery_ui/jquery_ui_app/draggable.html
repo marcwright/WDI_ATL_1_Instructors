@@ -1,0 +1,68 @@
+<html>
+  <head>  
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>    
+    <script>
+        go=(  function() {
+// We will need to call the draggable method on the element we want to make draggable.
+          $( "#catalog li" ).draggable({
+            appendTo: "body",
+            helper: "clone"
+          });
+// The jQuery UI Droppable plugin makes selected elements droppable (meaning they accept being dropped on by draggables). You can specify which draggables each will accept.
+          $( "#cart ol" ).droppable({
+            activeClass: "ui-state-default",
+            hoverClass: "ui-state-hover",
+            accept: ":not(.ui-sortable-helper)",
+            drop: function( event, ui ) {
+              $( this ).find( ".placeholder" ).remove();
+              $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+            }
+          }).sortable({
+            items: "li:not(.placeholder)",
+            sort: function() {
+// gets added unintentionally by droppable interacting with sortable
+// using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
+              $( this ).removeClass( "ui-state-default" );
+            }
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <div id="products">
+      <h1 class="ui-widget-header">Ruby</h1>
+      <div id="catalog">
+        <h2><a href="#">Pre-processors</a></h2>
+        <div>
+          <ul>
+            <li>Haml</li>
+            <li>Sass</li>
+            <li>Slim</li>
+            <li>Coffeescript</li>
+          </ul>
+        </div>
+        <h2><a href="#">DBs</a></h2>
+        <div>
+          <ul>
+            <li>PgSql</li>
+            <li>MySql</li>
+            <li>Mongodb</li>
+            <li>Cassandra</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+     
+    <div id="cart">
+      <h1 class="ui-widget-header">What I use</h1>
+      <div class="ui-widget-content">
+        <ol>
+          <li class="placeholder">Add your items here</li>
+        </ol>
+      </div>
+    </div>
+
+  </body>
+</html>

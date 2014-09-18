@@ -1,0 +1,38 @@
+%p#notice= notice
+
+%h1= @snippet.title
+
+.description~ markdown @snippet.description
+
+.grid
+  %hr
+  .input-code.row
+    .col
+      %h3 HAML:
+      %pre.snippet.read-only-scss-snippet~ @snippet.haml_input
+    .col
+      %h3 SCSS:
+      %pre.snippet.read-only-scss-snippet~ @snippet.scss_input
+
+  %hr
+  .output-code.row
+    .col
+      %h3 HTML:
+      %pre.snippet.read-only-html-snippet~ @snippet.html_output
+    .col
+      %h3 CSS:
+      %pre.snippet.read-only-css-snippet~ @snippet.css_output
+
+  %hr
+  .result.row
+    %h2 Result
+    .result-panel
+      = @snippet.result
+      
+
+
+.controls
+
+  = link_to 'Edit', edit_snippet_path(@snippet)
+  \|
+  = link_to 'Back', snippets_path

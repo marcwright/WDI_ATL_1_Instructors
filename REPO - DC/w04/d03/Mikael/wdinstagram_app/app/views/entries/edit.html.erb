@@ -1,0 +1,23 @@
+<h1>Edit an entry!</h1>
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <label>
+    Author:
+    <input type="text" name="author">
+  </label>
+
+  <label>
+    Date Taken:
+    <input type="text" name="date_taken" value="yyyy-mm-dd">
+  </label>
+
+  <label>
+    Photo URL:
+    <input type="text" name="photo_url">
+  </label>
+
+  <input type="submit" value="Post this image!">
+
+</form>

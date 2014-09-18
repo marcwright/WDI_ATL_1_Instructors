@@ -1,0 +1,12 @@
+<% link_to "All Venues", bands_path %>
+
+<h1><%= @band.name %></h1>
+<p>Genre: <%= @band.genre %></p>
+<p>Has Profanity: <%= @band.has_profanity %></p>
+
+
+<p><%= link_to "Edit", edit_band_path %></p>
+
+<%= form_for @band, method: 'delete' do |f| %>
+    <%= f.submit "Delete" %>
+<% end %>

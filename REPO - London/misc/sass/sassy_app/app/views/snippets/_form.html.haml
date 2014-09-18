@@ -1,0 +1,36 @@
+= form_for @snippet do |f|
+  - if @snippet.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@snippet.errors.count, "error")} prohibited this snippet from being saved:"
+      %ul
+        - @snippet.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title, "Title:"
+    %br
+    = f.text_field :title
+
+  .field
+    .grid
+      .row
+        .col
+          = f.label :description, "Description:"
+          = f.text_area :description, rows: 5, class: "snippet markdown"
+
+  %hr
+
+  .field
+    .grid
+      .input-code.row
+        .col
+          = f.label :haml_input, "HAML Input:"
+          = f.text_area :haml_input, class: "snippet haml-snippet"
+        .col
+          = f.label :scss_input, "SCSS Input:"
+          = f.text_area :scss_input, class: "snippet scss-snippet"
+
+  %hr
+
+  .actions
+    = f.submit 'Save'

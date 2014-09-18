@@ -1,0 +1,6 @@
+
+<%= form_tag("/movie_list", method: "get") do %>
+  <%= label_tag(:title, "Pick a Flick") %>
+  <%= text_field_tag(:title) %>
+  <%= submit_tag("Search") %>
+<% end %>

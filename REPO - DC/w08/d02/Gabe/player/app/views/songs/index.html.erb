@@ -1,0 +1,25 @@
+<h1>Player!</h1>
+
+<form>
+  <fieldset>
+    <legend>Add A Song</legend>
+    <label>
+      Name
+      <input type="text" name="name">
+      <input type="submit" value="Add">
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li data-song-id="<%= song.id %>">
+      <u><%= song.title %></u> by
+      <i><%= song.artist %></i>
+      <audio controls>
+        <source src="<%= song.preview_url %>">
+      </audio>
+      <span>&hearts;(delete)</span>
+    </li>
+  <% end %>
+</ul>

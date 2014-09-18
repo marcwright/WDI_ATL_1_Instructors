@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+
+    var dollarsToPounds = function(dollars){
+
+      pounds = (dollars * 0.6).toFixed(2);
+      alert('$' + dollars + ' is ' + '\u00A3' + pounds);
+    }
+
+    var poundsToDollars = function(pounds){
+
+      dollars = (pounds * 1.68).toFixed(2);
+      alert('\u00A3' + pounds + ' is ' + '$' + dollars);
+    }
+
+    var currencyConverter = function(convertingFrom, convertingTo, amount){
+      if (convertingFrom === 'dollars' && convertingTo === 'pounds'){
+        dollarsToPounds(amount)
+      } else if (convertingFrom === 'pounds' && convertingTo === 'dollars'){
+        poundsToDollars(amount)
+      } else if (convertingTo === convertingFrom && convertingTo === 'dollars') {
+        alert('You have $' + amount + '.')
+      } else {
+        alert('\u00A3' + amount)
+      }
+    }
+
+    convertingFrom = prompt('Converting from dollars or pounds?');
+    convertingTo = prompt('Converting to dollars or pounds?');
+    amount = prompt('What amount in ' + convertingFrom + '?');
+    currencyConverter(convertingFrom, convertingTo, amount);
+
+  </script>
+</body>
+</html>

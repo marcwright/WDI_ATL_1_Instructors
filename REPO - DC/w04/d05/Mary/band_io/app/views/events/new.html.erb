@@ -1,0 +1,19 @@
+<h1>New Event for <%= @venue.name %></h1>
+<div class="form">
+<%= form_for [@venue, @event] do |f| %>
+  <%= f.label :date %>
+  <%= f.date_select(:date) %>
+<br>
+<br>
+  <%= f.label :time %>
+  <%= f.time_select(:time) %>
+<br>
+<br>
+  <%= f.label :band_id %>
+  <%= f.collection_select(:band_id, @bands, :id, :name, :include_blank => "Please select a band...") %>
+<br>
+<br>
+  <%= f.submit "Submit" %>
+<% end %>
+</div>
+<p><%= link_to "Cancel", bands_path %></p>

@@ -1,0 +1,106 @@
+<h1>People</h1>
+
+<% @blondes.each do |person| %>
+  <%= person.name %> 
+<% end %>
+
+<%= form_for @person_search, :url=> people_path, :method => :get do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Age</h3>
+      <%= f.label :age do %>
+        <%= f.radio_button :age, "All Ages" %>
+        <%= "All" %>
+      <% end %>
+      <%= f.label :age do %>
+        <%= f.radio_button :age, "Under 30" %>
+        <%= "Under 30" %>
+      <% end %>
+      <%= f.label :age do %>
+        <%= f.radio_button :age, "Over 30" %>
+        <%= "Over 30" %>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <h3>Hair Color</h3>
+      <%= f.label :hair_color do %>
+        <%= f.radio_button :hair_color, "All Hair Colors" %>
+        <%= "All" %>
+      <% end %>
+      <%= f.label :hair_color do %>
+        <%= f.radio_button :hair_color, "red" %>
+        <%= "Red" %>
+      <% end %>
+      <%= f.label :hair_color do %>
+        <%= f.radio_button :hair_color, "brown" %>
+        <%= "Brown" %>
+      <% end %>
+      <%= f.label :hair_color do %>
+        <%= f.radio_button :hair_color, "blonde" %>
+        <%= "Blonde" %>
+      <% end %>
+      <%= f.label :hair_color do %>
+        <%= f.radio_button :hair_color, "black" %>
+        <%= "Black" %>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <h3>Eye Color</h3>
+      <%= f.label :eye_color do %>
+        <%= f.radio_button :eye_color, "All Eye Colors" %>
+        <%= "All" %>
+      <% end %>
+      <%= f.label :eye_color do %>
+        <%= f.radio_button :eye_color, "blue" %>
+        <%= "Blue" %>
+      <% end %>
+      <%= f.label :eye_color do %>
+        <%= f.radio_button :eye_color, "brown" %>
+        <%= "Brown" %>
+      <% end %>
+      <%= f.label :eye_color do %>
+        <%= f.radio_button :eye_color, "green" %>
+        <%= "Green" %>
+      <% end %>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <%= f.submit "Filter", class: 'btn btn-info col-md-2 col-md-offset-5' %>
+  </div>
+<% end %>
+
+<br/>
+
+<table class="table" id="people">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Height In Inches</th>
+      <th>Eye Color</th>
+      <th>Hair Color</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.age %></td>
+        <td><%= person.height_in_inches %></td>
+        <td><%= person.eye_color %></td>
+        <td><%= person.hair_color %></td>
+        <td><%= link_to "Show Details", person_path(person) %></td>
+        <td><%= link_to "Edit", edit_person_path(person) %>
+        </td>
+        <td><%= link_to "Delete", person_path(person), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add a person", new_person_path, class: 'btn btn-primary' %>

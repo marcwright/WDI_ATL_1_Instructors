@@ -1,0 +1,92 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-06-02 10:45:30
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-06-02 15:57:04
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+  <title>JS Examples</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // AC Code
+
+    // var curr = prompt( "Current temperature? ");
+    // var des = prompt( "Desired temperature? ");
+    // var ac = prompt( "Does the AC work? (true/false)" );
+
+    // if ( ac ) {
+    //   if ( curr > des ) {
+    //     console.log( "Turn on the A/C Please" );
+    //   }
+    // } else {
+    //   if ( curr > des ) {
+    //     console.log( "Fix the A/C now!  It's hot!" );
+    //   }
+    //   else {
+    //     console.log( "Fix the A/C now!  It's hot!" );
+    //   }
+    // }
+
+    // "Guess my number" Game
+
+    // var guess;
+    // var rand = Math.round(Math.random() * 10);
+    // var guesses = 0;
+
+    // while ( true ) {
+    //   guess = parseInt(prompt( "Guess the number!" ));
+    //   guesses++;
+
+    //   if ( guess === rand ) {
+    //     console.log( "Great success! Took " + guesses + " guessess" );
+    //     break;
+    //   } else if ( guess > rand ) {
+    //     console.log( "Too high!" );
+    //   } else {
+    //     console.log( "Too low =(" );
+    //   }
+    // }
+
+    // var myPerson = {
+    //   name: "Stephen",
+    //   hometown: "Los Gatos, CA",
+    //   sing: function() {
+    //     console.log("lallalala");
+    //   },
+    //   introduce: function () {
+    //     console.log("Hey, I'm " + this.name + " and I'm from " + this.hometown);
+    //   }
+    // }
+
+    // currency converter
+
+    function dollarsToPounds(dollars) {
+        console.log( '$' + dollars + ' is £' + (0.6 * dollars).toFixed(2));
+    }
+
+    function poundsToDollars(pounds) {
+        1.68 * pounds
+        console.log( '£' + pounds + ' is $' + (1.68 * pounds).toFixed(2));
+    }
+
+    function currencyConverter(from, to, amt) {
+        if ( from === to ) {
+            console.log(from + amt + ' is ' + from + amt);
+        } else {
+            from == '$' ? dollarsToPounds(amt) : poundsToDollars(amt)
+        }
+    }
+
+    currencyConverter("$", "$", 4);
+    currencyConverter("$", "£", 4);
+    currencyConverter("£", "$", 4);
+
+  </script>
+</body>
+</html>

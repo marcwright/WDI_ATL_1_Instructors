@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Morning Exercise</title>
+</head>
+
+<body>
+  <script type='text/javascript'>
+
+  // Air Conditioning
+
+//  var currenttemp = prompt('What is the current temp?');
+//  var acfunctional = prompt('Is the AC functional?');
+//  var desiredtemp = prompt('What temp do you wish it was?');
+//
+//  if (( acfunctional == 'yes' ) && ( currenttemp > desiredtemp )) {
+//    console.log('Turn on the AC please');
+//    } else {
+//      console.log('Get your stuff together');
+//  }
+//
+//  if (( acfunctional == 'no' ) && ( currenttemp > desiredtemp )) {
+//    console.log('Please fix the AC');
+//    } else {
+//      console.log('Get your stuff together');
+//  }
+//
+//   if (( acfunctional == 'no' ) && ( currenttemp < desiredtemp )) {
+//    console.log('Fix the AV whenever you have a chance');
+//    } else {
+//      console.log('Get your stuff together');
+//  }
+
+  // Guess the Number
+
+  var randomNumber = Math.floor(Math.random()*10);
+  var userGuess = parseInt(prompt('Guess a number from 1 to 10'));
+
+  while (randomNumber !== userGuess) {
+    userGuess = parseInt(prompt('Incorrect, please guess again.'));
+  }
+    console.log('Correct!');
+
+  </script>
+</body>
+</html>

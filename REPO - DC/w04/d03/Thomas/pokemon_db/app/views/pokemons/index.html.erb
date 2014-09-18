@@ -1,0 +1,11 @@
+<audio src="Song.mp3" autoplay></audio>
+
+
+<h1>HERE are the Mofuggin pokemen:</h1>
+
+<% @pokemons.each do |poke| %>
+<h2><%= poke.name %> has <%= poke.attack %></h2>
+<img src="<%= poke.image_url %>">
+<% end %>
+
+

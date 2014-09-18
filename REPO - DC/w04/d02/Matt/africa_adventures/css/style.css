@@ -1,0 +1,111 @@
+/* Tag Styles */
+
+body {
+  background: url('http://i.imgur.com/tok7a3J.jpg') no-repeat;
+  background-size: cover;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.42857143;
+  margin: 20px 0;
+}
+
+/*h1 {font-size: 2em;
+  animation-duration: 3s;
+  animation-name: slidein;}*/
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.6em;}
+
+img {
+  border: 10px solid #bbb;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  /*-moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: slidein;
+  -webkit-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;*/
+}
+
+@-moz-keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+
+  75% {
+    font-size:300%;
+    margin-left:25%;
+    width:150%;
+  }
+
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+
+  75% {
+    font-size:300%;
+    margin-left:25%;
+    width:150%;
+  }
+
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
+
+/* Class Styles */
+
+.clearfix {
+  clear: both;
+  display: block;
+}
+
+.container {
+  background: rgba(255,255,255,0.4);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  padding: 10px 20px;
+  width: 80%;
+  clear: both;
+}
+
+.container img {
+  display: block;
+  margin-right: auto;
+  max-width: 120px;
+}
+
+
+.inner {
+  background: rgba(255,255,255,0.8);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  padding: 2px 10px;
+  width: 90%;
+}
+
+.inner div {
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0 10px 0;
+}
+

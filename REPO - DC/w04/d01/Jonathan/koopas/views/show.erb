@@ -1,0 +1,20 @@
+<h2><%= @koopa.name %></h2>
+<p>
+  Koopa Color: <%= @koopa.color %>
+<br>
+  Shell Status: <%= @koopa.has_shell %>
+</p>
+<br>
+<img src="<%= @koopa.image_url %>" >
+
+<form action="/<%= @koopa.id %>" method="post">
+
+  <input type="hidden" name="_method" value="delete">
+  <iframe name="music" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+  <form action="http://themushroomkingdom.net/sounds/wav/smb/smb_mariodie.wav" target="music">
+    <input type="submit" value="Delete" />
+
+  </form>
+</form>
+
+

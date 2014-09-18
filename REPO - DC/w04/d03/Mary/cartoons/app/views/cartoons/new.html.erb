@@ -1,0 +1,26 @@
+
+  <h1>Create a new cartoon!</h1>
+
+<form action='/cartoons' method='post'>
+  <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+
+  <label>
+    Name:
+    <input type="text" name="name">
+  </label>
+  <br>
+  <label>
+    Location:
+    <input type="text" name="location">
+  </label>
+<br>
+  <label>
+    ImageURL:
+    <input type="text" name="image_url">
+  </label>
+<br>
+  <input type="submit" value="Create a carton!">
+
+
+</form>
+

@@ -1,0 +1,7 @@
+#map_canvas {
+    float: left;
+    display: inline-block;
+    min-height: 300px;
+    min-width: 300px;
+    margin-right: 10px;
+}

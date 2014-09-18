@@ -1,0 +1,22 @@
+<h1>Winter is Coming</h1>
+
+<form>
+  <fieldset>
+    <legend>New Character</legend>
+    <label>
+      Name
+      <input type="text" name="name">
+      <input type="submit" value="Save">
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+  <% @characters.each do |character| %>
+    <li data-character-id="<%= character.id %>" class="<%= character.dead ? "dead" : "" %>">
+      <%= character.name %>
+      <%= check_box_tag :dead, 'yes', character.dead %>
+      <span>&hearts;</span>
+    </li>
+  <% end %>
+</ul>

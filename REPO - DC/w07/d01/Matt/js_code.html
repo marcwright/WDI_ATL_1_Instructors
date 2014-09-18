@@ -1,0 +1,121 @@
+<html lang='en' data-scribe-reduced-action-queue='true'><!--<![endif]-->
+<head>
+  <title>JSSS</title>
+</head>
+  <body>
+
+  <script type='text/javascript'>
+    // This is a comment
+    /*
+      This is a js
+      block comment
+    */
+    // variable
+    var beep = 'beep';
+
+    // console output
+    console.log(beep);
+
+    // conditional
+    var number = 5;
+    if (number > 5) {
+      console.log('big numer');
+    } else if (number < 5) {
+      console.log('tiny num');
+    } else {
+      console.log('must be 5');
+    }
+
+    // case statements
+
+    var day = 'Monday';
+    switch (day) {
+      case 'Monday' :
+        console.log('Get it');
+        break;
+      case 'Tuesday' :
+        console.log('Twofer');
+        break;
+      case 'Friday' :
+        console.log('Freaky');
+        break;
+      default :
+        console.log('?');
+    }
+
+    // while loop
+    var count = 10
+    while (count > 0) {
+      console.log(count);
+      count -= 1; // or count--;
+    }
+
+    //// functions
+
+      // named function
+      function add(x, y){
+        return x + y;
+      };
+
+      // anonymous function
+      var add = function(x, y) {
+        return x + y;
+      };
+
+      // function with no arguments
+      var scream = function() {
+        return 'AHH';
+      };
+
+    // Arrays
+    var myArray = ['Dog', 'Cat', 'CatDog']
+    myArray[0];
+    myArray.push('Cow');
+
+    //// iteration
+    var dogs = ['Dog', 'Cat', 'CatDog']
+
+      // for loop
+      for(var i = 0; i <= dogs.length; i++){
+        console.log('bone to' + dogs[i]);
+      }
+
+      // enumeration
+      dogs.forEach(function(dog, index){
+        console.log(dog + ' bone');
+      });
+
+    // object literal (like hashes)
+    var myHash = {"name" : "Poochie", "race" : "dog", "age" : 5}
+    myHash["name"]
+
+    // change value
+    myHash[age] = 7
+    // or
+    myHash.age
+
+    myBird = {
+      character: "Tweety",
+      chirp: function(){
+        console.log('tweet tweet tweet');
+      },
+      greet: function () {
+        console.log('Hi my name is ' + this.character);
+      }
+    }
+
+    person = {
+      name: 'Rolph',
+      hometown: 'Gary, IN',
+      sing: function() {
+        console.log('all gold everything');
+      },
+      intro: function() {
+        console.log('Hi I am ' + this.name + ' from ' + this.hometown);
+      }
+    }
+
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,25 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 12:06:32
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 14:47:52
+
+ -->
+
+<h1>Welcome to the Cat Shelter!</h1>
+
+<h2>Here are all the cats:</h2>
+
+<div class="cat_list">
+  <% @cats.each do |c| %>
+    <h3><%= c.name %></h3>
+    <img class="cat_pic" src="<%= c.image_url %>" alt="">
+  <% end %>
+</div>
+
+<!--
+<div class="main_image">
+  <img src="http://goo.gl/9jwS3i" alt="">
+</div>
+-->

@@ -1,0 +1,7 @@
+<h1>Here are the rides!</h1>
+
+<ul>
+  <% @rides.each do |ride| %>
+  <li><%= ride.name %> has a top speed of <%= ride.top_speed %>. You must be <%= ride.min_height %> inches tall to ride this ride.</li>
+  <% end %>
+</ul>

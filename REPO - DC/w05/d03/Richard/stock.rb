@@ -1,0 +1,24 @@
+require 'pry'
+require 'httparty'
+require 'sinatra'
+require 'sinatra/reloader'
+
+get '/' do
+
+  if params[:symbol]
+    @stock_symbol = params[:symbol]
+    response = HTTParty.get("http://dev.markitondemand.com/Api/Quote/json?symbol=#{@stock_symbol}")
+    response_hash = JSON(response)
+
+
+    if response_hash["Data"] && response_hash["Data"]["Status"] == "SUCCESS"
+      @last_price = response_hash["Data"]["LastPrice"]
+      @high_price = response_hash["Data"]["High"]
+      @low_price = response_hash["Data"]["Low"]
+      @company_name = response_hash["Data"]["Name"]
+      @market_cap = response_hash["Data"]["MarketCap"]
+      @num_shares = @market_cap.to_i / @last_price.to_i
+    end
+  end
+  erb :index
+end

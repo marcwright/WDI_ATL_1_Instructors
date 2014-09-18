@@ -1,0 +1,10 @@
+<h1>Bands Touring:</h1>
+<% @bands.each do |band| %>
+<ul>
+  <li><a href="/bands/<%= band.id %>"><%= band.name %></a></li>
+</ul>
+<% end %>
+
+
+<p><%= link_to "Back to Venues", venues_path %></p>
+<p><%= link_to "Add a band", new_band_path %></p>

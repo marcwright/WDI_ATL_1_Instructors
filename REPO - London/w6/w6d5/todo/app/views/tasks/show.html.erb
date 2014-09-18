@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h4>Title</h4>
+<p><%= @task.title %></p>
+<br>
+<h4>Description</h4>
+<p><%= @task.description %></p>
+<br>
+<h4>Priority</h4>
+<p><%= @task.priority %></p>
+<br>
+<h4>Due Date</h4>
+<p><%= @task.due_date %></p>
+<br>
+<h4>Today Task?</h4>
+<p><%= @task.today_task %></p>
+<br>
+<h4>Completed?</h4>
+<p><%= @task.completed %></p>
+<br>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Destroy', @task, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', tasks_path %>

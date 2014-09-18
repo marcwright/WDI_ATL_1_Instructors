@@ -1,0 +1,11 @@
+form[action="/koopas/#{ @koopa.id }" method="post"]
+  input[type="hidden" name="_method" value="patch"]
+  label[for="koopa-name"] Name:
+  input[type="text" id="koopa-name" name="name" value = @koopa.name]
+  label[for="koopa-color"] Color:
+  input[type="text" id="koopa-color" name="color" value = @koopa.color]
+  label[for="koopa-shell"] Has Shell:
+  input[type="checkbox" id="koopa-shell" name="shell" value="true" checked = @koopa.has_shell]
+  label[for="koopa-photo-url"] Photo URL:
+  input[type="text" id="koopa-photo-url" name="photo_url" value = @koopa.photo_url]
+  input[type="submit" value="Edit Koopa"]

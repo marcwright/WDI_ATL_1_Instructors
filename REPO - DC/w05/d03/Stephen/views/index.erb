@@ -1,0 +1,24 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-21 11:50:29
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-21 12:28:18
+
+ -->
+
+<form action="/" method="get">
+  <label for="symbol">Symbol:</label>
+  <input type="text" name="symbol" placeholder="Enter Symbol">
+
+  <input type="submit">
+</form>
+
+<% if @price %>
+  <p>Current Price: $<%= @price %></p>
+  <p>High Price: $<%= @high %></p>
+  <p>Low Price: $<%= @low %></p>
+  <p># of Shares: $<%= @num %></p>
+<% else %>
+  <p><%= @error %></p>
+<% end %>

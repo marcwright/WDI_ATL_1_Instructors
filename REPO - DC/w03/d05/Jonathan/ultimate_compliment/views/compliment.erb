@@ -1,0 +1,32 @@
+<h1>
+  The WDI<br>
+  Ultimate Compliment
+</h1>
+
+<h2>
+  Feeling down
+  <%= "#{params[:new_name]} ..." %>
+</h2>
+
+<h3>
+  <% compliments = [
+    "Your instructors love you.",
+    "High five = ^5.",
+    "Is it Ruby Tuesday yet?",
+    "It's almost beer o'clock.",
+    "The Force is strong with you."
+    ] %>
+  <% new_compliment = 1 + rand(4) %>
+  <%= compliments[new_compliment] %>
+</h3>
+
+<% colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"] %>
+<% back_color = 1 + rand(3) %>
+<body bgcolor="<%= colors[back_color] %>">
+
+
+
+<!-- <form class="pure-form">
+        <input type="text" placeholder="Compliment">
+        <button type="submit" class="pure-button">Submit Compliment</button>
+</form> -->

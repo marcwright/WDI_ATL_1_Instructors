@@ -1,0 +1,89 @@
+body {
+  background-color: #d6d6d6;
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat-x;
+  color: #000000;
+}
+
+
+.page .banner {
+  text-align: center;
+}
+
+.page .banner img {
+  margin-bottom: 30px
+}
+
+.page .main {
+  background-color: #fff;
+  float: left;
+  padding: 10px 20px 0 20px;
+  margin: 0 auto;
+  margin-left: 225px;
+  text-align: center;
+  width: 650px;
+}
+
+.page .main img {
+  margin: 0 auto;
+  width: 100%
+}
+
+.page .main h2,
+.page .main p {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+.page .main h2 {
+  margin-top: 30px;
+}
+
+.page .main p.posted {
+  border-width: 2px;
+  border-top-style: dotted;
+  border-bottom-style: solid;
+  margin-bottom: 75px;
+  padding: 8px;
+}
+
+.page .main a {
+  color: #ff6600;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.page .main a.download {
+  text-transform: uppercase;
+}
+
+.page .sidebar {
+  background-color: #fff;
+  float: right;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-right: 225px;
+  padding: 20px;
+}
+
+.page .sidebar p {
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.page .sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page .sidebar ul.images li {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+.page .footer {
+  clear: both;
+  padding: 30px;
+  text-align: center;
+}

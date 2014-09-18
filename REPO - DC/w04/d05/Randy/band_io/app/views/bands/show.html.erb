@@ -1,0 +1,21 @@
+<%= link_to "All Bands", bands_path %>
+
+
+
+<h1> <%= @band.name %> </h1>
+<p>Genre: <%= @band.genre %></p>
+<p>Explicit? <%= @band.explicit_lyrics ? "Yes" : "No" %></p>
+
+
+
+<iframe width="420" height="315" src="<%=@band.video_embed_url%>" frameborder="0" allowfullscreen></iframe>
+
+
+<!-- <iframe id="ytplayer" type="text/html" width="320" height="195"
+  src="<%=@band.video_embed_url%>?autoplay=1&origin=http://youtube.com"/></iframe> -->
+
+<br></br>
+<%= link_to "Edit", edit_band_path(@band)%>
+<%= form_for @band, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+  <%end%>

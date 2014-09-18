@@ -1,0 +1,10 @@
+<h2><%= @koopa.name %></h2>
+<p><img src="<%= @koopa.photo_url %>">
+  <a href="/koopas/<%= @koopa.id.to_s %>/edit">Edit this guy</a>
+</p>
+
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Get this koopa outta here!</button>
+</form>

@@ -1,0 +1,9 @@
+<h1>Rails MovieDB</h1>
+
+<%= form_tag("/results", method: "get") do %>
+    <%= label_tag(:query, "Seach for movie:") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
+

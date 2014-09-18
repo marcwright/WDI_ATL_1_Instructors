@@ -1,0 +1,22 @@
+<h1>Characters to die</h1>
+
+<form>
+  <fieldset>
+    <legend>New Character</legend>
+    <label>
+      Name:
+      <input type="text" name="name">
+      <input type="submit" value="Add to list of people who gon' be ded"/>
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+  <% @characters.each do |character| %>
+    <li data-character-id="<%= character.id %>" class="<%= character.is_dead ? "dead" : "" %>">
+      <%= character.name %>
+      <%= check_box_tag :is_dead, 'yes', character.is_dead %>
+      <span>&times;</span>
+    </li>
+  <% end %>
+</ul>

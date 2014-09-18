@@ -1,0 +1,58 @@
+<h1>MTA on Rails</h1>
+
+<%= form_tag root_path do %>
+  <% submit_value = "next" %>
+
+  What train do you want to get on:
+  <% if params[:start_train].present? %>
+    <%= params[:start_train] %>
+    <%= hidden_field_tag :start_train, params[:start_train] %>
+
+    <br>
+
+    Which stop:
+    <% if params[:stop_a].present? %>
+      <%= params[:stop_a] %>
+      <%= hidden_field_tag :stop_a, params[:stop_a] %>
+
+      <br>
+
+      What train do you want to get off
+      <% if params[:stop_train].present? %>
+        <%= params[:stop_train] %>
+        <%= hidden_field_tag :stop_train, params[:stop_train] %>
+
+        <br>
+
+        Which stop:
+        <%= select_tag :stop_b, options_for_select(@mta[params[:stop_train]]) %>
+        
+        <% submit_value = "finish" %>
+
+      <% else %>
+        <%= select_tag :stop_train, options_for_select(@mta.keys) %>
+      <% end %>
+
+
+    <% else %>
+      <%= select_tag :stop_a, options_for_select(@mta[params[:start_train]]) %>
+    <% end %>
+
+
+  <% else %>
+    <%= select_tag :start_train, options_for_select(@mta.keys) %>
+  <% end %>
+
+  <br>
+  <%= submit_tag submit_value %>
+
+<% end %>
+
+
+<% if @total_length_of_trip %>
+  <p>
+    Your trip length is <%=@total_length_of_trip%> stops.
+  </p>
+<% end %>
+
+

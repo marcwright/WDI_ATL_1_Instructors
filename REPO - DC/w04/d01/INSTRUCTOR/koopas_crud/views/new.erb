@@ -1,0 +1,18 @@
+<h1>Create a Koopa</h1>
+<form action="/koopas" method="post">
+  <ul>
+    <li>
+      <label>Name <input type="text" name="name" value="<%= @koopa.name %>"></label>
+    </li>
+    <li>
+      <label>Color <input type="text" name="color" value="<%= @koopa.color %>"></label>
+    </li>
+    <li>
+      <label>Has shell <input type="checkbox" name="has_shell" <%= @koopa.has_shell ? 'checked="checked"' : '' %>></label>
+    </li>
+    <li>
+      <label>Photo URL <input type="text" name="photo_url" value="<%= @koopa.photo_url %>"></label>
+    </li>
+  </ul>
+  <input type="submit" value="Create">
+</form>

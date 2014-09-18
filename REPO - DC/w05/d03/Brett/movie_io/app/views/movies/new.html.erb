@@ -1,0 +1,15 @@
+<h1>Movie.io</h1>
+
+<%= form_tag("/movies/new", method: "get") do %>
+  <%= label_tag(:title, "Search for:") %>
+  <%= text_field_tag(:title) %>
+
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @title %>
+  <h2>Search results</h2>
+  <% @response_hash["Search"].each do |movie| %>
+    <%= movie["Title"] %> (<%= movie["Year"] %>) - <%= movie["Type"]%> <%= link_to "More details", {:controller => "movies", :action => "details", :title => movie["Title"] } %> <br>
+  <% end %>
+<% end %>

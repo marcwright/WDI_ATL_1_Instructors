@@ -1,0 +1,12 @@
+<h1>Bands</h1>
+<p>Below are the bands available to view.</p>
+
+<ul>
+  <% @bands.each do |band| %>
+    <li><%= link_to band.name, band %></li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "Return to main menu", root_path %>

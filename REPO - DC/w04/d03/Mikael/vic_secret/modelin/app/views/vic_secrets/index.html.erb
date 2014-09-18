@@ -1,0 +1,23 @@
+<style>
+  body {
+    background-color: grey;
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+  }
+
+  img {
+    max-width: 500px;
+  }
+</style>
+
+<body>
+
+<h1 style="color: pink;">~Here are some sexy models~</h1>
+
+<% @models.each do |moddle| %>
+<h2><%= moddle.name %> is <%= moddle.age %> years old.</h2>
+<img src="<%= moddle.image_url %>" >
+<% end %>
+
+</body>

@@ -1,0 +1,23 @@
+<h1>Add Student to Roster:</h1>
+
+<form action="/wdi_rosters" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+  <label>
+    Name:
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Email:
+    <input type="email" name="email">
+  </label>
+
+  <label>
+    Image:
+    <input type="text" name="image_url">
+  </label>
+
+  <input type="submit" value="Add Student">
+
+</form>

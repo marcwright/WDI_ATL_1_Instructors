@@ -1,0 +1,8 @@
+<h1><%= @rollercoaster.name %> has a required height of <%= @rollercoaster.min_height %> ft.
+It's top speed is <%= @rollercoaster.top_speed %>mph.</h1>
+<img src="<%= @rollercoaster.image_url %>" height="100" width="100">
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <% if !@koopa.has_shell %><button>Delete this Koopa :(</button><% end %>
+</form>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p id="paragraph">
+  JavaScript can change the content of an HTML element.
+</p>
+
+<script>
+  function changeContent() {
+    p=document.getElementById("paragraph");  // Find the element
+    p.innerHTML="Hello JavaScript!";    // Change the content
+  }
+</script>
+
+<button type="button" onclick="changeContent()">Click Me!</button>
+
+</body>
+</html>

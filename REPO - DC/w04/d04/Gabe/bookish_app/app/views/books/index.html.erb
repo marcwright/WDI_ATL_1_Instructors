@@ -1,0 +1,20 @@
+<h1>ALL BOOKS WRITTEN BY ???</h1>
+<hr>
+<a href="/authors/<%= params[:author_id] %>/books/new"><button>Add A Book for This Author</button></a>
+
+
+<hr>
+
+
+<% @books.each do |book| %>
+<li><a href="/authors/<%= book.author_id %>/books/<%= book.id %>"><%= book.title %></a></li>
+<% end %>
+
+<hr>
+<hr>
+<a href="/authors"><button>Back to all Authors</button></a><br>
+<a href="/authors/<%= params[:author_id] %>"><button>Back to this Author</button></a>
+
+<hr>
+
+

@@ -1,0 +1,15 @@
+<h2><%= @roller_coaster.name %></h2>
+
+<p><%= @roller_coaster.name %> has a height restriction of <%= @roller_coaster.min_height %> inches and a top speed of <%= @roller_coaster.top_speed %> mph.</p>
+
+<img src="<%= @roller_coaster.image_url%>">
+
+<a href="/roller_coasters/<%= @roller_coaster.id %>/edit">Edit!</a>
+
+<form action="/roller_coasters/<%= @roller_coaster.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Get this roller coaster outta here!</button>
+
+</form>
+
+

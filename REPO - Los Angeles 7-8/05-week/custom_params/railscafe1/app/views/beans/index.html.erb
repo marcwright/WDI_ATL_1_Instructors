@@ -1,0 +1,12 @@
+<!-- RAILSCAFE1 -->
+
+<h1>Our Beans v1.0</h1>
+<ul>
+  <% @beans.each do |b| %>
+  <li>
+    <strong> <%= b.name %> </strong> -- 
+    (<%= b.roast %>) -- 
+    <i><%= link_to "more info", bean_path(b) %></i>
+  </li>
+  <% end %>
+</ul>

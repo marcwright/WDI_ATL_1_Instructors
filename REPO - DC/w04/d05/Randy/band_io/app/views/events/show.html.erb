@@ -1,0 +1,8 @@
+<h1>Event Details</h1>
+<h2>Where: <%= link_to @event.venue.name, venue_path(@event.venue_id) %> </h2>
+<h3>Band: <%= @event.band.name %> </h3>
+<h3>When: <%= @event.date %></h3>
+<p>Doors Open at: <%= @event.time.strftime "%H:%M" %> </p>
+
+<%= link_to "Edit this Event", edit_event_path %>
+<%= link_to "Home", root_path %>

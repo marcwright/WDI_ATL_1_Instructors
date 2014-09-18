@@ -1,0 +1,5 @@
+<h2>The best coasters</h2>
+
+<% @coasters.each do |coaster| %>
+  <li style="margin-top: 90px;"><a href="/coasters/<%= coaster.id %>"><img style="float:left;max-height: 80px;margin-top:" src="<%= coaster.image_url %>" alt="<%= coaster.name %>"><%= coaster.name %></a></li>
+<% end %>

@@ -1,0 +1,13 @@
+<h1><%= @band.name %></h1>
+<p>Genre: <%= @band.genre %></p>
+<p>Explicit Content: <%= @band.explicit_lyrics %></p>
+
+<p><%= link_to "All Bands", bands_path %></p>
+<%= form_for @band, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>
+
+<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="<%=@band.video_embed_url%>" frameborder="0"/>
+
+

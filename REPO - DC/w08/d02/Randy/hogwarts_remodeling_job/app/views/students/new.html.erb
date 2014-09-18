@@ -1,0 +1,12 @@
+<h1>Welcome to the Sorting Hat!</h1>
+<%= image_tag "http://flavorwire.files.wordpress.com/2009/06/sorting-hat.jpg" %>
+
+<%= form_for house_path do |f| %>
+<%= f.label :name %><br />
+<%= f.text_field :name %><br />
+
+<%= f.label :img_url %><br />
+<%= f.text_field :img_url %><br />
+
+  <%= f.submit %>
+<% end %>

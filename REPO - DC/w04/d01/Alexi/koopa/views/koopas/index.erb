@@ -1,0 +1,10 @@
+<ul>
+  <%= @koopa.each do |koopa| %>
+  <img src="<%= @koopa.image_url %>">
+    <ul>
+      <li><%= koopa.name %></li>
+      <li><%= koopa.color %></li>
+      <li><%= koopa.has_shell %></li>
+  <% end %>
+  </ul>
+</ul>

@@ -1,0 +1,16 @@
+<h1>Hit List</h1>
+
+<%= form_tag :characters, :id => "add-char" do %>
+  <%= text_field_tag "character[name]", nil, placeholder: "Name"  %>
+  <%= submit_tag "Add character"  %>
+<% end %>
+
+<ul id="hit-list">
+  <% @characters.each do |character| %>
+    <%= content_tag :li, :"data-char-id" => character.id, :class => character.dead ?  "dead" : "" do %>
+      <%= check_box_tag :dead, true, character.dead %>
+      <%= character.name %>
+      <%= content_tag :span, "Delete", class: "delete-char" %>
+    <% end %>
+  <% end %>
+</ul>

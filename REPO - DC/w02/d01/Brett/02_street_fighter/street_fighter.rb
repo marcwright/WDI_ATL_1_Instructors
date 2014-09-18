@@ -1,0 +1,114 @@
+class Fighter
+  def initialize
+    @name = ""
+    @actions = []
+  end
+
+  def action(code)
+    code = code.upcase
+    @actions.push(code)
+
+    # Pass last four action codes into the special-move test:
+    if @actions.length >= 4
+      combo = @actions[-4..-1].join('')
+      test_for_special(combo)
+    else
+      case code
+      when "A"
+        self.high_punch()
+      when "S"
+        self.low_punch()
+      when "Z"
+        self.high_kick()
+      when "X"
+        self.low_kick()
+      end
+    end
+    return self
+  end
+
+  def high_punch
+    puts "High Punch!"
+  end
+
+  def low_punch
+    puts "Low Punch!"
+  end
+
+  def high_kick
+    puts "High Kick!"
+  end
+
+  def low_kick
+    puts "Low Kick!"
+  end
+
+  def test_for_special(combo)
+    case combo
+    when "ASZX"
+      self.special_attack1()
+      return true
+    when "SSZX"
+      self.special_attack2()
+      return true
+    end
+    return false
+  end
+
+  def special_attack1
+    puts "Special Attack 1!"
+  end
+
+  def special_attack2
+    puts "Special Attack 2!"
+  end
+end
+
+class Guile < Fighter
+  def test_for_special(combo)
+    case combo
+    when "ASSA"
+      puts "Sonic Boom!"
+      return true
+    when "ZZZX"
+      puts "Flash kick!"
+      return true
+    end
+  end
+end
+
+class ChunLi < Fighter
+  def test_for_special(combo)
+    case combo
+    when "XZXZ"
+      puts "Lightning Kick"
+      return true
+    when "AXXZ"
+      puts "Spinning bird kick!"
+      return true
+    end
+  end
+end
+
+class Blanka < Fighter
+  def test_for_special(combo)
+    case combo
+    when "SSAA"
+      puts "Electric Thunder"
+      return true
+    when "XXZA"
+      puts "Rolling attack!"
+      return true
+    end
+  end
+end
+
+fighter = Fighter.new
+fighter.action("A").action("S").action("Z").action("X")
+fighter.action("S").action("S").action("Z").action("X")
+
+guile = Guile.new
+guile.action("A").action("S").action("S").action("A")
+guile.action("Z").action("Z").action("Z").action("X")
+
+chunli = ChunLi.new

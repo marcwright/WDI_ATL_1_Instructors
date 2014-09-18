@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Ribeye+Marrow);
+
+body {
+  font-family: Ribeye Marrow;
+  color: papayawhip;
+  background-color: chocolate;
+  margin: 0;
+  padding: 0;
+  padding-left: 40%;
+}
+
+
+form {
+  position: auto;
+  left: 10%;
+  top: 100px;
+  width: 30%;
+}
+
+form h1 {
+  font-size: 30px;
+}
+
+img {
+  display: block;
+  margin: 50px auto;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+
+.big {
+  height: 350px;
+  width: 350px;
+  transition: 1s;
+}

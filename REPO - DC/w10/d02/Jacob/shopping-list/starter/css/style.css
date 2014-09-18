@@ -1,0 +1,18 @@
+body {
+  background-color: #000;
+  color: #FFF;
+  font: 200 20px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+li {
+  margin: 20px 0;
+}

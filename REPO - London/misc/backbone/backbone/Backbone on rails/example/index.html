@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Photo Gallery App</title>
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="js/jquery.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="js/backbone.js"></script>
+        <script src="js/gallery.js"></script>
+
+        <script type="text/template" id="tmpl_album">
+            <h2>Photo Album</h2>
+            <form class="add" action="#">
+            <label for="title">Title</label><input id="title" name="title" placeholder="Your image's title" />
+            <label for="url">URL</label><input id="url" name="url" placeholder="http://www.example.com/picture.jpg" />
+            <input type="submit" value="Add" />
+        </form>
+            <p class="empty_album">No images in this album.</p>
+            <ul class="album_images"></ul>
+        </script>
+
+        <script type="text/template" id="tmpl_image">
+            <h1><%= title %></h1>
+            <span class="remove" data-id="<%= id %>">X</span>
+            <img src="<%= url %>" alt="<%= title %>" />
+        </script>
+
+        <script type="text/template" id="tmpl_gallery">
+            <h2>Available Albums</h2>
+            <p>We have <%= albums.length %> <% if (1 == albums.length) { print("album"); } else { print("albums"); } %> in our gallery.</p>
+            <ul>
+                <% albums.each(function(album) { %>
+                    <li class="album" data-id="<%= album.cid %>"><a href="#albums/<%= album.cid %>"><img src="http://placehold.it/200x200" /><p><%= album.get('title') %></a></p></li>
+                <% }) %>
+            </ul>
+        </script>
+
+        <script type="text/template" id="tmpl_menu">
+            <p>Photo Gallery &raquo;
+            <% if (!album) { %>
+                Albums
+            <% } else { %>
+            <a href="#" class="albums">Albums</a> &raquo; <%= album.get('title') %> (<%= album.size() %>)
+            <% } %>
+        </script>
+
+        <script type="text/template" id="tmpl_404">
+            <h2>404 Not Found</h2>
+            <p>You tried to access <%= stuff %>, but our app doesn't know how to display it. Sorry.</p>
+        </script>
+
+
+
+    </head>
+    <body>
+        <header>
+            <h1>My first photo gallery</h1>
+        </header>
+        <nav id="menubar"></nav>
+        <div id="container">
+        </div>
+
+    </body>
+</html>

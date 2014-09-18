@@ -1,0 +1,19 @@
+Create a Rails app (use -T -d postgresql)
+rails new thrones -T -d postgresql
+
+|x| One model: Character
+  - name, string, not null
+  - dead, boolean, default to false
+rails generate migration CreateCharacters
+rake db:migrate
+rake db:seed
+
+|x| Create the AR model
+
+|x| Test the model in the Rails Console to make sure it works
+
+|x| Seed the database with 3 characters
+
+|x| Create a route for the root which goes to the characters index
+
+|x| Create a controller and view so that we can see all the characters on the index page in a ul (each character name should in an li)

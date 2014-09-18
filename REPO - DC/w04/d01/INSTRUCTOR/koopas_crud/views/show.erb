@@ -1,0 +1,14 @@
+<h1>Koopa <%= @koopa.name %></h1>
+<ul>
+  <li>Name: <%= @koopa.name %></li>
+  <li>Color: <%= @koopa.color %></li>
+  <li>Has shell: <%= @koopa.has_shell %></li>
+  <li><img src="<%= @koopa.photo_url %>" alt="<%= @koopa.name %>"></li>
+</ul>
+
+<a href="/">All Koopas</a> | 
+<a href="/koopas/<%= @koopa.id %>/edit">Edit this koopa</a>
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

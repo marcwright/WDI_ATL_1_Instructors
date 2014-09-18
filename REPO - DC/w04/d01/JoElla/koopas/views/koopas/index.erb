@@ -1,0 +1,10 @@
+<h1>View our Koopa collection</h1>
+<ul>
+  <% @koopas.each do |koopa| %>
+      <% if koopa.has_shell == true %>
+      <a href="/koopas/<%= koopa.id %>"><li><%= koopa.name %> has a beautiful <%= koopa.color %> coat.</li></a>
+      <% else %>
+      <li><%= koopa.name %> has a beautiful <%= koopa.color %> coat.</li>
+      <% end %>
+    <% end %>
+</ul>

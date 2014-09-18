@@ -1,0 +1,29 @@
+<!--
+This form states that it will only be carried out if the user is indeed
+signed in as determined by the signed_in? method described in the
+sessions_help.rb file.
+
+The form sets the path as being for :session which is the session instance object. The path specified for the request is the signout_path
+which we set up in our routes page specifically for the delete method.
+The method called is delete which will specifiythe type of request being
+passed to the controller.
+
+The form also has some flair by specifying what the name of the currently
+logged in user is. Along with a button to initate the request.
+
+Additionally, the signout view has links to the signin and signup pages
+if the user is not currently logged in.
+ -->
+
+<% if signed_in? %>
+
+  <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
+    Signed in as <%= link_to current_user.name, current_user %>
+    <%= f.submit "Sign out", id: 'signout' %>
+  <% end %>
+
+<% else %>
+
+  <%= link_to "Sign In", signin_path %> | <%= link_to "Sign up", signup_path %>
+
+<% end %>

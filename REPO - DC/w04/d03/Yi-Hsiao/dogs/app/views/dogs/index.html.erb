@@ -1,0 +1,5 @@
+<h1>Dogs looking for a happy home:</h1>
+<% @dogs.each do |dog| %>
+  <h2><%= dog.name %></h2>
+  <%= link_to image_tag(dog.image_url, alt: dog.name), dog %>
+<% end %>

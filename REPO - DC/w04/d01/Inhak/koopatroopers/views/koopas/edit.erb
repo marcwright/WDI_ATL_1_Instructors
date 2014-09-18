@@ -1,0 +1,21 @@
+<h1>Edit <%= @koopa.name %></h1>
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @koopa.name %>">
+
+  <label>
+    Does it have a shell?
+    <input type="text" name="has_shell" value="<%= @koopa.has_shell %>">
+  </label>
+
+  <label>
+    photo URL:
+    <input type="text" name="photo_url" value="<%= @koopa.photo_url %>">
+  </label>
+
+  <button> Update this Koopa </button>
+</form>

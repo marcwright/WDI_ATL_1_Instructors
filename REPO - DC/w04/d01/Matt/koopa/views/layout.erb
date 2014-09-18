@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Koopa</title>
+  <link href="/style.css" rel="stylesheet">
+  <link href="/cover.css" rel="stylesheet">
+</head>
+
+  <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h2 class="masthead-brand">Koopa Island</h2>
+              <ul class="nav masthead-nav">
+                <li><a href="/">View All Koopas</a></li>
+                <li><a href="/koopa/new">Create a Koopa</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="inner cover show-list">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>

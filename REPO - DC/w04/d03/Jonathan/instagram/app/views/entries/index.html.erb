@@ -1,0 +1,17 @@
+<h1>Instagram Entries:</h1>
+
+<h2>
+  <% @entries.each do |entry| %>
+    <br>
+    <img src="<%= entry.photo_url %>">
+    <br>
+    <%= entry.author %>
+    -
+    <%= entry.date_taken %>
+    -
+    <a href="<%= "/entries/#{entry.id}" %>">Edit</a>
+    <br><br>
+  <% end %>
+</h2>
+
+<br><br>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <title>I &hearts; JavaScript</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    // var currentTemp = prompt("What's the temp?");
+
+    // var desiredTemp = prompt("What temp do you want?");
+
+    // var workingAC = prompt("Is the AC working? (True/False)");
+
+    // if ( workingAC === "true" && currentTemp > desiredTemp ) {
+    //   console.log("Turn on the AC");
+    // } else if ( workingAC === "false" &&currentTemp > desiredTemp ) {
+    //   console.log("Fix the AC");
+    // } else if ( workingAC === "false" &&currentTemp < desiredTemp ){
+    //     console.log("Fix the AC whenevers.");
+    // }
+
+
+    // var compNum = Math.floor(Math.random() *11);
+
+    // var userNum = parseInt(prompt("Guess a number 1-10"));
+
+    while (userNum !== compNum) {
+       compNum = parseInt(prompt("Guess again"));
+     }
+
+
+    //Functions
+
+    //named functions
+
+    function add(x, y) {
+      return x + y;
+    }
+
+    //anonymous functions
+
+    var add = function (x, y){
+      return x + y;
+    }
+
+    //Arrays
+
+    var myNameArray = ["Adam", "Elaine", "Travis"];
+    //access things
+    myNameArray[0];
+
+    myNameArray.push("Matt");
+
+
+    //Iteration
+
+    var dwarves = ["Doc", "Sleepy", "Wheezey", "Mopey", "Sneezy"];
+
+    //for loop
+
+    for(var i = 0; i <= dwarves.length; i++) {
+      console.log("Hi, I'm " + dwarves[i]);
+    }
+
+    //enumeration
+
+    dwarves.forEach(function(dwarf, index){
+      console.log(dwarves[index] + "says hi");
+    });
+
+
+    //Object literal notation
+
+    var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+
+    var myBird = {name: "Tweety", chirp: function(){
+        console.log('tweet tweet tweet');
+    },
+      greet: function(){
+        console.log('Hi my name is ' + this.name);
+      }
+  }
+
+    var myPerson = {name: 'Ned', hometown: 'Springfield', sing: function() {
+      console.log('doobie doobie');
+    }, introduce: function(){
+      console.log('My name is ' + self.name + 'and I am from ' + self.hometown);
+    }
+    }
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

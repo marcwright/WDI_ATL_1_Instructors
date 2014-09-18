@@ -1,0 +1,88 @@
+
+body{
+  background-color: #d6d6d6;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.container {
+  margin: 0 auto;
+  width: 925px;
+}
+
+.page .header {
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat-x;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.page .main {
+  background-color: #fff;
+  float: left;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+}
+.page h2 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
+  text-align: left;
+}
+
+.page p {
+  font-family: monospace;
+  line-height: 20px;
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+}
+
+.page .main h3 {
+  border: 2px black;
+  border-top-style: dotted;
+  border-bottom-style: solid;
+  font-size: 12px;
+  margin: 10px 0px 50px 0px;
+  padding: 10px;
+  text-align: left;
+}
+
+.page .main a {
+  color: #cc6633;
+}
+
+.page .complementary {
+  background-color: #fff;
+  float: right;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 220px;
+}
+
+.page .complementary ul {
+  margin-bottom: 10px;
+}
+
+.page .complementary li {
+  color: #000;
+  font-size: 14px;
+  padding: 3px;
+}
+
+.page .complementary img {
+  padding: 10px 0px 10px 0px;
+}
+
+.page .footer {
+  clear: both;
+  text-align: center;
+  padding-top: 30px;
+}
+

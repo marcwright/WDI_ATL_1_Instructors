@@ -1,0 +1,33 @@
+body {
+  background-color: gray;
+  background-image: url(http://www.publicdomainpictures.net/pictures/30000/nahled/blue-rippling-water.jpg);
+  font: 14px/2em Helvetica, Sans-Serif;
+}
+
+
+.container {
+  background-color: white;
+  border: 0px;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+
+.container h1 {
+background-color: red;
+color: white;
+font: 20px/2em Helvetica, Sans-Serif;
+margin-bottom: 20px;
+}
+
+h2 {
+color: red;
+font-style: italic;
+font-weight: bold;
+
+}
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}

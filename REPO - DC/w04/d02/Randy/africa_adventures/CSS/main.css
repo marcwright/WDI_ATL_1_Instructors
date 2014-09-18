@@ -1,0 +1,48 @@
+body {
+  background-image: url("http://3.bp.blogspot.com/-6MRiYQtbGw4/UCeVH__moZI/AAAAAAAARWs/RuuWQuqWbdI/s1600/batman%2Bsurf.png");
+  background-color: gray;
+  font: 14px/1.4em Helvetica, san-serif;
+}
+
+.container {
+  background-color: orange;
+  border: 5px solid white;
+  color: black;
+  margin: 0px auto;
+  padding: 10px;
+  text-align: center;
+  width: 600px;
+}
+.container h1 {
+  background-color: blue;
+  border: 5px solid white;
+  border-radius: 20px;
+  line-height: 120px;
+  height: 120px;
+  padding: 10px;
+}
+
+h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+h2 {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+img {
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba( 0 0 0 5);
+}
+
+p{
+  text-decoration: :bold;
+}
+

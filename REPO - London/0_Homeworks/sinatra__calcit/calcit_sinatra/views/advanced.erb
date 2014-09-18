@@ -1,0 +1,98 @@
+<div class="container">
+  
+<div class="page-header">
+  <h1>Advanced</h1>
+</div>
+
+
+<form class="form-horizontal" action='/advanced' method='get'>
+<fieldset>
+
+<legend>I've got the power!</legend>
+<input type='hidden' name='type' value='power'>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="first">Your base number</label>  
+  <div class="col-md-5">
+  <input id="distance" name='first' type="text" class="form-control input-md" required="" autofocus>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="second">To the power of...</label>  
+  <div class="col-md-5">
+  <input id="mpg" name="second" type="text" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">Don't rush it Jennifer!</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+<!-- <h2>Enter a number to find the square root</h2>
+<form action='/advanced' method='get'>
+  <input type='hidden' name='type' value='sqrt'>
+  <label>First</label>
+  <input type='text' name='square'>
+  <button>Let's get to the root!</button>
+</form> -->
+
+
+<form class="form-horizontal" action='/advanced' method='get'>
+<fieldset>
+
+<legend>I've got the power!</legend>
+<input type='hidden' name='type' value='sqrt'>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="square">Your number please</label>  
+  <div class="col-md-5">
+  <input id="distance" name='square' type="text" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">I'll have a p please Bob</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+<% if @result %>
+
+<section>
+  <header>
+    
+    <% if @type == 'sqrt' %>
+    <h3>The square root of <%= @square %> is 
+      <%= @result %></h3>
+    <% end %>
+    <% if @type == 'power' %>
+    <h3><%= @first %> to the power of <%= @second %> is
+      <%= @result %></h3>
+    <% end %>
+
+  </header>
+</section>
+<% end %>
+</div>

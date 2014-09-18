@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+
+<body>
+  <script type='text/javascript'>
+  
+  // JavaScript Comment
+  /* This is a
+  JavaScript block
+  */
+
+  //Variables
+  var beep = 'beep';
+
+  // Console Output
+  console.log(beep);
+
+  // Conditionals
+  var number = 5;
+  if (number > 5) {
+    console.log('Big number');
+  } else if (number < 5) {
+    console.log('little number');
+  } else {
+    console.log('must be 5 then');
+  }
+
+  var day = 'Monday';
+  switch (day) {
+    case 'Monday' : 
+      console.log('Get Haircut!');
+      break;
+  case 'Tuesday' :
+    console.log('Don\'t get haircut');
+      break;
+  case 'Friday' :
+    console.log('Drink a beer');
+    break;
+  default:
+    console.log('I\'m in limbo');
+  }
+
+// While Loop
+var count = 10
+while (count > 0) {
+  console.log(count);
+  count--;
+}
+
+//Functions
+
+//named
+function add(x, y){
+  return x + y;
+}
+
+// anonymous
+var add = function(x, y){
+  return x + y;
+};
+
+//function w/o arguments
+var scream = function(x, y){
+  return "AAAHHH";
+};
+
+// Arrays
+var myNameArray = ['Adam', 'Elaine', 'Travis'];
+myNameArray[0];
+myNameArray.push('Matt')
+
+// Iteration
+var dwarves = ['Doc', 'Sleepy', 'Bashful', 'Grumpy', 'Sneezy', 'Happy', 'Dopey']
+
+//for looop
+for(var i = 0; i < dwarves.length; i++){
+  console.log('HI HO! I am ' + dwarves[i]);
+}
+
+//enumeration
+dwarves.forEach(function(dwarf, index){
+  console.log(dwarves[index] + ' says hi');
+})
+
+// Object (Literal Notation)
+var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+
+var myBird = {
+  name: "Tweety", 
+  chirp: function(){
+    console.log('tweet tweet tweet');
+  },
+  greet: function(){
+    console.log('Hi my name is ' + this.name);
+  }
+}
+
+var person = {
+  name: 'Alexi',
+  age: 31,
+  sing: function() {
+    console.log("I wish I was a little bit taller");
+  },
+  introduce: function() {
+    console.log("Hi, my name is " + this.name + " I'm from Texas");
+  }
+};
+
+// Elequent JS
+var base = 2
+var result = 1
+var power = 10
+while (power < 10){
+  result = result * base;
+  power = power + 1;
+  }
+  console.log(result);
+
+
+  </script>
+  </body>
+</html>

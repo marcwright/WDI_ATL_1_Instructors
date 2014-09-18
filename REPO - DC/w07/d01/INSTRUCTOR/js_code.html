@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+  // JavaScript!
+  // This is a JavaScript Comment
+  /*
+      This is
+      A JavaScript
+      Block Comment
+  */
+
+  // Variables
+  var beep = 'beep';
+  var multiWordVariable = 'some string'
+
+  //Console Output
+  console.log(beep);
+
+  //Conditionals
+  var number = 5;
+  if (number > 5) {
+    console.log('BIG NUMBER!');
+  } else if (number < 5) {
+    console.log('little number');
+  } else {
+    console.log('must be 5 then');
+  }
+
+  var day = 'Salilday';
+  switch (day){
+    case 'Monday' :
+      console.log('Get Haircut!');
+      break;
+    case 'Tuesday' :
+      console.log('Dont get Haircut');
+      break;
+    case 'Friday' :
+      console.log('Get 3 haircuts!');
+      break;
+    default :
+      console.log('Im in limbo');
+  }
+
+  // While loop
+  var count = 10;
+  while (count > 0) {
+    console.log(count);
+    count--;
+  }
+
+  //Functions
+
+  //named
+  function add(x, y){
+    return x + y;
+  }
+
+  // anonymous
+  var add = function(x, y){
+    return x + y;
+  };
+
+  //function with no arguments
+  var scream = function(){
+    return "AHHHHHHHHHHHHHHHHH";
+  };
+
+  //Arrays
+  var myNameArray = ['Adam', 'Elaine', 'Travis'];
+  myNameArray[0];
+  myNameArray.push('Matt');
+
+  //Iteration
+  var dwarves = ['Doc', 'Sleepy', 'Bashful', 'Grumpy', 'Dopey', 'Sneezy', 'Happy']
+
+  //for loop
+  for(var i = 0; i < dwarves.length; i++){
+    console.log('HI HO! I am ' + dwarves[i]);
+  }
+
+  //enumeration
+  dwarves.forEach(function(dwarf, index){
+    console.log(dwarf + ' says hi');
+  });
+
+  //Object (literal notation)
+  var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+
+  var tweety = {
+    character: "Tweety",
+    chirp: function(){
+      console.log('tweet tweet tweet');
+    },
+    greet: function(){
+      console.log('Hi my name is ' + this.character);
+    }
+  }
+
+  var person = {
+    name: "boomer",
+    hometown: "Jawbone",
+    sing: function() {
+      console.log("I've been working on my BAAAANNjooo");
+    },
+    greet: function(visitor) {
+      console.log("Hiya " + visitor + ", mah name is " + this.name + ", is this your first time to " + this.hometown + "?");
+    }
+  }
+
+
+  </script>
+</body>
+</html>

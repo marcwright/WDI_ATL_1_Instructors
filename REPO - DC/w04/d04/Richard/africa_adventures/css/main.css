@@ -1,0 +1,50 @@
+
+body {
+  background-color: gray;
+  font: 14px/1.4em Helvetica, sans-serif;
+  /* font-family: Helvetica, sans-serif/
+     font-size: 14px;
+     line_height: 1.4em; */
+     background-image: url("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c73.0.160.160/p160x160/1381288_2646140563903_1889650191_n.jpg");
+
+}
+
+
+.container {
+  background-color: white;
+  border: 5px solid purple;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+}
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px purple;
+}
+.container h1 {
+  background-color: red;
+  border: 1px solid purple;
+  color: white;
+  height: 120px;
+  line-height: 120px;
+  margin: 0 0 10px 0;
+  padding: 10px;
+}
+
+.container h2 {
+  color: purple;
+  font-weight: bold;
+}
+
+.container h1,
+.container h2,
+.container p {
+  font-weight: bold;
+  font-size: 18px 2em;
+}
+
+.container ul {
+  list-style-type: disc;
+}

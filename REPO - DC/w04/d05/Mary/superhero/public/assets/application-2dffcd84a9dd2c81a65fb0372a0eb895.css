@@ -1,0 +1,49 @@
+/* line 2, /Users/mhipp/dev/wdi/WDI_DC_1/w04/d05/Mary/superhero/app/assets/stylesheets/hero.css.scss */
+body {
+  background: black url(/assets/skyline.jpg) no-repeat;
+  background-size: cover;
+  color: white;
+  font: 16px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 9, /Users/mhipp/dev/wdi/WDI_DC_1/w04/d05/Mary/superhero/app/assets/stylesheets/hero.css.scss */
+a {
+  color: yellow;
+  text-decoration: none;
+}
+/* line 13, /Users/mhipp/dev/wdi/WDI_DC_1/w04/d05/Mary/superhero/app/assets/stylesheets/hero.css.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 18, /Users/mhipp/dev/wdi/WDI_DC_1/w04/d05/Mary/superhero/app/assets/stylesheets/hero.css.scss */
+.page {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  padding: 20px;
+  width: 600px;
+}
+/* line 24, /Users/mhipp/dev/wdi/WDI_DC_1/w04/d05/Mary/superhero/app/assets/stylesheets/hero.css.scss */
+.page h1 {
+  color: #ffffcc;
+}
+/* line 28, /Users/mhipp/dev/wdi/WDI_DC_1/w04/d05/Mary/superhero/app/assets/stylesheets/hero.css.scss */
+.page .hero {
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

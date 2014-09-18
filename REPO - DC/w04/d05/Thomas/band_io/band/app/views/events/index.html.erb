@@ -1,0 +1,15 @@
+<h1>Upcomming events at <%= @venue.name %></h1>
+<% @events.each do |event| %>
+<ul>
+  <li><a href="/events/<%= event.id %>"><%= event.band.name %> playing
+    <%= event.band.genre %> on
+    <%= event.date %></a>
+  </li>
+    <ul>
+      <li>Doors open at <%= event.time %></li>
+    </ul>
+</ul>
+
+<% end %>
+<button><%= link_to "Return to Venues", venues_path %></button>
+<button><%= link_to "Book a Band", new_venue_event_path %></button>

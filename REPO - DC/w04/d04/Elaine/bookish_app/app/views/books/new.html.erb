@@ -1,0 +1,38 @@
+<div class="page">
+  <% if params[:author_id] %>
+    <h1>Add a New Book by <%= @author.name %></h1>
+
+    <form action="/authors/<%= @author_id %>/books" method="post">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <ul>
+        <li>
+          <label>
+            Title:
+            <input type="text" name="title">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            Release Date:
+            <input type="date" name="release_date">
+          </label>
+        </li>
+
+      <li>
+          <label>
+          Genre:
+          <input type="text" name="genre">
+        </label>
+      </li>
+      </ul>
+
+      <input type="submit" value="Add Book">
+    </form>
+
+    <p><a href="/">Home</a></p>
+    <p><a href="/authors">All Authors</a></p>
+
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CookbookInClass</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Recipes", recipes_path %></li>
+  <li><%= link_to "Ingredients", ingredients_path %></li>
+</ul>
+
+<%= yield %>
+
+
+</body>
+</html>

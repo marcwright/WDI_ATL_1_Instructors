@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="dragging">
+  <head>
+    <title>angular-dragdrop test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
+    <script src="draganddrop.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+      .box {
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+      }
+      #colright {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body ng-controller="dragCtrl">
+    <main class="row" style="height:100vh">
+      <div class="col-sm-1"></div>
+      <div id="colleft" class="col-sm-5">
+        <div
+          ui-draggable="true" drag="box" on-drop="onDrop($event, $data, rightboxcol)" on-drop-success="dropSuccessHandler($event, $index, leftboxcol)"
+          ng-repeat="box in leftboxcol track by $index"
+          style="background-color: pink;" class="box">{{box}}</div>
+        <p>Drag the elements from the left to the right To see <a href="http://ganarajpr.github.io/angular-dragdrop/" target="_blank">Angular-DragDrop</a> in action.</p>
+      </div>
+      <div id="colright" class="col-sm-5" ui-on-drop="onDrop($event, $data, rightboxcol)">
+        <div
+          ng-repeat="box in rightboxcol track by $index"
+          style="background-color: purple; color: white;" class="box">{{box}}</div>
+      </div>
+      <div class="col-sm-1"></div>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+  background-color: gray;
+  background-image: url(http://www.placekitten.com/300/300);
+  background-size: 100%;
+  font: 14px/1.4em Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+  text-align:center;
+}
+
+.container h1 {
+  background-color: red;
+  color:white;
+  height: 120px;
+  line-height: 120px;
+  padding: 10px;
+}
+
+.container h2 {
+  color: red;
+  font-style: italic;
+  font-weight:bold;
+}
+
+.container h1,
+.container h2,
+.conatiner p {
+  margin: 20px 0;
+  text-align:left;
+}
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+

@@ -1,0 +1,11 @@
+<h1>Users#new</h1>
+
+<%= form_for @user do |f| %>
+	<%= f.text_field :name, placeholder: "name" %>
+	<%= f.text_field :email, placeholder: "email" %>
+	<%= f.text_field :github_handle, placeholder: "github handle" %>
+	<%= f.text_field :password, placeholder: "password" %>
+	<%= f.text_field :password_confirmation, placeholder: "password again.." %>
+	<%= f.submit %>
+<% end %>
+

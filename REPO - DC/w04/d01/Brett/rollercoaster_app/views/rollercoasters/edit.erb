@@ -1,0 +1,13 @@
+<h1> Edit <%= @rollercoaster.name %></h1>
+
+<form action="/rollercoasters/<%= @rollercoaster.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+<label>Name:<input type="text" name="name" value="<%= @rollercoaster.name %>"></label>
+<label>Minimum height (ft):<input type="number" name="min_height" value="<%= @rollercoaster.min_height %>"></label>
+<label>Top speed (mph):<input type="number" name="top_speed" value="<%= @rollercoaster.top_speed %>"></label>
+<label>Image URL:<input type="text" name="image_url" value="<%= @rollercoaster.image_url %>"></label>
+
+<button>Update this rollercoaster</button>
+
+</form>

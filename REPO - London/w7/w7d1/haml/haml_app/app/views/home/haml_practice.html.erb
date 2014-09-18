@@ -1,0 +1,31 @@
+<div id='wrapper'>
+  <div id='header'>
+    <ul class='menu'>
+      <% %w(Home Contact About).each do |menu_item| %>
+        <%= content_tag :li, class: 'menu-item' do %>
+          <%= menu_item %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div id='sidebar'>
+    <div class='favourites'>My faves</div>
+    <div class='todo-list'>Must do</div>
+  </div>
+  <div id='content'>
+    <form action='/postform' method='post'>
+      <input name='name' placeholder='Name' type='text'>
+      <input name='email' placeholder='Email' type='text'>
+      <label>Sex</label>
+      <select>
+        <option value='f'>Female</option>
+        <option value='m'>Male</option>
+      </select>
+    </form>
+  </div>
+  <div id='footer'>
+    <p>Copyright 2013</p>
+    <p class='very-big'>Make this text very big</p>
+    <p>but only make<span class='very-big'>this text</span> very big</p>
+ </div>
+</div>

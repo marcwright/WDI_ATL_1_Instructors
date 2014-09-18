@@ -1,0 +1,22 @@
+<h1>Add a book</h1>
+
+<form action="/books" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <label>
+    Title:
+    <input type="text" name="title">
+  </label>
+
+  <label>
+    Release Date:
+    <input type="date" name="release_date">
+  </label>
+
+  <label>
+    Genre:
+    <input type="text" name="genre">
+  </label>
+
+  <input type="submit" name="Add Book" redirect="/books">
+
+</form>

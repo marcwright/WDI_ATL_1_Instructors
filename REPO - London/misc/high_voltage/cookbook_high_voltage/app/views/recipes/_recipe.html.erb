@@ -1,0 +1,12 @@
+<div class="container2">
+  <h2><%=link_to recipe.name, recipe_path(recipe.id)%></h2>
+  <%= link_to 'delete', recipe_path(recipe.id), method: :delete, confirm: 'Are you sure?'%>
+  <%= link_to 'edit', edit_recipe_path(recipe.id)%>
+   <p>Tags: <%= recipe.tag_list %></p>
+
+   <p>Tags: <% recipe.tag_list.map do |t|%>
+   <%= link_to t, tagged_url(:tag => t) %>
+   <%end%>
+
+ </p>
+</div>

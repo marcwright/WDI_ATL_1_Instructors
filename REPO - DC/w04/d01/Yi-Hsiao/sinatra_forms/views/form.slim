@@ -1,0 +1,52 @@
+<form action="/add-ponies" method="post">
+  <h2>Add Ponies</h2>
+  <label for="pony-name">Name:</label>
+  <input type="text" id="pony-name" name="name">
+  <label for="pony-breed">Breed:</label>
+  <input type="text" id="pony-breed" name="breed">
+  <input type="submit">
+</form>
+
+<form action="/book-flights" method="post">
+  <h2>Book Flights</h2>
+  <label for="flight-origin">Origin:</label>
+  <input type="text" id="flight-origin" name="origin">
+  <label for="flight-destintion">Destination:</label>
+  <input type="text" id="flight-destination" name="destination">
+  <label for="flight-date">Date:</label>
+  <input type="date" id="flight-date" name="date">
+  <input type="submit">
+</form>
+
+<form action="/login" method="post">
+  <h2>Login</h2>
+  <label for="login-email">Email:</label>
+  <input type="email" id="login-email" name="email">
+  <label for="login-password">Password:</label>
+  <input type="password" id="login-password" name="password">
+  <input type="submit">
+</form>
+
+<form action="/order-pizzas" method="post">
+  <h2>Order a Pizza</h2>
+  <fieldset>
+    <legend>Size:</legend>
+    <input type="radio" name="size" id="pizza-size-small">
+    <label for="pizza-size-small">Small</label>
+    <input type="radio" name="size" id="pizza-size-medium">
+    <label for="pizza-size-medium">Medium</label>
+    <input type="radio" name="size" id="pizza-size-large">
+    <label for="pizza-size-large">Large</label>
+  </fieldset>
+  <fieldset>
+    <legend>Toppings:</legend>
+    <label for="pizza-toppings-pepperoni">Pepperoni</label>
+    <input type="checkbox" id="pizza-toppings-pepperoni" name="pepperoni">
+    <label for="pizza-toppings-mushrooms">Mushrooms</label>
+    <input type="checkbox" id="pizza-toppings-mushrooms" name="mushrooms">
+    <label for="pizza-toppings-peppers">Peppers</label>
+    <input type="checkbox" id="pizza-toppings-peppers" name="peppers">
+  </fieldset>
+  <input type="submit">
+</form>
+

@@ -1,0 +1,19 @@
+
+<form action="/" method="get">
+
+  <label>
+    Stock Symbol:
+    <input type="text" name="symbol" placeholder="Enter ticker">
+    <input type="submit" value="Submit">
+  </label>
+</form>
+
+<% if @last_price %>
+<h2>Last price:<%= @last_price %></h2>
+<p>High: <%= @high %></p>
+<p>Low: <%= @low %></p>
+<p>Approximate Number of Shares: <%= @num_shares.to_i %></p>
+  <% else %>
+  <%= @error %>
+<% end %>
+

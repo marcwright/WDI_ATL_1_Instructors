@@ -1,0 +1,15 @@
+<section>
+  <article>
+    <dl>
+      <dt>Item :</dt>
+      <dd><%=@item['item']%></dd>
+    </dl>
+    <dl>
+      <dt>Details :</dt>
+      <dd><%=@item['details']%></dd>
+    </dl>
+    <div class='link'><a href='/items/<%=@item['id']%>/delete'>delete</a></div>
+    <div class='link'><a href='/items/<%=@item['id']%>/edit'>edit</a></div>
+    <div class='clear_both'></div><%# TODO: replace with clearfix hack... %>
+  </article>
+</section>

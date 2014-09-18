@@ -1,0 +1,137 @@
+/*
+  Red: #B00;
+  Dark Red: #900;
+
+  Max page width: 900px
+  Nav width: 25%, with 5% right margin
+  Main width: 65%
+
+  CSS you'll need:
+  - max-width
+  - @media
+*/
+
+body {
+  background-color: #333;
+  font: 15px/1.4 Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 25px 25px 50px;
+}
+
+a {
+  color: #C00;
+}
+
+div.page {
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+  .nav {
+    background-color: #B00;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    margin-right: 5%;
+    padding: 0;
+    width: 25%;
+  }
+
+    ul.nav li a {
+      border-bottom: 1px solid #900;
+      color: #fff;
+      display: block;
+      padding: 15px;
+    }
+
+    .nav a:hover {
+      background-color: #900;
+    }
+
+  div.header {
+    background: url('../images/header.png') center top;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+    div.header img{
+      margin: 20px;
+      width: 30%;
+    }
+
+  .main {
+    float: right;
+    margin-right: 3%;
+    width: 65%;
+  }
+
+    div.main img {
+      float: left;
+      margin-right: 15px;
+      width: 35%;
+    }
+
+ul {
+  list-style: none;
+}
+
+  .nav a,
+  .footer a {
+    text-decoration: none;
+  }
+
+  ul.footer {
+    clear: both;
+  }
+
+    ul.footer li {
+      display: inline;
+    }
+
+.breadcrumbs {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+  .breadcrumbs li {
+    display: inline;
+    list-style-type: none;
+  }
+
+  .breadcrumbs li:before {
+    content: '>';
+    margin: 10px;
+  }
+
+  .breadcrumbs li:first-child:before {
+    content: none;
+  }
+
+@media (max-width: 800px) {
+  .nav {
+    float: none;
+    margin: 0;
+    width: auto;
+  }
+
+    .nav li {
+      display: inline-block;
+    }
+
+    .nav a {
+      border-right:
+    }
+
+  .main {
+    float: none;
+    margin: 0;
+    padding: 15px;
+    width: auto;
+  }
+}

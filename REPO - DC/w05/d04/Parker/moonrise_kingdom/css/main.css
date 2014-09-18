@@ -1,0 +1,66 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;*/
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+
+
+ 
+ .box { display:static;
+overflow:visible;
+visibility:visible;
+width:160px;
+height:150px;
+padding:30px;
+border-top: 30px solid gray; border-bottom:30px solid black; border-left:30px solid gray; border-right: 30px solid black; margin-left:230px; margin-top:80px;
+  background-color:gold; }
+
+body {
+  font-family: Droid Sans, Droid Serif;
+  background-image: 
+
+  margin: 0;
+  padding: 20px;
+}
+
+
+
+
+
+
+/*article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;*/
+}

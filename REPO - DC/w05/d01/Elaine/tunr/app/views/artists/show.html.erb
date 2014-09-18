@@ -1,0 +1,13 @@
+<!-- All Artists Link -->
+
+<h1><%= @artist.name %></h1>
+<p><%= @artist.genre %></p>
+
+<!-- Artist Image -->
+<%= image_tag @artist.photo_url, alt: "", class: "artist" %>
+
+<!-- Artist Edit link -->
+<p><%= link_to "Edit", edit_artist_path(@artist) %></p>
+<%= form_for @artist, method: 'delete' do |f| %>
+  <%= f.submit "Delete", id: 'destroy' %>
+<% end %>

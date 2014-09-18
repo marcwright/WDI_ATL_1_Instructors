@@ -1,0 +1,19 @@
+<h1>Shameless Reddit Ripoff</h1>
+
+<form>
+  <fieldset>
+    <legend>New Post</legend>
+    <label>
+      Article URL
+      <input type="text" name="url" />
+    </label>
+    <button>Submit</button>
+  </fieldset>
+</form>
+
+<div id="container"></div>
+
+<script type="template" id="post-html">
+  <h2><%%= post.get("upvotes") %> -- <%%= post.get("title") %></h2>
+  <span>+1</span>
+</script>

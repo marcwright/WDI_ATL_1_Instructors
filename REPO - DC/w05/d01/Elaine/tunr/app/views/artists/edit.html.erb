@@ -1,0 +1,18 @@
+<h1>Edit <%= @artist.name %></h1>
+
+<!-- Artist Edit Form -->
+<%= render "manage_form" %>
+
+<hr>
+
+<!-- Artist Delete -->
+
+<%= form_for @artist, method: 'delete' do |f| %>
+  <%= f.submit "Delete", id: 'destroy' %>
+<% end %>
+
+<!-- Cancel -->
+
+<p><%= link_to "Cancel", @artist %></p>
+
+

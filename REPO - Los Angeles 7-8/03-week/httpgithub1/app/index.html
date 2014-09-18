@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="githubApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+  <div class="view-container" ng-controller="TeamCtrl">
+    <div class="container-fluid">
+
+      <h1>What's Up With WDI 7-8</h1>
+      <!-- {{team}} -->
+      <div class="row">
+
+        <div class="col-md-4 users">
+            <h2>Team Members:</h2>
+            <ul class="clearfix">
+              <li ng-repeat="user in team">
+                {{user.login}}
+                <br>
+              <div class="user-logo">
+                <img ng-src="{{user.avatar_url}}">
+              </div>
+              </li>
+            </ul>
+        </div>
+
+        <div class="col-md-8 feeds">
+          <h2>What they're up to:</h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+   <!--In production use a cdn:-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

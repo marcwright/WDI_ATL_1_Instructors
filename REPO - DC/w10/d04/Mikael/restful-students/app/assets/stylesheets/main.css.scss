@@ -1,0 +1,132 @@
+body {
+  background: #333 image-url("pinstripe.png");
+  font: 14px/1.25 Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.students-app {
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 20px auto;
+  overflow: hidden;
+  width: 450px;
+
+  input,
+  button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+
+  button {
+    padding: 5px 0.5em;
+  }
+
+  button.primary {
+    background-color: #3276b1;
+    border-color: #285e8e;
+    color: #fff;
+  }
+
+  button.danger {
+    color: #d2322d;
+  }
+
+  .header {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 15px;
+
+    h1 {
+      display: inline;
+      font-size: 22px;
+      font-weight: normal;
+    }
+
+    button {
+      display: block;
+      height: 30px;
+      vertical-align: center;
+    }
+  }
+
+  .create {
+    padding: 10px 15px;
+
+    input {
+      font-size: 18px;
+      margin-right: 2%;
+      width: 87%;
+    }
+
+    button {
+      font-size: 18px;
+      font-weight: 800;
+      width: 10%;
+    }
+  }
+}
+
+.students-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border-top: 1px solid #ccc;
+  }
+
+  a {
+    color: #285e8e;
+    display: block;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #F5FAFF;
+      display: block;
+      padding: 10px 15px;
+    }
+  }
+}
+
+.student-detail {
+  .done:before {
+    content: '\00AB';
+    margin-right: 5px;
+  }
+
+  fieldset {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    line-height: 30px;
+    margin: 0 15px;
+    min-height: 30px;
+    padding: 10px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  label {
+    display: inline-block;
+    width: 40%;
+  }
+
+  input[type="text"] {
+    width: 59%;
+  }
+
+  .remove {
+    text-align: center;
+  }
+}

@@ -1,0 +1,22 @@
+01. pry(main)> Artist.create(name: "Vincent Van Gogh")
+
+02. pry(main)> Painting.create(name: "Starry Night", artist_id: 2, description: "oil on canvas", paint_date: 1889)
+
+03. Artist.all
+04. Painting.all
+05. Artist.find_by(id: 2) --explicit
+    Artist.find(2) --> shortcut
+  
+06. Artist.find_by(name: "Vincent Van Gogh")
+07. Artist.where(nationality: "Spain")
+08. Painting.find(1)
+09. Painting.find_by(title: "Guernica")
+10. Artist.find_by(name: "Pablo Picasso").paintings
+11. Painting.find_by(title: "Guerinca").artist
+12. vangogh = Artist.find_by(name: "Vincent Van Gogh")
+    vangogh.update(nationality: "American")
+    Artist.all
+    vangogh.nationality = "canadian" --> does not persist
+    Artist.all
+    vangogh.save
+13. 

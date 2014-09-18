@@ -1,0 +1,11 @@
+<h1>List of books </h1>
+
+<% @books.each do |book| %>
+  <li><%= book.title %>
+    <ul>
+    <li>author: <%= book.author.name %></li>
+    <li>release date: -  <%= book.release_date %></li>
+    <li>genre: <%= book.genre %></li>
+    </ul>
+  </li>
+<% end %>

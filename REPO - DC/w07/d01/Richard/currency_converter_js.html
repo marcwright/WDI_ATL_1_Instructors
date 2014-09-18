@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> I &hearts; Inhak </title>
+</head>
+<body>
+  <script type = 'text/javascript'>
+//   # Currency Converter
+
+// * [Find the exchange rate between dollars and pounds](http://www.bloomberg.com/quote/GBPUSD:CUR)
+
+// * Write a function dollarsToPounds that takes a dollar number as input and outputs a string of what the pound equivalent is.
+
+    var dollarsToPounds = function(dollars){
+      var pounds = parseFloat(dollars/1.6748).toFixed(2);
+      return console.log('$'+dollars+' is equal to' + '£'+pounds+ '.');
+    };
+
+// // * Write a function poundsToDollars that takes a pound number as input and outputs a string of what the dollar equivalent is.
+  var poundsToDollars = function(pounds){
+      var dollars = parseFloat(pounds/0.5971).toFixed(2);
+      return console.log('£'+pounds+' is equal to' + '$'+dollars+ '.');
+    };
+
+
+// * Write a function currencyConverter that takes 3 arguments: the currency it is converting from, the currency you are converting to, and the amount. It should output the appropriate string.
+
+// * You can get user input using the `prompt` function.
+
+// * Can you make sure the output is only 2 decimal places?
+
+var whichCurr = confirm('Are you converting from Dollars to Pounds?');
+
+   if (whichCurr==true) {
+        x = 'yes';
+    } else {
+        x = 'no';
+    }
+
+  if (x === 'yes') {
+    convertingFrom = '$';
+    convertingTo = '£';
+  } else {
+    convertingFrom = '$';
+    convertingTo = '£';
+  }
+  var total = prompt('How much would you like to convert?');
+  while (total === isNaN()) {
+    var total = prompt('Try again, herp derp.');
+  }
+
+
+var currencyConverter = function(convertingFrom, convertingTo, total){
+      if (convertingFrom === "$") {
+
+        var converted = parseFloat(total/1.6748).toFixed(2);
+      return console.log('$'+total+' was converted to ' + '£'+converted+ '.');
+      } else {
+        var converted = parseFloat(total/0.5971).toFixed(2);
+      return console.log('£'+total+' was converted to' + '$'+converted+ '.');
+    };
+    };
+  currencyConverter(convertingFrom, convertingTo, total);
+
+
+
+ </script>
+</body>
+</html>

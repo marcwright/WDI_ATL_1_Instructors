@@ -1,0 +1,151 @@
+* {
+	box-sizing:border-box;
+}
+body {
+	margin:0;
+	background:#999;
+}
+.page-wrap {
+	width:900px;
+	margin:0 auto;
+	box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+h1, h2, p {
+	margin:0 0 16px;
+}
+p {
+	font-family:'Apex Sans';
+	font-size:1.1em;
+	line-height:1.5;
+}
+
+.site-header,
+.site-footer {
+	padding:20px;
+	color:#fff;
+	background:#000;
+}
+
+.site-header {
+	border-bottom:3px solid #fff45a;
+	box-shadow:0 2px 2px #ccc;
+}
+.site-header h1 {
+	margin-bottom:0;
+	color:#fff45a; /* yellow */
+}
+.site-nav {
+	float:right;
+}
+.site-nav ul {
+	list-style:none;
+}
+.site-nav li {
+	display:inline-block;
+	margin-right:0.5em;
+}
+.site-nav a {
+	color:#fff;
+	text-decoration:none;
+}
+.site-nav .featured-link {
+	font-size:1.25em;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.tagline {
+	padding:10px 0;
+	background:#c6c6c6;
+	text-align:center;
+	font-style:italic;
+}
+.tagline h2 {
+	margin-bottom:0;
+}
+.tagline del {
+	color:#666;
+}
+.tagline ins {
+	text-decoration:none;
+	border-bottom:2px solid #fff45a;
+}
+
+.intro {
+	background:url('coworking.jpg') no-repeat center center;
+}
+.intro-content {
+	float:right;
+	width:20em;
+	margin:3em 2em;
+	padding:20px;
+
+	background:rgba(255,255,255,0.8);
+	border:1px solid #999;
+	box-shadow: 0 0 1em rgba(0,0,0,0.3);
+}
+.intro-title {
+	font-size:2em;
+}
+.button {
+	display:block;
+	padding:0.5em;
+
+	color:#000;
+	background:#ccc;
+	border-radius:5px;
+	border:1px solid #ccc;
+	border-bottom:3px solid #666;
+
+	font-family:'Apex Sans';
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+	text-decoration:none;
+
+	transition:0.3s;
+}
+.button:hover {
+	background:#fff;
+}
+.call-to-action {
+	background:#fff45a;
+	border:1px solid #fff45a;
+	border-bottom:3px solid #cdc346;
+}
+.call-to-action:hover {
+	background:#ffffcc;
+}
+
+.features {
+	padding:20px 0;
+	background:#fff;
+}
+.feature {
+	float:left;
+	width:300px;
+	padding:20px 30px;
+	border-left:1px solid #ccc;
+}
+.feature {
+	display:table-cell;
+	float:none;
+}
+.feature:first-child {
+	border-left:0;
+}
+
+.site-footer p {
+	margin:0;
+}
+
+/* utils */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}

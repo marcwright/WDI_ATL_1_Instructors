@@ -1,0 +1,24 @@
+<noscript>
+  <p>Sorry, this application requires JavaScript.</p>
+</noscript>
+
+<div id="students-container" class="students-app">
+  <div class="header">
+  <h1>Students Directory</h1>
+</div>
+<form class="create">
+  <input type="text" name="name" id="student-new">
+  <button class="primary" id="student-add" title="Add">+</button>
+</form>
+
+</div>
+
+<script type="template" id="students-list">
+  <%% collection.each(function(model) { %>
+      <li><a href="#students/<%%= model.get('id') %>"><%%= model.get('name') %></a></li>
+  <%% }) %>
+</script>
+
+<script type="template" id="student-detail">
+  <%= render 'detail_template' %>
+</script>

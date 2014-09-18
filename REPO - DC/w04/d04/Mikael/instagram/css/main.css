@@ -1,0 +1,55 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  background-image: url("../images/bgtile.png");
+  background-repeat: repeat-x;
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.page {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.main {
+  background: url("../images/frame.png") no-repeat;
+  min-height: 284px;
+  padding: 40px;
+  width: 424px;
+}
+
+.main h2 {
+  color: #06365f;
+  margin-top: 0;
+}
+
+.content {
+  float: right;
+}
+
+
+.promo {
+  float: left;
+}
+
+.page .footer {
+  clear: both;
+  list-style: none;
+  text-align: center;
+}
+
+.page .footer li {
+  display: inline;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.page .product-photo img {
+  width: 260px;
+}

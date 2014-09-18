@@ -1,0 +1,15 @@
+<h2><%= @author.author %> &ndash; <a href="/authors/<%= @author.id %>/books">All books&nbsp;&raquo;</a></h2>
+<p>Born: <%= @author.dob %></p>
+<p>Gender: <%= @author.gender %></p>
+<p>Pseudonym? <%= @author.has_pseudonym.to_s %></p>
+<hr>
+
+<form action="<%= @author.id %>/edit">
+  <button>Edit Author</button>
+</form>
+
+<form action="<%= @author.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <button>Delete Author</button>
+</form>

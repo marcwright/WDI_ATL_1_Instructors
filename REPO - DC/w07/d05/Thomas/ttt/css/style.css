@@ -1,0 +1,27 @@
+.page {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.board {
+  width: 308px;
+  height: 350px;
+  border: 1px solid grey;
+  margin: 0 auto;
+}
+
+.board button {
+  width: 90px;
+  height: 90px;
+  border: 1px solid blue;
+  margin: 5px;
+}
+
+.gameActionDisplay {
+  padding: 20px;
+}

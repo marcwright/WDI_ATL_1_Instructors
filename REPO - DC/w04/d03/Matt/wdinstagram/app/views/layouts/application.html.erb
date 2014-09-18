@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wdinstagram</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Logo & Header -->
+    <div class="header" role="banner">
+      <a href="/"><img src="http://i.imgur.com/Rq4f1i0.png" alt=""></a>
+    </div>
+    <!-- Right Column -->
+    <div class="col col_right" role="complementary">
+      <!-- Archive -->
+      <div>
+        <p>Welcome, Guest.&nbsp;<a href="/new">Post a photo?</a></p>
+        <hr>
+        <% @photos.each do |photo| %>
+
+            <a href="<%= photo.id %>"><%= photo.id %></a>
+
+        <% end %>
+        <hr>
+      </div>
+    </div>
+    <!-- Left Column -->
+    <div class="col col_left" role="main">
+      <!-- Post -->
+      <div class="post">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

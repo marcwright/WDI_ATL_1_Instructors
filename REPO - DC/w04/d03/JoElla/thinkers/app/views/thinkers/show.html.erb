@@ -1,0 +1,10 @@
+<h1><%= @thinker.name %> says...</h1>
+<%= @thinker.quote %> and they look like <img src="<%= @thinker.image_url %>" >
+
+
+
+<form action="/thinkers/<%= @thinker.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>Throw him out!</button>
+</form>

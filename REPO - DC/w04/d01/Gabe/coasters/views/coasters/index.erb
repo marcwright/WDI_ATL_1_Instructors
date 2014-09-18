@@ -1,0 +1,18 @@
+<h1> Here are the Roller Coasters!</h1>
+<form action="/coasters/new">
+  <button>Add a coaster</button>
+</form>
+
+<% @coaster.each do |coaster|  %>
+
+<li><%= coaster.name %> has a top speed: <%= coaster.top_speed %>. They look like this:
+  <img src="<%= coaster.image_url %>" width="200" height="200">
+
+
+
+<form action="/coasters/<%= coaster.id %>" method="get">
+  <button>See This Coaster</button>
+</form>
+
+</li>
+<% end %>

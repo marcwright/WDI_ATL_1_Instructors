@@ -1,0 +1,9 @@
+<h1>This is a picture of <%= @entry.author %>, which was taken on <%= @entry.date_taken %>.</h1>
+<img style="max-width: 400px"; src="<%= @entry.photo_url %>">
+<a href="/entries/<%= @entry.id %>/edit">Edit entry</a>
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>This sucks, delete it!</button>
+</form>
+

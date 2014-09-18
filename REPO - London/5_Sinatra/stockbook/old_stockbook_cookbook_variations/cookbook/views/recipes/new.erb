@@ -1,0 +1,68 @@
+<form action='/recipes' method='post'> 
+  <dl>
+    <dt>
+      <label for='name'>Name:</label>
+    </dt>
+    <dd>
+      <input id='name' type='text' name='name' autofocus>
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>
+      <label for='description'>Description:</label>
+    </dt>
+    <dd>
+      <textarea id='description' name='description'></textarea>
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>
+      <label for='instructions'>Instructions:</label>
+    </dt>
+    <dd>
+      <textarea id='instructions' name='instructions'></textarea>
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>
+      <label for='published_on'>Published on:</label>
+    </dt>
+    <dd>
+      <input id='published_on' type='text' name='published_on'>
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>
+      <label for='category_id'>Category:</label>
+    </dt>
+    <dd>
+      <select id='category_id' name='category_id'>
+        <% @categories.each do |category| %>
+          <option value='<%= category.id %>'><%= category.name %></option>
+        <% end %>
+      </select>
+    </dd>
+  </dl>
+
+  <h2>Ingredients:</h2>
+  <% @ingredients.each do |ingredient| %>
+    <dl>
+      <dt>
+        <label for='ingredients[<%=ingredient.id%>]'><%=ingredient.name%>:</label>
+      </dt>
+      <dd>
+        <input type='checkbox' name='ingredient_ids[]' value='<%= ingredient.id %>'>
+      </dd>
+    </dl>
+  <% end %>
+
+  <div class='clear_both'></div>
+
+  <button>add</button>
+
+
+</form>

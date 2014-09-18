@@ -1,0 +1,48 @@
+body {
+background-color: grey;
+border-radius: 10px;
+font-family: Calibri,Arial, sans-serif;
+line-height: 1.4em
+/*font-size: 14px;*/
+
+}
+
+
+.container {
+  background-color: grey;
+  text-align: center;
+  margin: 0px auto;
+  padding: 20px;
+  width: 600px;
+
+}
+
+.container h1 {
+  background-color: brown;
+  box-shadow: 5px 5px 10px black;
+  border: 1px solid black;
+  color: white;
+  margin: bottom;
+  padding: 10px;
+  text-align: center;
+}
+
+.container h2 {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+
+}
+
+.container img {
+  border: 10px solid #fff;
+      border-bottom: 45px solid #fff;
+      -webkit-box-shadow: 3px 3px 3px #708090;
+         -moz-box-shadow: 3px 3px 3px #708090;
+              box-shadow: 3px 3px 3px #708090;
+}
+
+.container ul {
+  
+
+}

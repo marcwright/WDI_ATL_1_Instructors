@@ -1,0 +1,24 @@
+<section>
+  <% @recipes.each do |recipe| %>
+  <article>
+    <dl>
+      <dt>
+        <%= recipe.name %>:</dt>
+      <dd>
+          <%= recipe.description[0..50] %>
+          <%= '...' if recipe.description.length > 50 %>
+      </dd>
+    </dl>
+    <div class='clear_both'></div>
+    <div>
+      <a href="/recipes/<%=recipe.id%>/show">show</a>
+    </div>
+  </article>
+
+  <% end %>
+
+</section>
+
+<div>
+  <a href="/recipes/new">new recipe</a>
+</div>

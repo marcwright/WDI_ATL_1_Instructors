@@ -1,0 +1,22 @@
+<h1>Photo taken by <%= @entries.author %> on <%= @entries.date_taken %></h1>
+
+<img src="<%= @entries.photo_url %>" height="300" width="300">
+
+<div class= "caption">
+  <p class="caption"><%= @entries.caption %></p>
+</div>
+<form action="/entries/<%= @entries.id %>" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="hidden" name="_method" value="delete">
+
+  <button>Picture too Ugly?</button>
+</form>
+
+<form action="/entries/edit/<%= @entries.id %>" >
+
+    <input type="submit" value="Let's update Our image">
+
+</form>
+

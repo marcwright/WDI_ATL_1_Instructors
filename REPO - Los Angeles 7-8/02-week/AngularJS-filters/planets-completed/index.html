@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="planetApp">
+  <head>
+    <title>Planets!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="PlanetsController" id="container">
+      <h1>Let's get Planetary!</h1>
+      <h1 x-ng-bind="search"></h1> <!-- using ng-bind to change this h1's innerHTML when the form input changes -->
+      
+      Filter These Planets! <input type="text" x-ng-model="search"/> <!-- using ng-model to bind search to whatever is input in this field -->
+
+      <h2>{{search}}</h2> <!-- using double-curly-braces to show the expressed value of search (bound to the form input above) within this h2 -->
+
+      <div class="planet" x-ng-repeat="p in planets | filter:search"> <!-- setting the filter on the repeat so planets that don't include characters typed into the input above won't show up -->
+
+        <h2>{{p.name}}</h2>
+        <p>Diameter -- {{p.diameter | number:3}} miles</p> <!-- filtering with number, setting 3 decimal places -- 0s will fill in on integers, decimals with higher precision will round -->
+      </div>
+    </div>
+  </body>
+</html>

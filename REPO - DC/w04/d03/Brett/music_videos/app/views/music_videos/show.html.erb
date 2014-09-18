@@ -1,0 +1,11 @@
+<h1><%= @video.title %> from <%= @video.year %> by <%= @video.artist %></h1>
+
+<iframe width="840" height="630" src="<%= @video.video_url %>" frameborder="0" allowfullscreen></iframe>
+
+<form action="/music_videos/<%= @video.id %>" method="post">
+
+<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="_method" value="delete">
+  <button>NO MAS</button>
+</form>

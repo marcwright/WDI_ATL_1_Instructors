@@ -1,0 +1,25 @@
+<h1><%= @entry.author %></h1>
+<img src="<%= @entry.photo_url %>">
+<h2><%= @entry.date_taken %></h2>
+
+<form action="/entries" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <label>
+    Author:
+    <input type="text" name="author">
+  </label>
+
+  <label>
+    Date:
+    <input type="date" name="date_taken">
+  </label>
+
+  <label>
+    Image:
+    <input type="text" name="photo_url">
+  </label>
+
+  <input type="submit" value="Update">
+
+</form>

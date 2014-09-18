@@ -1,0 +1,19 @@
+<h1>Listing games</h1>
+
+<table>
+  <tr>
+    <th>Playing</th>
+    <th>O / X</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+
+  <% @games.each do |game| %>
+  <tr>
+    <td><%= other_player_for_game(game) %></td>
+    <td><%= playing_x_or_o_for_game(game) %></td>
+    <td><%= game_status_for_game(game) %></td>
+    <td><%= link_to 'Show', game %></td>
+  </tr>
+  <% end %>
+</table>

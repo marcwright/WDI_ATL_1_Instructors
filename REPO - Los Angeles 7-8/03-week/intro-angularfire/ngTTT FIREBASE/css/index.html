@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="planetApp">
+<head>
+  <title>Planets!</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+  <div ng-controller="PlanetsController" id="container">
+    <h1>Let's get Planetary!</h1>
+<h3>
+<input type="radio" name="listname" ng-model="listName" value="modernList" ng-click="pickListM()"> Modern List
+<input type="radio" name="listname" ng-model="listName" value="legacyList" ng-click="pickListL()"> Legacy List
+
+{{value}}
+
+</h3>
+
+    <div class="planet" ng-repeat="oneplanet in activePlanetsList">
+      <h2> {{oneplanet.name}} </h2>
+    </div>
+
+
+  </div>
+</body>
+</html>

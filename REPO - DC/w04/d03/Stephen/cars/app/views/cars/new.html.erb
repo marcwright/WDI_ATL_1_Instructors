@@ -1,0 +1,22 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:17:07
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 16:25:58
+
+ -->
+
+<h2>Create a new car!</h2>
+
+<form action="/cars" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <label>Color:<input type="text" name="color"></label>
+  <label>Year:<input type="integer" name="year"></label>
+  <label>Make:<input type="text" name="make"></label>
+  <label>Model:<input type="text" name="model"></label>
+  <label>Image URL:<input type="text" name="image_url"></label>
+
+  <input type="submit" value="Create a car!">
+</form>

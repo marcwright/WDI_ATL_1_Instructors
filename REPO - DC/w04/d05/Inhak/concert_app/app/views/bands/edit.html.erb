@@ -1,0 +1,9 @@
+<h1>Edit <%= @band.name %></h1>
+
+<%= render "manage_form" %>
+
+<%= form_for @band, method:'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>
+
+<p><%= link_to "Cancel", @band %></p>

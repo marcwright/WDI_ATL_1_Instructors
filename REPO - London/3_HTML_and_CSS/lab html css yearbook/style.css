@@ -1,0 +1,102 @@
+body{
+  font-family: "Helvetica", Gadget, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container{
+  width: 960px;
+  margin: auto;
+}
+
+#container #section{
+  width: 100%;
+}
+h1{
+  font-family: "Arial Black", Gadget, sans-serif
+}
+
+h2{
+  border-top: 3px dashed red;
+  float: left;
+  width: 100%;
+  font-family: "Comic Sans MS", cursive, sans-serif
+}
+.menu ul{
+  list-style-type: none;
+  width: 100%;
+  float: left;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+}
+
+.menu ul li{
+  float: left;
+  margin: 0 1em;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  font-weight: normal;
+  color: red;
+}
+
+.menu ul li a:hover{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#photo_class{
+  width: 100%;
+}
+.concepts{
+  width: 100%;
+  float: left;
+
+}
+.concepts > div{
+  float: left;
+  
+}
+
+.concepts > div ul{
+  list-style-type: none;
+  font-size: 0.8em;
+}
+
+
+
+.rails-desc img{
+  width: 20%;
+  float: left;
+}
+.rails-desc > div > div{
+  width: 80%;
+  float: left;
+}
+
+.rails-desc > div > div > p{
+  padding: 20px;
+}
+
+
+
+#instructors-thumbnails{
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  display: block
+}
+#instructors-thumbnails li{
+  list-style: none;
+  display: inline;
+  margin: 10px;
+}
+
+footer{
+  border-top: 1px solid red;
+  width: 100%;
+  float: left;
+  text-align: center;
+}

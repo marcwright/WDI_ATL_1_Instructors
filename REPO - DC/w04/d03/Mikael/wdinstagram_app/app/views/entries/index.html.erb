@@ -1,0 +1,13 @@
+<h1>Instagram Entries</h1>
+<p>
+<% @entries.each do |entry| %>
+  <h2><img src="<%= entry.photo_url %>"></h2>
+  Taken by <%= entry.author %> on <%= entry.date_taken %>
+  <form action="/entries/<%= entry.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+    <button>Delete</button>
+</form>
+<% end %>
+
+</p>

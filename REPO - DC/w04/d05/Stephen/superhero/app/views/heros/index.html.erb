@@ -1,0 +1,20 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 10:50:56
+
+ -->
+
+<h1>Superheros</h1>
+
+<!-- list heros -->
+<ul>
+  <% @heros.each do |hero| %>
+    <li><%= link_to hero.name, hero %></li>
+  <% end %>
+</ul>
+
+<!-- Add a hero -->
+<p><%= link_to "Add a hero", new_hero_path %></p>

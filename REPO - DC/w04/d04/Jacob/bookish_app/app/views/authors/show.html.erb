@@ -1,0 +1,12 @@
+<h1>About <%= @author.name %></h1>
+
+<h2>Date of birth: <%= @author.date_of_birth %></h2>
+<h2>Gender: <%= @author.gender %></h2>
+<h2>Pseudonym?: <%= @author.has_pseudonym %></h2>
+<a href="/authors/<%= @author.id %>/books">Books by <%= @author.name %></a>
+<a href="/authors/<%= @author.id %>/edit">Edit <%= @author.name %></a>
+<form action="/authors/<%= @author.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Author</button>
+</form>

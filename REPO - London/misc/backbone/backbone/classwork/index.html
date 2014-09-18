@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>Backbone</title>
+  <script src="js/jquery-1.11.0.js"></script>
+  <script  src="js/underscore.js"></script>
+  <script  src="js/backbone.js"></script>
+  <script  src="js/application.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- document templates -->
+  <script type="text/template" id="tmpl_hello">
+    <p>Hello, <%= name %></p>
+
+    <button id='redraw'>redraw</button>
+  </script>
+
+  <script type="text/template" id="tmpl_image">
+    <span class='closebutton'>x</span>
+    <h1><%= title %></h1>
+    <img src="<%= url %>" alt="<%= title %>" />
+  </script>
+
+  <script type="text/template" id="tmpl_flash">
+    <p class='flash'><%= message %>!</p>
+  </script>
+
+  <script type="text/template" id="tmpl_album">
+    <div>
+      <h2>Photo Album</h2>
+      <form class="add" action="#">
+          <label for="title">Title</label><input id="title" name="title" placeholder="Your image's title" />
+          <label for="url">URL</label><input id="url" name="url" placeholder="http://www.example.com/picture.jpg" />
+          <input type="submit" value="Add" />
+      </form>
+      <p class="empty_album">No images in this album.</p>
+      <ul class="album_images"></ul>
+    </div>
+  </script>
+
+  <script type="text/template" id="tmpl_gallery">
+    <h2>Available Albums</h2>
+    <p>We have <%= albums.length %> <% if (1 == albums.length) { print("album"); } else { print("albums"); } %> in our gallery.</p>
+    <ul>
+      <% albums.each(function(album) { %>
+        <li class="album" data-id="<%= album.cid %>"><img src="http://placehold.it/200x200" /><p><%= album.get('title') %></p></li>
+      <% }) %>
+    </ul>
+  </script>
+
+
+</head>
+<body>
+  <header>
+    <h1 class='header'>My first backbone app</h1>
+  </header>
+  
+  <div id="flash"></div>
+
+  <div id="container">
+
+    <p>Please wait... images loading</p>
+
+  </div>
+
+
+</body>
+</html>

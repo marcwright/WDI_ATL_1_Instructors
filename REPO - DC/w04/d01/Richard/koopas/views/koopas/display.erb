@@ -1,0 +1,8 @@
+<h2><%= @koopa.name %></h2>
+<img width="438" height="600" src="<%=@koopa.photo_url%>" frameborder="0" allowfullscreen>
+
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Bye-Bye Koopa!</button>
+</form>

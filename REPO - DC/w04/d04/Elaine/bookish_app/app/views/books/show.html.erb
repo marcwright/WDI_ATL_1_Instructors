@@ -1,0 +1,32 @@
+<div class="page">
+  <% if params[:author_id] %>
+    <h1>Book Profile</h1>
+
+    <p><b>Title:</b> <%= @book.title %></p>
+    <p><b>Author:</b> <%= @book.author.name %></p>
+    <p><b>Genre:</b> <%= @book.genre %></p>
+    <p><b>Release Date:</b> <%= @book.release_date %></p>
+
+    <form action="/authors/<%= @book.author.id %>/books/<%= @book.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <p><input type="submit" value="Delete Book"></p>
+    </form>
+
+    <p><a href="/">Home</a></p>
+    <p><a href="/authors">All Authors</a></p>
+
+  <% else %>
+    <h1>Book Profile</h1>
+
+    <p><b>Title:</b> <%= @book.title %></p>
+    <p><b>Genre:</b> <%= @book.genre %></p>
+    <p><b>Release Date:</b> <%= @book.release_date %></p>
+
+    <p><a href="/books/<%= @book.id %>/characters">All Characters in <%= @book.title %></a></p>
+    <p><a href="/books/<%= @book.id %>/characters/new">Add a Character</a></p>
+    <p><a href="/books">Back to All Books</a></p>
+    <p><a href="/">Home</a></p>
+  <% end %>
+</div>

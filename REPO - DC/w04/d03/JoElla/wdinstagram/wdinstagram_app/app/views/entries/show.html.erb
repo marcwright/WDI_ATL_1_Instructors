@@ -1,0 +1,16 @@
+<div class="container">
+<h1>That's a classy pic!</h1>
+  <ul>
+    <li><img src="<%= @entry.photo_url %>"></li>
+  </ul>
+    <p>Credit:</p> <%= @entry.author %>
+
+
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>This sucks, delete it!</button>
+</form>
+
+</div>

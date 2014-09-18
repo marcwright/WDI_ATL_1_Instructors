@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head><title>I &hearts; JavaScript</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    // JavaScript Comment is this.
+
+    /* This is a
+      JavaScript
+      block
+      comment.
+    */
+
+    // Variables
+    var beep = "beep";
+
+    // Console Putput
+    console.log(beep);
+
+    // Conditionals
+    var number = 10;
+    if (number > 5 ){
+      console.log("BIG NUMBER!");
+    } else if (number < 5) {
+      console.log("little number");
+    } else {
+      console.log("must be 5");
+    }
+
+    //  Case Statements
+    var day = "Monday";
+    switch (day){
+      case "Monday" :
+        console.log("Get Haircut");
+        // Need the break to stop the program from continuing to run.
+        break;
+      case "Tuesday" :
+        console.log("Don't get haircut");
+        break;
+      case "Friday" :
+        console.log("Get 3 haircuts.");
+        break;
+      default :
+        console.log("I'm in limbo");
+    }
+
+    // While loop
+    var count = 10;
+    while (count > 0) {
+      console.log(count);
+      count--;
+      // -- is short hand for -=1 neato!
+      // ++ is shorthand for +=1 Double neato!
+    }
+
+    // Functions (methods)
+    // Named functions
+    function add(x, y){
+      return x + y;
+    }
+    // anonymous functions
+    var add = function(x, y){
+      return x + y;
+    };
+
+    // Arrays
+    var myNameArray = ['Adam', 'Elaine', 'Travis'];
+    myNameArray[0];
+    myNameArray.push('Matt');
+
+    // Iteration
+    var dwarves = ["Pudgy", "Sneaky", "Smurfette"]
+
+      // For Looop
+      for(var i = 0; i <= dwarves.length; i++) {
+        console.log("HI HO I am " + dwarves[i]);
+      }
+
+    // Enumeration
+    // forEach
+    dwarves.forEach(function(dwarf){
+      console.log(dwarf + "says hi")
+    )};
+
+    // Hashes - Do not have hashes in JS
+    // We have object literal notation
+    // Keys are called properties
+    var myObject = {name: "Snow White", age: 17, weakness: "Apples"};
+    myObject['name'];
+    myObject['age'];
+    myObject['age'] = 29;
+    myObject.name
+
+    var myBird = {name: "Tweety",
+      chirp: function(){
+        console.log('Tweet Mother Fucker');
+      },
+      greet: function(){
+        console.log('Hi my name is ' + this.name);
+      }
+    };
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<h1><%= @characters.name %> from <%= @book.title%></h1>
+
+<ul>
+  <li>They're a <%= @characters.gender %></li>
+  <li>Their novel quirk is: <%= @characters.quirk %></li>
+
+<form action="/characters/<%= @characters.id %>" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="hidden" name="_method" value="delete">
+
+  <button>Remove Book from Author</button>
+</form>
+
+<a href="/authors"><button>Return Home</button></a>
+
+
+

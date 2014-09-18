@@ -1,0 +1,40 @@
+<h1>Different Forms</h2>
+
+<h2>Find a flight</h2>
+<form action="/find_flight" method="post">
+
+  <label>Origin<input type="text" name="origin"></label>
+  <label>Destination<input type="text" name="destination"></label>
+  <label>Date<input type="date" name="date"></label>
+
+  <button>Submit</button>
+</form>
+
+<h2>Order a pizza</h2>
+
+<form action="/order_pizza" method="post">
+  <h3>Size<h3>
+
+  <select>
+    <option value="small">S</option>
+    <option value="medium">M</option>
+    <option value="large">L</option>
+  </select>
+
+  <h3>Toppings</h3>
+
+  <input type="checkbox" name="pepperoni" value="Pepperoni">Pepperoni
+  <input type="checkbox" name="mushroom" value="Mushrooms">Mushrooms
+  <input type="checkbox" name="pepper" value="Peppers">Peppers
+
+  <button>Submit</button>
+</form>
+
+<h2>Log-in Form</h2>
+
+<form action="/login" method="post">
+  <label>Username<input type="email" name="user"></label>
+  <label>Password<input type="password" name="password"></label>
+
+  <button>Submit</button>
+</form>

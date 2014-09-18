@@ -1,0 +1,19 @@
+<h1>Add a character to <%= @book.title %></h1>
+
+<%= form_for [@book, @character] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <fieldset>
+    <legend>Gender</legend>
+    <%= f.label :gender, "Male:"%>
+    <%= f.radio_button :gender, "m" %>
+    <%= f.label :gender, "Female:"%>
+    <%= f.radio_button :gender, "f" %>
+  </fieldset>
+
+  <%= f.label :quirk %>
+  <%= f.text_field :quirk %>
+
+  <%= f.submit "Add character" %>
+<% end %>

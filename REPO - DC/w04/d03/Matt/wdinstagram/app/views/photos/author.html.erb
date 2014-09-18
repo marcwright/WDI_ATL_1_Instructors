@@ -1,0 +1,12 @@
+<img src="<%= @photo.image_url %>" alt="">
+<h2><%= @photo.author %></h2>
+
+<form action="/<%= @photo.id %>/edit">
+  <button>Edit Photo</button>
+</form>
+
+<form action="/<%= @photo.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <button>Delete Photo</button>
+</form>

@@ -1,0 +1,18 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-12 15:43:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-12 19:30:48
+
+ -->
+
+<h2><%= @koopa.name %></h2>
+
+<p><%= @koopa.to_s %> (<a href="/koopas/<%= @koopa.id %>/edit">edit</a>)</p>
+<img src="<%= @koopa.image_url %>" width="500" />
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <% if !@koopa.has_shell %><button>Delete this Koopa :(</button><% end %>
+</form>

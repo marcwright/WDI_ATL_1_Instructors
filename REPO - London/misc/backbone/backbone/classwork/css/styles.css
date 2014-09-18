@@ -1,0 +1,60 @@
+body {
+    background-color: #aac;
+}
+
+#app_container {display: none;}
+
+#container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.closebutton {
+    margin-right: 0.3em;
+    float: right;
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+    background-color: #004;
+    color: #eee;
+    min-height: 80px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 30px 0 30px 0;
+    margin-right: 5px;
+    vertical-align: top;
+    overflow: hidden
+}
+
+
+li h1 {
+    font-size: 120%;
+    text-align: center;
+}
+
+#flash {
+    max-width: 60%;
+    margin:10px auto 30px auto;
+    border-radius: 10px;
+    padding: 7px;
+    border: 1px solid yellow;
+    background-color: #cca;
+    text-align: center;
+}
+
+
+
+
+
+

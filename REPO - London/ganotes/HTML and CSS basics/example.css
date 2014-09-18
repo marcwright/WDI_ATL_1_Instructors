@@ -1,0 +1,93 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+.ebtf {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+img.portrait {
+    float: right;
+    margin: 0 0 10px 10px;
+    max-width: 200px;
+}
+
+h2 {
+    clear: both;
+    border-top: 1px dashed #aaa;
+    margin-top: 2em;
+    padding-top: 0.5em;
+}
+
+a {
+    color: #00f;
+}
+
+a:hover {
+    color: #44f;
+}
+
+a:visited {
+    color: #404;
+}
+
+thead {
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    padding: 4px 8px;
+}
+
+.likes aside, .likes ul {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.likes ul {
+    margin-top: 10px;
+}
+
+aside {
+    font-style: italic;
+    background: #aaa;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside p {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    font-size: 80%;
+    padding: 4px;
+    margin-top: 100px;
+    min-height: 100px;
+}
+
+footer p {
+    margin-top: 0;
+}

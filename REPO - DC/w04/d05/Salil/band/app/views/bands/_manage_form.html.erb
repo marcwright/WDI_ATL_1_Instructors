@@ -1,0 +1,16 @@
+<%= form_for @band do |f| %>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :genre, "Genre:" %>
+    <%= f.text_field :genre %>
+
+    <%= label_tag (:has_profanity), "Has profanity?" %>
+    <%= check_box_tag (:has_profanity) %>
+
+    <%= f.label :video_url, "Video URL:" %>
+    <%= f.text_field :video_url %>
+
+    <%= f.submit "Submit" %>
+
+<% end %>

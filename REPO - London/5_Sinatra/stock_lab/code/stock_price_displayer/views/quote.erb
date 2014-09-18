@@ -1,0 +1,27 @@
+<header>
+  <h2><%= @quote ? @quote.name : "Enter ticker" %></h2>
+</header>
+
+<form action='/' method='get'>
+  <input type='text' name='symbol' autofocus>
+  <button>Get quote</button>
+</form>
+
+<% if @quote %>
+  <table>
+    <% @quote.send(:instance_variables).each do |instance_variable| %>
+    <% instance_variable = instance_variable.to_s.gsub('@', '') %>
+      <%  if @quote.respond_to?(instance_variable) %>
+        <tr>
+          <td><%= instance_variable %></td>
+          <td><%= @quote.send(instance_variable) %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+<% end %>
+
+
+
+
+

@@ -1,0 +1,12 @@
+<%= form_for @song do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :year %>:
+  <%= f.text_field :year %><br />
+
+  <%= f.label :artist_id %>:
+  <%= f.text_field :artist_id %><br />
+
+  <%= f.submit "edit song" %>
+<% end %>

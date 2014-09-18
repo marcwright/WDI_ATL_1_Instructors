@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; Air Conditioning</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  var currentTemperature = prompt("What is the current temperature?");
+  var functional = prompt("Is the A/C functional?");
+  var desiredTemperature = prompt('What temperature do you wish it was?');
+
+  if (functional === 'yes' && currentTemperature > desiredTemperature) {
+    alert('Turn on the A/C please.');
+  } else if (functional === 'no' && currentTemperature > desiredTemperature) {
+    alert('Fix the A/C now!');
+  } else {
+    alert('Fix the A/C whenever...')
+  };
+
+
+  </script>
+</body>
+</html>

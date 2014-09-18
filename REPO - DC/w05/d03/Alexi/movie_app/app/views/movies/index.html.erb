@@ -1,0 +1,13 @@
+<h1>Movies!</h1>
+
+<form action="<%= movies_path %>" method="get">
+  <input type="text" name="q" placeholder="Enter Movie Title">
+  <input type="submit" value="Submit">
+</form>
+
+
+<ul>
+<% @movies.each do |movie| %>
+  <li><%= link_to movie['Title'], "#{movie_path}?imdb=#{movie['imdbID']}" %></li>
+<% end %>
+</ul>

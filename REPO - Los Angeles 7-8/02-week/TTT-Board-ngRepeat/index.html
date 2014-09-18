@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="tictactoe">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <main class="container" ng-controller="gameCtrl">
+      <h1>Tic Tac Toe</h1>
+      <div ng-repeat="row in board">
+        <span ng-repeat="field in row track by $index"><a ng-click="takefield($parent.$index, $index, '✘')">{{field}} </a></span>
+      </div>
+      <button ng-hide="boardcreated" ng-click="createBoard(20)">Create Game Board</button>
+    </main>
+  </body>
+</html>

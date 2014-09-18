@@ -1,0 +1,93 @@
+<html lang="en" data-scribe-reduced-action-queue="true"><!--<![endif]-->
+<head>
+  <title>JSSS</title>
+</head>
+  <body>
+    <script>
+      // var temp = prompt('What is the temp?');
+      // var status = prompt('Is the AC working?');
+      // var ideal_temp = prompt('What is the ideal temp?');
+
+      // if (status === 'y' && temp > ideal_temp) {
+      //   console.log('Turn on AC');
+      // }
+      //   else if (status === 'n' && temp > ideal_temp) {
+      //     console.log('fix the ac NOW');
+      // }
+      //   else (status === 'n' && temp < ideal_temp) {
+      //     console.log('It cool');
+      // }
+
+      // var number = Math.floor(Math.random()*11);
+      // var guess = parseInt(prompt('Guess a number between 1 and 10'));
+      // while (guess !== number) {
+      //   guess = parseInt(prompt('incorrect-o'));
+      // }
+
+      // console.log('Right-o');
+
+      // var things = ['Skynet', 'Digital Music Distribution', 'FitBit', 'Realtime Data', 'ManPacks', 'Landing Page', 'Conversion Funnel', 'Social Network', 'Airbnb', 'SnapChat', 'Bang With Friends', 'HTML5 App', 'Google Analytics', 'Mapreduce Query', 'Node.js Server', 'KickStarter', 'Match.com', 'Adultfriendfinder', 'Pinterest', 'Amber Alert System', 'Groupon', 'Appstore', 'Digital Magazine', 'Distributed Social Network', 'Quadcopter', 'Daring Fireball', 'Content Distribution Network', 'Analytics Platform', 'OpenTable', 'LinkedIn', 'Brick and Mortar Solution', 'Aggregator', 'Social Game', 'jQuery Plugin', 'Game-based Incentive', 'Foursquare', 'YouTube', 'WeedMaps', 'Texts From Last Night', 'Ponzi Scheme', '1-800-Flowers', 'Cash4Gold', 'Online Marketplace', 'Viral Marketer', 'Wearable Computer', 'Google Glass App', 'Facebook Marketplace', 'Zivity', 'Playboy', 'Cloud Storage Provider', 'Kindle Fire App', 'Pandora', 'Green Tech Program', 'Eco-Friendly Marketplace', 'Netflix', 'Amazon', 'Zappos', 'Reddit', 'Enron', 'Wordpress', 'iPhone App', 'Android App', 'Meme Generator', 'Crowdsourcing App', 'Mac App', 'SEO Optimizer', 'Apartment Guide', 'Social CRM', 'Database Abstraction Layer', 'Microblogging Service', 'Product Curation Service', 'API', 'New Social Platform', 'Tumblr', 'Deal Finder', 'CPA Ad Network', 'Collaborative Filter', 'Shopping Site', 'Digg 2.0', 'Recommendation Engine', 'News Recommender', 'Neural Network', 'Tesseract OCR engine', 'Unreadable CAPTCHA', 'Mobile Ecosystem', 'Flickr', 'Salesforce.com', 'Twitter Filter', 'Wikipedia', 'Yelp']
+
+      // var that = ['Facebook Platform', 'Erlang Enthusiasts', 'Ex-Girlfriends', 'Mitt Romneys Hair', 'Laundromats', 'Celebrity Gossip', 'Endangered Species', 'Pandas', 'Middle Schoolers', 'Alpha Phi Girls', 'Funeral Homes', 'Chinese Take-out', 'Ex-Convicts', 'Fast Casual Restaurants', 'Marketers', 'Qualifying Leads', 'Funeral Homes', 'Farmers', 'Cougars', 'Pilots', 'Gynecologists', 'Cracked iPhone Apps', 'Stolen Goods', 'Adult Dancers', 'People Who Hate Groupon', 'Hunters', 'Sysadmins', 'Bath Salts', 'Nootropics', 'California', 'Government Corruption', 'Political Attack Ads', 'Whiskey Lovers', 'Parking Tickets', 'Highway Accidents', 'Traveling', 'Airlines', 'Presentation Tools', 'Your Boss', 'Ponzi Schemes', 'Your Finances', 'Restroom Attendants', 'Your Aquarium', 'Your Cats Litter Box', 'Pets', 'Alcoholics', 'Camp Counselors', 'Nature Blogs', 'World of Warcraft', 'Models', 'Family Guy Enthusiasts', 'The Army', 'Cheap Vodka', 'Tech Incubators', 'Star Trek Conventions', 'Presentation Tools', 'Small Businesses', 'Beer', 'Nightclub Lines', 'Semi-Active Volcanoes',  'Sanctimonial Artifacts', 'Traveling Abroad', 'Your Mom', 'Billionaires', 'Happy Hours', 'Ugg Boots', 'The Homeless', 'Blacking Out', 'Red Wine', 'Happy Families', 'Social Outcasts', 'Surgeons', 'Pounding Jagger Bombs', 'Textbooks', 'Coffee Shops', 'Baristas']
+
+      // var thingsRandom = things[Math.floor(Math.random()*things.length)];
+      // var thatRandom = that[Math.floor(Math.random()*that.length)];
+
+      // console.log(thingsRandom + ' ' + thatRandom)
+
+      // console.log(['its like a', thingsRandom,' for ', thatThing])
+
+      // var favShit = ['money', 'cash', 'hos']
+
+      // favShit.forEach(function(fav, index){
+      //   console.log(fav + ' is my #' + (index + 1) + ' favorite thing');
+      // });
+
+      // Convert Currency
+
+      var dollars = prompt('How many $?');
+      function dollarsToPounds(dollars) {
+        return ('$' + dollars + ' dollars is £' + (dollars * 1.5).toFixed(2));
+      }
+      var pounds = prompt('How many £?');
+      function poundsToDollars(pounds) {
+        return ('£' + pounds + ' is $' + (pounds / 1.5).toFixed(2));
+      }
+
+      var convertedAmount;
+
+      if (currency === 'dollars') {
+        convertedAmount = dollarsToPounds (money_input);
+      } else {
+        convertedAmount = poundsToDollars (money_input);
+      }
+
+      console.log('That is ' + convertedAmount + ' when converted')
+
+      // Advancder way to do it
+
+      var fxRate = {
+        dollars: 1,
+        pounds: 1.675,
+        exchange: function(currencyFrom, currencyTo, amount) {
+          var dollars = amount * this[currencyFrom];
+          return (dollars / this[currencyTo]).toFixed(2);
+        }
+      }
+
+      var currencyConverter = function() {
+        var currencyFrom = prompt('WHat currency are you inputing?');
+        var currencyTo = prompt('What convert to??');
+        var amount = prompt('how much??');
+      }
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

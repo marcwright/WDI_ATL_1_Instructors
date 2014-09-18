@@ -1,0 +1,4 @@
+<% flash.each do |name, msg| %>
+<!--why is the below 'class' tag written so?-->
+<%= content_tag :p, msg, class: name %>
+<% end %>

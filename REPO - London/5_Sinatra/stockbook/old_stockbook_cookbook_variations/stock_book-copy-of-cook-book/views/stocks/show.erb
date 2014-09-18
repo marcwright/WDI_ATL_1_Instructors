@@ -1,0 +1,30 @@
+<section>
+  <article>
+    <dl>
+      <dt>Name :</dt>
+      <dd><%=@ingredient.name%></dd>
+    </dl>
+
+    <dl>
+      <dt>Recipes :</dt>
+      <dd>
+        <ul>
+        <% @ingredient.recipes.each do |recipe| %>
+          <li><%= recipe.name %></li>
+        <% end %>
+        </ul>
+      </dd>
+    </dl>
+
+    <div class='clear_both'></div>
+
+    <div>
+      <a href="/ingredients/<%=@ingredient.id%>/delete">delete</a>
+    </div>
+    <div>
+      <a href="/ingredients/<%=@ingredient.id%>/edit">edit</a>
+    </div>
+
+
+  </article>
+</section>

@@ -1,0 +1,8 @@
+<% @movies.each do |movie| %>
+
+  <div>
+    <h3><%= movie['title'] %></h3>
+    <img src='<%= movie['poster'] %>'/>
+  </div>
+
+<% end %>

@@ -1,0 +1,7 @@
+<h1>Events at <%=@venue.name%></h1>
+
+<% @events.each do |event| %>
+  <li class="indexlist"><a href="/venues/<%= event.venue_id %>/events/<%= event.id %>">EVENT<%= event.band %><%= event.date %><%= event.time %></a></li>
+<% end %>
+
+<%= link_to "Create new event for this location", new_venue_event_path %>

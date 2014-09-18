@@ -1,0 +1,15 @@
+<!-- All Superheros Link -->
+<%= link_to "All Venues",venues_path %>
+
+<h1>Venue: <%= @venue.name %></h1>
+<p><b>City: </b><%= @venue.city %></p>
+<p><b>State: </b><%= @venue.state %></p>
+<p><b>Allows explicit lyrics: </b><%= @venue.allows_explicit_lyrics == true ? "Yes" : "No" %></p>
+
+<!-- Hero Image -->
+
+
+<!-- Hero Edit link -->
+<p><%= link_to "Edit", edit_venue_path(@venue) %></p>
+<p><%= link_to "Add an Event", new_venue_event_path(@venue) %></p>
+<p><%= link_to "Home", root_path %></p>

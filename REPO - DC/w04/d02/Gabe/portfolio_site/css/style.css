@@ -1,0 +1,79 @@
+
+
+body{
+   font-size: 14px;
+	 font-family: "Times New Roman", serif;
+	 color: black;
+	 background-image: url("../images/pattern1.png");
+  }
+
+.banner{
+  background: salmon;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+
+}
+
+.container {
+  background-color: white;
+  border: 0px;
+  margin: 0 auto;
+  text-align: center;
+  width: 54%;
+}
+
+h1{
+
+   font-size: 34px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+   padding: 10px auto 50px auto;
+   color: #FFFFFF;	(White);
+ }
+
+
+
+h2{
+  font-size: 13px;
+  text-align: left;
+	text-transform: uppercase;
+	font-family: Cursive, Helvetica, sans-serif;
+  padding: 10px 0px 0px 5px;
+}
+
+h2.in_page{
+  font-size: 13px;
+  text-decoration: underline;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: Cursive, Helvetica, sans-serif;
+  padding: 10px 0px 0px 5px;
+}
+
+img.album{
+  width: 23%;
+  float: center;
+  padding: 10px 0px 10px 0px;
+}
+
+img.main_image{
+  width: 100%;
+}
+
+p{
+  padding: 10px;
+  text-align: left;
+}
+p.bottom{
+  color: #FFFFFF; (White);
+  float: right;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  text-align: top;
+
+}
+
+.page {
+  padding: 10px;
+}

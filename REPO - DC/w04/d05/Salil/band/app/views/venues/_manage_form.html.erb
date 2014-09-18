@@ -1,0 +1,16 @@
+<%= form_for @venue do |f| %>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :city, "City:" %>
+    <%= f.text_field :city %>
+
+    <%= f.label :state, "State:" %>
+    <%= f.text_field :state %>
+
+    <%= label_tag (:allows_profanity), "Allows profanity?" %>
+    <%= check_box_tag (:allows_profanity) %>
+
+    <%= f.submit "Submit" %>
+
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  orbit: 1.5
+  image: MyText
+  diameter: 1.5
+  mass: 1.5
+  galaxy_id: 1
+
+two:
+  name: MyString
+  orbit: 1.5
+  image: MyText
+  diameter: 1.5
+  mass: 1.5
+  galaxy_id: 1

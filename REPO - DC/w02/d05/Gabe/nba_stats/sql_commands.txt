@@ -1,0 +1,64 @@
+
+478 rows
+
+1)All columns for all players from the New York Knicks (NYK)
+
+nba_db=# SELECT * FROM players WHERE team = 'NYK';
+
+
+2)All columns for all players from the Indiana Packers (IND) who are under 26 years old
+
+nba_db=# SELECT * FROM players WHERE team = ‘IND’ AND  age < 27;
+
+3)All columns for all players, ordered from least points scored to most points scored
+
+SELECT * FROM players ORDER BY points DESC;
+
+
+4)Name and Points per game (points/games), for the players with the top 20 points per game
+
+SELECT name, points / games FROM players; —selects all players names with all points per game, unordered;
+SELECT name, points*1.0 / games FROM players; —returns much more accurate float point results;
+SELECT name, points*1.0 / games FROM players ORDER BY points DESC; —gives you ALL ordered results;
+SELECT name, points*1.0 / games FROM players ORDER BY points DESC LIMIT 20;—almost, but is sorting by points, not points per game.
+
+SELECT name, points*1.0 / games AS ppg FROM players ORDER BY ppg DESC LIMIT 20; — THATS IT!!!
+
+
+5)The average age for all players
+
+nba_db=# SELECT AVG(age) FROM players;
+         avg         
+---------------------
+ 26.6443514644351464
+
+
+
+6)The average age for all players on the Oklahoma City Thunder (OKC)
+
+nba_db=# SELECT AVG(age) FROM players WHERE team = 'OKC';
+         avg         
+---------------------
+ 25.4000000000000000
+
+
+7)The average age for all players who played more than 40 games
+
+nba_db=# SELECT AVG(age) FROM players WHERE games < 39;
+         avg         
+---------------------
+ 26.9111111111111111
+
+
+
+8)The team and total points scored from all players on that team (team points), ordered from most team 
+points to least:
+
+SELECT DISTINCT team FROM players; — lists ONLY the discrete teams;
+SELECT SUM(points) FROM players WHERE team = 'NYK’;—- lists the total points for one team
+ sum  
+------
+ 6458
+
+WITH franchises AS (SELECT DISTINCT team FROM players), team_points AS (SELECT SUM(points) FROM franchises) SELECT franchises, team_points FROM players;
+—Didn’t work because ‘franchises’ list doesn’t contain points!

@@ -1,0 +1,33 @@
+<div class="header">
+  <button class="done" id="done">Back To All Students</button>
+</div>
+<fieldset>
+   <%% collection.each(function(student) {%>
+      <label for="student-name">Student Name</label>
+      <input id="student-name" type="text" name="name" value=" <%%= student.get('name')%>">
+    </fieldset>
+    <fieldset>
+      <label for="student-email">Email</label>
+      <input id="student-email" type="text" name="email" value=" <%%= student.get('email')%>">
+    </fieldset>
+    <fieldset>
+      <label for="student-phone">Phone Number</label>
+      <input id="student-phone" type="text" name="phone" value=" <%%= student.get('phone')%>">
+    </fieldset>
+    <fieldset>
+      <label for="student-location">Current Location</label>
+      <input id="student-location" type="text" name="location" value=" <%%= student.get('location')%>">
+    </fieldset>
+    <fieldset>
+      <label for="student-employment">Employment Status</label>
+      <input id="student-employment" type="text" name="employment" value=" <%%= student.get('employment')%>">
+    </fieldset>
+    <fieldset>
+      <label for="student-misses">Misses WDI?</label>
+      <input id="student-misses" type="button" name="misses_wdi" value=" <%%= student.get('misses_wdi')%>">
+    </fieldset>
+    <fieldset>
+      <button class="primary" id="save">Save</button>
+      <button class="danger" id="remove">Remove</button>
+  <%% });%>
+</fieldset>

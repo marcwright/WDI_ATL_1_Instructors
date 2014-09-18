@@ -1,0 +1,99 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+body {
+
+  background-image:url(../images/wood.jpg);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+
+  margin: 0;
+}
+
+.form {
+  background-color: #eabc6f;
+
+
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 8px;
+  width: 694px;
+}
+
+.formblanks {
+  border-right: 2px solid black;
+  font-family: courier;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 290px;
+}
+
+.formlabel {
+  text-transform: uppercase;
+}
+
+h1 {
+
+  font-weight: 200;
+  margin-bottom: 10px;
+  margin-top: 15px ;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: lighter;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+img {
+  border: 20px solid #e1c49a;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.35);
+}
+
+.inner {
+  border: 2px solid #000;
+}
+
+
+.label {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 12px;
+}
+
+.picarea {
+  float: right;
+  margin-right: 15px;
+  width: 320px;
+}
+
+.preposition {
+  text-transform: lowercase;
+}
+
+.signature {
+  font-family: 'Crafty Girls', cursive;
+  font-size: 25px;
+  text-decoration: underline;
+  margin: 0;
+}

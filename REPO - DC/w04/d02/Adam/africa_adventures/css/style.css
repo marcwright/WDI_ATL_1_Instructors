@@ -1,0 +1,25 @@
+body {
+  background-color: gray;
+  font: 14px/1.4em Arial, Helvetica, sans-serif;
+}
+
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+
+.container h1 {
+  background-color: red;
+  opacity: 0.5;
+  padding: 10px;
+  color: white;
+  margin-bottom: 30px;
+}

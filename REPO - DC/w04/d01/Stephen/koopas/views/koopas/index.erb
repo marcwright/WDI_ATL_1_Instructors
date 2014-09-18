@@ -1,0 +1,16 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-12 15:43:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-12 19:28:08
+
+ -->
+
+<h1>All of the koopas:</h1>
+
+<% @koopas.each do |k| %>
+  <div style="float:left; padding: 10px"><%= k.to_s %> (<a href="/koopas/<%= k.id %>">profile</a>)<br />
+
+  <img src="<%= k.image_url %>" width="500" border="5" /></div>
+<% end %>

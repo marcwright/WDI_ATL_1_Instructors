@@ -1,0 +1,45 @@
+<h1>Create a koopa:</h1>
+
+<div>
+<form action="/koopas" method="post">
+  <ul>
+    <li>
+      <label>
+        Name:
+        <input type="text" name="name">
+      </label>
+    </li>
+
+    <li>
+      <label>
+        Color:
+        <input type="radio" name="color" value="green">green
+        <input type="radio" name="color" value="red">red
+        <input type="radio" name="color" value="blue">blue
+        <input type="radio" name="color" value="yellow">yellow
+      </label>
+    </li>
+
+    <li>
+      <label>
+        Has Shell?
+        <input type="checkbox" name="has_shell">
+      </label>
+    </li>
+
+    <li>
+      <label>
+        Photo URL:
+        <input type="text" name="photo_url">
+      </label>
+    </li>
+
+  </ul>
+  <button>Create koopa</button>
+</form>
+</div>
+
+<br>
+<center>
+  <a href="/"><b>Home</b></a>
+</center>

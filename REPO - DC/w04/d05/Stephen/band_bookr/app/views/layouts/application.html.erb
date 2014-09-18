@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>band bookr -- stephen stanwood</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <link href='http://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <a href="/">band bookr</a>
+      </div>
+
+      <div class="navigation">
+        <ul>
+          <li><a href="/bands">Bands</a></li>
+          <li><a href="/venues">Venues</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/bands/new">Add Band</a></li>
+          <li><a href="/venues/new">Add Venue</a></li>
+          <li><a href="/events/new">Add Event</a></li>
+        </ul>
+      </div>
+
+      <hr />
+    </div>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <hr />
+      <p>&copy 2014 Stephen Stanwood</p>
+    </div>
+  </div>
+
+</body>
+</html>

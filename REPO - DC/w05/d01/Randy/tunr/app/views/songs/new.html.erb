@@ -1,0 +1,14 @@
+<%= form_for ([@artist, @song]) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.hidden_field :artist_id, :value => @artist.id %>
+
+
+  <%= f.submit 'Submit', id: 'submit' %>
+
+<% end %>

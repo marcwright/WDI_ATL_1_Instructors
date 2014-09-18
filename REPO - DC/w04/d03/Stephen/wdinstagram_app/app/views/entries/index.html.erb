@@ -1,0 +1,16 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:19:40
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 20:13:16
+
+ -->
+
+<h2>Latest Entries</h2>
+
+<% @entries.each do |e| %>
+  <h3><%= e.caption %></h3>
+  <a href="/entries/<%= e.id %>"><img class="entry_image" src="<%= e.photo_url %>" alt=""></a>
+  <h4>Last updated <%= e.date_taken.strftime("%m/%d/%Y") %> by <%= e.author %></h4>
+<% end %>

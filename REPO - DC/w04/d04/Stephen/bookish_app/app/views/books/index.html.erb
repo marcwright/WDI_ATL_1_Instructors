@@ -1,0 +1,20 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:19:40
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 07:57:59
+
+ -->
+
+<h2>All Books by <%= @author.name %></h2>
+
+<ul>
+<% @books.each do |b| %>
+  <li><a href="/authors/<%= @author.id %>/books/<%= b.id %>"><%= b.title %></a>, released <%= b.release_date %>, genre: <%= b.genre %></li>
+<% end %>
+
+<form action="/authors/<%= @author.id %>/books/new" method="get">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="submit" value="New Book">
+</form>

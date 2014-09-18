@@ -1,0 +1,57 @@
+
+<%= link_to('GO BACK HOME!!', root_path, class: "btn btn-lg btn-primary") %>
+
+<br/>
+
+<%= number_to_human(237654432) %>
+
+<%= number_to_phone(1235551234) %>
+
+<%= number_with_delimiter(123429380750384755678) %>
+
+<%= highlight('You searched for: ruby, rails, dhh', 'ruby') %>
+
+<%= pluralize(3, 'matrix') %>
+
+<br/>
+
+<%= ye_er('avi') %>
+
+
+<br/>
+
+<%= bs_link('google', 'google.com', 'warning', 'xs') %>
+<%= bs_link('google', 'google.com' ) %>
+
+<%= bs_link('google', 'google.com', 'primary', 'lg' ) %>
+
+
+<h1>Listing pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.title %></td>
+        <td><%= page.body %></td>
+        <td><%= link_to 'Show', page %></td>
+        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page', new_page_path %>

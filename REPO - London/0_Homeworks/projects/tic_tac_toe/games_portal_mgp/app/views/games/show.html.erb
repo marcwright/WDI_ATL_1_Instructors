@@ -1,0 +1,40 @@
+<% unless @game.includes_player?(current_user) %>
+  <p>
+    <b>Player 1:</b>
+    <%= @game.player1.name %>
+  </p>
+<% end %>
+
+<p>
+  <b>Playing:</b>
+  <%= other_player_for_game(@game) %>
+</p>
+
+<p>
+  <b>O / X:</b>
+  <%= playing_x_or_o_for_game(@game) %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= game_status_for_game(@game) %>
+</p>
+
+
+<div class='game_board'>
+  <% @game.board.each_with_index.each_slice(3) do |moves_and_index| %>
+    <div class='game_row'>
+      <% moves_and_index.each do |move, index| %>
+        <div class='game_square'>
+          <% if move %>
+            <%= move.symbol %>
+          <% else %>
+            <%= button_to '', make_move_game_path(@game, index) if @game.whose_turn == current_user %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Back', games_path %>

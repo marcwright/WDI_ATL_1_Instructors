@@ -1,0 +1,51 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+.slip {
+  width: 710px;
+  background-color: #eabc6f;
+}
+
+.head {
+  text-align: center;
+}
+
+
+body {
+  margin: 0;
+}
+
+.right_column {
+  border: 2px solid red;
+  float: right;
+  margin-right: 50px;
+}
+
+.form {
+  width: 300px;
+  border: 2px solid red;
+  margin-left: 50px;
+  float: left;
+}
+
+.form p {
+  margin: 1px;
+}
+
+.checkbox {
+  border: 1px solid black;
+  margin: 0 15px 0 15px;
+}

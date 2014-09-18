@@ -1,0 +1,17 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:47:25
+
+ -->
+
+<!-- Edit -->
+<h1>Edit <%= @band.name %></h1>
+<%= render "manage_form" %>
+
+<!-- Delete -->
+<%= form_for @band, method: "delete" do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>

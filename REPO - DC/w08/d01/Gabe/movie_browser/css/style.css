@@ -1,0 +1,30 @@
+body {
+  background: url('../images/Mushroom_cloud.jpeg');
+   background-size: 100%;
+    background-repeat: no-repeat;
+  font: 16px/1.5 Helvetica Neue, Helvetica, sans-serif;
+  margin: 0;
+  color: white;
+}
+
+h1 .NEONpinktxt {
+color: #fff;
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.browse {
+  text-align: center;
+  float: center;
+  padding: 10px 25px;
+}
+
+
+
+a {
+  color: #c00;
+}
+
+input[type="search"],
+select {
+  width: 200px;
+}

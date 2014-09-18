@@ -1,0 +1,11 @@
+<h1><%= @koopa.name %></h1>
+
+<p><%= @koopa.name %> is resplendent in <%= @koopa.color %> fur.</p>
+
+<img src="<%= @koopa.image_url%>" >
+
+<form action="/koopas/<%= @koopa.id %>"
+  method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Ew, gross.  Delete it!</button>
+</form>

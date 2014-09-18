@@ -1,0 +1,12 @@
+<h1>Venues:</h1>
+
+<ul>
+<% @venues.each do |venue| %>
+  <li><%= link_to venue.name, venue %></li>
+<% end %>
+</ul>
+
+<p><%= link_to "See the bands", bands_path %></p>
+
+
+<p><%= link_to "Add a venue", new_venue_path %></p>

@@ -1,0 +1,11 @@
+<h1><%= @bean.name %></h1>
+
+<p>This coffee is a <b><%= @bean.roast %></b> roast from <i><%= @bean.origin %></i>, and we have <%= @bean.quantity %> pounds available. </p>
+<p>Goes great with: <%=@bean.pastry_list%></p>
+<br>
+<br>
+<%= link_to "Delete", :bean, method: :delete, data: { confirm: "Are you sure you want to delete #{@bean.name}?"} %>
+<br>
+<%= link_to "Edit this bean listing", edit_bean_path(@bean) %>
+<br>
+<%= link_to "Return to Our Beans", beans_path %>

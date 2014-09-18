@@ -1,0 +1,7 @@
+<h1>List of all <%= @author.name %>'s books </h1>
+
+<% @books.each do |book| %>
+  <h1><a href="/books/<%= book.id %>"><%= book.title %></a> </h1>
+<% end %>
+
+<a href="/authors/<%= @author.id %>" >Back to author</a>

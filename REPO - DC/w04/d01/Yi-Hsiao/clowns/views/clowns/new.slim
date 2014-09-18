@@ -1,0 +1,16 @@
+h1.title Add a clown to the circus!
+
+form[action="/clowns" method="post"]
+  label[for="clown-name"] Name:
+  input[type="text" name="name" id="clown-name"]
+
+  label[for="clown-talent"] Talent:
+  input[type="text" name="talent" id="clown-talent"]
+
+  label[for="clown-creepy"] Creepy:
+  input[type="checkbox" name="creepy" id="clown-creepy" value="true"]
+
+  label[for="clown-image"] Image:
+  input[type="text" name="image_url" id="clown-image"]
+
+  input.submit[type="submit"]

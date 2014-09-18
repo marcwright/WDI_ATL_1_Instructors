@@ -1,0 +1,8 @@
+<% @planets.each do |planet| %>
+  <%= planet.name %> has <%= pluralize(planet.moons, 'moon') %>.
+  <%= link_to 'show', planet %>
+  <%= link_to 'edit', edit_planet_path(planet) %>
+  <%= button_to 'delete', planet_path(planet), method: :delete, confirm: 'Energise the demolition beam?' %>
+
+  <br>
+<% end %>

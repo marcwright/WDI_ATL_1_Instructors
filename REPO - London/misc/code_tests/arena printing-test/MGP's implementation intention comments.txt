@@ -1,0 +1,8 @@
+I've had a chance to have a look at your exercise this morning, and have put the attached client.rb together as a first-pass solution. I also made a tweak to the server - mostly to illustrate an possible design intention.
+
+I would have rather started off with some Cucumber scenarios and some specs, as this would have made the next stages of refactoring, bug-hunting and enhancements easier - but would've eaten up the time I had this morning (I've got to be out of here at 1pm... I'm typing this email at my fastest wpm rate! :-)
+
+There's not much in the way of error-handling in there. If an order-number comes down twice, it'll probably explode. There's also a few refactorings that would be high on my list - firstly, to get the XML generation out to its own class, and I'd also look at getting the parameters passed to the initializer - though I suppose it's a large part personal preference whether to have accessors or parameters.
+
+Regarding the reliance of the operation... it might be worth downloading all the order details to a local DB while the ADSL is up, and then building the XML from the local copy. This would add another step in the process (another point of failure) but it would at least allow a buffer (presuming the slow part is processing a single order into XML and printing it). 
+There should also be a bit of double-checking order numbers - it may be that the "completed" call fails, so the server re-sends an order. So it would be worth keeping a track at both ends of completed orders - with some notification for human intervention if a discrepancy is noticed.

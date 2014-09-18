@@ -1,0 +1,11 @@
+<h1>List of characters </h1>
+
+<% @characters.each do |character| %>
+  <li><%= character.name %>
+    <ul>
+    <li>book: <%= character.book.title %></li>
+    <li>gender: -  <%= character.gender %></li>
+    <li>quirk: <%= character.quirk %></li>
+    </ul>
+  </li>
+<% end %>

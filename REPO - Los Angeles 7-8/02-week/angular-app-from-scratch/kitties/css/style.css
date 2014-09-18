@@ -1,0 +1,25 @@
+body {
+	background-image: url('../images/background.png');
+	font-family:helvetica;
+	text-align: center;
+	width: 100%;
+}
+
+#catnip {
+	margin:0 auto;
+	width:1000px;
+
+}
+
+.babycats {
+	border: 2px dashed lightblue;
+}
+
+.left-container, .right-container {
+	width: 440px;
+	border: 2px solid red;
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	background-color:white;
+}

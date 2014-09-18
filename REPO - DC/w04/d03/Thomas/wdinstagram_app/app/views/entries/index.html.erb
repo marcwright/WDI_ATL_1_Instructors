@@ -1,0 +1,8 @@
+<h1>View your entries:</h1>
+<% @entries.each do |entry| %>
+<h2><%= entry.author %> took the following photo on <%= entry.date_taken %></h2>
+<img src="<%= entry.photo_url %>" height="200px" width="300px">
+<button><a href="/entries/<%= entry.id %>/delete">DELETE <%= entry.author %></a></button>
+<button><a href="/entries/<%= entry.id %>/edit">EDIT <%= entry.author %></a></button>
+<% end %>
+

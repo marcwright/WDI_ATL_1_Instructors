@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WdiHelpers</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- Flash Messages -->
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+ 	<% if current_user %>
+		User <%= current_user.email %> signed in<br />
+		<%= link_to "Sign out", destroy_user_session_path, method: "delete" %><br />
+	<% else %>
+		<%= link_to "Sign in", new_user_session_path %><br /> or <%= link_to "Sign up", new_user_registration_path %><br />
+	<% end %>
+	<hr />
+	<br />
+	<br />
+
+<%= yield %>
+
+</body>
+</html>

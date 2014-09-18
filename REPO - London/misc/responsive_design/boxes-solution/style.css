@@ -1,0 +1,81 @@
+body {
+	background:#333;
+}
+.page-wrap {
+	width:100%;
+	max-width:960px;
+	margin:0 auto;
+	min-height:1000px;
+	background:#fff;
+}
+
+header {
+	border:1px solid black;
+	height:75px;
+}
+nav ul {
+	padding:0;
+	list-style: none;
+}
+nav li {
+	display:inline-block;
+	width:100px;
+	height:40px;
+	margin:5px;
+	border:1px solid black;
+}
+
+.banner,
+.latest-articles {
+	width:95%;
+	margin:20px 2.5%;
+}
+.banner {
+	height:200px;
+	border:1px solid black;
+}
+
+.latest-articles {
+	overflow: hidden;
+	background:green;
+}
+.latest-articles article {
+	float:left;
+	width:21.25%;
+	margin:20px 2.5%;
+	
+	height:160px;
+	background:red;
+}
+.latest-articles article:first-child {
+	margin-left:0;
+}
+.latest-articles article:last-child {
+	margin-right:0;
+}
+@media screen and (max-width:730px) {
+	.latest-articles article {
+		margin:20px 2.5%;
+		width:45%;
+	}
+	.latest-articles article:first-child {
+		margin-left:2.5%;
+	}
+}
+
+/* override for mobile */
+@media screen and (max-width:500px) {
+	header {
+		height:auto;
+	}
+	nav li {
+		display: block;
+		width:100%;
+		margin:0;
+	}
+	.latest-articles article {
+		float:none;
+		width:100%;
+		margin:10px 0;
+	}
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>this</title>
+  </head>
+  <body>
+    <h1>this</h1>
+    <script type='text/javascript'>
+/////////////////////////////////////////////
+      console.log('1')
+      console.log(this);
+
+      var color = 'red';
+
+      var shmee = function(){
+        console.log(this);
+        console.log(this.color);
+        //Everything here is within global scope because it has no other context.
+      };
+/////////////////////////////////////////////
+      console.log('2')
+      shmee();
+
+      var banana = { color: 'yellow' };
+      banana.shmee = shmee;
+      //shmee(); still refers to the global function and as such simply calls the function logging hte window as context and calling the .color which is defined in window context as red.
+/////////////////////////////////////////////
+      console.log('3');
+      console.log(banana);
+
+      //This jsut returns the banana object by itself.
+/////////////////////////////////////////////
+      console.log('4');
+      banana.shmee();
+
+      var puppy = {
+        name: 'fluffy',
+        bark: function(){
+          console.log(this)
+        },
+        sayName: function(){
+          console.log(this.name)
+        },
+      };
+      //banana.shmee(); calls the shmee function, now scoped to the banana object so this = banana object and this.color = yellow as defined within banana.
+      // Also set up a new object called puppy with name and 2 functions.
+/////////////////////////////////////////////
+      console.log('5');
+      console.log(puppy);
+
+      //This should return just the puppy object.
+/////////////////////////////////////////////
+      console.log('6')
+      puppy.bark();
+      //This will return the results of calling the puppy's bark method which says to return 'this'. This is in the context of puppy.
+/////////////////////////////////////////////
+      console.log('7');
+      puppy.sayName();
+
+      var kitten = {
+        name: 'mittens',
+        friend: puppy,
+        introFriend: function() {
+          console.log(this);
+          this.friend.bark();
+          console.log(this);
+        }
+      }
+
+      //Calls the puppy's say name method
+/////////////////////////////////////////////
+      console.log('8');
+      console.log(kitten);
+/////////////////////////////////////////////
+      console.log('9');
+      kitten.introFriend();
+
+    </script>
+  </body>
+</html>

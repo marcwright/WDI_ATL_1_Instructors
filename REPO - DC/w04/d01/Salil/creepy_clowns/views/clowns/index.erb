@@ -1,0 +1,6 @@
+<h1>Here are the clowns..</h1>
+<ul>
+  <% @clowns.each do |clown| %>
+    <li><%= clown.name %> is good at <%= clown.talent %>. It is <%= clown.is_creepy %> that he is creepy.</li>
+  <% end %>
+</ul>

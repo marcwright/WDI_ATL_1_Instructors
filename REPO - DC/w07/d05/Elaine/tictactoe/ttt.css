@@ -1,0 +1,15 @@
+.header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.board {
+  text-align: center;
+  margin: 0 auto;
+}
+
+  .square {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+  }

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Search term:</b>
+  <%= @link.search_term %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @link.text %>
+</p>
+
+<p>
+  <b>Uri:</b>
+  <%= @link.uri %>
+</p>
+
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>

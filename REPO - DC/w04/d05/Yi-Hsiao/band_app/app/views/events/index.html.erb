@@ -1,0 +1,17 @@
+<h1>Upcoming Events</h1>
+
+<table>
+  <tr>
+    <th>Artist</th>
+    <th>Venue</th>
+    <th>Location</th>
+    <th>Event Info</th>
+  </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= link_to event.band.name, event.band %></td>
+      <td><%= link_to event.venue.name, event.venue %></td>
+      <td><%= "#{ event.venue.city }, #{ event.venue.state }" %>
+    </tr>
+  <% end %>
+</table>

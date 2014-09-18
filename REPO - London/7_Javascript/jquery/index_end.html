@@ -1,0 +1,64 @@
+  <html>
+  <head>
+    <style>
+      /* stuff that happens if JS is enabled (ie. _don't_ show the "you've not got js" warning) */
+      .nojs_warning {
+        display: none;
+      }
+
+      
+      /* stuff that happens if JS is disabled (ie. show the "you've not got js" warning, and hide all the buttons that have js events) */
+      .nojs button {
+        display: none;  
+      }
+      .nojs .nojs_warning {
+        display: block;
+      }
+
+
+      .hidden {
+        display: none;
+      }
+
+      .message {
+        background-color: #aaf;
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding: 10px;
+        line-height: 2;
+      }
+
+    </style>
+    <script src="jquery-1.11.0.js"></script>
+    <script>
+      var myApp = myApp || {}; 
+    
+      myApp.sayHello = function () { 
+        // alert('Hello WDI!'); 
+
+        var $message = $('.message').first();
+        $message.slideToggle(1000);
+      }
+  
+      myApp.setup = function () {
+        var $helloButton = $('#helloButton');
+        $helloButton.on('click', myApp.sayHello);
+      
+        var $body = $('body').first();
+        $body.removeClass('nojs');
+      }
+    
+      $(document).ready(myApp.setup);
+    </script>
+  </head>
+  <body class="nojs" id="body">
+    <button id="helloButton">I'm a button with JS event!</button>
+    <p class="nojs_warning">You need JS to view this site best...</p>
+    <p class="hidden message">you just clicked my button</p>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+  </body>
+  </html>

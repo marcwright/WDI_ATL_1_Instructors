@@ -1,0 +1,10 @@
+<h1><%= @artist.name %></h1>
+<p><%= @artist.genre %></p>
+<%= image_tag @artist.photo_url, alt: "", class: "artist" %>
+<% @songs.each do |song| %>
+  <%= song.title %>
+  <%= song.year %>
+<% end %>
+<%= form_for @artist, method: 'delete' do |f| %>
+  <%= f.submit 'destroy' %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Welcome to Koopa Island</h1>
+
+<% @koopas.each do |koopa| %>
+  <div class="col-lg-3">
+    <a href="/koopa/<%= koopa.id %>">
+      <img src="<%= koopa.image_url %>" alt="<%= koopa.name %>">
+    </a>
+    <p><a href="/koopa/<%= koopa.id %>"><%= koopa.name %></p></a></div>
+<% end %>
+

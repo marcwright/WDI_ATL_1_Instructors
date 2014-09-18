@@ -1,0 +1,12 @@
+<%= link_to "All Bands", bands_path %>
+
+<h1><%= @band.name %></h1>
+<ul>
+  <li>Genre: <%= @band.genre %></li>
+  <li>Has explicit lyrics: <%= @band.explicit %></li>
+  <li><iframe width="560" height="315" src="<%= @band.video_url %>"></iframe></li>
+</ul>
+
+<%= form_for @band, method: 'delete' do |f| %>
+  <%= f.submit "Delete band" %>
+<% end %>

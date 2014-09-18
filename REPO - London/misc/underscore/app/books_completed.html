@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Books Underscore Practice</title>
+    <script src="underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js "></script>
+
+    <style>
+      .hot {
+        background-image: url('http://2.bp.blogspot.com/-KMFq0fNr_Zo/TosiqJSk1RI/AAAAAAAABEI/Bbq_qiKyhZs/s200/flames.jpg');
+        background-repeat: no-repeat;
+        color:sienna;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <div id="bookshelf"></div>
+
+    <div id="todo">
+      <ol>
+        <li>Iterate over each book and display it in the bookshelf</li>
+        <li>Pull out the web reader URL and create a link around the book image, so that when I click it I can see inside the book.</li>
+        <li>Find all the books with a rating of 4 or 5, and add a CSS class to them called hot. Add CSS so that the hot class is a snazzy star shape or something.</li>
+
+      </ol>
+    </div>
+
+    <script>
+      function handleResponse(response) {
+        // console.log(response.items[0]);
+        _(response.items).each(addBookToBookshelf);
+        _(_(response.items).map(formatImageAsLink)).each(addImageToBook);
+        var hotItems =_(response.items).select(function(item) {return _([4,5]).include(item.volumeInfo.averageRating)})
+        _(hotItems).each(markAsHot);
+      }
+
+      function markAsHot(item) {
+        book = $('#' + item.id);
+        book.addClass('hot');
+      }
+
+      function addBookToBookshelf(item) {
+        bookshelf = $('#bookshelf');
+        var template = "<article id='<%= id%>'><h1><%= volumeInfo.title %></h1></article>";
+        var parsedTemplate = _.template(template, item);
+        bookshelf.append(parsedTemplate);
+      }
+
+      function formatImageAsLink(item) {
+        var readerUrl = item.accessInfo.webReaderLink;
+        var imageSrc = item.volumeInfo.imageLinks.smallThumbnail;
+        var altText = item.volumeInfo.title;
+        var template = "<a href='<%= readerUrl %>'><img src='<%= imageSrc%>' alt='<%= altText%>'></a>";
+        var parsedTemplate = _.template(template, {readerUrl: readerUrl, imageSrc: imageSrc, altText: altText});
+
+        return {id: item.id, imageAsLinkText: parsedTemplate};
+      }
+
+      function addImageToBook(item) {
+        book = $('#' + item.id);
+        book.append(item.imageAsLinkText);
+      }
+
+
+    </script>
+
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+  </body>
+</html>

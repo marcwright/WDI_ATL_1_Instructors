@@ -1,0 +1,16 @@
+# Directions: You're all adults with 20+ years of experience as learners,
+# and you know your learning patterns best. Please answer these two simple questions,
+# keeping your entire learning history in mind.
+
+# 1) What habits have you developed over the years that you feel might hinder you during WDI?
+
+
+1. I can make decisions too quickly before learning everything I need to know about a situation.
+2. I cannot focus on too many tasks at one time.
+3. I don't retain knowledge very well through memorization.
+
+# 2) How can you combat or minimize those habits' effects on your experience at General Assembly?
+
+1. Ask questions and research topics thoroughly.  Don't assume that I know everything about the topic yet.
+2. Minimize distractions and focus on the present task at hand.
+3. Do problem sets on codewars.com and use flash cards daily to help retain knowledge.

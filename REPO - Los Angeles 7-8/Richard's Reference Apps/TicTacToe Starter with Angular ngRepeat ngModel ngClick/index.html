@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html x-ng-app="TTTApp">
+<head>
+    <title>TTT REFERENCE STEP 1</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/ngTTT.css">	
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div x-ng-controller="TTTController">
+        <p>TTT Reference: Step 1</p>
+        <div class="theBox" >
+            <div x-ng-repeat="currentCell in cellList">
+                <div class="allCellsAlways" ng-click="playerPicks(currentCell)"
+                ng-class="{xclass: currentCell.status=='X', yclass: currentCell.status =='Y'}">
+                Cell Contents: {{currentCell.status}}
+            </div>
+        </div>
+    </div>
+    <br>
+    {{testString}}
+    <p></p>
+    <button ng-click="testJS()">TEST BUTTON</button>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,64 @@
+<div class="container">
+
+<div class="page-header">
+  <h1>Keep it simple stupid</h1>
+</div>
+
+
+<form class="form-horizontal" action='/simple' method='get'>
+<fieldset>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="first">Your number please</label>  
+  <div class="col-md-5">
+  <input id="distance" name='first' type="text" class="form-control input-md" required="" autofocus>
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="operator">Which calculation?</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="operator" class="form-control">
+      <option value='+'>Add</option>
+      <option value='-'>Subtract</option>
+      <option value='*'>Multiply</option>
+      <option value='/'>Divide</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="second">Your second number please</label>  
+  <div class="col-md-5">
+  <input id="distance" name='second' type="text" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">Calc.it</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+<% if @result %>
+<section>
+  <header>
+    <h3>The result of <%= @first %> <%= @operator %> <%= @second %> is: <%= @result %></h3>
+  </header>
+</section>
+<% end %>
+</div>

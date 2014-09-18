@@ -1,0 +1,51 @@
+
+body {
+  font-size: 14px;
+  font-family: "Times New Roman";
+  font-color: "black";
+  background: #F3EBE9;
+  background-image: url(../images/pattern1.png);
+  margin: 0 auto;
+  text-align: center;
+  width: 950px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.banner {
+  background-color: pink;
+  padding: 15px;
+}
+
+p {
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+}
+
+.main {
+  width: 950px;
+}
+
+h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: cursive, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.content {
+  background-color: white;
+  padding: 15px;
+}
+
+.photos {
+  display: inline-block;
+  margin-left: 10px;
+}

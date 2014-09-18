@@ -1,0 +1,15 @@
+
+<h1>Here is <%= @artist.name %></h1>
+
+<p><%= @artist.name %>'s songs</p>
+<% @songs.each do |song| %>
+  <%= song.title %>
+  <%= link_to "edit", edit_artist_song_path(@artist, song) %>
+  <%= button_to "destroy song", artist_song_path(@artist, song), method: :delete %>
+<% end %>
+
+<%= link_to "add song", new_artist_song_path(@artist)%>
+
+<%= form_for @artist, method: 'delete' do |f| %>
+  <%= f.submit "destroy" %>
+<% end %>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head><title>I &hearts; JavaScript</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+
+function dollarsToPounds(dollars) {
+  var results = (dollars / 1.6748).toFixed(2);
+  alert("That's " + (results) + " Brittish Pounds");
+};
+
+function poundsToDollars(pounds) {
+  var results = (pounds * 1.6748).toFixed(2);
+  alert("That's " + (results) + " America Bucks");
+};
+
+function currencyConverter(from, to, amount){
+  if (from === 'pounds' && to === 'dollars'){
+    poundsToDollars(amount);
+
+} else if (from === 'dollars' && to === 'pounds'){
+    dollarsToPounds(amount)
+} else if (from === to){
+    alert('It\'s the damn same!')
+} else {
+  console.log("Try Again Dummy");
+  }
+}
+
+
+var q1 = (prompt('What is the currency you are converting from?'))
+
+var q2 = (prompt('What is the currency you are converting to?'))
+
+var q3 = parseInt(prompt('What is the amount?'))
+
+currencyConverter(q1, q2, q3);
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

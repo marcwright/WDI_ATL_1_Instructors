@@ -1,0 +1,19 @@
+  body {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    border-top: 1px solid #777;
+    padding-top: 0.3em;
+  }
+
+  .about {
+    font-size: 80%;
+  }

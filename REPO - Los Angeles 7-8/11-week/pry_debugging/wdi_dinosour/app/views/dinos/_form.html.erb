@@ -1,0 +1,12 @@
+<%= form_for @dino do |d| %>
+	Name:		<%= d.text_field :name %>
+	era:		<%= d.text_field :era %>
+	weight:		<%= d.text_field :weight %>
+	horns:		<%= d.text_field :horns %>
+	diet		<%= d.text_field :diet %>
+
+	<%= d.submit "Submit Beast" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", dinos_path %>

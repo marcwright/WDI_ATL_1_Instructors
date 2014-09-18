@@ -1,0 +1,22 @@
+<h1>Edit <%= @entry.author %> below:</h1>
+  <form action="/entries/<%= @entry.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+    <label>
+      Author:
+      <input type="string" name="author" value="<%= @entry.author %>">
+    </label>
+
+    <label>
+      Photo:
+      <input type="text" name="photo_url" value="<%= @entry.photo_url %>">
+    </label>
+
+    <label>
+      Date:
+      <input type="date" name="date_taken" value="<%= @entry.date_taken %>">
+    </label>
+
+    <input type="submit" value="update <%= @entry.author %>">
+  </form>

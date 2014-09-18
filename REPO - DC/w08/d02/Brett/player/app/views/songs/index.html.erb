@@ -1,0 +1,31 @@
+<h1>My Playlist</h1>
+
+<form>
+  <fieldset>
+    <legend>New Song</legend>
+    <label>
+      Artist
+      <input type="text" name="artist">
+    </label>
+     <label>
+      Title
+      <input type="text" name="title">
+    </label>
+     <label>
+      Preview URL
+      <input type="text" name="preview-url">
+    </label>
+    <input type="submit" value="Save">
+  </fieldset>
+</form>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= song.title %> by <%= song.artist %>
+    <audio controls>
+      <source src="<%= song.preview_url %>">
+    </audio>
+    <span>&hearts;</span>
+    </li>
+  <% end %>
+</ul>

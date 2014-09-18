@@ -1,0 +1,13 @@
+<h1><%= @movie["Title"] %></h1>
+<h2><%= @movie["Year"] %></h2>
+
+<% if @poster %>
+  <%= image_tag @poster %>
+<% end %>
+
+<dl>
+  <% @movie.each do |attribute, value| %>
+    <b><%= content_tag "dt", attribute + ":" %></b>
+    <%= content_tag "dd", value %>
+  <% end %>
+</dl>

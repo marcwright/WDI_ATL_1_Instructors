@@ -1,0 +1,41 @@
+// Place all the styles related to the snippets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.description {
+  margin-bottom: $default-margin-bottom;
+}
+
+.snippet {
+  padding: 0;
+  width: $col-width;
+  height: auto;
+  font-size: 12px;
+}
+
+.grid {
+  .row {
+    .col {
+      float: left;
+      width: $col-width;
+      margin-right: $outer-padding;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include clearfix;
+    margin-bottom: $default-margin-bottom;
+  }
+}
+
+.result-panel {
+  margin-top: 12px;
+  background-color: $result-background-color;
+  border: $result-border;
+  padding: $inner-padding;
+  width: auto;
+  overflow: hidden;
+  &.compact {
+    max-height: 200px;
+  }
+}

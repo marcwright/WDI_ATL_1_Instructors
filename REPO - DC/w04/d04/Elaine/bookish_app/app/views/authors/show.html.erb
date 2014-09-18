@@ -1,0 +1,23 @@
+<div class="page">
+  <h1>Author Profile: <%= @author.name %></h1>
+
+  <ul>
+    <li><b>Date of Birth:</b> <%= @author.dob %></li>
+    <li><b>Gender:</b> <%= @author.gender %></li>
+    <li><b>Has a pseudonym:</b> <%= @author.has_pseudonym == true ? "Yes" : "No" %></li>
+  </ul>
+
+  <form action="/authors/<%= @author.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+    <p><input type="submit" value="Delete Author"></p>
+  </form>
+
+  <p><a href="/authors/<%= @author.id %>/edit">Edit <%= @author.name %>'s Profile</a></p>
+  <p><a href="/authors/<%= @author.id %>/books">All Books by <%= @author.name %></a></p>
+  <p><a href="/authors/<%= @author.id %>/books/new">Add a Book</a></p>
+  <p><a href="/authors">All Authors</a></p>
+  <p><a href="/">Home</a></p>
+</div>
+

@@ -1,0 +1,24 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:53:10
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:48:13
+
+ -->
+
+<%= form_for @band do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :genre %>
+  <%= f.text_field(:genre, size:"10") %>
+
+  <%= f.label(:explicit_lyrics, "Explicit?") %>
+  <%= f.check_box :explicit_lyrics %>
+
+  <%= f.label(:video_embed_url, "Video URL") %>
+  <%= f.url_field :video_embed_url %>
+
+  <%= f.submit "Submit" %>
+<% end %>

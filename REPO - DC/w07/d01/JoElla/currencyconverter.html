@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>I &hearts; JavaScript</title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+
+    var amount = prompt('What amount do you want to put in GBP?')
+
+    function dollarsToPounds(dollars) {
+      console.log('$' + dollars + ' is GBP ' +  parseFloat(dollars/1.6747).toFixed(2) + '.');
+    }
+
+    dollarsToPounds(amount);
+
+
+    var fxRate = {
+      dollars: 1,
+      pounds: 1.675,
+      exchange: function(currencyFrom, currencyTo, amount){
+        var collars = amount * this[currencyFrom];
+        return (dollars / this[currencyTo]).toFixed(2);
+      }
+    }
+
+
+
+    </script>
+
+  </body>
+</html>

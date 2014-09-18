@@ -1,0 +1,8 @@
+h1
+  - if @starting_bottles > 0
+    | Take #{ @plural_bottles ? "one" : "it" } down,
+      pass #{ @plural_bottles ? "one" : "it" } around...
+  - else
+    | No bottles of beer on the wall :(
+a.yes href="/verse/#{ @bottles_left }" Next...
+a.no href="/" Stop

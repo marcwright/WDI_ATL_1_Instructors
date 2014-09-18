@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+    // JavaScript!
+    // Dis be a JavaScript Comment, maan
+    /* Dis also
+       be a JS
+       Comment, man!
+    */
+    // Variables
+    var beep = 'beep';
+
+    //Console Output
+    console.log(beep);
+
+    // Conditionals
+    var number = 5;
+    if (number > 5) {
+      console.log('BIG NUMBER');
+    } else if (number < 5) {
+      console.log('little number ');
+    } else {
+      console.log('must be 5 then');
+    }
+
+    // Case Statements
+    var day = 'friday';
+    switch (day) {
+      case 'Monday' :
+        console.log('Get Haircut!');
+        break;
+      case 'Tuesday' :
+        console.log('Don\'t get Haircut');
+        break;
+      case 'Friday' :
+        console.log('Get 3 haircuts!');
+        break;
+      default:
+        console.log('I\'m in Haircut Limbo!');
+    }
+
+    // While loop
+    var count = 10;
+    while (count > 0) {
+      console.log(count);
+      count--;
+    }
+
+    //Functions
+
+    // Named
+    function add(x, y) {
+      return x + y;
+    }
+
+    // Anonymous
+    var add = function(x,y){
+      return x + y;
+    };
+
+    // Function with no arguments
+    var scream = function() {
+      return "AHHHHHHHHHH";
+    };
+
+    // Arrays
+    var myNameArray = ['Inhak', 'Mikael', 'Randy'];
+    myNameArray[0];
+    myNamearray.push('Matt');
+
+    // Iteration
+    var people = ["Inhak", "Elaine", "Yi-Hsiao", "Salil", "Brett"]
+
+    // for loop
+    for(var i = 0; i <=people.length; i++) {
+      console.log('Hi HO! I am ' + dwarves[i]);
+    }
+
+    // Enumeration
+    people.forEach(function(person, index) {
+      console.log(people[index] + ' says hi');
+    });
+
+    //Object (literal notation)
+    var myObject = {name: 'Snow White', age: 17, weakness: 'apples' };
+
+    //myObject.name => 'Snow White'
+    //myObject['name'] => 'Snow White'
+    //myObject.age => 17
+
+    var mybird = {
+      name: "Tweety",
+      chirp: function(){
+        console.log('tweet tweet tweet');
+      },
+      greet: function(){
+        console.log('Hi my name is ' + name);
+      }
+    }
+
+    // Object practice
+    var person = {
+      name: "Inhak",
+      hometown: "Korea Land, NK",
+      sing: function(){
+        console.log('Don\'t stop \'til you get Inhak!');
+      },
+      introduce: function(){
+        console.log('Hi my name is ' + this.name + " and I'm from " + this.hometown + ".");
+      }
+    }
+
+  </script>
+</body>
+</html>

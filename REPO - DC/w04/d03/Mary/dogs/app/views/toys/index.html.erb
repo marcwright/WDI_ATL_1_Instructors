@@ -1,0 +1,7 @@
+<h1>These are all the toys</h1>
+
+<% @toys.each do |toy| %>
+<ul>
+<li><a href="/dogs/<%= toy.dog_id %>/toys/<%= toy.id %>"><%= toy.name %></a></li>
+</ul>
+<% end %>

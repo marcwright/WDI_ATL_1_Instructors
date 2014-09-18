@@ -1,0 +1,26 @@
+<h1>Edit <%= @ride.name %></h1>
+<form action="/rides/<%= @ride.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @ride.name %>">
+  </label>
+
+  <label>
+    Top Speed:
+    <input type="text" name="top_speed" value="<%= @ride.top_speed %>">
+  </label>
+
+  <label>
+    Minimum Height:
+    <input type="text" name="min_height" value="<%= @ride.min_height %>">
+  </label>
+
+  <label>
+    Image URL:
+    <input type="text" name="image_url" value="<%= @ride.image_url %>">
+  </label>
+
+  <button>Whoo!</button>
+
+</form>

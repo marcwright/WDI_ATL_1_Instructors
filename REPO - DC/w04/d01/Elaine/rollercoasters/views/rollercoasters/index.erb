@@ -1,0 +1,12 @@
+<h1>Here are all the rollercoasters:</h1>
+
+<ul>
+<% @rollercoasters.each do |rollercoaster| %>
+  <li><a href="/rollercoasters/<%= rollercoaster.id %>"><%= rollercoaster.name %></a> has a top speed of <%= rollercoaster.top_speed %> mph.</li>
+  <% end %>
+</ul>
+
+<ul>
+  <li><a href="/rollercoasters/new">Add a coaster</a></li>
+  <li><a href="/">Home</a></li>
+</ul>

@@ -1,0 +1,35 @@
+<h1>Add a new Book!</h1>
+
+<form action="/books" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+<ul style="list-style-type: none">
+  <li><label>
+    Title:
+    <input type="text" name="title" >
+  </label></li>
+
+  <li><label>
+    Release Date:
+    <input type="date" name="release_date" >
+  </label></li>
+
+  <li><label>
+    Genre:
+    <input type="text" name="genre" >
+  </label></li>
+
+  <li><label>
+    Who is the Author?:
+    <select type="integer" name ="author_id">
+      <% @authors.each do |author| %>
+      <option value="<%=author.id%>"><%= author.name %></option>
+      <% end %>
+
+  </label></li>
+
+  <input type="submit" value="Add Book">
+</ul>
+</form>
+

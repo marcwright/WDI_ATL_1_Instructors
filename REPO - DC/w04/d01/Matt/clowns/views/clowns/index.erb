@@ -1,0 +1,7 @@
+<h2>Here are the clowns</h2>
+
+<ul>
+<% @clowns.each do |clown| %>
+  <li style="margin-top: 90px;"><a href="/clowns/<%= clown.id %>"><img style="float:left;max-height: 80px;margin-top:" src="<%= clown.image_url %>" alt="<%= clown.name %>"><%= clown.name %></a></li>
+<% end %>
+</ul>

@@ -1,0 +1,29 @@
+<h1>Listing rappers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rappers.each do |rapper| %>
+      <tr>
+        <td><%= rapper.name %></td>
+        <td><%= rapper.age %></td>
+        <td><%= link_to 'Show', rapper %></td>
+        <td><%= link_to 'Edit', edit_rapper_path(rapper) %></td>
+        <td><%= link_to 'Destroy', rapper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rapper', new_rapper_path %>

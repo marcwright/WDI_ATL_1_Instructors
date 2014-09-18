@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>this</title>
+  </head>
+  <body>
+    <h1>this</h1>
+    <script type='text/javascript'>
+
+      //prints '1' to console
+      console.log('1')
+      //prints global scope to the console
+      console.log(this);
+
+      //declares variable 'color' equal to red
+      var color = 'red';
+
+      //declares variable 'shmee' equal to a function
+
+      var shmee = function(){
+        //prints the object to the console
+        console.log(this);
+        //prints the color of the associated object
+        console.log(this.color);
+      };
+
+      //prints '2' to the console
+      console.log('2')
+      //invokes the shmee function printing the current object to the console as well as the current value of 'color'.
+      shmee();
+
+      //declares a variable 'banana' equal to the object { color: 'yellow'}
+      var banana = { color: 'yellow' };
+      //
+      banana.shmee = shmee;
+
+      //prints '3' to the console
+      console.log('3');
+      //prints the banana object
+      console.log(banana);
+
+      //prints '4' to the console
+      console.log('4');
+      //invokes the shmee function on banana
+      banana.shmee();
+
+      //constructor for the puppy variable pull equal to
+      //
+      var puppy = {
+        name: 'fluffy',
+        bark: function(){
+          console.log(this)
+        },
+        sayName: function(){
+          console.log(this.name)
+        },
+      };
+
+      console.log('5');
+      console.log(puppy);
+
+      console.log('6')
+      //method invocation of bark function on puppy
+      puppy.bark();
+
+      console.log('7');
+      //method invocation of sayName function on puppy
+      puppy.sayName();
+
+      var kitten = {
+        name: 'mittens',
+        //entire puppy object
+        friend: puppy,
+        introFriend: function() {
+          //console logs 'this' - mittens at the moment
+          console.log(this);
+          //kitten has friend(puppy)
+          this.friend.bark();
+          console.log(this);
+        }
+      }
+
+      console.log('8');
+      console.log(kitten);
+
+      console.log('9');
+      kitten.introFriend();
+
+    </script>
+  </body>
+</html>

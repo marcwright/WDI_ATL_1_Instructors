@@ -1,0 +1,55 @@
+<div class="toolbar" id="toolbar">
+  <h1>Watch.io</h1>
+  
+  <h2>Find Movies</h2>
+  <div class="search" id="search">
+    <form>
+      <input type="search" name="search" placeholder="Search for a movie...">
+      <button>Search</button>
+    </form>
+    <label class="search-results" id="search-results">
+      Search Results
+      <select name="search-results">
+        <option value="tt1375666">Inception</option>
+        <option value="tt1790736">Inception: Motion Comics</option>
+        <option value="tt2160855">How Inception Should Have Ended</option>
+      </select>
+    </label>
+  </div>
+  
+  <h2>My Movie Watchlist</h2>
+  <ul class="watchlist" id="watchlist">
+    <li><a href="#movies/tt0372784">Batman Begins</a></li>
+    <li><a href="#movies/tt0468569">The Dark Knight</a></li>
+    <li><a href="#movies/tt1345836">The Dark Knight Rises</a></li>
+  </ul>
+
+</div>
+<div class="main" id="main">
+  <noscript>This application requires JavaScript.</noscript>
+
+  <div class="watchio-home">
+<pre>
+ __     __     ______     ______   ______     __  __     __     ______    
+/\ \  _ \ \   /\  __ \   /\__  _\ /\  ___\   /\ \_\ \   /\ \   /\  __ \   
+\ \ \/ ".\ \  \ \  __ \  \/_/\ \/ \ \ \____  \ \  __ \  \ \ \  \ \ \/\ \  
+ \ \__/". \_\  \ \_\ \_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_\  \ \_____\ 
+  \/_/   \/_/   \/_/\/_/     \/_/   \/_____/   \/_/\/_/   \/_/   \/_____/ 
+</pre>
+  </div>
+  
+  <div class="watchio-detail">
+    <a href="#home">Home</a>
+    <h1>Inception</h1>
+    <p><button id="watchlist-toggle">Add to Watchlist</button></p>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt="Inception.">
+    <p>A skilled extractor is offered a chance to regain his old life as payment for a task considered to be impossible.</p>
+  </div>
+
+</div>
+
+<%= requirejs_include_tag %>
+<script>
+  require.config({urlArgs: 'bust='+ Date.now()});
+  require(['watchio/main']);
+</script>

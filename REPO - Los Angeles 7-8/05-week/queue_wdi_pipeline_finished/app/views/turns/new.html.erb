@@ -1,0 +1,18 @@
+  <div class="row">
+
+    <div class="col-sm-3 col-sm-offset-1">
+      <h2>
+        Please wait your turn and add yourself to the queue
+      </h2>
+      <hr>
+
+      <%= form_for @turn do |f| %>
+        <%= f.text_field :name, size: '40', placeholder: "Name" %>
+        <%= f.text_field :subject, size: '40', placeholder: "Subject" %>
+        <%= f.text_field :question, size: '42x12', placeholder: "Question" %>
+        <%= f.submit "Add me to the queue!", class: 'btn btn-primary btn-large' %>
+      <% end %>
+
+    </div>
+
+</div>

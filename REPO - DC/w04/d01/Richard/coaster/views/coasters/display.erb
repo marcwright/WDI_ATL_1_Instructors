@@ -1,0 +1,8 @@
+<h2><%= @coaster.name %></h2>
+<iframe width="640" height="390" src="<%=@coaster.image_url%>" frameborder="0" allowfullscreen></iframe>
+
+
+<form action="/coasters/<%= @coaster.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Bye-Bye!</button>
+</form>

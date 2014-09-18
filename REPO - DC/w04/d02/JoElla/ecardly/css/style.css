@@ -1,0 +1,77 @@
+.adlist {
+  padding-bottom: 25px;
+}
+
+body {
+  background-color: #d6d6d6;
+}
+
+.banner {
+  background-image: url("../images/background.jpg");
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.clear {
+  clear: both;
+}
+
+h1 {
+  background-image: url("../images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  padding: 100px 100px;
+  text-align: center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.highlight {
+  color: red;
+}
+
+.iconlist li {
+  display: inline;
+  list-style-type: none;
+}
+
+.iconlist {
+  background-color: #d6d6d6;
+  float: left;
+  padding-left: 250px;
+}
+
+
+
+li {
+  list-style-type: none;
+}
+
+.main {
+  background-color: #fff;
+  float: left;
+  padding: 15px 5px 0px 20px;
+  width: 620px;
+}
+
+p {
+  padding-right: 15px;
+}
+
+
+.sidebar {
+  background-color: #fff;
+  float: right;
+  padding: 10px 0px 30px 0px;
+  width: 300px;
+}
+
+.sidebar h2 {
+  padding-left: 40px;
+}
+

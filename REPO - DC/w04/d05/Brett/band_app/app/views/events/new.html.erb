@@ -1,0 +1,16 @@
+<h1>Add an Event</h1>
+<%= form_for [@venue, @event] do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :time %>
+  <%= f.time_field :time %>
+
+
+<!--  need a dropdown menu for bands  -->
+  <%= f.label :band %>
+  <%= f.collection_select :band_id, Band.all, :id, :name %>
+
+  <%= f.submit "Submit" %>
+<% end %>
+

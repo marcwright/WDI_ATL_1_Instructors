@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>A/C</title>
+  </head>
+
+  <body>
+    <script>
+
+    // AC code
+
+      /* var temp = prompt("what is the current temperature?");
+      var functionality = prompt("is the A/C functional?");
+      var desire = prompt("whats is your desired temperature?");
+
+      if (functionality === "no") {
+        if (temp > desire) {
+          console.log("Fix the A/C now! It is hot!");
+        } else {
+          console.log("Fix the A/C whenever you have the chance...It's chill bro...");
+        }
+      } else if (functionality === "yes" && temp > desire) {
+        console.log("Turn on the A/C please");
+      } else {
+        console.log("you might want to try burning something?");
+      } */
+
+    // Guess the number code
+
+      var guess = parseInt(prompt("guess a number"));
+      var number = Math.floor(Math.random()*11);
+
+      while (guess !== number) {
+        if (guess > number) {
+          guess = parseInt(prompt("guess lower"));
+        } else {
+          guess = parseInt(prompt("guess higher"));
+        }
+      }
+      console.log("well done!");
+
+    </script>
+  </body>
+</html>

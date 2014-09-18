@@ -1,0 +1,20 @@
+<h1>Play.er</h1>
+
+<form>
+  <fieldset>
+    <legend>New Song</legend>
+    <label>
+      Song
+      <input type="text" name="name">
+      <input type="submit" value="Search">
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <%= song.title %>
+    </li>
+  <% end %>
+</ul>

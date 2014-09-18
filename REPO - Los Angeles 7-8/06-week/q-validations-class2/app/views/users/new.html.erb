@@ -1,0 +1,31 @@
+<h1>Users#new</h1>
+
+  <% if @user.errors.any? %>
+
+      <div id="error_explanation">
+
+        <h2>
+          <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
+        </h2>
+
+        <ul class="list-group">
+
+        <% @user.errors.full_messages.each do |msg| %>
+          <li class="list-group-item list-group-item-danger"><%= msg %></li>
+        <% end %>
+
+        </ul>
+
+      </div>
+
+<% end %>
+
+<%= form_for @user do |f| %>
+	<%= f.text_field :name, placeholder: "name" %>
+	<%= f.text_field :email, placeholder: "email" %>
+	<%= f.text_field :github_handle, placeholder: "github handle" %>
+	<%= f.text_field :password, placeholder: "password" %>
+	<%= f.text_field :password_confirmation, placeholder: "password again.." %>
+	<%= f.submit %>
+<% end %>
+

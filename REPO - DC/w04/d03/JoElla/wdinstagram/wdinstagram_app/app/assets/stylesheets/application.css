@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-image: url("http://vintageillustrations.org/hash/seamless-pattern-samples/4/9/4/494-vector-abstract-elegance-seamless-pattern-with-floral-background-92419189.jpg");
+  color: #E44D79;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container {
+  background-color: #E6D8DC;
+  border: 1px solid #E44D79;
+  margin: 0 auto;
+  margin-top: 50px;
+  width:800px;
+}
+
+
+
+h1 {
+  font-size: 75px;
+  padding: 60px 0px;
+  text-align: center;
+}
+
+
+img {
+  border: 1px solid #E44D79;
+  padding: 5px 5px;
+  width: 400px;
+}
+
+li {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+

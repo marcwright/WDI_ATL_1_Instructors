@@ -1,0 +1,15 @@
+<h1>Here is a list of all the events!</h1>
+
+<ul>
+<!-- list events -->
+<% @events.each do |event| %>
+  <%= link_to event.name, event %><br>
+<% end %>
+</ul>
+
+<!-- Search for an event -->
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:event, "Search for:") %>
+  <%= text_field_tag(:date) %>
+  <%= submit_tag("Search") %>
+<% end %>

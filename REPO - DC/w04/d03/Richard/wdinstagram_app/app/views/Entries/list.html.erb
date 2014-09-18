@@ -1,0 +1,8 @@
+<h1>Here are the current pictures</h1>
+<a href="/"><h2>Go Back Home</h2></a>
+<% @entries.each do |entry| %>
+<a href="/entries/show/<%= entry.id %>"><img src="<%= entry.photo_url %>" height="300" width="300"></a>
+<!-- <h2>This was taken by <%= entry.author %> is <%=entry.date_taken %></h2> -->
+<% end %>
+
+

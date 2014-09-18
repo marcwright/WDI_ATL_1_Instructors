@@ -1,0 +1,28 @@
+<center>
+
+<h1>LIST OF ALL AUTHORS<h1><br>
+<hr>
+<a href="/authors/new"><button>Add An Author</button></a>
+
+
+<hr>
+
+<% @authors.each do |author| %>
+<h2>
+</center><%= author.id %>)<center><br>
+<img src="<%= author.image_url %>" length="250" width="250"><br>
+Name: <b><%= author.name %></b><br>
+Date of Birth: <b><%= author.dob %></b><br>
+Gender: <b><%= author.gender %></b><br>
+Pseudonym: <b>This <% if author.has_pseudonym == true %>is not<% else %>is<% end %> their birth name.</b><br>
+</h2>
+---------------------------------<br>
+<a href="/authors/<%= author.id %>"><button>See Author Details + Books</button></a>
+
+
+<br>
+---------------------------------<br>
+<hr>
+<% end %>
+
+<hr>

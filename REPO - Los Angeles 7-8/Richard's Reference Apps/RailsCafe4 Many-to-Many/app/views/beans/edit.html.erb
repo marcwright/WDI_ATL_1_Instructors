@@ -1,0 +1,16 @@
+<h1> Edit this coffee! </h1>
+
+
+<%= form_for @bean do |f| %>
+	   Name: <%= f.text_field :name, placeholder: "Name" %><br>
+	  Roast: <%= f.text_field :roast, placeholder: "Roast"%><br>
+	 Origin: <%= f.text_field :origin, placeholder: "Origin" %><br>
+ Quantity: <%= f.number_field :quantity, placeholder: "Quantity" %><br><br>
+ Goes great with:<br>
+  <%= f.collection_check_boxes :pastry_ids, Pastry.all, :id, :name %>
+  <br><br>
+	<%= f.submit "Save changes" %>
+
+<% end %>
+<br><br>
+<%= link_to "Return to Our Beans", beans_path %>

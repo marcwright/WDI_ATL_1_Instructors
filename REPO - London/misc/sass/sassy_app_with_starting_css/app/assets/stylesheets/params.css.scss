@@ -1,0 +1,15 @@
+// dimensions
+
+$main-width: 960px;
+$outer-padding: 15px;
+$inner-padding: 10px;
+$col-width: ($main-width - 3 * $outer-padding) / 2;
+
+$default-margin-bottom: 30px;
+
+// colors
+
+$body-background-color: grey;
+$main-background-color: lightgrey;
+$result-background-color: white;
+$result-border: 1px solid black;

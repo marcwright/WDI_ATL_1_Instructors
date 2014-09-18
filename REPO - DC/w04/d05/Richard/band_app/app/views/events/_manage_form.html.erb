@@ -1,0 +1,19 @@
+
+<%= form_for @event do |f| %>
+  <%=f.label :date %>
+  <%= f.date_select :date %>
+
+  <%=f.label :time %>
+  <%= f.time_select :time %>
+
+  <%=f.label :band_id %>
+  <%=f.select :band_id, options_for_select(find_band)%>
+
+  <%=f.label :venue_id %>
+  <%=f.select :venue_id, options_for_select(find_venue)%>
+
+  <%= f.submit "Add new event" %>
+<% end %>
+
+
+

@@ -1,0 +1,8 @@
+<h1>Bands</h1>
+
+<% @bands.each do |band| %>
+<li class="indexlist"><%= link_to band.name, band %></li>
+<% end %>
+</ul>
+
+<p class="createlink"><%= link_to "Create New Band",new_band_path %></p>

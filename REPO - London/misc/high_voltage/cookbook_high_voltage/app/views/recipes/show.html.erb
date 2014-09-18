@@ -1,0 +1,32 @@
+
+<h2>Recipe Details</h2>
+
+<div class="container2"> 
+
+  <h2>
+    <%= @recipe.name %><br>
+  </h2>
+
+  <h3><%= @recipe.description %><br></h3>
+  <%= @recipe.instructions %><br>
+
+  <p>Ingredients:</p>
+  <% @recipe.ingredients_recipes.each do |ingredients_recipe| %>
+    <%= ingredients_recipe.quantity %> of <%= ingredients_recipe.ingredient.try(:name) %><br>
+  <% end %>
+
+
+
+  <p>Categories:</p>
+  <%= @recipe.category.try(:name) %>
+
+  <p>Total Cost:</p>
+  <%= total_cost(@recipe) %>
+
+  <p>Tags:</p>
+  <% @recipe.tags.any? %>
+  <% @recipe.tags.each do |tag| %>
+  <%= link_to tag.name, tagged_url(tag: tag.name) %>
+<% end %>
+
+</div>  

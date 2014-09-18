@@ -1,0 +1,62 @@
+<!-- not required but best practice: -->
+<!DOCTYPE html>
+
+<!-- html tag wraps whole page; attribute lang designates language as english; helps with localization(determines where content is "from") -->
+<html lang="en">
+  <head>
+    <title></title> <!-- only one title tag per document; most important tag in entire document becuase has highest visibility with search engines; include content provider & page that you're on -->
+    <!-- also include metadata and links to other documents up here -->
+    <style type="text/css">
+      body {
+        background-color: blue;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+    <h1>Title</h1> <!-- best practice to only have one h1 per page -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+
+      <dl> <!--definition list -->
+        <dt>Yawn</dt>
+        <dd>When someone is tired</dd>
+      </dl>
+
+    <h2>Sub-heading</h2>
+      <!--form element doesn't change appearance but makes everything in tags a child of that parent form -->
+      <form>
+        <img src="http://placekitten.com/500/350">
+        <!--text input field:-->
+        <input type="text">
+
+        <!--drop-down menu: -->
+        <select>
+            <option>Option 1</option>
+        </select>
+        <!--big old text field: -->
+        <textarea></textarea>
+      </form>
+
+      <!--scripts go at bottom so it loads all structured content first-->
+      <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

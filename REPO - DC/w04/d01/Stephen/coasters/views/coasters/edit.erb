@@ -1,0 +1,21 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-12 15:43:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-12 15:59:26
+
+ -->
+
+<h1>Editing the <%= @coaster.name %>...</h1>
+
+<form action="/coasters/<%= @coaster.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>Name:<input type="text" name="name" value="<%= @coaster.name %>"></label>
+  <label>Min Height:<input type="text" name="min_height" value="<%= @coaster.min_height %>"></label>
+  <label>Top Speed:<input type="text" name="top_speed" value="<%= @coast.top_speed %>"></label>
+  <label>Image URL:<input type="text" name="image_url" value="<%= @clown.image_url %>"></label>
+
+  <button>Update!</button>
+</form>

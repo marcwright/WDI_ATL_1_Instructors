@@ -1,0 +1,122 @@
+#= depend_on_asset "new-stall-form.html"
+#= depend_on_asset "stall-list.html"
+
+
+(function() {
+
+  var app = angular.module('leatherLaneMarketApp', ['ngAnimate']);
+
+  app.controller('MarketController' , ["$scope" , "$http", function($scope, $http) {
+      $scope.stalls = [];
+      $scope.newStall = false;
+
+      $http.get('/stalls.json').success(function(data) {
+        $scope.stalls = data;
+
+      })
+
+      $scope.addStall = function () {
+        $http.post('/stalls.json', { stall: $scope.newStall}).success(function(data) {
+            $scope.stalls.push(data)
+            $scope.newStall = false;
+            $scope.stallForm.$setPristine()            
+
+          })
+      }
+
+
+      $scope.deleteStall = function(stall) {
+
+        $http.delete('/stalls/' + stall.id + '.json').success(function(data) {
+            $scope.stalls.splice( $scope.stalls.indexOf(stall), 1);
+            $scope.selectedStall = ""
+
+        })
+
+      }
+      
+
+      $scope.editStall = function(stall) {
+          $scope.editAStall = stall 
+
+      }
+
+      $scope.updateStall = function(stall) {
+        var stall_for_rails = {}
+        stall_for_rails.name = stall.name
+        stall_for_rails.price = stall.price
+        stall_for_rails.description = stall.description
+
+        // console.log(stall_for_rails)
+        // delete stall["created_at"]
+        // delete stall["updated_at"]
+        // delete stall["id"]
+
+        $http.put('/stalls/' + stall.id + '.json', {stall: stall_for_rails}).success(function(data) {
+              $scope.stalls.splice( $scope.stalls.indexOf(stall), 1);
+              $scope.stalls.push(data)
+                $scope.editAStall = ""
+                $scope.selectedStall = data 
+
+                })
+        
+
+
+        //   $scope.editAStall = ""
+        //   $scope.selectedStall = data
+        //       $http.get('/stalls.json').success(function(data) {
+        //       $scope.stalls = data;
+
+        //     })
+
+
+        // })
+
+      }
+
+
+
+
+      $scope.setStall = function(stall) {
+        $scope.selectedStall = stall
+      }
+    
+      $scope.selectStall = function( stall ) {
+          $scope.selectedStall = stall;
+      }
+
+        $scope.clearSelectedStall = function()  {
+        $scope.selectedStall = false;  
+    }
+
+  }])
+
+  app.directive('newStallForm', function() {
+      return {
+        restrict: 'AEC',
+        templateUrl: "<%= asset_path('new-stall-form.html') %>"
+      }
+  })
+
+   app.directive('stallList', function() {
+      return {
+        restrict: 'AEC',
+        templateUrl: "<%= asset_path('stall-list.html') %>"
+      }
+  })
+
+
+
+
+
+
+
+
+
+
+
+})();
+
+
+
+

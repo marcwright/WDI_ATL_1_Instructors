@@ -1,0 +1,54 @@
+/*
+* @Author: Richard Hessler
+* @Date:   2014-06-07 13:59:49
+* @Last Modified by:   Richard Hessler
+* @Last Modified time: 2014-06-10 09:34:07
+*/
+
+body {
+  background-color: black;
+  text-align:center;
+  font: 18px/27px Skolar, Tisa, Georgia, serif;
+  color: #888;
+}
+
+.red {
+  background-image: url('http://img4.wikia.nocookie.net/__cb20131009153844/villains/images/f/f6/Grumpy_Cat.jpg');
+  background-size: cover;
+  z-index: 999;
+}
+
+.doge {
+  background-image: url('http://i.huffpost.com/gen/1451579/thumbs/o-DOGE-570.jpg?6');
+  background-size: cover;
+  z-index: 999;
+
+}
+
+h1 {
+  color: white;
+  margin: 100px 0 100px 0;
+  text-align: center;
+}
+
+div {
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
+
+input {
+  background-color: white;
+  border: 1px solid #888;
+  color: rgba(0,0,0,0);
+  float: right;
+  font-size: 70px;
+  height: 150px;
+  padding: 5px;
+  position: relative;
+  margin: 2px;
+  text-align: center;
+  width: 150px;
+}

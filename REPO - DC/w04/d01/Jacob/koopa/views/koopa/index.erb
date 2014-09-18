@@ -1,0 +1,7 @@
+<h1>Here are the koopas!</h1>
+
+<ul>
+  <% @koopas.each do |koopa| %>
+    <li><a href="/koopas/<%= koopa.id %>"><%= koopa.name %></a> is <%= koopa.color %> and <%= koopa.has_shell ? "has" : "doesn't have" %>a shell.</li>
+  <% end %>
+</ul>

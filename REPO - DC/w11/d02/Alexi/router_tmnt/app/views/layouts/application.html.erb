@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RouterTmnt</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="header">
+      <div class="tmnt-logo"></div>
+    <div class="nav">
+      <ul>
+        <li><a href="#turtles">TURTLE INDEX</a></li>
+      </ul>
+    </div> <!-- div.nav -->
+  </div> <!-- div.header -->
+  <div class="content-wrapper">
+    <%= yield %>
+  </div>
+
+<script type="text/template" id="turtle-profile-template">
+  <h1 class="orange">MICHELANGELO</h1>
+  <img src="http://img4.wikia.nocookie.net/__cb20140504203628/deathbattle/images/9/9c/Tmnt-michelangelo.png" alt="michelangelo">
+  <p class="weapon orange">NUNCHAKUS</p>
+</script>
+
+<%= requirejs_include_tag %>
+<script>
+  require.config({ urlArgs: 'bust='+Date.now() });
+  require(['main']);
+</script>
+  
+</body>
+</html>

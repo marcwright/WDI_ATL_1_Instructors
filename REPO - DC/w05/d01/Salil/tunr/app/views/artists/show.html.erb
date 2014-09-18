@@ -1,0 +1,22 @@
+<h1><%= @artist.name %></h1>
+
+<p>Genre: <%= @artist.genre %></p>
+
+<p>Songs:
+  <ul>
+    <% @songs.each do |song| %>
+    <li><%= song.title %><%= link_to song.title, edit_artist_song_path %></li>
+    <%end%>
+  </ul>
+</p>
+
+
+<img src="<%= @artist.photo_url %>" height=500px width=500px>
+
+<%= link_to "New Song", new_artist_song_path(@artist) %>
+
+<%= form_tag artist_path(@artist), method: "delete" do %>
+  <%= submit_tag("destroy") %>
+<% end %>
+
+

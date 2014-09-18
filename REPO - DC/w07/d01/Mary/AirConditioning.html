@@ -1,0 +1,25 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>I &hearts; Javascript</title>
+</head>
+<body>
+  <script type="text/javascript">
+    //Air conditioning
+    var currentTemp = prompt('What is the current temp?');
+    var aCFunctional = prompt('Is the AC functioning?');
+    var desiredTemp = prompt('What do you want the temperature to be?');
+
+    if (aCFunctional === 'yes' && currentTemp > desiredTemp) {
+        console.log('Turn on the AC please');
+    } else if (aCFunctional === 'no' && currentTemp > desiredTemp) {
+      console.log('Fix the AC, its hot!');
+    } else if (aCFunctional === 'no' && currentTemp < desiredTemp) {
+      console.log('Fix the AC  whenever you can, its cool');
+    }
+
+
+
+  </script>
+</body>
+</html>

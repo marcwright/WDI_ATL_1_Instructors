@@ -1,0 +1,18 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:26:20
+
+ -->
+
+<h1>Edit <%= @event.to_s %></h1>
+
+<!-- Edit -->
+<%= render "manage_form" %>
+
+<!-- Delete -->
+<%= form_for @event, method: "delete" do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>

@@ -1,0 +1,75 @@
+body {
+	background-image: url('../images/bg.jpeg');
+	font-family: helvetica;
+	text-align: center;
+}
+
+.shopname {
+  color: white;
+}
+
+.main-container {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.main-container img {
+  width: 220px;
+}
+
+.coffees {
+  padding: 5px;
+  margin: 10px 18px;
+  border: 2px dashed #D3D3D3;
+  background-color: #FFF;
+  width: 250px;
+  float: left;
+  width: 250px;
+}
+
+.dark {
+  background-color: #846C64;
+}
+
+.title {
+  font-size: 50px;
+  color: #A43D89;
+  text-shadow: 1px 1px 1px #FFF;
+}
+
+.large {
+  font-size: 100px;
+}
+
+button {
+  margin: 0;
+padding: 0;
+border: 0;
+-webkit-appearance: none;
+-moz-appearance: none;
+-ms-appearance: none;
+-o-appearance: none;
+appearance: none;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background-color: #4A4A4A;
+border: 1px solid #4A4A4A;
+color: #FFF;
+cursor: pointer;
+padding: 0 2em;
+  -webkit-transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+transition: all 0.4s ease;
+background-color: #008BCB;
+border-color: #008BCB;
+color: #FFF;
+height: 3em;
+line-height: 3em;
+}
+button:active {
+  background-color: #154B64;
+}

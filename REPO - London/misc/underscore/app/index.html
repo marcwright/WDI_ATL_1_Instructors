@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="underscore-min.js"></script>
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+  </head>
+
+  <body>
+    <h1>My Amazing Underscore project</h1>
+
+    <div id="content">
+    </div>
+
+    <script>
+      var fruits = ['apple', 'pear', 'mango'];
+
+      _.each(fruits, function(fruit) {
+        console.log(fruit);
+      });
+
+      SC.initialize({
+        client_id: 'd4c9ff1b3aaa3e397abbf4aa470e736e'
+      });
+
+      SC.get('/tracks', { q: 'bon jovi', license: 'cc-by-sa' }, function(tracks) {
+
+        all_tracks = tracks
+
+      });
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<h1> Edit <%= @coaster.name %></h1>
+<img style="max-height: 200px;" src="<%= @coaster.image_url %>" alt="<%= @coaster.name %>">
+
+<form action="/coasters/<%= @coaster.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>Name:
+    <input type="text" name="name" value="<%= @coaster.name %>">
+  </label>
+  <label>Top speed:
+    <input type="number" name="speed" value="<%= @coaster.speed %>">
+  </label>
+  <label>Min height requirement:
+    <input type="number" name="height_requirement" value="<%= @coaster.height_requirement %>">
+  </label>
+  <label>coasterpic:
+    <input type="text" name="image_url" value="<%= @coaster.image_url %>">
+  </label>
+  <button>Edit coaster</button>
+</form>

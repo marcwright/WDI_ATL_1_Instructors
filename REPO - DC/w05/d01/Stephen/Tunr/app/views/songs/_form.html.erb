@@ -1,0 +1,17 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-19 18:22:11
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-20 08:38:41
+
+ -->
+
+<%= form_for [@artist, @song] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :video_url %>
+  <%= f.text_field :video_url %>
+  <%= f.hidden_field :artist_id, :value => @artist.id %>
+  <%= f.submit "GO GO GO SONG", id: "submit" %>
+<% end %>

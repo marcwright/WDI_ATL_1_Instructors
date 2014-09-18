@@ -1,0 +1,23 @@
+<h1>Add a Band</h1>
+<div class="form">
+<%= form_for Band.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<br>
+<br>
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+<br>
+<br>
+  <%= f.label :video_embed_url %>
+  <%= f.text_field :video_embed_url %>
+<br>
+<br>
+  <%= f.label :explicit_lyrics %>
+  <%= f.check_box :explicit_lyrics %>
+<br>
+<br>
+  <%= f.submit "Submit" %>
+<% end %>
+</div>
+<p><%= link_to "Cancel", bands_path %></p>

@@ -1,0 +1,12 @@
+<h1> Play.er </h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <%= song.title %> by <%= song.artist %>
+      <audio controls>
+        <source src="<%= song.preview %>">
+      </audio>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,17 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 20:48:06
+
+ -->
+
+<h1>Venues</h1>
+
+<!-- List -->
+<ul>
+  <% @venues.each do |venue| %>
+    <li><%= link_to venue.name, venue %></li>
+  <% end %>
+</ul>

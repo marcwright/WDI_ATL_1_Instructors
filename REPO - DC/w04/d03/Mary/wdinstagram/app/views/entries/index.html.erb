@@ -1,0 +1,10 @@
+<h1>List of Instagram Entries</h1>
+<hr>
+
+<% @entries.each do |entry| %>
+  <h2><a href="/entries/<%= entry.id %>"><%= entry.author %></a></h2>
+  <a href="/entries/<%= entry.id %>"><img src="<%= entry.photo_url %>" style="max-width:400px; border: 1px solid black"></a>
+  <h3><%= entry.caption %></h3>
+  <h4><%= entry.created_at %></h4>
+  <hr>
+  <% end %>

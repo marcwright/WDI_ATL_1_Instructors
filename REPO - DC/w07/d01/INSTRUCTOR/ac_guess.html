@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+
+  // AC code
+
+  // var currentTemp = prompt('What is the current temperature?');
+  // var functioning = prompt('Is the AC functioning?');
+  // var desiredTemp = prompt('What is the desired temperature?');
+
+  // if (functioning === 'yes' && currentTemp > desiredTemp) {
+  //   console.log('Turn on the AC');
+  // } else if (functioning === 'no' && currentTemp > desiredTemp) {
+  //   console.log('Fix the AC');
+  // } else if (functioning === 'no' && currentTemp < desiredTemp) {
+  //   console.log('Fix the AC whenever, its cool');
+  // }
+
+  // Guess the number code
+
+  var randomNumber = Math.floor(Math.random()*11);
+  var userGuess = parseInt(prompt('Guess any number from 0 to 10.'));
+  var count = 1;
+
+  while (randomNumber !== userGuess) {
+    var hint = userGuess < randomNumber ? 'Your guess is too low!' : 'Your guess is too high =(';
+    userGuess = parseInt(prompt(hint + ' please guess again.'));  
+    count++;
+  }
+  console.log('Correct! ' + count + ' tries');
+
+  </script>
+</body>
+</html>

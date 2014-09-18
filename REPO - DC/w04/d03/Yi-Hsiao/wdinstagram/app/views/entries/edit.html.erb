@@ -1,0 +1,25 @@
+<h1>Edit the Instagram Photo</h1>
+
+<% if @entry.errors.any? %>
+<ul>
+  <% @entry.errors.full_messages.each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @entry do |form| %>
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+
+  <%= form.label :photo_url %>
+  <%= form.text_field :photo_url %>
+
+  <%= form.label :date_taken %>
+  <%= form.date_field :date_taken %>
+
+  <%= form.label :caption %>
+  <%= form.text_field :caption %>
+
+  <%= form.submit %>
+<% end %>

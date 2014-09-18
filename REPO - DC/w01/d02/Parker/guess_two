@@ -1,0 +1,15 @@
+# puts "What is 2 to the 16th power?"
+# answer = gets.to_i
+
+# while answer != 2 ** 16
+#   puts "Guess again"
+#   answer = gets.to_i
+# end
+
+puts "Please guess a number...? Thank you!"
+answer = gets.to.i
+
+while answer != 4
+puts "Guess again!"
+answer = gets.to_i
+end

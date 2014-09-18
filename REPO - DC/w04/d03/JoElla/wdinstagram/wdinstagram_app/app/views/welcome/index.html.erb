@@ -1,0 +1,13 @@
+<div class="container">
+<h1>Welcome to Pics</h1>
+
+<% @entries.each do |entry| %>
+  <ul>
+    <li><img src="<%= entry.photo_url %>" ></li>
+    <li><%= entry.date_taken %></li>
+    <li><%= entry.author %></li>
+  </ul>
+
+<% end %>
+
+</div>

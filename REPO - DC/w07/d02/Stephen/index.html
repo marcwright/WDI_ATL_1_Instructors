@@ -1,0 +1,30 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-06-03 09:07:51
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-06-03 09:17:06
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+  <title>Initials</title>
+</head>
+<body>
+  <script>
+    function initials(name) {
+      var names = name.split(" ");
+      var initials = "";
+      for( var i = 0; i < names.length; i++ ) {
+        initials += names[i][0];
+      }
+
+      return initials;
+    }
+
+    console.log( initials("Stephen Dickel Stanwood") );
+  </script>
+</body>
+</html>

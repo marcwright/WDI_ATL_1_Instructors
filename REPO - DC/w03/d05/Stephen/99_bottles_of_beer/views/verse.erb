@@ -1,0 +1,14 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-09 16:08:43
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-09 16:10:31
+
+ -->
+
+<h1><%= @bottles.abs %> bottle<% if @plural %>s<% end %> of beer on the wall, <br /><br /><%= @bottles.abs %> bottle<% if @plural %>s<% end %> of beer</h1>
+
+<a href="/refrain/<%= @bottles %>" class="yes">take one?</a>
+<a href="/" class="no">nah...</a>
+

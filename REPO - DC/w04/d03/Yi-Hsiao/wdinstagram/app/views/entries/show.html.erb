@@ -1,0 +1,12 @@
+<h1>WDInstagram Photo</h1>
+
+<dl>
+  <dt>Author:</dt>
+  <dd><%= @entry.author %></dd>
+  <dt>Date Taken:</dt>
+  <dd><%= @entry.date_taken %></dd>
+</dl>
+
+<img src="<%= image_path(@entry.photo_url) %>" alt="">
+<%= link_to "Edit Photo", edit_entry_path %>
+<%= link_to "Delete Photo", entry_path, :method => :delete, data: { confirm: "Are you sure?" } %>

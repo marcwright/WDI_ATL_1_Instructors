@@ -1,0 +1,26 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-20 16:40:03
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-20 17:16:21
+
+ -->
+
+<h1>Sign in</h1>
+
+<!-- easily display error messages for the user -->
+<% flash.each do |name, msg| %>
+  <%= content_tag :p, msg, class: name %>
+<% end %>
+
+<!-- generate a form for a user to sign in -->
+<%= form_for :session, url: sessions_path do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit 'Sign in', id: 'signin' %>
+<% end %>

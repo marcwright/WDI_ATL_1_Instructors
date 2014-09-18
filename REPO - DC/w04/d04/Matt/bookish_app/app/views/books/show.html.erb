@@ -1,0 +1,10 @@
+<h1>Book Profile</h1>
+<p>Title: <%= @book.title %></p>
+<hr>
+<p>Author: <a href="/authors/<% @book.author_id %>"><%= @book.author.author %></a></p>
+<hr>
+<p>Characters:
+  <% @book.characters.each do |character| %>
+  <li><a href="/books/<%= @book.author_id %>/characters/<%= character.id %>"><%= character.name %></li>
+  <% end %>
+  <p><a href="/books/<%= @book.id %>/characters/new">Add a character</a></p>

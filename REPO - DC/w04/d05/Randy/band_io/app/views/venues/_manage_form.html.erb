@@ -1,0 +1,16 @@
+<%= form_for @venue do |f| %>
+  <%= f.label :name, "Venue Name: " %>
+  <%= f.text_field :name %>
+
+  <%= f.label :city, "City: "%>
+  <%= f.text_field :city %>
+
+  <%= f.label :state, "State: " %>
+  <%= f.text_field :state%>
+
+  <%= f.label :allows_explicit_lyrics, "Family Friendly?" %>
+  <%= f.check_box :allows_explicit_lyrics %>
+
+  <%= f.submit "Add This Venue" %>
+
+  <%end%>

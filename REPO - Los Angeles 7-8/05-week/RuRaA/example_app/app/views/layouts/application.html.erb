@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="angulartest">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.js"></script>
+  <script>
+    angular.module('angulartest', []).controller('aCtrl', ['$scope', '$http', function($scope, $http) {
+      console.log('Angular loaded');
+
+      $scope.is_anagram = function() {
+        var data = $http.get('http://localhost:3000/api/' + $scope.teststring).success(function(data, status, headers, config) { $scope.data = data; });
+      }
+
+    }]);
+  </script>
+  <style>
+    .is_anagram {
+      background-color: green;
+      color: white;
+    }
+    .not_anagram {
+      background-color: red;
+    }
+  </style>
+  <title>Angulartest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-controller="aCtrl">
+
+<%= yield %>
+
+</body>
+</html>

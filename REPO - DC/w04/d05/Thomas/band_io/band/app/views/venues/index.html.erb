@@ -1,0 +1,13 @@
+<h1>Washington Metropolitan venues:</h1>
+
+<ul>
+
+  <% @venues.each do |venue| %>
+  <li><a href="/venues/<%= venue.id %>/events"><%= venue.name %></a></li>
+  <% end %>
+
+</ul>
+
+<button><%= link_to "Add a Band", new_band_path %></button>
+<button><%= link_to "Add a Venue", new_venue_path %></button>
+<button><%= link_to "Search Events", new_venue_path %></button>

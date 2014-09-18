@@ -1,0 +1,14 @@
+<h1>Add a new book</h1>
+<form action="/authors/<%= @author_id %>/books" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="title-attribute">Title:</label>
+  <input id ="title-attribute" type="text" name="title">
+
+  <label for="release-date-attribute">Release Date:</label>
+  <input id="release-date-attribute" type="date" name="release_date">
+
+  <label for="genre-attribute">Genre:</label>
+  <input id="genre-attribute" type="text" name="genre">
+
+  <input type="submit" value="Add Book">
+</form>

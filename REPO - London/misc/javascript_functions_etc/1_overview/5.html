@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p>Enter a number between 1 and 10.</p>
+
+<input id="number" type="text">
+
+<script>
+  function validateOneToTen() {
+    var x=document.getElementById("number").value;
+    if(x == "" || isNaN(x)) {
+      alert("Not Numeric");
+      console.log('not number');
+    } else if(x<1 || x>10) {
+      alert("Must be between 1 and 10");
+      console.log('number');
+    }
+  }
+</script>
+
+<button type="button" onclick="validateOneToTen()">Click Me!</button>
+
+</body>
+</html>

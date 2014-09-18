@@ -1,0 +1,9 @@
+<h1>My Koopas</h1>
+
+<ul>
+  <% @koopa.each do |character| %>
+    <li><a href="/<%= character.id %>"><%= character.name %></a></li>
+    <% end %>
+</ul>
+<br>
+<button onclick="location.href='/new'">Create New Koopa</a>

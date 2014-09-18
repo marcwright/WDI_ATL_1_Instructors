@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Muppet Up-Vote!</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>Muppet Up-Vote!</h1>
+
+    <form id="muppet-add">
+      <label>Name: <input type="text" name="name"></label>
+      <label>Image: <input type="text" name="image"></label>
+      <label>Rating: <input type="text" name="rating"></label>
+      <button>Add Muppet</button>
+    </form>
+
+    <ul id="muppet-list"></ul>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone.js"></script>
+    <script src="js/vendor/backbone-localstorage.js"></script>
+    <script src="js/muppets/model.js"></script>
+    <script src="js/muppets/view.js"></script>
+
+  </body>
+
+</html>

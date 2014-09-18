@@ -1,0 +1,16 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:19:40
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 17:05:16
+
+ -->
+
+<h1>Welcome to the Car Show!</h1>
+
+<% @cars.each do |car| %>
+  <h2><%= car.color %> <%= car.year %> <%= car.make %> <%= car.model %></h2>
+  <a href="/cars/<%= car.id.to_s %>"><img src="<%= car.image_url %>" alt=""></a>
+
+<% end %>

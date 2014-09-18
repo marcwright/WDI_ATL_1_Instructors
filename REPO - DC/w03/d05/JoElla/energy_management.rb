@@ -1,0 +1,3 @@
+# Staying after class and working with other students is immensely helpful.  I also think there is a limit to how much code-related stuff I want to do in one day, so I have typically been leaving soon after I finish the assignment, and hopefully manage to help at least one other person with part of the homework.  It's nice to leave the building with a feeling of accomplishment.
+
+#   I think doing a little outside-class reading about some of the stuff we're learning would help me really excel, but at the same time I feel like I'm comprehending things pretty well and have my whole life ahead of me to learn more.  I'm satisfied with my progress for now and am happy to have been leading a fairly balanced life for the first three weeks anyway.

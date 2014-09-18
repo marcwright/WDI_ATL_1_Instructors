@@ -1,0 +1,21 @@
+<h1>Edit a photo</h1>
+
+<form action="/<%= @photo.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Author:
+    <input type="text" name="author" value="<%= @photo.author %>">
+  </label>
+  <label>
+    Date Taken:
+    <input type="date" name="date_taken" value="<%= @photo.date_taken %>">
+  </label>
+  <label>
+    Image:
+    <img src="<%= @photo.image_url %>" alt="" >
+    <input type="text" name="image_url" value="<%= @photo.image_url %>">
+  </label>
+  <input type="submit" value="Add Photo">
+</form>

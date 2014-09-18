@@ -1,0 +1,7 @@
+shows = ["Girls", "Game of Thrones", "Silicon Valley", "Arrested Development", "Battlerstar Galactica"]
+
+count = 0
+while count < shows.length
+puts "I <3 #{shows[count].upcase}"
+count += 1
+end  

@@ -1,0 +1,20 @@
+<h1>Summer is coming</h1>
+
+<form>
+  <fieldset>
+    <legend>New Character</legend>
+    <label>
+      <input type="text" name="name">
+      <input type="submit" value="Fuck you Inhak">
+    </label>
+  </fieldset>
+</form>
+
+<ul><% @characters.each do |character| %>
+    <li data-character-id='<%= character.id %>' class='<%=character.is_dead ? "dead" : "" %>'>
+      <%= character.name %>
+      <%= check_box_tag :is_dead, 'yes', character.is_dead %>
+      <span>&times;</span>
+    </li>
+  <% end %>
+</ul>

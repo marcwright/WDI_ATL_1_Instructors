@@ -1,0 +1,79 @@
+<form action="/ponies" method="post">
+
+  <label>
+    Name
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Breed
+    <input type="text" name="breed">
+  </label>
+  <button>Submit</button>
+
+</form>
+
+<h2>Flight Form</h2>
+<form action="/flights" method="post">
+
+  <label>
+    Name
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Date
+    <input type="date" name="date">
+  </label>
+
+  <label>
+    Departure City
+    <input type="text" name="departure_city">
+  </label>
+
+  <label>
+    Arrival City
+    <input type="text" name="arrival_city">
+  </label>
+  <button>Submit</button>
+
+</form>
+
+<h2>Login Form</h2>
+<form action="/logins" method="post">
+  <label>
+    Email
+    <input type="email" name="email">
+  </label>
+
+  <label>
+    Password
+    <input type="password" name="password">
+  </label>
+
+  <button>Submit</button>
+</form>
+
+<h2>Pizza Form</h2>
+<form action="/pizzas" method="post">
+  <label>
+    Size
+    <input type="radio" name="size" value="S">S
+
+    <input type="radio" name="size" value="M">M
+
+    <input type="radio" name="size" value="L">L
+  </label>
+  <br>
+  <label>
+    Toppings
+
+    <input type="checkbox" name="topping1" value="pepperoni">Pepperoni
+
+    <input type="checkbox" name="topping2" value="mushrooms">Mushrooms
+
+    <input type="checkbox" name="topping3" value="peppers">Peppers
+  </label>
+  <br>
+  <button>Submit</button>
+</form>

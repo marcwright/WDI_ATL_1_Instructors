@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title> I &hearts; Javascript</title>
+</head>
+<body>
+  <script type='text/Javascript'>
+    var currentTemp = prompt('What is the current temperature?');
+    var desiredTemp = prompt('What temperature would you like it to be?');
+
+    var working = prompt('Is the AC working? (y/n)');
+
+    if (working == 'y') {
+      working = true;
+    } else {
+      working = false;
+    }
+
+    if (currentTemp > desiredTemp && working === true) {
+      console.log('Turn on the A/C Please');
+    } else if (currentTemp > desiredTemp && working === false) {
+      console.log('Fix the A/C now!  Its hot!');
+    } else {
+      console.log('Fix the A/C whenever you have the chance...  Its cool...');
+    }
+
+
+    // Random number code
+    var randomNumber = Math.floor(Math.random() * 11);
+    var userGuess = parseInt(prompt('Guess any number from 0 to 10.'));
+    while (randomNumber !== userGuess) {
+      userGuess = parseInt(prompt('Incorrect, please guess again.'))
+    }
+    console.log('Correct!')
+
+    //Object literal notation
+
+    var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+
+    var newGuy = {name: 'Bertram', hometown: 'over yonder', sing: function(){
+      console.log('Ladi dadi we like to party')
+    }, introduce: function(){ console.log('Hey my name is ' + this.name)}
+  }
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

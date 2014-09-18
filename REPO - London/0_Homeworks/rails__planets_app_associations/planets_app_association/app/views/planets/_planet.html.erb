@@ -1,0 +1,13 @@
+<tr>
+    <td><%= planet.name %></td>
+    <td><%= planet.orbit %></td>
+    <td><%= planet.image %></td>
+    <td><%= planet.diameter %></td>
+    <td><%= planet.mass %></td>
+    <td><%= planet.galaxy_id %></td>
+    <td>
+        <%= link_to 'Show', planet, class: "pure-button" %>
+        <%= link_to 'Edit', edit_planet_path(planet), class: "pure-button" %>
+        <%= link_to 'Destroy', planet, method: :delete, data: { confirm: 'Are you sure?' }, class: "pure-button" %>
+    </td>
+</tr>

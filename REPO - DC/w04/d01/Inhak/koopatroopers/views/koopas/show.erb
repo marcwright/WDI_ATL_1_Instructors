@@ -1,0 +1,12 @@
+<h1><%= @koopa.name %></h1>
+
+<img src="<%= @koopa.photo_url %>" >
+
+
+<% if @koopa.has_shell == false %>
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Destroy Koopa</button>
+</form>
+<% else %>
+<% end %>

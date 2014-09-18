@@ -1,0 +1,25 @@
+<% title "Recipes" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Instructions</th>
+    <th>Category</th>
+    <th>Description</th>
+  </tr>
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= recipe.name %></td>
+      <td><%= recipe.instructions %></td>
+      <td><%= recipe.category.try(:name) %></td>
+      <td><%= recipe.description %></td>
+      <td><%= link_to "Show", recipe %></td>
+      <td><%= link_to "Edit", edit_recipe_path(recipe) if(can? :update, recipe) %></td>
+      <td><%= link_to "Destroy", recipe, confirm: 'Are you sure?', method: :delete if(can? :destroy, recipe) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<% if can? :create, Category %>
+  <p><%= link_to "New Recipe", new_recipe_path %></p>
+<% end %>

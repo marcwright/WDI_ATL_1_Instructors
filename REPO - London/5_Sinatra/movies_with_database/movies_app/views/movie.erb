@@ -1,0 +1,12 @@
+<% if @title %>
+  <h2>You searched for <%= @title %></h2>
+<% end %>
+
+<form action='/' method='get'>
+  <input type='text' name='title' autofocus>
+  <button>Get Movie!</button>
+</form>
+
+<% if @hash %>
+  <p>actors: <%= @hash['Actors'] %></p>
+<% end %>

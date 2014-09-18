@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @planet.name %>
+</p>
+
+<p>
+  <b>Orbit:</b>
+  <%= @planet.orbit %>
+</p>
+
+<p>
+  <%= image_tag @planet.image, width: 100 %>
+</p>
+
+<p>
+  <b>Diameter:</b>
+  <%= @planet.diameter %>
+</p>
+
+<p>
+  <b>Mass:</b>
+  <%= @planet.mass %>
+</p>
+
+<p>
+  <b>Galaxy:</b>
+  <%= link_to @planet.galaxy.name, @planet.galaxy %>
+</p>
+
+<h3>Moons</h3>
+
+<%= render @planet.moons %>
+
+<br>
+<%= link_to 'Edit', edit_planet_path(@planet) %> |
+<%= link_to 'Back', planets_path %>

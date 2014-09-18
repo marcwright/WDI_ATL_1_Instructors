@@ -1,0 +1,9 @@
+<h1>Which Koopa would you like to learn about?</h1>
+
+<ul>
+<% @koopa.each do |koopa| %>
+<li>
+  <a href="/koopas/<%=koopa.id%>"><%=koopa.name %>
+  <% end %>
+</li>
+</ul>

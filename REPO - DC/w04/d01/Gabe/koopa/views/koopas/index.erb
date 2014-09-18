@@ -1,0 +1,21 @@
+<h1>Available Koopas...</h1>
+<form action="/koopas/new">
+<button>KREATE A NEW KOOPA</button>
+</form>
+<hr>
+
+<% @koopas.each do |koopa|  %>
+
+<img src="<%= koopa.image_url %>" width="300" height="300"><br>
+NAME : <%= koopa.name %><br>
+
+<form action="/koopas/<%= koopa.id %>">
+<button>SHOW THIS KOOPA</button>
+</form>
+<form action="/koopas/<%= koopa.id %>/edit">
+<button>EDIT THIS KOOPA</button>
+</form>
+
+<hr>
+
+<% end %>

@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=Quintessential);
+@import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script);
+
+body {
+  background-color: #f7d9b5;
+}
+
+
+ul, ol {
+  padding-left: 0;
+}
+
+
+#page {
+  width: 75%;
+  margin: 20px auto;
+  box-shadow: 1px 1px 10px 5px #f2c187;
+  -webkit-box-shadow: 1px 1px 10px 5px #f2c187;
+  -moz-box-shadow: 1px 1px 10px 5px #f2c187;
+}
+
+
+#main {
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+}
+
+
+nav.navbar {
+  font-family: "Quintessential", cursive;
+  font-size: 25px;
+  border: solid 1px black;
+  background-color: #6b1229;
+  padding: 20px 40px;
+  border: solid 1px black;
+  color: #fab99a;
+}
+
+nav.navbar ul, nav.navbar ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar a {
+  color: #fab99a;
+  text-decoration: none;
+}
+
+nav.navbar ul.left-nav li {
+  float: left;
+  padding-right: 20px;
+}
+
+nav.navbar ul.right-nav li {
+  float: right;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+nav.navbar ul.right-nav li a {
+  text-decoration: underline;
+}
+
+
+.flash-message {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 8px;
+  margin: 0;
+  border: solid 1px black;
+  border-top: none;
+  border-bottom: none;
+}
+
+.flash-message.flash-notice {
+  background-color: #CFC;
+}
+
+.flash-message.flash-error, .flash-message.flash-alert {
+  background-color: #FCC;
+}
+
+
+.error-messages {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 10pxpx;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error-messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error-messages p {
+  margin: 8px 10px;
+}
+
+.error-messages ul {
+  margin-bottom: 0;
+}
+
+
+img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #6B1229;
+}
+
+
+section {
+  font-family: "Petit Formal Script", cursive;
+  font-size: 13px;
+  padding: 30px;
+}
+
+section ol {
+  padding-left: 0;
+  list-style-type: lower-roman;
+  list-style-position: inside;
+  font-size: 20px;
+}
+
+section ol > li {
+  margin: 20px 0px;
+}
+
+
+.clear {
+  float: none;
+  clear: both;
+}
+
+
+form .field, form .actions {
+  margin: 12px 0;
+}
+
+form .field input, form .field select, form .actions input, form .actions select {
+  margin-top: 5px;
+}
+
+
+.recipe .recipe-name {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.recipe .recipe-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.recipe .recipe-detail {
+  float: left;
+}
+
+.recipe .recipe-detail .field {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.recipe .recipe-detail .field .field-label {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: inline;
+}
+
+.recipe:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.ingredient .ingredient-name {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ingredient .ingredient-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.ingredient .ingredient-detail {
+  float: left;
+}
+
+.ingredient .ingredient-detail .field {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.ingredient .ingredient-detail .field .field-label {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: inline;
+}
+
+.ingredient:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+ul.ingredients {
+  list-style: none;
+}
+
+ul.ingredients li {
+  margin-bottom: 20px;
+}

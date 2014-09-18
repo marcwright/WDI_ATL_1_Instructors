@@ -1,0 +1,69 @@
+/*
+  Red: #B00;
+  Dark Red: #900;
+
+  Max page width: 900px
+  Nav width: 25%, with 5% right margin
+  Main width: 65%
+
+  CSS you'll need:
+  - max-width
+  - @media
+*/
+
+body {
+  background-color: #333;
+  font: 15px/1.4 Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 25px 25px 50px;
+}
+
+a {
+  color: #C00;
+}
+
+.page {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.header {
+  background: url('../images/header.png') center top;
+  background-size: cover;
+}
+
+  .header img {
+    margin: 20px;
+    width: 30%;
+  }
+
+.nav {
+  background-color: #900;
+  float: left;
+  list-style: none;
+  margin: none;
+  padding: none;
+}
+
+  .nav a {
+    border-bottom: 1px solid #900;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+  }
+
+.main {
+  float: left;
+}
+
+.footer {
+  clear: both;
+}
+
+/*@media (max-width: 600px) {
+/*  .facet_sidebar {
+/*    display: none;
+/*  }
+/*}

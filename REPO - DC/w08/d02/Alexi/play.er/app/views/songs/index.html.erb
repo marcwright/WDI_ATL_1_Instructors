@@ -1,0 +1,23 @@
+<h1>Play.er</h1>
+
+<form>
+    <fieldset>
+      <label>
+        Name
+        <input type="text" name="name">
+        <input type="submit" value="Save">
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li data-character-id="<%= song.id %>">
+      <%= artist.name %>
+      <%= song.name %>
+      <%= song_url %>
+    </li>
+  <% end %>
+</ul>
+
+

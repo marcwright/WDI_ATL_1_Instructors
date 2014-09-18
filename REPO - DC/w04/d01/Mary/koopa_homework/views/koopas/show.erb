@@ -1,0 +1,16 @@
+<h2><%= @koopa.name %></h2>
+
+<img src="<%= @koopa.image_url%>">
+
+<p><%= @koopa.name %> is a <%= @koopa.color %> koopa that <%= @koopa.has_shell ? "has" : "does not have" %> his shell on.</p>
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Stomp on this koopa!</button>
+</form>
+  <a href="/koopa/<%= @koopa.id %>/edit">Let's switch this koopa's info up!</a>
+
+
+
+
+

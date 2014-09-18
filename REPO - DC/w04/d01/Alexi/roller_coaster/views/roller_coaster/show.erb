@@ -1,0 +1,12 @@
+<h2><%= @rollercoaster.name %></h2>
+
+<p><%= @rollercoaster.name %></p>
+<img src="<% @rollercoaster.image_url %>" >
+
+
+<form action="/rollercoaster/<%= @rollercoaster.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+
+<button>Delete Roller Coaster</button>
+
+</form>

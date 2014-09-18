@@ -1,0 +1,18 @@
+<h1>General Assembly Instagram:</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Photo</th>
+    <th>Date Taken</th>
+    <th>Caption</th>
+  </tr>
+  <% @entries.each do |entry| %>
+  <tr>
+    <td><%= entry.author %></td>
+    <td><%= link_to image_tag(entry.photo_url), entry %></td>
+    <td><%= entry.date_taken %></td>
+    <td><%= entry.caption %></td>
+  </tr>
+  <% end %>
+</table>

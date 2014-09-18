@@ -1,0 +1,55 @@
+<div class="container">
+  
+<div class="page-header">
+  <h1>Mortgage</h1>
+</div>
+
+
+<form class="form-horizontal" action='/mortgage' method='get'>
+<fieldset>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="loan">What's the amount you are borrowing?</label>  
+  <div class="col-md-5">
+  <input id="distance" name='loan' type="text" placeholder="Enter amount" class="form-control input-md" required="" autofocus>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rate">What's the interest rate?</label>  
+  <div class="col-md-5">
+  <input id="mpg" name="rate" type="text" placeholder="Enter your rate" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="months">How many years is your mortgage over?</label>  
+  <div class="col-md-5">
+  <input id="cost" name="months" type="text" placeholder="" class="form-control input-md" required="">
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">Calc.it!</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<% if @result %>
+<section>
+  <header>
+    <h2>Your monthly payment is: £<%= @result %>. Ouch.</h2>
+  </header>
+</section>
+<% end %>
+</div>

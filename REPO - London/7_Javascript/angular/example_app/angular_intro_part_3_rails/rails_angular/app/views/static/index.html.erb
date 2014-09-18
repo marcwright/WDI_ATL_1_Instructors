@@ -1,0 +1,59 @@
+<h1>Angular Leather Lane Market App</h1>
+  
+
+  <div ng-controller="MarketController">
+  
+   <nav>
+     <h2>Stalls</h2>
+        
+        <stall-list></stall-list>
+        
+        <!-- A = attribute -->
+        <!-- <div new-stall-form></div> -->
+        <!-- C = Class -->
+        <!-- <div class="new-stall-form"></div> -->
+        <!-- E = Element -->
+        <new-stall-form></new-stall-form>
+
+      </nav>
+
+  <section ng-show="selectedStall">
+      <div ng-click="clearSelectedStall()">  
+        <img src="http://www.sirrahmj.co.uk/close.png" />  
+      </div>   
+      <h2>Selected Stall Details</h2>   
+      <table>  
+        <tr>   
+          <td>Name:</td>  
+          <td ng-hide="editAStall">{{ selectedStall.name }}</td> 
+          <td ng-show="editAStall"><input ng-model="editAStall.name" /></td>     
+        </tr>  
+        <tr>  
+          <td>Price:</td>  
+          <td ng-hide="editAStall"> {{ selectedStall.price}}</td>   
+          <td ng-show="editAStall"><input ng-model="editAStall.price" /></td>     
+        </tr>  
+        <tr>  
+          <td>Description:</td>  
+          <td ng-hide="editAStall"> {{ selectedStall.description}}</td>  
+          <td ng-show="editAStall"><textarea ng-model="editAStall.description"></textarea></td>     
+        </tr>  
+      </table>  
+
+      <button ng-click="deleteStall(selectedStall)">Delete Stall</button>
+
+      <button ng-hide="editAStall" ng-click="editStall(selectedStall)">Edit Stall</button>
+
+      <button ng-show="editAStall" ng-click="updateStall(editAStall)">Update Stall</button>
+
+    </section>
+
+    <section ng-hide="selectedStall">
+      <h2>Leather Lane Market</h2>
+      <p>Leather lane market is in clerkenwell and is awesome. It has a wide variety of stalls.  Select a stall from the left to see more details.</p>
+    </section>
+
+</div>
+
+
+

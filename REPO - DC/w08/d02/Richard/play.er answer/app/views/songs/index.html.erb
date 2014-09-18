@@ -1,0 +1,28 @@
+<h1>Play.er</h1>
+
+<form>
+  <fieldset>
+    <legend>New Song</legend>
+    <label>
+      Artist
+      <input type="text" name="artist" />
+    </label>
+    <label>
+      Song title
+      <input type="text" name="title" />
+    </label>
+    <button>Add</button>
+  </fieldset>
+</form>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li data-song-id="<%= song.id %>">
+      <%= song.title %>
+      <audio controls>
+        <source src="<%= song.preview_url %>">
+      </audio>
+      <span>&times;</span>
+    </li>
+  <% end %>
+</ul>

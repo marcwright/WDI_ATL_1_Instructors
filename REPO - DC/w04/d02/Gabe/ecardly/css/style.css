@@ -1,0 +1,121 @@
+body{
+background-color: #d6d6d6;
+color: #000000;
+}
+
+a:link.download {
+  color: darkorange;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:link{
+  color: darkorange;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.wrapper {
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner {
+  background-image: url(../images/background.jpg);
+  border: 0px;
+  height: 165px;
+  width: 100%;
+  margin: 0px 0px 100px 0px;
+
+}
+
+div.banner img{
+  margin: 20px 0px 0px 0px;
+  text-align: center;
+
+ }
+
+div.content {
+
+  text-align: center;
+  overflow: hidden;
+  width: 80%;
+}
+
+h1{
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+p{
+  font-size: 9px;
+  line-height: 1.2em;
+}
+
+.blog {
+  background-color: white;
+  border: 0px;
+  overflow: auto;
+  float: left;
+  margin: 0% 0% 0% 24%;
+  text-align: left;
+  padding: 25px;
+  width: 600px;
+}
+
+.sidebar {
+  background-color: white;
+  border: 0px;
+  overflow: auto;
+  float: left;
+  margin: 0px 0px 0px 20px;
+  padding: 15px;
+  text-align: left;
+  width: 250px;
+}
+
+div.sidebar img{
+  margin: 5px 5px 5px 10px;
+  text-align: center;
+
+ }
+
+
+.blogroll{
+  display: block;
+  text-align: left;
+
+}
+
+.archive{
+display: block;
+text-align: left;
+
+}
+
+ul
+{
+    list-style-type: none;
+    text-align: left;
+}
+
+.post_data{
+  border-top: 1px dotted black;
+  border-bottom: 1px solid black;
+  padding: 7px;
+  margin: 0px 0px 40px 0px;
+}
+
+.footer{
+text-align: center;
+height: 100px;
+}
+
+div.footer img{
+  margin: 20px 5px 5px 0px;
+  text-align: center;
+
+ }

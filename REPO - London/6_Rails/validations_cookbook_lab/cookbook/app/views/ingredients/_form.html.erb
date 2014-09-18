@@ -1,0 +1,21 @@
+<%= form_for @ingredient do |f| %>
+  
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </p>
+  <p>
+    <%= f.label :gluten_free %><br />
+    <%= f.check_box :gluten_free %>
+  </p>
+  
+  <p><%= f.submit %></p>
+<% end %>

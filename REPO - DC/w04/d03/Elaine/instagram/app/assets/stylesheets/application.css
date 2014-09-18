@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-attachment:fixed;
+  background-image: url(http://wallpapr.biz/wp-content/uploads/Background-Wallpapers.jpg);
+  background-position:center;
+  background-size: cover;
+}
+
+div.main {
+  border: 10px groove #0099FF;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px;
+  width: 750px;
+}
+
+.main h2 {
+  margin-top: 65px;
+}
+
+img {
+  border: 5px dotted #000;
+  display: block;
+  height: 500px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 65px;
+}
+
+h2 {
+  text-align: center;
+}
+
+input[type=text] {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+input[type=date] {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+p a:link {
+  background-color:#CCFFCC;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 32px;
+  margin: 20px auto;
+  padding: 15px;
+  text-decoration: none;
+}
+
+p a:visited {
+  background-color:#CCFFFF;
+}
+
+p a:hover {
+  background-color:#66CCFF;
+}
+
+p {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+button {
+  background-color:#CCFFCC;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 32px;
+  margin: 20px;
+  margin-left: 625px;
+  padding: 15px;
+}
+
+button:hover {
+  background-color:#66CCFF;
+}
+
+button:visited {
+  background-color:#CCFFFF;
+}
+
+p button {
+  margin: 0 auto;
+}
+
+form {
+  font-size: 28px;
+}
+
+div.form {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 25px;
+  width: 500px;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 50px;
+}

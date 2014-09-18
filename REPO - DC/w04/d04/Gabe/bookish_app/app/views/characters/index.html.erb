@@ -1,0 +1,27 @@
+<center>
+<br>
+<h1>LIST OF CHARACTERS IN THIS BOOK<h1><br>
+<hr>
+<a href="/characters/new"><button>Add A Character</button></a>
+
+
+<hr>
+
+<% @characters.each do |character| %>
+<h2>
+</center><%= character.id %>)<center><br>
+Character Name: <b><%= character.name %></b><br>
+Gender: <b><%= character.gender %></b><br>
+Character's Quirk: <b><%= character.quirk %></b><br>
+
+</h2>
+---------------------------------<br>
+<a href="/books/<%= character.book_id %>"><button>Back to Book View</button></a>
+
+
+<br>
+---------------------------------<br>
+<hr>
+<% end %>
+
+<hr>

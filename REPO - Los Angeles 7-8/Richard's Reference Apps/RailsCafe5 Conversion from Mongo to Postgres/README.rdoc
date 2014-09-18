@@ -1,0 +1,22 @@
+== README
+
+RAILSCAFE5 demonstrates how to convert an app from MongoDB with Mongoid to Postgres with ActiveREcord
+
+RAILSCAFE5 was created by Richard, starting with RAILSCAFE4 by Richard 
+and Lorin, which started with RAILSCAFE created by Meredith.
+
+The purpose of this app is to have as limited and pure implementation as possible
+to demonstrate some of the differences and changes required to switch from Mongoid to ActiveRecord
+
+REMEMBER: After download, run:
+
+BUNDLE INSTALL
+RAKE DB:SETUP  
+  or RAKE DB:RESET
+
+Start the app with localhost:3000/beans   
+To see the pastry part, run localhost:3000/pastries
+Will create a home page with these links RSN (real soon now)
+
+
+contact: Richard Grossman

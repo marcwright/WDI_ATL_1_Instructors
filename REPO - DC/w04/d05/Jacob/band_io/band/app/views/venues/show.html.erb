@@ -1,0 +1,8 @@
+<%= link_to "All Venues", venues_path %>
+
+<h1><%= @venue.name %></h1>
+<p><%= @venue.city %>, <%= @venue.state %></p>
+<%= link_to "Events", venue_events_path(@venue.id) %>
+<%= form_for @venue, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>

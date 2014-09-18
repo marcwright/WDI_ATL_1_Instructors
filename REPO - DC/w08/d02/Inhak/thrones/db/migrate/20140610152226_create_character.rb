@@ -1,0 +1,9 @@
+class CreateCharacter < ActiveRecord::Migration
+  def change
+    create_table :characters do |t|
+      t.string :name, null: false
+      t.boolean :is_dead, default: false
+      t.timestamps
+    end
+  end
+end

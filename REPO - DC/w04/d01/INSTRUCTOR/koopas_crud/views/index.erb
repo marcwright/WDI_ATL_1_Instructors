@@ -1,0 +1,7 @@
+<ul>
+<% @koopas.each do |koopa| %>
+  <li><a href="/koopas/<%= koopa.id %>"><%= koopa.name %></a></li>
+<% end %>
+</ul>
+
+<a href="/koopas/new">Create a Koopa</a>

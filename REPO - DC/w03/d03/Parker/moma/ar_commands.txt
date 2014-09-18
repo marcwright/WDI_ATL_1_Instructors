@@ -1,0 +1,25 @@
+Create a new Artist (Vincent Van Gogh) and save him to your database
+
+Create a new Painting (Starry Night) and save it to your database
+
+Return all Artists
+
+Return all Paintings
+
+Return the artist with an id of 2
+
+Return the artist with a name of "Vincent Van Gogh"
+
+Return all the artists who are "Spanish"
+
+Return the painting with an id of 1
+
+Return the painting with a name of "Guernica"
+
+Return all the paintings that "Pablo Picasso" painted
+
+Return the artist of "Guernica"
+
+Change Vincent Van Gogh's nationality to "American"
+
+Change "Starry Night" to be one of Pablo Picasso's paintings

@@ -1,0 +1,137 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style type="text/css">
+      table {
+        width:200px;
+        height:200px;
+        text-align: center;
+      }
+      table td { width:45px; }
+      input {
+        width: 100%;
+        font-size: 25px;
+        background-color: silver;
+        padding: 2px;
+      }
+      button { font-size: 25px; }
+      .logRow { display:none; }
+    </style>
+
+    <script>
+      new_calculation = true;
+      first_number = operator = second_number = operation = null;
+
+      function new_number(number) {
+        resultInput = document.getElementById("result_input");
+        if(operator==null) {
+          if(first_number==null) {
+            first_number = number.toString();
+          } else {
+            if(new_calculation==true) {
+              resultInput.setAttribute("value", "");
+              first_number = '';
+            }
+            first_number = first_number + number.toString();
+          }
+        } else {
+          if(second_number==null) {
+            second_number = number.toString();
+          } else {
+            second_number = second_number + number.toString();
+          }
+        }
+        resultInput.setAttribute("value", resultInput.getAttribute("value")+number.toString());
+        new_calculation = false;
+        log();
+      }
+
+      function define_operator(operator_string) {
+        if(first_number != null && second_number != null) {
+          get_result();
+        }
+        operator = operator_string;
+        resultInput = document.getElementById("result_input");
+        resultInput.setAttribute("value", "");
+        log();
+      }
+
+      function get_result() {
+        operation = first_number + " " + operator + " " + second_number;
+        result = eval(operation);
+        first_number = result;
+        operator = second_number = operation = null;
+        resultInput = document.getElementById("result_input");
+        resultInput.setAttribute("value", result);
+        new_calculation = true;
+        log();
+      }
+
+      function log() {
+        operatorLog = document.getElementById("operatorLog");
+        operatorLog.setAttribute("value", operator);
+        firstNumberLog = document.getElementById("firstNumberLog");
+        firstNumberLog.setAttribute("value", first_number);
+        secondNumberLog = document.getElementById("secondNumberLog");
+        secondNumberLog.setAttribute("value", second_number);
+      }
+
+    </script>
+</head>
+<body>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td colspan="3"><input readonly="readonly" id="result_input" value=""></td>
+        <td><button id="reset_button">Ø</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="new_number(7)">7</button></td>
+        <td><button onclick="new_number(8)">8</button></td>
+        <td><button onclick="new_number(9)">9</button></td>
+        <td><button onclick="define_operator(&#39;/&#39;)">/</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="new_number(4)">4</button></td>
+        <td><button onclick="new_number(5)">5</button></td>
+        <td><button onclick="new_number(6)">6</button></td>
+        <td><button onclick="define_operator(&#39;*&#39;)">x</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="new_number(1)">1</button></td>
+        <td><button onclick="new_number(2)">2</button></td>
+        <td><button onclick="new_number(3)">3</button></td>
+        <td><button onclick="define_operator(&#39;-&#39;)">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="new_number(0)">0</button></td>
+        <td colspan="2"><button onclick="get_result()">=</button></td>
+        <td><button onclick="define_operator(&#39;+&#39;)">+</button></td>
+      </tr>
+
+      <tr class="logRow">
+        <td>Operator</td>
+        <td colspan="3"><input readonly="readonly" id="operatorLog" value=""></td>
+      </tr>
+      <tr class="logRow">
+        <td>First Number</td>
+        <td colspan="3"><input readonly="readonly" id="firstNumberLog" value=""></td>
+      </tr>
+      <tr class="logRow">
+        <td>Second Number</td>
+        <td colspan="3"><input readonly="readonly" id="secondNumberLog" value=""></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    reset_element = document.getElementById("reset_button")
+    reset_element.onclick = function() {
+      first_number = operator = second_number = null;
+      result_input.setAttribute("value", "")
+      log();
+    }
+  </script>
+
+</body>
+</html>

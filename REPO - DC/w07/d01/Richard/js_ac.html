@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> I &hearts; Inhak </title>
+</head>
+<body>
+  <script type = 'text/javascript'>
+
+  var currentTemp = prompt('What is the temperature?');
+  // var acWork = prompt('Is the temperature working?');
+  var acWork=confirm("Is the AC working");
+
+    if (acWork==true) {
+        x = 'yes';
+    } else {
+        x = 'no';
+    }
+  var idealTemp = prompt('What temperature would you like it to be?');
+
+
+if (currentTemp > idealTemp && x === 'yes') {
+  console.log('Turn the A/C on please');
+} else if (currentTemp > idealTemp && x === 'no') {
+  console.log('Fix the A/C now! It\'s hot!');
+} else if ( currentTemp < idealTemp && x === 'no') {
+  console.log('Fix the A/C when you have a chance, it\'s cool')
+}
+
+
+
+// - Create a basic "guess my number" game.  The computer will pick a random number between 0 and 10 inclusive.  The user will guess the number until they guess correctly.
+
+// ###Specification:
+// - The user should be asked to guess a number
+// - If the user's guess is correct, the user should see a congratulatory message
+// - If the user's guess is not correct, the user should be asked to guess the number again.
+
+// ###Bonus 1
+// - When the user guesses, you should tell them if they guessed too high or too low
+
+// ###Bonus 2
+// - When the user guesses the number correctly, tell them how many guesses it took them.
+ </script>
+</body>
+</html>

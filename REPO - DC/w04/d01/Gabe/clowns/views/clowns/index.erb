@@ -1,0 +1,12 @@
+<h1> Here are the clowns!</h1>
+
+<% @clowns.each do |clown|  %>
+
+<li><%= clown.name %> has a talent: <%= clown.talent %>. They look like this:
+  <img src="<%= clown.image_url %>" width="200" height="200">
+  Are they creepy? = <% if clown.is_creepy == true %>yes<% else %>no<% end %>
+they <% if clown.is_creepy == true %>are<% else %>aren't<% end %> creepy.
+<a class="yes" href="/clowns/<%= clown.id %>"> Show Clown </a>
+
+</li>
+<% end %>

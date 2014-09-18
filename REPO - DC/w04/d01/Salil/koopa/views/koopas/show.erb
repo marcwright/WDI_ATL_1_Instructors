@@ -1,0 +1,18 @@
+<h2><%= @koopa.name %></h2>
+
+<ul>
+  <li><%= @koopa.color %></li>
+  <li>It is <%= @koopa.has_shell %> that he has a shell</li>
+</ul>
+<img src="<%= @koopa.photo_url %>" height=500px width= 550px>
+
+
+<form action="/koopas/<%= @koopa.id %>/edit" method="patch">
+  <input type="hidden" name="_method" value="edit">
+  <button>Edit</button>
+</form>
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete</button>
+</form>

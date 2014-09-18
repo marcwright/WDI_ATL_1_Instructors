@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>I &hearts; Javascript</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  function dollarsToPounds(dollars) {
+    return (dollars * 1.675).toFixed(2);
+  }
+  console.log("$" + dollars + " is £" + dollarsToPounds);
+
+  function poundsToDollars(pounds) {
+    return (pounds / 1.675).toFixed(2);
+  }
+  console.log("£" + pounds +" is $" + poundsToDollars);
+
+  function currencyConverter(convertFrom, amount) {
+    if (convertFrom === 'dollars') {
+      return (amount * 1.675).toFixed(2);
+    } else if (convertTo === 'pounds') {
+      return (amount / 1.675).toFixed(2);
+    }
+  }
+    convertFrom = prompt('Are you converting from pounds or dollars?');
+    amount = prompt('What is the amount you would like to convert?');
+    console.log("That is " + currencyConverter(convertFrom, amount))
+
+
+  </script>
+</body>
+</html>

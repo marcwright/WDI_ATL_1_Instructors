@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; Guess the Number</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  var computerNumber = parseInt(Math.random() * 10);
+  var userNumber = parseInt(prompt("Guess a number between 0 and 10, inclusive."));
+  var guesses = 1;
+
+  while (computerNumber !== userNumber) {
+    guesses++;
+    if (computerNumber > userNumber) {
+      userNumber = parseInt(prompt("Too low. Guess again."));
+    } else if (computerNumber < userNumber) {
+      userNumber = parseInt(prompt("Too high. Guess again."))
+    };
+  };
+  var message = 'Congrats on guessing correctly! It took you' + ' ' + guesses + ' ' + 'guesses.';
+  alert(message);
+
+
+
+  </script>
+</body>
+</html>

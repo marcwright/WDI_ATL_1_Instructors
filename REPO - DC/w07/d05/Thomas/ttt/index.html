@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+      <div class="page">
+      <h1 id="title">Tic Tac Toe</h1>
+
+      <div class="board">
+
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+        <div>
+
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+
+        <div>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+
+        <div class="gameActionDisplay">poop</div>
+
+      </div>
+
+      <script src="js/ttt/model.js"></script>
+      <script src="js/ttt/view.js"></script>
+
+      <script>
+        var model = new Tictactoe();
+        var game = new TictactoeView(model);
+      </script>
+
+    </div>
+  </body>
+</html>

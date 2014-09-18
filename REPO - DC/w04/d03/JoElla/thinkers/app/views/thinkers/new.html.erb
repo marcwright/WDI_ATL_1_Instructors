@@ -1,0 +1,22 @@
+<h1>Add a THINKER!!!</h1>
+
+  <form action="/thinkers" method="post">
+    <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+    <label>
+      Name:
+      <input type="text" name="name">
+    </label>
+
+    <label>
+      Quote:
+      <input type="text" name="quote">
+    </label>
+
+    <label>
+      Image:
+    <input type="text" name="image_url">
+    </label>
+
+    <input type="submit" value="BOOM!">
+
+  </form>

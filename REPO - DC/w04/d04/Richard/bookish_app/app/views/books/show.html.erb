@@ -1,0 +1,25 @@
+<h1><%= @book.title %></h1>
+
+<ul>
+  <li>Released on <%= @book.release_date %></li>
+  <li>Falls in the <%= @book.genre %> genre.</li>
+
+<form action="/books/<%= @book.id %>" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="hidden" name="_method" value="delete">
+
+  <button>Remove Book from Author</button>
+</form>
+
+<h2>Character List</h2>
+
+  <ul style="list-style-type: none">
+    <% @character.each do |character| %>
+    <a href="/books/<%= @book.id %>/characters/<%= character.id %>"><li><%= character.name %></a><li>
+       <% end %>
+  </ul>
+  <br>
+
+<a href="/characters/new"><button>Add a Character for <%= @book.title%>!</button></a>

@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS musicals;
+CREATE TABLE musicals (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  year INTEGER NOT NULL,
+  composer VARCHAR(100) NOT NULL,
+  lyricist VARCHAR(100) NOT NULL
+);
+
+DROP TABLE IF EXISTS songs;
+CREATE TABLE songs (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  musical_id INTEGER REFERENCES musicals(id)
+);

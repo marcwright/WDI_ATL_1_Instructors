@@ -1,0 +1,11 @@
+<!-- All Venues Link -->
+<%= link_to "Event venue", @venue %>
+
+<h1><%= @event.band.name %></h1>
+<h2><%= @event.venue.name %></h2>
+<p><%= @event.date %></p>
+
+<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="<%= @event.band.video_embed_url %>"
+  frameborder="0"/>
+

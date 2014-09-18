@@ -1,0 +1,91 @@
+/*
+
+Style Hints:
+
+Body Font Size = 14px
+	 Font Family = "Times New Roman", serif
+	 Font Color = black
+	 Background: #F3EBE9
+
+H1 Font Size = 50px
+   Font Family = Arial, Helvetica, sans-serif
+   Text-transform: uppercase;
+   color: #FFFFFF;	(White)
+
+H2: Font Size = 18px
+	Text-Transform: uppercase;
+	Font-Family: cursive, Helvetica, sans-serif;
+
+*/
+body {
+  background: url('../images/pattern1.png');
+  font-size:14px;
+  color: black;
+}
+
+.page {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0px;
+  text-align:center;
+  width: 980px;
+}
+
+.page .header h1 {
+  font-size:50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-align:left;
+  padding:15px;
+}
+
+.page .main {
+  padding: 15px;
+}
+
+.page h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: cursive, Helvetica, sans-serif;
+  text-align:left;
+  padding:20px 10px 10px 10px;
+}
+
+.page .header {
+  background-color: salmon;
+  padding: 10px;
+
+}
+
+.page p {
+  text-align: left;
+  padding: 0px 10px 10px 10px;
+}
+
+.page .header p {
+  font-family:cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.orchid {
+  width: 980px;
+}
+
+ul {
+  overflow: auto;
+}
+
+li  {
+  width:25%;
+  float:left;
+}
+
+.footer p {
+  background-color: salmon;
+  text-align: right;
+  margin: 0 auto;
+  float:bottom;
+}
+

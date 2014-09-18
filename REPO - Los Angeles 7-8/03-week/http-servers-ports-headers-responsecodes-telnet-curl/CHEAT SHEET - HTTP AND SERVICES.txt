@@ -1,0 +1,70 @@
+CHEAT SHEAT - HTTP AND SERVICES
+Created 2014-07-21 Richard
+
+Only shows the stuff YCA (= You Care About)
+
+HTML REQUESTS YCA
+GET
+POST
+(less common PUT, PATCH)
+
+RESPONSE CODES YCA
+200's information: 200 okay
+300's redirects: 301 (page/file) permanent move
+400's errors: 404 page or file not found, can customize this page
+500's server errors: Call admin or server provider!
+
+PORTS YCA
+ 80  HTTP                        Web requests
+443  HTTPS (secure HTTP)         Web requests - secure
+ 20  FTP                         File Transfer Request
+ 23  FTP                         File Transfer Request
+ 25  SMTP                        Outbound mail server
+465  SECURE SMTP                 Outbound mail server - secure
+110  POP                         Inbound mail - legacy service
+995  SECURE POP                  Inbound mail - legacy service - sud
+143  IMAP                        Inbound mail
+993  SECURE IMAP                 Inpbound mail - secure
+ 23  TELNET                      Direct connect to CLI on any remote computer/server
+ 53  DNS                         Get location of site
+
+TELNET COMMANDS YCA
+Terminal CLI
+Typically connect to a:
+  server
+  "talker"
+  "mud" or "moo"
+  hardware
+
+CURL COMMANDS YCA
+curl example.com/index.html         RETRIEVES WEB PAGE
+curl -O example.com/index.html      RETRIEVES WEB PAGE and writes it to a local file.
+curl -I example.com/index.html      RETRIEVES ONLY HEADERS
+curl --help                         HELP
+
+HARDWARE YCA
+Router  connects inside computer IP addresses to IP addresses on the internet 
+Firewall blocks dangerous traffic (connections, websites, email, viruses)
+- "Stateful packet inspection" - looks inside every TCP/IP packet for danger
+- Attack patterns - hourly or daily updates to firewall rules based on actual threats
+
+THREATS AND ATTACKS YCA
+Internet storm center:
+https://isc.sans.edu/dashboard.html
+Current status:
+https://isc.sans.edu/infocon.html
+
+SITE HOSTING YCA
+Website Hosting 
+Virtual
+Virtual Dedicated
+Dedicated
+Colo - colocated
+
+CODE HOSTING
+Rails Code Hosting - Heroku, Engineyard
+Backend data hosting - Firebase.com Parse.com, Kinveny.com, Stackmob.com, Buddy.com
+Source Control - Github, Bitbucket, Assembla
+Websites & Servers- BlueHost, Godaddy/Mediatemple, Rackspace, Softlayer, AWS
+
+end

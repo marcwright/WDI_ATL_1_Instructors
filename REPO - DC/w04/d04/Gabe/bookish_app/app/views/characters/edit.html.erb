@@ -1,0 +1,44 @@
+<h1>Edit An Author</h1>
+
+<form action="/authors/<%= @author.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @author.name %>" >
+  </label>
+  <br>
+
+  <label for="male">Male</label>
+    <input type="radio" name="gender" id="male" value="<%= @author.gender %>"><br>
+  <label for="female">Female</label>
+    <input type="radio" name="gender" id="female" value="<%= @author.gender %>"><br>
+  </label>
+<br>
+
+
+  <label>
+    Date of Birth:
+    <input type="date" name="dob" value="<%= @author.dob %>" >
+  </label>
+<br>
+
+<label for="yes">Has Pseudonym</label>
+  <input type="radio" name="has_pseudonym" id="true" value="<%= @author.has_pseudonym %>"><br>
+  <label for="no">No Pseudonym</label>
+  <input type="radio" name="has_pseudonym" id="false" value="<%= @author.has_pseudonym %>"><br>
+
+  </label>
+  <br>
+
+  <label>
+    Image URL:
+    <input type="text" name="image_url" value="<%= @author.image_url %>" >
+  </label>
+  <br>
+  <hr>
+
+  <input type="submit" value="Update Author">
+</form>
+

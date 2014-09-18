@@ -1,0 +1,15 @@
+h1 = @koopa.name
+
+img.profile-img[src = @koopa.photo_url]
+
+dl.koopa-info
+  dt Color:
+  dd = @koopa.color
+  dt Has a shell:
+  dd #{ @koopa.has_shell ? "Yes" : "No" }
+
+a.edit-link[href="/koopas/#{ @koopa.id }/edit"] Edit This Koopa
+
+form[action="/koopas/#{ @koopa.id }" method="post"]
+  input[type="hidden" name="_method" value="delete"]
+  input[type="submit" value="Delete Koopa"]

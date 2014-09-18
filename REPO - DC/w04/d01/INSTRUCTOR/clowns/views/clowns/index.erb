@@ -1,0 +1,7 @@
+<h1>Here are the clowns!</h1>
+
+<ul>
+  <% @clowns.each do |clown| %>
+    <li><%= clown.name %> is good at <%= clown.talent %></li>
+  <% end %>
+</ul>

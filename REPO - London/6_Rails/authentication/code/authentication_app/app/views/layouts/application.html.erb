@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AuthenticationApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% flash.each do |name, msg| %>
+  <div class="flash-message flash-message-<%= name %>">
+    <%= msg %>
+  </div>
+  <% end %>
+
+  <% if current_user %>
+    <p>
+      hello <%= current_user.email %>
+    </p>
+    <p>
+      <%= link_to 'log me out!', '/logout' %>
+    </p>
+  <% else %> 
+  <p>
+    <%= link_to 'login', new_session_path %>
+  </p>
+  <% end %>
+
+  <%= yield %>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

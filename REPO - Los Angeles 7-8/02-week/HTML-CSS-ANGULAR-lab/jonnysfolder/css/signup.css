@@ -1,0 +1,36 @@
+header.main {
+  height: 49px;
+  background: #fff;
+}
+
+header.main img {
+  float: left;
+}
+
+header.main h1 {
+  float: right;
+  margin: 0;
+  font-size: 24px;
+  padding: 5px 10px;
+  font-weight: 300;
+}
+
+.col {
+  width: 33.33%;
+  float: left;
+}
+
+.col header {
+  background: #9dbfa5;
+  text-align: center;
+}
+
+.col header.active {
+  background: #438855;
+}
+
+.col header h2 {
+  margin: 0;
+  height: 66px;
+  line-height: 61px;
+}

@@ -1,0 +1,22 @@
+<h1>Here is the koopa:</h1>
+
+<center>
+  <h2><%= @koopa.name %></h2>
+  <p><%= @koopa.name %> is <%= @koopa.color %><%= " and has no shell" if @koopa.has_shell == false %>.</p>
+  <img src="<%= @koopa.photo_url %>" height="400">
+
+  <form action="/koopas/<%= @koopa.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <br>
+    <button>Delete this koopa</button>
+  </form>
+
+  <ul>
+    <li>
+      <a href="/koopas/<%= @koopa.id %>/edit"><b>Edit this koopa</b></a>
+    </li>
+    <li>
+      <a href="/koopas"><b>Back to all koopas</b></a>
+    </li>
+  </ul>
+</center>

@@ -1,0 +1,11 @@
+<h1>Book Profile</h1>
+
+<p>Title: <%= @book.title %></p>
+<p>Release Date: <%= @book.release_date %></p>
+<p>Genre: <%= @book.genre %></p>
+<a href="/books/<%= @book.id %>/characters">Characters</a>
+<form action="/books/<%= @book.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Book</button>
+</form>

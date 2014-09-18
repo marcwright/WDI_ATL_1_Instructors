@@ -1,0 +1,6 @@
+<h1>Here we have <%= @entry.author %></h1>
+<h2>Our records indicate he was walking around on <%= @entry.date_taken %> taking polaroid pictures of:</h2>
+<img src="<%= @entry.photo_url %>" height="200px" width="300px">
+<!-- the below was simply me playing around, is it better to include delete form? -->
+<button><a href="/entries/<%= @entry.id %>/delete">DELETE <%= @entry.author %></a></button>
+

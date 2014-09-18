@@ -1,0 +1,13 @@
+<ul>
+  <% if @random_movies %>
+    <h2>There are no movies with this title.</h2>
+    <p>You might be interested in the following ...</p>
+  <% end %>
+
+  <% @movies.each do |movie| %>
+    <li>
+      <%= link_to movie["Title"], movie_path(movie["imdbID"]) %>
+      <%= movie["Year"] %>
+    </li>
+  <% end %>
+</ul>

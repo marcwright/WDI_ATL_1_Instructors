@@ -1,0 +1,7 @@
+h1.title Here come the clowns!
+
+div.container
+  - for clown in @clowns
+    div.clown
+      h2.subtitle = clown.name
+      img[src = clown.image_url]

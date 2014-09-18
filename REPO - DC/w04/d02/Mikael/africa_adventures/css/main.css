@@ -1,0 +1,38 @@
+body {
+  background-color: gray;
+  background-image: url("http://images2.alphacoders.com/800/80080.jpg");
+  /* font: 14px/1.4em Arial, Helvetica, sans-serif; */
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+
+.container {
+  background-color: white;
+  border: 5px solid red;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+
+.container h1 {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  height: 120px;
+  line-height: 120px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.container h2 {
+  color: red;
+  font-weight: bold;
+}
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}

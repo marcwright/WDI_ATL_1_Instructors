@@ -1,0 +1,17 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 20:53:08
+
+ -->
+
+<h1>Bands</h1>
+
+<!-- List -->
+<ul>
+  <% @bands.each do |band| %>
+    <li><%= link_to band.name, band %></li>
+  <% end %>
+</ul>

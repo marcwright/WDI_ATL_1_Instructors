@@ -1,0 +1,61 @@
+<html ng-app="leatherLaneMarketApp">   
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.js"></script>
+  <script type="text/javascript" src="JS/app.js"></script>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <h1>Angular Leather Lane Market App</h1>
+ <div ng-controller="MarketController as market">  
+      
+      <nav>  
+        <h2>Stalls</h2>  
+        <input ng-model="search" placeholder="search" />  
+        <ul>  
+           <li ng-repeat="stall in stalls | filter : {name: search} | orderBy: 'name'" ng-click="selectStall(stall)" ng-class="{highlighted: stall === selectedStall }">{{ stall.name}}</li>  
+           <li class="new_item" ng-show="newStall" ng-click="selectStall(newStall)" ng-class="{highlighted: newStall === selectedStall }">  
+          {{ newStall.name}}  
+    </li>  
+        </ul>  
+
+     <h3>Add an item</h3>  
+     <form name="stallForm" ng-submit="stallForm.$valid && addStall(newStall)" novalidate>
+      <div class="warning-number">Price must be beween 1 and 10
+      </div>
+      <label>Name</label>  
+      <input type="text" ng-model="newStall.name" required/><br>  
+      <label>Price</label>  
+      <input type="number" ng-model="newStall.price" min="1" max="10" required/><br>  
+      <label>Description</label>  
+      <textarea ng-model="newStall.description"></textarea><br>  
+      <button>Submit</button>  
+    </form>  
+      </nav>  
+      <section ng-show="selectedStall"> <div ng-click="clearSelectedStall()">
+        <img src="http://www.sirrahmj.co.uk/close.png" /> 
+      </div> 
+      <h2>Selected Stall details</h2>   
+      <table>  
+        <tr>   
+          <td>Name:</td>  
+          <td>{{ selectedStall.name }}</td>   
+        </tr>  
+        <tr>  
+          <td>Price:</td>  
+          <td> {{ selectedStall.price}}</td>   
+        </tr>  
+        <tr>  
+          <td>Description:</td>  
+          <td> {{ selectedStall.description}}</td>  
+        </tr>  
+      </table>  
+    </section>  
+
+     <section ng-hide="selectedStall"> 
+        <h2 >Leather Lane</h2>  
+        <p>Leather Lane is an awesome market in leather lane that has a wide variety of lunch options.  Select an option from the left to see more details.</p>  
+    </section>  
+</body>
+</html>

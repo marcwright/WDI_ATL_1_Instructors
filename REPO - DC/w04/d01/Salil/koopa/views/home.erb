@@ -1,0 +1,14 @@
+<h1>Welcome to Koopa land!</h1>
+
+<h2>Here are your Koopas:</h2>
+<ul>
+  <% @koopas.each do |koopa| %>
+    <li><a href="/koopas/<%= koopa.id %>"><%= koopa.name %></a></li>
+  <% end %>
+  <li><a href="/koopas/new">Create a Koopa</a></li>
+</ul>
+
+<!-- <form action="/koopas/new" method="post">
+  <input type="hidden" name="_method" value="new">
+  <button>Create a Koopa</button>
+</form> -->

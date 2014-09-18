@@ -1,0 +1,31 @@
+<h2> <%= @koopa.name %></h2>
+
+<img src="<%= @koopa.image_url %>" width="400" height="400">
+<br>
+
+<li>NAME -- <%= @koopa.name %><br>
+<li>COLOR -- <%= @koopa.color %><br>
+<li>HAS A SHELL? -- <% if @koopa.has_shell == true %> Yes<% else %> No <% end %><br>
+
+<% if @koopa.has_shell == true %>
+
+<form>
+<button>NOTE: THIS KOOPA HAS A SHELL AND THEREFORE CANNOT BE KRUSHED! SORRY!</button>
+</form>
+
+<% else %>
+
+<form action="/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>KRUSH THIS KOOPA!</button>
+</form>
+
+<% end %>
+
+<form action="/koopas/<%= @koopa.id %>/edit">
+  <button>EDIT THIS KOOPA</button>
+</form>
+
+<form action="/">
+  <button>BACK TO ALL KOOPAS</button>
+</form>

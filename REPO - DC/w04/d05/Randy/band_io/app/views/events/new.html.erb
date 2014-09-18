@@ -1,0 +1,25 @@
+<h1>Create Event</h1>
+
+<%= form_for([@venue, @event]) do |f| %>
+
+  <%= f.label :date, "Event Date: " %>
+  <%= f.date_field :date %>
+
+  <%= f.label :time, "Start Time: "%>
+  <%= f.time_field :time %>
+
+  <%= f.label :band_id, "Band" %>
+  <%= f.select :band_id, @bands %>
+
+
+  <%= f.hidden_field :venue_id, :value => @venue.id %>
+
+  <%= f.submit "Add This Band" %>
+
+  <%end%>
+
+
+<%= link_to "Cancel", venue_path(@venue) %>
+
+
+

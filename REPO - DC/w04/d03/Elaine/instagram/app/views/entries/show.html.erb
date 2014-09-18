@@ -1,0 +1,19 @@
+<h1>Here is <%= @entry.author %>.</h1>
+
+<div class="main" role="main">
+  <img src="<%= @entry.photo_url %>">
+  <p>Date Taken: <%= @entry.date_taken %></p>
+
+  <form action="/entries/<%= @entry.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+    <p><button>Delete this entry</button></p>
+  </form>
+
+  <p><a href="/entries/<%= @entry.id %>/edit">Edit Entry</a></p>
+</div>
+
+<p><a href="/">Home</a></p>
+<p><a href="/entries">All Entries</a></p>
+

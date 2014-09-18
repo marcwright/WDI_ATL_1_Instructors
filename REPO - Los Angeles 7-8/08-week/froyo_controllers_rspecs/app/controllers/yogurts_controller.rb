@@ -1,0 +1,3 @@
+class YogurtsController < ApplicationController
+
+end

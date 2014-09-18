@@ -1,0 +1,79 @@
+/*
+ - Layout width: 710px
+
+ - Photo size: 282 x 282
+
+ - Colors:
+   - #eabc6f (form background)
+   - #e1c49a (photo border)
+   - #365c69 (blue ink)
+
+ - Fonts:
+   - 'Montserrat', Helvetica, sans-serif; (Google fonts)
+   - 'Crafty Girls', script; (Google fonts)
+   - Courier, monospaced;
+*/
+
+body {
+  background-image: url("../images/wood.jpg");
+  background-repeat: repeat;
+  margin: 0;
+}
+
+.border {
+  border: 2px solid #000;
+  overflow: auto;
+  padding: 15px;
+}
+
+.form {
+  background-color: #eabc6f;
+  font-family: Montserrat;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 20px;
+  text-align: center;
+  width: 694px;
+}
+
+.form .info {
+  border-right: 4px solid;
+  float: left;
+  padding-right: 35px;
+  text-align: left;
+  width: 268px;
+}
+.form .photo{
+  float: right;
+  margin: auto;
+  width: 322px;
+}
+
+.form .photo img {
+ border: 20px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+.header {
+
+}
+
+
+.info span.signature {
+  border-bottom: 2px solid #000;
+  color: #365c69;
+  font-family: Crafty Girls;
+  font-size: 32px;
+}
+
+.info span.label {
+  font-family: Montserrat;
+}
+
+.info span.field {
+  border-bottom: 2px solid #000;
+  font-family: Courier;
+}
+
+.radio {
+  -webkit-appearance: none;
+}

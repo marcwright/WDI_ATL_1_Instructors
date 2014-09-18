@@ -1,0 +1,24 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:53:10
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:19:16
+
+ -->
+
+<%= form_for @venue do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field(:name, size:"32") %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+
+  <%= f.label :state %>
+  <%= f.text_field(:state, size:"2")  %>
+
+  <%= f.label(:allows_explicit_lyrics, "Explicit OK?") %>
+  <%= f.check_box :allows_explicit_lyrics %>
+
+  <%= f.submit "Submit" %>
+<% end %>

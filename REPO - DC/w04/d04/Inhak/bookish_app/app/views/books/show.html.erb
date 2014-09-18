@@ -1,0 +1,10 @@
+<h1>Here is <%= @book.title %></h1>
+
+<p>This book was released on <%= @book.release_date %> </p>
+<p>It was written by <%= @book.author.name %>
+
+<form action="/authors/<%= @book.author_id %>/books/" method="post">
+  <input type="hidden" name="_method" value="delete">
+    <input name="authenticity_token" type="hidden" value="form_authenticity_token %>">
+  <button>Delete this book</button>
+</form>

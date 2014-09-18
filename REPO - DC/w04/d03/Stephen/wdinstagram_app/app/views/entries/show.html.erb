@@ -1,0 +1,28 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:17:24
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 20:13:23
+
+ -->
+
+<h2>Viewing Entry</h2>
+
+<h3><%= @entry.caption %></h3>
+<a href="/entries/<%= @entry.id %>"><img class="entry_image" src="<%= @entry.photo_url %>" alt=""></a>
+<h4>Last updated <%= @entry.date_taken.strftime("%m/%d/%Y") %> by <%= @entry.author %></h4>
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="submit" value="Delete">
+</form>
+
+<form method="get" action="/entries/<%= @entry.id %>/edit">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="submit" value="Edit">
+</form>

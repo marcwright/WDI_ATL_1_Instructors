@@ -1,0 +1,28 @@
+<h1> Mario Party! </h1>
+
+<div id="container"></div>
+
+<form>
+  <fieldset>
+      <legend>New Character</legend>
+      <label>
+        Character Name
+        <input type="text" name="name" />
+      </label>
+      <label>
+        Image URL
+        <input type="text" name="img_url" />
+      </label>
+    <button>SAVE</button>
+  </fieldset>
+</form>
+
+<div id="container"></div>
+
+<audio id='coin' src= 'http://soundfxnow.com/soundfx/SuperMarioBrothers-Coin.mp3'></audio>
+
+<script type="template" id="character-html">
+  <h2><%%= character.get('name') %> -- <%%= character.get('coins') %></h2>
+  <span> &hearts; </span>
+  <img src="<%%= character.get('img_url')%>"/>
+</script>

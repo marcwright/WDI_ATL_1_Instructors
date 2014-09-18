@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; Javascript</title>
+</head>
+<body>
+  <script type= 'text/javascript'>
+    //Javascript !
+    // This is a javascript comment
+    /* This is
+      a Javascript
+      block comment
+    */
+    //Variables
+    var beep = 'beep';
+
+    //Console output
+    console.log(beep);
+
+    //Conditionals
+    var number = 3;
+    if (number > 5) {
+      console.log('BIG NUMBER!');
+    } else if (number < 5) {
+      console.log('little number');
+    } else {
+      cosnole.log('must be 5 then')
+    }
+
+    // Case Statements
+    var day = 'Monday';
+    switch (day) {
+      case 'Monday' :
+        console.log('Get Haircut')
+        break;
+      case 'Tuesday' :
+        console.log('don\'t get haircut');
+        break;
+      case 'Friday' :
+        console.log('Get three haircuts!');
+        break;
+      default :
+        console.log('I\'m in limbo');
+    }
+
+    // While loop
+    var count = 10;
+    while (count > 0) {
+      console.log(count);
+      count--;
+    }
+
+    // Functions (like methods)
+    // named
+    function add(x, y) {
+      return x + y;
+    }
+
+    // anonymous
+    var add = function(x, y){
+      return x + y;
+    };
+
+    //function with no arguments
+    var scream = function(){
+      return "AHHHHH";
+    };
+
+    //Arrays
+    var myNameArray = ['Adam', 'Elaine', 'Travis']
+    myNameArray[0];
+    myNameArray.push('Matt');
+
+    //Iteration
+    var dwarves = ['Doc', 'Sleepy', 'Bashful', 'Grumpy', 'Dopey', 'Sneezy', 'Happy']
+
+    // for loop
+    for(var i = 0; i <= dwarves.length; i++) {
+      console.log('HI HO! I am ' + dwarves[i]);
+    }
+
+    //enumeration
+    dwarves.forEach(function(dwarf) {
+      console.log(dwarf + ' says hi');
+    });
+
+    //Object (literal notation)
+    var myObject = {name: 'Snow White', age: 17, weakness: 'apples'};
+    myObject['name']
+
+    var myBird = {
+      name: "Tweety",
+      chirp: function(){
+        console.log('tweet tweet tweet')
+      },
+      greet: function(){
+        console.log('Hi my name is ' + this.name)
+      }
+    }
+
+    var richardHessler = {
+      name: "Richard Hessler",
+      hometown: "India",
+      sing: function(){
+        console.log('How can you just let me walk away')
+      },
+      introduce: function(){
+        console.log('HI my name is ' + this.name + ' I\'m from ' + this.hometown)
+      }
+    }
+
+    var dollarsToPounds = function(dollars){
+      var pounds = dollars / 1.6748;
+      return "$" + parseInt(dollars) + " is £" + parseInt(pounds);
+    };
+
+    var poundsToDollars = function(pounds){
+      var dollars = pounds * 1.6748;
+      return "£" + parseInt(pounds) + " is $" + parseInt(dollars);
+    };
+
+    var currencyConverter = function(currfrom, currto, amount) {
+      if (currfrom === "pounds"){
+        return poundsToDollars(amount);
+      } else if (currfrom === "dollars"){
+        return dollarsToPounds(amount);
+      }
+    };
+
+    var answer = prompt(7)
+  </script>
+</body>
+</html>
+

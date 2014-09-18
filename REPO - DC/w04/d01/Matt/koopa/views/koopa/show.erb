@@ -1,0 +1,13 @@
+<h1><%= @koopa.name %></h1>
+<img style="max-height: 200px;" src="<%= @koopa.image_url %>" alt="<%= @koopa.name %>">
+<p>Color: <%= @koopa.color %></p>
+<p>Shell: <%= @koopa.has_shell.to_s %></p>
+
+<form action="/koopa/<%= @koopa.id %>/edit">
+  <button class="btn btn-warning">Edit the Koopa</button>
+</form>
+
+<form action="/koopa/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn btn-danger">Clear the Koopa</button>
+</form>

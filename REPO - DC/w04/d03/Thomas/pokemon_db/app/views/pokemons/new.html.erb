@@ -1,0 +1,21 @@
+<h1>Create a new Pokemons</h1>
+
+<form action="/pokemons" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+  <label>
+    Name:
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Image:
+    <input type="text" name="image_url">
+  </label>
+
+  <label>
+    Attack:
+    <input type="text" name="attack">
+  </label>
+
+  <input type="submit" value="Create a Pokemons!">
+</form>

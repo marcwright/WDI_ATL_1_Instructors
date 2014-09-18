@@ -1,0 +1,6 @@
+<h1>Here are the rollercoasters</h1>
+<ul>
+  <% @coasters.each do |coaster| %>
+    <li><%= coaster.name %> has a top speed of <%= coaster.top_speed %> miles per hour.</li>
+  <% end %>
+</ul>

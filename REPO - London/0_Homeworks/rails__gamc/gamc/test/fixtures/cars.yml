@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  colour: MyString
+  image: MyText
+  max_speed: 1
+  released_year: 1
+  brand: MyString
+
+two:
+  name: MyString
+  colour: MyString
+  image: MyText
+  max_speed: 1
+  released_year: 1
+  brand: MyString

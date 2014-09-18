@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  background: url('http://img.wallpaperstock.net:81/winter-is-coming-wallpapers_34968_1280x800.jpg');
+  background-size: cover;
+  color: #615B5B;
+  font-family: MedievalSharp;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+}
+
+.dead{
+  color: red;
+  text-decoration: line-through;;
+}
+
+.button {
+  background-color: #000;
+  border-radius: 15px;
+  color: #fff;
+  font-family: MedievalSharp;
+}
+
+.text-field{
+  background-color: gray;
+  color : #fff;
+  font-family: MedievalSharp;
+  font-size: 12px;
+}
+
+.list-item{
+  list-style-image: url('http://img3.wikia.nocookie.net/__cb20120613005944/finalfantasy/images/archive/2/26/20120613012552!FF1_Sword_Icon_NES.png');
+}

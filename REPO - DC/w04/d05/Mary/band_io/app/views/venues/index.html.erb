@@ -1,0 +1,8 @@
+<h1>Venues</h1>
+
+<% @venues.each do |venue| %>
+<li class="indexlist"><%= link_to venue.name, venue %></li>
+<% end %>
+</ul>
+
+<p class="createlink"><%= link_to "Create New Venue",new_venue_path %></p>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dogs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+  <li><%= link_to "Our Dogs", dogs_path %></li>
+  <li><%= link_to "Add Dogs", new_dog_path %></li>
+  <% if @dog && !@dog.new_record? %>
+    <li><%= link_to "Give #{@dog.name} a Toy", new_dog_toy_path(@dog) %></li>
+  <% end %>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

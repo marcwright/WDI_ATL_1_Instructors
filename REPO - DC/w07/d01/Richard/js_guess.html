@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> I &hearts; Inhak </title>
+</head>
+<body>
+  <script type = 'text/javascript'>
+
+
+
+  var guess = prompt('Guess a number');
+
+  var randomNumber=Math.floor(Math.random()*11);
+
+  count = 1;
+  while (guess != randomNumber) {
+
+      if (randomNumber > guess && guess < 11 ) {
+        var guess = prompt('Too low, guess again!');
+      }
+      else if (randomNumber < guess && guess < 11){
+        var guess = prompt('Too high, guess again!');
+      } else if (guess > 10){
+        var guess = prompt(guess + ' is outside of the limit!! A NUMBER THIS TIME');
+      } else {
+        var guess = prompt(guess + ' is not a number, guess again! A NUMBER THIS TIME');
+      }
+      count ++;
+}
+
+alert('You got it! and it only took' + count + "tries.");
+
+ </script>
+</body>
+</html>

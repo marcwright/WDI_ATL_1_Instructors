@@ -1,0 +1,18 @@
+Artist.all
+Painting.all
+Artist.find(2)
+
+spanish_artists = Artist.find_by(nationality: "Spanish")
+Painting.find(1)
+
+picasso = Artist.find_by(name: "Pablo Picasso")
+picasso.paintings.all
+
+guernica = Painting.find_by(title: "Guernica")
+guernica.artist
+
+van_gogh.nationality = "American"
+van_gogh.save
+
+starry.artist = picasso
+starry.save

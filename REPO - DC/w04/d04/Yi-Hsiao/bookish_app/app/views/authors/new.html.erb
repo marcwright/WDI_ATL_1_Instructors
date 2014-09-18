@@ -1,0 +1,21 @@
+<h1>Add an author</h1>
+<%= form_for @author do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :dob, "Date of Birth" %>
+  <%= f.date_field :dob %>
+  
+  <fieldset>
+    <legend>Gender</legend>
+    <%= f.label :gender, "Male:"%>
+    <%= f.radio_button :gender, "m" %>
+    <%= f.label :gender, "Female:"%>
+    <%= f.radio_button :gender, "f" %>
+  </fieldset>
+
+  <%= f.label :has_pseudonym %>
+  <%= f.check_box :has_pseudonym %>
+
+  <%= f.submit "Add author" %>
+<% end %>

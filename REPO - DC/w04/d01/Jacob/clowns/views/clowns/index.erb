@@ -1,0 +1,9 @@
+<h1>Here are the clowns!</h1>
+
+<ul>
+  <% @clowns.each do |clown| %>
+    <li><%= clown.name %> is good at <%= clown.talent %></li>
+  <% end %>
+</ul>
+
+<!-- The "=" sign doesn't have to be implemented when opening and closing the method, only in the interpolation of the variables.  It's a sort of trigger that deploys the Ruby stuff from the server through erb file and onto the internet. -->

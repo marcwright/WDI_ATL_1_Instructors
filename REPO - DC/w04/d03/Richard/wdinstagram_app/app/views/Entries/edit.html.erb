@@ -1,0 +1,26 @@
+<h1> Edit picture by <%= @entries.author %>:</h1><br>
+<img src="<%= @entries.photo_url %>" height="300" width="300">
+
+<form action="/entries/<%=@entries.id%>" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <input type="hidden" name="_method" value="patch">
+
+ <label>
+    Author:
+    <input type="text" name="author" value="<%= @entries.author %>" required>
+  </label>
+
+  <label>
+    Image URL:
+    <input type="text" name="photo_url" value="<%= @entries.photo_url %>" required>
+  </label>
+
+  <label>
+    Caption:
+    <input type="text" name="caption" value="<%= @entries.caption %>" required>
+  </label>
+  <button>Update Photo!</button>
+
+</form>

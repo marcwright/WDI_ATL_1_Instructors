@@ -1,0 +1,9 @@
+<h1>Moviely</h1>
+
+<%= link_to "Browse by movies", movies_path %>
+
+<%= form_tag("/results", method: "get") do %>
+  <%= label_tag(:query, "Search for movie:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>

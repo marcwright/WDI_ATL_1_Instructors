@@ -1,0 +1,12 @@
+<h1>List of Bowser's Koopas</h1>
+<ul>
+  <% @koopas.each do |koopa| %>
+  <li>Is named <%= koopa.name %>
+    <% if koopa.has_shell == true %>
+      and has a shell!
+    <% else %>
+      and doesn't have a shell.
+    <% end %>
+  </li>
+  <% end %>
+</ul>

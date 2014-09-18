@@ -1,0 +1,20 @@
+<%= link_to "Return to All Venues", venues_path %>
+
+
+<h1>Name: <%= @venue.name %> </h1
+<p>Location: <%= @venue.city %>, <%= @venue.state %> </p>
+<p>Explicit? <%= @venue.allows_explicit_lyrics ? "Yes" : "No" %></p>
+
+
+
+<%= link_to "Edit", edit_venue_path(@venue)%>
+
+
+
+<%= form_for @venue, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+  <%end%>
+
+
+<%= link_to "See Events", venue_events_path(@venue) %>
+<%= link_to 'Create Event', new_venue_event_path(@venue) %>

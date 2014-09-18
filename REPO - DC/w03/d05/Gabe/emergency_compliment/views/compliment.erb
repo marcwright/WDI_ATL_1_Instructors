@@ -1,0 +1,17 @@
+<body bgcolor="<%= @rand_bg_color %>">
+
+<% if @username %>
+
+<h1>Hi <%= @username %>!<br>
+  <%= @compliment %><h1>
+
+<a href="/<%= @username %>" class="yes">Another!</a>
+
+<% else %>
+
+<h1>Greeting my friend!<br>
+  <%= @compliment %><h1>
+
+<a href="/" class="yes">One more...</a>
+
+<% end %>

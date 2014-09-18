@@ -1,0 +1,12 @@
+<!-- All Artists Link -->
+
+<h1><%= @song.title %></h1>
+<p><%= @song.artist %></p>
+<p><%= @song.year %></p>
+
+
+<!-- Artist Edit link -->
+<p><%= link_to "Edit", edit_artist_path(@artist) %></p>
+<%= form_for @artist, method: 'delete' do |f| %>
+  <%= f.submit "Delete", id: 'destroy' %>
+<% end %>

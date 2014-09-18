@@ -1,0 +1,14 @@
+.pleasant {
+  color: #facade;
+}
+
+.classy {
+  font-family: 'Niconne', cursive;
+  color: rgb(165, 119, 0);
+}
+
+.product {
+  background-color: rgba(165, 119, 0, 0.5);
+  height: 200px;
+  width: 200px;
+}

@@ -1,0 +1,25 @@
+<h1>New Photo</h1>
+
+  <form action='/photos' method='post'>
+
+    <input name="authenticity_token" type="hidden" value="<%=form_authenticity_token%>">
+
+    <label>
+    Author:
+      <input type="text" name="author"
+    </label>
+
+    <label>
+    Pic URL:
+      <input type="text" name="photo_url"
+    </label>
+
+    <label>
+    Date Taken:
+      <input type="date" name="date_taken"
+    </label>
+
+  <input type="submit" value="Create your Photo!">
+  </form>
+
+  <br><a href="/photos">All Photos</a></br>

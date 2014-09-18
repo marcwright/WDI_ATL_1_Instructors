@@ -1,0 +1,15 @@
+<h1>Welcome to the Sorting Hat!</h1>
+<%= image_tag "http://flavorwire.files.wordpress.com/2009/06/sorting-hat.jpg" %>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
+  <%= f.label :house_id %>
+  <%= f.collection_select :house_id, House.all, :id, :name, prompt: true %>
+
+  <%= f.submit "Add a Student" %>
+<% end %>

@@ -1,0 +1,17 @@
+<%= form_for @band do |f| %>
+
+  <%= f.label :name, "Band Name: " %>
+  <%= f.text_field :name %>
+
+  <%= f.label :genre, "Genre: "%>
+  <%= f.text_field :genre %>
+
+  <%= f.label :explicit_lyrics, "Have Explicit Lyrics? " %>
+  <%= f.check_box :explicit_lyrics %>
+
+  <%= f.label :video_embed_url, "Video Link: " %>
+  <%= f.text_field :video_embed_url%>
+
+  <%= f.submit "Add This Band" %>
+
+  <%end%>

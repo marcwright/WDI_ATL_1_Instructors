@@ -1,0 +1,12 @@
+
+<h1><%= @band.name %></h1>
+
+<%= video_tag @band.video_url %>
+
+  <p><%= link_to "Edit Band", edit_band_path(@band) %></p>
+  <%= form_for @band, method: 'delete' do |f| %>
+    <%= f.submit "Delete" %>
+  <% end %>
+
+  <p><%= link_to "Band list", bands_path %></p>
+  

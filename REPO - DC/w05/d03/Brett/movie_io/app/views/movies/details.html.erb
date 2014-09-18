@@ -1,0 +1,23 @@
+<h1><%= @response_hash["Title"] %></h1>
+<p>Year: <%= @response_hash["Year"]%></p>
+<p><%= @response_hash["Plot"]%></p>
+<img src="<%= @response_hash["Poster"]%>">
+
+<%= form_for @movie do |f| %>
+  <% f.label :title %>
+  <% f.hidden_field :title, value: @response_hash["Title"] %>
+
+  <% f.label :year %>
+  <% f.hidden_field :year, value: @response_hash["Year"] %>
+
+  <% f.label :imdb_rating %>
+  <% f.hidden_field :imdb_rating, value: @response_hash["imdbRating"] %>
+
+  <% f.label :plot %>
+  <% f.hidden_field :plot, value: @response_hash["Plot"] %>
+
+  <% f.label :poster_url %>
+  <% f.hidden_field :poster_url, value: @response_hash["Poster"] %>
+
+  <%= f.submit "Add to Watchlist", id: "submit" %>
+<% end %>

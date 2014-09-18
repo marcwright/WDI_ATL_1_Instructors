@@ -1,0 +1,27 @@
+<h1>Edit <%= @author.name %></h1>
+  <form action="/authors/<%= @author.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+    <label>
+      Name:
+      <input type="string" name="name" value="<%= @author.name %>">
+    </label>
+
+    <label>
+      Birth:
+      <input type="date" name="birth" value="<%= @author.birth %>">
+    </label>
+
+    <label>
+      Gender:
+      <input type="string" name="gender" value="<%= @author.gender %>">
+    </label>
+
+    <label>
+      Pseudo:
+      <input type="checkbox" name="has_pseudo" <%= @author.has_pseudo ? "checked" : "" %> >
+    </label>
+
+    <input type="submit" value="update <%= @author.name %>">
+  </form>

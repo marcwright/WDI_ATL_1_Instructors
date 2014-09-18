@@ -1,0 +1,7 @@
+<h1>List of Artists</h1>
+
+<%= @artists.each do |artist| %>
+  <li><a href="/artists/<%=artist.id%>"><%= artist.name %></a> <img src="<%= artist.photo_url %>" style="max-width:200px"></li>
+<% end %>
+<br>
+<%= link_to "Create a new artist", new_artist_path %>

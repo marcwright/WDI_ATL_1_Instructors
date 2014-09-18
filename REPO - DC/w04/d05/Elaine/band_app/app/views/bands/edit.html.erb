@@ -1,0 +1,16 @@
+<h1>Edit <%= @band.name %></h1>
+
+<!-- Hero Edit Form -->
+<%= render "manage_form" %>
+
+<hr>
+
+
+
+<!-- Hero Delete -->
+<%= form_for @band, method: 'delete' do |f| %>
+  <%= f.submit "Delete" %>
+<% end %>
+
+<!-- Cancel -->
+<p><%= link_to "Cancel", @band %></p>

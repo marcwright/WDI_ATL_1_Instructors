@@ -1,0 +1,11 @@
+<h1><%= @coaster.name %></h1>
+
+<p><%= @coaster.name %> is for people at least <%= @coaster.min_height %> inches tall.</p>
+
+<img src="<%= @coaster.image_url%>" >
+
+<form action="/rollercoasters/<%= @coaster.id %>"
+  method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>This one sucks, delete it!</button>
+</form>

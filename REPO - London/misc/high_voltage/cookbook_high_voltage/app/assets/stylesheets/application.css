@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+body {
+  font-family: Futura, helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 160%;
+  color: #303030;
+
+  background: url('/fresh-food-ingredients.jpg');
+  /* the follow is the code to have the image display as a full page */
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover; /* the next 3 lines are "browser prefixes", they are necessary to include for CSS3 techniques */
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 750px;
+  border-radius: 10px;
+ 
+  margin: 20px auto;
+  background-color: #e0e0e0;
+  padding: 10px 50px 80px 50px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 260%;
+  line-height: 130%;
+  margin: 20px 10px 0px 10px;
+}
+
+h2 {
+  font-size: 160%;
+  line-height: 130%;
+}
+
+a {
+  text-decoration: none;
+  color: #3030aa;
+}
+
+a:hover {
+  color: green;  
+}
+
+.container2 {
+  border: dotted black 2px;
+  background-color: #e2e2d8;
+  border-radius: 10px;
+  max-width: 600px;
+  padding: 0px 0 30px 20px;
+  margin: 10px 0;
+}
+
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}

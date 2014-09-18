@@ -1,0 +1,128 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>I &hearts; Javascript</title>
+</head>
+<body>
+  <script type="text/javascript">
+    //Javascript!
+    //This is a Javascript comment
+    /*
+      This is
+      a multi-line Javascript
+      comment
+    */
+    // Variables
+    var beep = 'beep';
+
+    //Console Output
+    console.log(beep);
+
+    //Conditionals
+    var number = 5;
+    if (number > 5) {
+      console.log('BIG NUMBER');
+    } else if (number < 5) {
+      console.log('little number');
+    } else {
+      console.log('must be 5');
+    }
+
+    //Case statements
+    var day = 'Monday';
+    switch (day) {
+      case 'Monday' :
+        console.log('Get haircut');
+        break;
+      case 'Tuesday' :
+        console.log('Dont get haircut');
+        break;
+      case 'Friday' :
+        console.log('Get 3 haircuts');
+        break;
+      default :
+        console.log('Im in limbo');
+    }
+
+    //While looop
+    var count = 10;
+    while (count > 0) {
+      console.log(count);
+      count -= 1;
+    }
+
+    //Methods/Functions
+    //named functions:
+    function add(x, y) {
+      return x + y;
+    }
+
+    //unnamed functions aka anonymous functions can be stored in variable:
+    var add = function (x,y) {
+      return x + y;
+    }
+
+    //anonymous function with no arguments
+    var scream = function() {
+      return "AHHHHHH";
+    }
+    //distinction between referencing (scream returns entire function) and calling (scream() returns "AHHHHH")
+
+    //Arrays
+    var myNameArray = ['Mary', 'Adam', 'Travis'];
+    myNameArray[0];
+    myNameArray.push('Matt');
+
+
+    //Iteration
+    var dwarves = ['Doc', 'Sleepy', 'Bashful', 'Grumpy', 'Dopey', 'Sneezy', 'Happy'];
+
+    //for loop
+    for(var i = 0; i <= dwarves.length, i++) {
+        console.log('HI HO! I am ' + dwarves[i]);
+    }
+
+    //enumeration
+    dwarves.forEach(function(dwarf, index) {
+      console.log(dwarves[index] + ' says Hi');
+    })
+
+    //Object(literal notation) - JS version of hashes; has properties instead of keys
+    var myObject = {name: 'Snow White', age: '17', weakness: 'apples'};
+    myObject['name'];
+    myObject['age'] = 29;
+    myObject.name;
+
+    var myBird = {
+      name: "Tweety",
+      chirp: function() {
+        console.log('tweet tweet tweet');
+      },
+      greet: function() {
+        console.log('Hi my name is ' + this.name);
+      },
+    }
+    myBird.name;
+    myBird.chirp; //references  function
+    myBird.chirp(); //calls function
+    myBird['chirp']() //calls function
+
+    var myPerson = {
+      name: "Mary",
+      hometown: "Atlanta",
+      sing: function() {
+        console.log("Do you wanna build a snowwwmaaan?");
+      },
+      introduce: function() {
+        console.log("Hi, my name is " + this.name + ". I'm from " + this.hometown + ".");
+      }
+    }
+
+
+
+
+
+
+  </script>
+</body>
+</html>

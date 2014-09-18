@@ -1,0 +1,24 @@
+<h1> Edit <%= @koopa.name %></h1>
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @koopa.name %>">
+  </label>
+  <label>
+    Hair color:
+    <input type="text" name="color" value="<%= @koopa.color %>">
+  </label>
+  <label>
+    Shelled?
+    <input type="checkbox" name="has_shell" <%= @koopa.has_shell ? "checked" : "" %> >
+
+    <label>
+    Image URL:
+    <input type="text" name="image_url" value="<%= @koopa.image_url %>">
+  </label>
+
+  </label>
+  <button>Update</button>
+</form>

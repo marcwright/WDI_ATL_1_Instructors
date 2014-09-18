@@ -1,0 +1,19 @@
+<h1>BREDDIT</h1>
+
+<form>
+  <fieldset>
+    <legend> New Site </legend>
+    <label>
+      Site URL
+      <input type="text" name="site_url">
+    </label>
+
+    <button>Save</button>
+  </fieldset>
+</form>
+
+<ul id="sites-list"><ul>
+
+<script type="template" id="site-html">
+  <a href="<%%= site.get('site_url') %>"><%%= site.get('title') %></a><button class="upvote">+1</button><%%= site.get('rating') %><button class="downvote">-1</button>
+</script>

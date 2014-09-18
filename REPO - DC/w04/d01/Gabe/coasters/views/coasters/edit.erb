@@ -1,0 +1,35 @@
+<h1> Edit <%= @coaster.name %>
+
+  <form action="/coasters/<%= @coaster.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <label>
+    Name:
+    <input type="text" name="name" value="<%= @coaster.name %>">
+  </label>
+
+<label>
+    Top Speed:
+    <input type="text" name="top_speed" value="<%= @coaster.top_speed %>">
+</label>
+
+<label>
+    Min. Height to ride:
+    <input type="text" name="min_height" value="<%= @coaster.min_height %>">
+</label>
+
+<label>
+    Image URL :
+    <input type="text" name="image_url" value="<%= @coaster.image_url %>">
+</label>
+
+    <button>SUBMIT EDITED ROLLER COASTER</button>
+
+</form>
+
+<form action="/coasters">
+  <button>BACK TO ALL ROLLERCOASTERS</button>
+</form>
+
+
+

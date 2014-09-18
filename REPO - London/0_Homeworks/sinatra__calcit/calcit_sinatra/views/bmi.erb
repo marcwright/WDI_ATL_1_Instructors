@@ -1,0 +1,64 @@
+<div class="container">
+    
+<div class="page-header">
+  <h1>BMI</h1>
+</div>
+
+<form class="form-horizontal" action='/bmi' method='get'>
+<fieldset>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="operation">Would you like to use metric or imperial measurements?</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="operation" class="form-control">
+      <option value='m'>Metric</option>
+      <option value='i'>Imperial</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="height">Hey lanky, what's your height?</label>  
+  <div class="col-md-5">
+  <input id="distance" name='height' type="text" class="form-control input-md" required="" autofocus>
+    
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="weight">Your weight?</label>  
+  <div class="col-md-5">
+  <input id="distance" name='weight' type="text" class="form-control input-md" required="" placeholder="I hope this box is big enough">
+    
+  </div>
+</div>
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">Calc.it Fatty</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+<% if @result %>
+<section>
+  <header>
+    <h1>Result</h1>
+    <p>Your BMI is <%= @result %>.</p>
+  </header>
+</section>
+<% end %>
+</div>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; JavaScript</title>
+</head>
+<body>
+  <script type='text/javascript'>
+      //JavaScript comment!
+
+      //variables
+      var beep = 'beep';
+
+      //console output
+      console.log(beep);
+
+      //conditionals
+      var number = 5;
+      if (number > 5) {
+        console.log('BIG NUMBER');
+      } else if (number < 5) {
+        console.log("Little Number")
+      } else {
+        console.log("Must be 5")
+      }
+
+      //case statements
+      var day = "Monday"
+      switch (day) {
+        case 'Monday':
+          console.log('')
+      }
+
+      //functions
+      function add(x,y) {
+        return x + y;
+      }
+
+      var add = function (x,y) {
+        return x + y;
+      }
+
+      //array
+      var myNameArray = ['Salil', 'Matt'];
+      myNameArray[0];
+      myNameArray.push('Mikael');
+
+      //iteration
+      var dwarves = ['Doc', 'Sleepy', 'Bashful', 'Grumpy', 'Dopey', 'Sneezy', 'Happy']
+
+      for(var i = 0; i <= dwarves.length; i++) {
+        console.log('Hi, Ho I am ' + dwarves[i])
+      }
+
+      //enumeration
+      dwarves
+      dwarves.forEach(function(dwarf) {
+        console.log(dwarves[index]) + ' says hi');
+      })
+
+      #hashes
+      var my_hash = {name: 'Snow White', age: 17, weakness: 'Apples'};
+      my_hash['name']
+      my_hash['age'] = 29
+
+      var myBird  = {
+        name: 'Tweety',
+        chirp: function() {
+          console.log('tweet, tweet, tweet, tweet');
+        },
+        greet: function() {
+            console.log('My name is ' + this.name);
+        }
+      }
+      myBird.chirp();
+      myBird.greet();
+
+      var person = {
+          name: 'Salil',
+          home: 'Pittsburgh',
+          sing: function() {
+              console.log('Where are your friends toniiiiiiight');
+          },
+          introduce: function() {
+              console.log('Hi I\'m ' + this.name + ' and I\'m from ' + this.home);
+          }
+      }
+      person.introduce();
+      person.sing();
+
+  </script>
+
+</body>
+
+</html>

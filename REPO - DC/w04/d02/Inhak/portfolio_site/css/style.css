@@ -1,0 +1,97 @@
+/*
+
+Style Hints:
+
+Body Font Size = 14px
+	 Font Family = "Times New Roman", serif
+	 Font Color = black
+	 Background: #F3EBE9
+
+H1 Font Size = 50px
+   Font Family = Arial, Helvetica, sans-serif
+   Text-transform: uppercase;
+   color: #FFFFFF;	(White)
+
+H2: Font Size = 18px
+	Text-Transform: uppercase;
+	Font-Family: cursive, Helvetica, sans-serif;
+
+*/
+
+body{
+  background-image: url("../images/pattern1.png");
+  /*font-color: black;
+  font-family: "Times New Roman", serif;*/
+}
+
+.page {
+  background-color: #FFF;
+  /*font-family: Helvetica, sans-serif;*/
+  /*padding: 0px, 0px, 30px, 0px;*/
+  margin: 0 auto;
+  /*text-align: left;*/
+  width: 980px;
+}
+
+.page .header{
+  background-color: salmon;
+  padding: 10px;
+}
+
+.page .header h1{
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.page .main{
+  padding: 15px;
+}
+
+.page h2 {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.page p{
+  margin: 10px 0;
+}
+
+.page .photo-list li {
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+
+.page .photo-list img {
+  border: 5px solid #ccc;
+}
+
+.page .footer{
+  background-color: salmon;
+  color: #fff;
+  text-align: right;
+  padding: 15px;
+}
+
+
+/*p.tagline{
+  background-color: #FF0033;
+}
+
+h1 {
+  text-align: left;
+  color: white;
+  font-size: 50px;
+}
+
+h2 {
+  background-color: white;
+  font-family: cursive, Helvetica, sans-serif;
+  line-height: 40px;
+}
+
+p {
+  background-color: white;
+}*/

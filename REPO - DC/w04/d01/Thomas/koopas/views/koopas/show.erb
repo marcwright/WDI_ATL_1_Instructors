@@ -1,0 +1,8 @@
+<h2>Hi, my name is <%= @koopas.name %></h2>
+<img src="<%= @koopas.photo_url %>">
+<button><a href="/koopas/<%= @koopas.id %>/edit">Edit <%= @koopas.name %></a></button>
+
+<form action="/koopas/<%= @koopas.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Koopa</button>
+</form>

@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <title>I &hearts; Javascript</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  //Guess the number
+    var Guess = prompt('Guess the number');
+    var Answer = Math.floor((Math.random() * 10) + 1);
+    var guessCount = 0;
+    while (Guess != Answer) {
+      if (Guess > Answer) {
+        nextGuess = prompt('Too high, guess again!');
+      } else if (Guess < Answer) {
+        nextGuess = prompt('Too low, guess again!');
+      }
+      Guess = nextGuess;
+      guessCount++;
+    }
+    console.log('Yep, you guessed correctly! It only took you ' + guessCount + ' times!');
+
+
+  </script>
+</body>
+</html>

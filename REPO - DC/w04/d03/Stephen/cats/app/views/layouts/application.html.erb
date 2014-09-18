@@ -1,0 +1,46 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 13:36:57
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 13:50:15
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cat Shelter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <link href="/stylesheets/style.css" rel="stylesheet">
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="navigation">
+        <ul>
+          <li><a href="/">Index</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/links">Links</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <hr />
+      <p>&copy 2014 Stephen Stanwood</p>
+    </div>
+  </div>
+
+</body>
+</html>

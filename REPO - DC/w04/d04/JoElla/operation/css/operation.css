@@ -1,0 +1,40 @@
+body {
+  font: 16px/1.4 Helvetica, Arial, sans-serif;
+  background-color: #333;
+}
+
+.operation {
+  background-color: white;
+  margin: 0 auto;
+  width: 400px;
+}
+
+/*without this part the pieces on the board are hard positioned according to the browser*/
+.operation .board {
+  position: relative;
+}
+
+.chip {
+  position: absolute;
+}
+
+.chip.breadbasket {
+  left: 190px;
+  top: 300px;
+}
+
+.chip.heart {
+  left: 235px;
+  top: 76px;
+}
+
+.chip.wishbone {
+  left: 175px;
+  top: 55px;
+}
+
+.chip.butterflies {
+  left: 215px;
+  top: 190px;
+}
+

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Tow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div data-ui="board">
+
+  </div>
+
+  <div data-ui="result"></div>
+
+  <script src="tictac.js" type="text/javascript"></script>
+  <script src="tictacview.js" type="text/javascript"></script>
+  <script>
+    var model = new TicTac();
+    var game = new TicTacView(model);
+  </script>
+</body>
+</html>

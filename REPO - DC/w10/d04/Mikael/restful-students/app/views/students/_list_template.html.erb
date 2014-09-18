@@ -1,0 +1,13 @@
+<div class="header">
+  <h1>Students Directory</h1>
+</div>
+<form class="create">
+  <input type="text" name="name" id="student-new">
+  <button class="primary" id="student-add" title="Add">+</button>
+</form>
+<ul id="students-list" class="students-list">
+  <%% collection.each(function(model) { %>
+      <li><a href="/<%% model.get('id') %>"><%%= model.get('name') %></a></li>
+  <%% }) %>
+
+</ul>

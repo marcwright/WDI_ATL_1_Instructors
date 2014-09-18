@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway+Dots);
+
+body {
+  height: 700px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Raleway Dots;
+  font-size: 48px;
+  margin: 0;
+  text-align: center;
+}
+
+img{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border: 5px solid red;
+  border-radius: 50%;
+  height: 200px;
+  position: absolute;
+  top: 200px;
+  transition-property: border;
+  transition-duration: 1s;
+  width: 200px;
+}
+
+.blue-border {
+  border: 8px solid DodgerBlue ;
+  transition-duration: 1s;
+  transition-property: border;
+}
+
+.cat{
+  left: 200px;
+}
+
+.dog{
+  left: 600px;
+}
+
+.panda{
+  left: 1000px;
+}

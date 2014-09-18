@@ -1,0 +1,9 @@
+<h1>List of authors</h1>
+<% @authors.each do |author| %>
+<li><%= author.name %>
+  <ul>
+  <li>DOB: <%= author.dob %></li>
+  <li>Has pseudonym? -  <%= author.has_pseudonym %></li>
+  </ul>
+</li>
+<% end %>

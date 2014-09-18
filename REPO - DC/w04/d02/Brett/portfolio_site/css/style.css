@@ -1,0 +1,53 @@
+
+body {
+  font-size: 14px;
+	font-family: "Times New Roman", serif;
+	color: black;
+	background-color: #F3EBE9;
+
+}
+.container .banner{
+  background-color: red;
+  padding: 15px;
+}
+
+.container {
+  background-color: white;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 720px;
+}
+
+.container h1 {
+  font-size: 50px;
+  font-family: Arial;
+}
+
+.container h2 {
+  font-size: 18px;
+  font-family: cursive, helvetica, sans-serif;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.container img {
+  max-width:100%; max-height:100%;
+}
+
+.container p {
+  margin: 15px;
+}
+
+.container .main {
+  padding: 15px;
+}
+
+ul {
+  overflow: auto;
+}
+
+li {
+  float: left;
+  display: inline;
+  width: 25%;
+}

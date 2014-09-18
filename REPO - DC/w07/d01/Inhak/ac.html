@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; Javascript</title>
+</head>
+<body>
+  <script type= 'text/javascript'>
+    var currTemp = prompt("What is the current temperature?");
+    var functional = prompt("Is the AC functional?").toLowerCase();
+    var desireTemp = prompt("what temperature do you want it to be?");
+    if ( functional === "yes" && currTemp > desireTemp ) {
+      console.log("Turn on the AC please")
+    } else if ( functional === "no" && currTemp > desireTemp ) {
+      console.log("Fix the AC now, it's not!")
+    } else if ( functional === "no", currTemp < desireTemp ) {
+      console.log("Fix the AC when you get the chance.")
+    } else {
+      console.log("error")
+    }
+
+
+  </script>
+</body>
+</html>

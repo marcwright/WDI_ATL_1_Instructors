@@ -1,0 +1,31 @@
+<div class="toolbar" id="toolbar">
+  <h1>Watch.io</h1>
+
+  <h2>Find Movies</h2>
+  <div class="search" id="search">
+    <form>
+      <input type="search" name="search" placeholder="Search for a movie...">
+      <button>Search</button>
+    </form>
+    <label class="search-results" id="search-results">
+      Search Results
+      <select name="search-results">
+      </select>
+    </label>
+  </div>
+
+  <h2>My Movie Watchlist</h2>
+  <ul class="watchlist" id="watchlist">
+  </ul>
+
+</div>
+<div class="main" id="main">
+  <noscript>This application requires JavaScript.</noscript>
+
+</div>
+
+<%= requirejs_include_tag %>
+<script>
+  require.config({urlArgs: 'bust='+ Date.now()});
+  require(['watchio/main']);
+</script>

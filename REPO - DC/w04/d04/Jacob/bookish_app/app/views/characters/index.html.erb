@@ -1,0 +1,11 @@
+<h1>Here are the characters in <%= @book.title %>.</h1>
+
+<% @characters.each do |character| %>
+  <ul>
+    <li>
+      <a href="/books/<%= character.book_id %>/characters/<%= character.id %>"><%= character.name %></a>
+    </li>
+  </ul>
+<% end %>
+
+<a href="/books/<%= @book.id %>/characters/new">Add a character</a>

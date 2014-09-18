@@ -1,0 +1,19 @@
+<h1>Edit <%= @hero.name %></h1>
+
+<%= form_for @hero do |f| %>
+  <%= f.lable :name %>
+  <%= f.text_field :name %>
+
+  <%= f.lable :secret_identity %>
+  <%= f.text_field :secret_identity %>
+
+  <%= f.lable :image_url %>
+  <%= f.text_field :image_url %>
+
+
+
+<% end %>
+
+<!-- Hero Delete -->
+
+<!-- Cancel -->

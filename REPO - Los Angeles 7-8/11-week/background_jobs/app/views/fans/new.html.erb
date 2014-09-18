@@ -1,0 +1,73 @@
+<!-- <h1>New fan</h1> -->
+
+<%#= render 'form' %>
+
+<%#= link_to 'Back', fans_path %>
+
+<div class="container">
+  <style type="text/css">
+  .landing {
+  	color: #FFF;
+  	background: rgba(0, 0, 0, .6);
+  	width: 600px;
+      margin: 0 auto;
+    padding: 80px;
+    -webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+  }
+  .bg-stretch {
+  	background-image: url("/assets/cat-waiting.jpg") !important;
+  	background-repeat: no-repeat !important;
+  	background: url(/assets/background.jpg) no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 100%;
+  	height: 100%;
+  	margin: 0;
+  	padding: 0;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+      z-index: -1;
+  }
+  </style>
+  <div id="user_nav">
+  </div>
+  <div class="bg-stretch"></div>
+  <br>
+  <br>
+  <br>
+  <div class="hero-unit landing">
+    <center>
+      <h1>KITTY FAN MAILER</h1>
+      <h2>Help out real, live, lonely indoor kitties by sending them fan mail!</h2>
+             
+          <p>Sign up to help out bored & lonely cats everywhere...</p>
+
+					<%= form_for(@fan) do |f| %>
+					  <% if @fan.errors.any? %>
+					    <div id="error_explanation">
+					      <h2><%= pluralize(@fan.errors.count, "error") %> prohibited this fan from being saved:</h2>
+
+					      <ul>
+					      <% @fan.errors.full_messages.each do |msg| %>
+					        <li><%= msg %></li>
+					      <% end %>
+					      </ul>
+					    </div>
+					  <% end %>
+
+					  <div class="field" style="margin-top: 50px">
+					    <%= f.text_field :email, placeholder: "Email Address", style: "color: #000" %>
+					  </div>
+					  <div class="actions" style="margin-top: 20px">
+					    <%= f.submit "Emeow now!", class: "btn btn-primary btn-large" %>
+					  </div>
+					<% end %>
+
+    </center>
+  </div>
+</div>

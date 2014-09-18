@@ -1,0 +1,17 @@
+== README
+
+RAILSCAFE4 demonstrates how to use a binary link file to connect two tables.
+
+Binary Link File AKA Junction File AKA ?
+
+The app was created by Richard and Lorin, starting with RAILSCAFE3 by Richard 
+and Lorin, which started with RAILSCAFE created by Meredith.
+
+The purpose of this app is to have as limited and pure implementation as possible
+to demonstrate many-to-many.
+
+However, RAILSCAFE3 from which it derives has an implementation of custom-params.
+The custom-params feature does not impact the same code as the many-to-many
+implementation.
+
+contact: Richard Grossman

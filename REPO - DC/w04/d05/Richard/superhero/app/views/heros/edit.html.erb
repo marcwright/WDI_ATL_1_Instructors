@@ -1,0 +1,18 @@
+<h1>Edit <%= @hero.name %></h1>
+
+<!-- Talks to _manage_form.erb -->
+<%= render "manage_form" %>
+
+<hr>
+
+
+<!-- Hero Delete -->
+
+<%= form_for @hero, method: 'delete' do |f| %>
+  <%= f.submit "Inhak's Mom" %>
+
+<% end %>
+
+<!-- Cancel -->
+
+<p><%= link_to "Cancel", @hero %></p>

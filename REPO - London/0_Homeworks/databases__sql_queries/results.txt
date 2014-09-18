@@ -1,0 +1,157 @@
+1. Selects the names of all products that are not on sale.
+
+select name from products where on_sale = 'f';
+Teddy Bear
+Cat Ears
+Card Against Humanity
+Set of 12 Mason Jars
+
+
+2. Selects the names of all products that cost less than £20.
+
+select name from products where price < 20;
+Teddy Bear
+The Ruby Programming Language
+Silicon Valley Monopoly
+Set of 12 Mason Jars
+
+
+3. Selects the name and price of the most expensive product.
+
+select name, price from products order by price desc limit 1;
+Cat Ears|99.99
+
+
+4. Selects the name and price of the second most expensive product.
+
+SELECT name, price FROM products ORDER BY price DESC LIMIT 1 OFFSET 1;
+Brown Leather Boots|82.0
+
+
+5. Selects the name and price of the least expensive product.
+
+select name, price from products order by price asc limit 1;
+Set of 12 Mason Jars|6.22
+
+
+6. Selects the names and prices of all products, ordered by price in descending order.
+
+select name, price from products order by price desc;
+Cat Ears|99.99
+Brown Leather Boots|82.0
+Lonely Pillow|78.82
+Card Against Humanity|25.0
+Hoodie|25.0
+Set of silverware|22.99
+The Ruby Programming Language|19.99
+Teddy Bear|17.99
+Silicon Valley Monopoly|10.99
+Set of 12 Mason Jars|6.22
+
+
+7. Selects the average price of all products.
+select avg(price) from products;
+38.899
+
+
+8. Selects the sum of the price of all products.
+select sum(price) from products;
+388.99
+
+
+9. Selects the sum of the price of all products whose prices is less than £20.
+select sum(price) from products where price < 20;
+55.19
+
+
+10. Selects the id of the user with your name.
+
+select id from users where name = 'Michael Pavling';
+14
+
+select id from users where name = 'Paul Varga';
+10
+
+
+11. Selects the names of all users whose names start with the letter "S".
+select name from users where name like 'S%';
+Samuel Hill
+Scott Gammon
+
+
+12. Selects the number of users whose first names are "Jonathan".
+
+select count(id) from users where name like 'Jonathan%';
+2
+
+
+13. Selects the number of users who want a "Teddy Bear".
+
+select count(u.id) from users u join wishlists w on u.id = w.user_id join products p on w.product_id = p.id where p.name = 'Teddy Bear';
+6
+
+
+14. Selects the count of items on the wishlish of the user with your name.
+
+select count(w.id) from wishlists w join users u on w.user_id = u.id where u.name = 'Michael Pavling';
+4
+
+select count(w.id) from wishlists w join users u on w.user_id = u.id where u.name = 'Paul Varga';
+5
+
+
+15. Selects the count and name of all products on the wishlist, ordered by count in descending order.
+
+select p.name, count(w.id) from wishlists w join products p on w.product_id = p.id group by p.id order by count(w.id) desc;
+Hoodie|18
+Card Against Humanity|16
+Cat Ears|15
+The Ruby Programming Language|9
+Teddy Bear|6
+Silicon Valley Monopoly|5
+Brown Leather Boots|4
+Lonely Pillow|2
+Set of 12 Mason Jars|2
+
+
+16. Selects the count and name of all products that are not on sale on the wishlist, ordered by count in descending order.
+
+select p.name, count(w.id) from wishlists w join products p on w.product_id = p.id where p.on_sale ='f' group by p.id order by count(w.id) desc;
+Card Against Humanity|16
+Cat Ears|15
+Teddy Bear|6
+Set of 12 Mason Jars|2
+
+
+17. Inserts a user with the name "Jonathan Anderson" into the users table. Ensure the created_at column is set to the current time.
+
+insert into users (name, created_at) values ('Jonathan Anderson', DateTime('now'));
+
+
+18. Selects the id of the user with the name "Jonathan Anderson"?
+
+select id from users where name = 'Jonathan Anderson';
+22
+
+
+19. Inserts a wishlist entry for the user with the name "Jonathan Anderson" for the product "The Ruby Programming Language".
+
+insert into wishlists (product_id, user_id, created_at) values ((select id from products where name ='The Ruby Programming Language'), (select id from users where name = 'Jonathan Anderson'), DateTime('now'));
+
+
+20. Updates the name of the "Jonathan Anderson" user to be "Jon Anderson".
+
+update users set name = 'Jon Anderson' where name = 'Jonathan Anderson';
+
+
+21. Deletes the user with the name "Jon Anderson".
+
+delete from users where name = 'Jon Anderson';
+
+
+22. Deletes the wishlist item for the user you just deleted.
+
+delete from wishlists where user_id not in (select id from users);
+
+select * from wishlists w left join users u on u.id = w.user_id where u.id is null;
+

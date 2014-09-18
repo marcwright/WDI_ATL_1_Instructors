@@ -1,0 +1,11 @@
+<h1>Superheros</h1>
+
+<ul>
+  <% @hero.each do |hero| %>
+  <li><%= link_to hero.name, hero %></li>
+  <% end %>
+</ul>
+
+<!-- Add a hero -->
+
+<p><%= link_to "Add a hero", new_hero_path %>

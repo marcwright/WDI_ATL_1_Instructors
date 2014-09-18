@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>Currency Converter &hearts;</title>
+</head>
+
+<body>
+  <script type='text/javascript'>
+// 1.6748 Price of 1 GBP in USD
+// "$NN is £NN"
+
+// dollarsToPounds = {
+//   pounds: 0.5971,
+//   conversion: function(dollars) {
+//     curr_calc = dollars * this.pounds;
+//     //console.log("$"dollars + " is worth " + " £"curr_calc);
+//     console.log(curr_calc);
+//   }
+// }
+
+var money_input = prompt('Desired conversion ammount:')
+function dollarsToPounds(dollars){
+  return (dollars / 1.675).toFixed(2);
+}
+
+function poundsToDollars(pounds){
+  return (pounds * 1.675).toFixed(2);
+}
+
+
+console.log('that is ' + dollarsToPounds(money_input) + ' in pounds');
+
+console.log('that is ' + poundsToDollars(money_input) + ' in pounds');
+
+
+  </script>
+</body>
+</html>

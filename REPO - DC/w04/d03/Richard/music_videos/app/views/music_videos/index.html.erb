@@ -1,0 +1,7 @@
+<h1>Music Videos</h1>
+<% @music_videos.each do |video| %>
+<a href="/music_videos/<%= video.id %>">
+<h2><%= video.title %> from <%= video.year %> by <%= video.artist %></h2></a>
+<% end %>
+
+<form action="/music_videos/new"><input type="submit" value="Add a song"></form>

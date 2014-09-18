@@ -1,0 +1,9 @@
+<h1>Book List</h1>
+
+<h2><%= @author.name %></h2>
+
+<% @books.find do |book| %>
+  <h2><%= book.title %></h2>
+  <p><%= book.release_date %></p>
+  <p><%= book.genre %></p>
+<% end %>

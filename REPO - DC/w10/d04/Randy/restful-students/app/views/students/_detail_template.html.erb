@@ -1,0 +1,27 @@
+<div class="header">
+  <button class="done" id="done">All Students</button>
+</div>
+<fieldset>
+  <label for="student-name">Student Name</label>
+  <input id="student-name" type="text" name="name" value="<%%=this.model.get('name')%>">
+</fieldset>
+<fieldset>
+  <label for="student-email">Email</label>
+  <input id="student-email" type="text" name="email" value="<%%=this.model.get('email')%>">
+</fieldset>
+<fieldset>
+  <label for="student-phone">Phone Number</label>
+  <input id="student-phone" type="text" name="phone" value="<%%=this.model.get('phone')%>">
+</fieldset>
+<fieldset>
+  <label for="student-location">Current Location</label>
+  <input id="student-location" type="text" name="location" value="<%%=this.model.get('location')%>">
+</fieldset>
+<fieldset>
+  <label for="student-employment">Employment Status</label>
+  <input id="student-employment" type="text" name="employment" value="<%%=this.model.get('employment')%>">
+</fieldset>
+<fieldset>
+  <button class="primary" id="save">Save</button>
+  <button class="danger" id="remove">Remove</button>
+</fieldset>

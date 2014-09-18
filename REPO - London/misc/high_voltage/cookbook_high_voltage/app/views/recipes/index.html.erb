@@ -1,0 +1,35 @@
+<h3>Recipe Search</h3>
+
+<%= search_form_for @q do |f| %>
+  <p>
+    <%= f.label :name_cont, "Recipe name contains" %>
+    <%= f.text_field :name_cont %>
+  </p>
+  <p>
+    <%= f.label :category_name_cont, "Category name contains" %>
+    <%= f.text_field :category_name_cont %>
+  </p>
+  <p>
+    <%= f.label :ingredients_name_cont, "Ingredient name contains" %>
+    <%= f.text_field :ingredients_name_cont %>
+  </p>
+
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<h2>Recipe Index</h2>
+<table>
+  <%= render @recipes %>
+</table>
+
+<div id="tag_cloud">
+  <% tag_cloud Recipe.tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, tagged_url(:tag => tag.name), class: css_class %>
+  <% end %>
+</div>
+
+<h3><%= link_to 'Add Recipe', new_recipe_path %></h3>

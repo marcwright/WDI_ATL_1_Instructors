@@ -1,0 +1,32 @@
+<h1> This is the Sign In Page </h1>
+<!--
+The flash here in the new form page will take the flash value that was determined
+in the session helper require_signin method and display that if the user was sent to
+the sign in page via a request while signed out, but will not show if the user went
+directly to the signin page.
+
+The form will then gather the necessary information (:name & :password) from the user
+and return those values to the session contoller for use in the create method.
+
+This relationship is determined by the form_for :sessions which says that the form
+information will be sent to the sessions#create route.
+
+NOTE: This form can and should be in a PARTIAL
+
+ -->
+
+<% flash.each do |name, message| %>
+  <%= content_tag :p, message, class:name %>
+  <% end %>
+
+<%= form_for :session, url: sessions_path do |f| %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+<%= f.submit 'Sign on In', id: 'signin' %>
+
+<% end %>

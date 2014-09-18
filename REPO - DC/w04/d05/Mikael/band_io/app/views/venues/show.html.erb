@@ -1,0 +1,8 @@
+<%= link_to "All Venues", venues_path %>
+
+<h1><%= @venue.name %></h1>
+<p><%= @venue.city %>, <%= @venue.state %></p>
+<p>This venue <% if @venue.allows_explicit_lyrics %>does<% else %>does not<% end %>allow explicit lyrics.</p>
+
+
+<p><%= link_to "Edit", edit_venue_path(@venue) %>

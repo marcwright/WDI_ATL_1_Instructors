@@ -1,0 +1,15 @@
+<div class="page">
+  <h1>Here are all the characters in <%= @book.title %></h1>
+
+  <ul>
+    <% @characters.each do |character| %>
+      <li><a href="/books/<%= character.book_id %>/characters/<%= character.id %>"><%= character.name %></a></li>
+    <% end %>
+  </ul>
+
+  <p><a href="/books/<%= @book.id %>/characters/new">Add a Character</a></p>
+  <p><a href="/books/<%= @book.id %>">Back to <%= @book.title %></a></p>
+
+  <p><a href="/books">All Books</a></p>
+  <p><a href="/">Home</a></p>
+</div>

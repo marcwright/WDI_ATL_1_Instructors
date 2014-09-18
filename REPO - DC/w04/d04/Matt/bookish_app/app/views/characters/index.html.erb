@@ -1,0 +1,6 @@
+<h1>Characters</h1>
+<h2><a href="/books/<%= @author_id %>/characters/new">Add a character in this book&nbsp;&raquo;</a></h2>
+<hr>
+<% @characters.each do |character| %>
+  <li><a href="/books/<%= character.book_id %>/characters/<%= @character %>"><%= character.name %></a></a></li>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Cartoons Index</h1>
+
+<% @cartoons.each do |cartoon| %>
+<h2><a href="/cartoons/<%= cartoon.id %>"><%= cartoon.name %> &ndash; <%= cartoon.location %></a></h2>
+<img style="max-width: 220px;" src="<%= cartoon.image_url %>" alt="">
+<% end %>

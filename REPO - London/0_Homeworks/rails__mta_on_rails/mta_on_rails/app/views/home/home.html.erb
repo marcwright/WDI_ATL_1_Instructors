@@ -1,0 +1,33 @@
+
+<table>
+  <tr>
+    <th>Line</th>
+    <th>Stops</th>
+  </tr>
+  <% @mta.each do |line, stops| %>
+  <tr>
+    <td><%= line %></td>
+    <td><%= stops.to_sentence %></td>
+  </tr>
+  <% end %>
+</table>
+
+<h2>Your Journey</h2>
+<section>
+
+  <form action='/' method='get'>
+    start train : <input name='start_train'><br>
+    start stop : <input name='start_stop'><br>
+    end train : <input name='end_train'><br>
+    end stop : <input name='end_stop'><br>
+    <input type='submit'>
+  </form>
+
+</section>
+
+
+<% if @total_length_of_trip %>
+<p>
+  Your trip length is <%=@total_length_of_trip%> stops.
+</p>
+<% end %>

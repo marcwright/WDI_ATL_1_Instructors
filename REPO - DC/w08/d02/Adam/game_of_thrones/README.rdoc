@@ -1,0 +1,15 @@
+Create a new Rails app (use -T -d postgresql)
+
+One model: Character
+  - name, string, not null
+  - dead, boolean, default to false
+
+Create the AR Model
+
+Test the Model in the Rails Console to make sure it works
+
+Seed the database with ~3 characters
+
+Create a route for the root which goes to characters index
+
+Create a controller and view so that we can see all the characters on the index page in a ul (each character name should be in an li)

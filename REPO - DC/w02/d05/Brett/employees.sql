@@ -1,0 +1,8 @@
+CREATE TABLE employees(
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  age INTEGER NOT NULL,
+  title VARCHAR(50) NOT NULL,
+  badge_number INTEGER UNIQUE NOT NULL
+);

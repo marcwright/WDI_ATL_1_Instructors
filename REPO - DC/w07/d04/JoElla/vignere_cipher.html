@@ -1,0 +1,46 @@
+
+
+<html>
+
+hi
+
+  <script>
+
+var alphabet = ["a", "b", "c", "d", "e", "f", "g",
+    "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+    "u", "v", "w", "x", "y", "z"];
+
+var wordIndex = [];
+
+var fakeWord = 'lemon';
+
+var lemonizedWordArray = [];
+var lemonizedWord = lemonizedWordArray.join('');
+
+
+//give letter a numeric value corresponding to its index
+function getIndex(word){
+  for( i = 0; i < word.length; i++){
+    wordIndex.push(alphabet.indexOf(word[i]));
+  }
+}
+
+function lemonize(word){
+  for( i = 0; i < word.length; i++){
+    lemonizedWordArray.push(fakeWord[i]);
+  }
+}
+
+
+
+
+
+
+
+
+  </script>
+</html>
+
+<!-- var letterIndex = alphabet.indexOf(word[i]);
+    wordIndex.push(letterIndex); -->
+<!-- lemonizedWord.push(fakeWord[i]); -->

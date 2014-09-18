@@ -1,0 +1,8 @@
+<h1>Which ride would you like to go on?</h1>
+<ul>
+<% @coaster.each do |coaster| %>
+<li>
+  <a href="/coasters/<%=coaster.id%>"><%= coaster.name %>
+  <% end %>
+</li>
+</ul>

@@ -1,0 +1,6 @@
+<%= link_to "All Venues", venues_path %>
+
+<h1><%= @band.name %></h1>
+<p><%= @band.genre %></p>
+<p>This band <% if @band.explicit_lyrics %>does<% else %>does not<% end %>have explicit lyrics.</p>
+

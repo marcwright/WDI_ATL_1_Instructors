@@ -1,0 +1,52 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-06-07 08:17:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-06-07 11:42:48
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tic-Tac Toe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="game-result" data-ui="result">Play on!</div>
+
+  <table class="game-board">
+    <tr class="board-row">
+      <td class="square" data-ui="1"></td>
+      <td class="square" data-ui="2"></td>
+      <td class="square" data-ui="3"></td>
+    </tr>
+    <tr>
+      <td class="square" data-ui="4"></td>
+      <td class="square" data-ui="5"></td>
+      <td class="square" data-ui="6"></td>
+    </tr>
+    <tr>
+      <td class="square" data-ui="7"></td>
+      <td class="square" data-ui="8"></td>
+      <td class="square" data-ui="9"></td>
+    </tr>
+  </table>
+
+  <ul class="game-options">
+    <li><button data-ui="newgame">New Game</button></li>
+  </ul>
+
+  <script src='js/ttt/utils.js'></script>
+  <script src='js/ttt/model.js'></script>
+  <script src='js/ttt/view.js'></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
+  <script>
+    var model = new TTT();
+    var game = new TTTView( model );
+  </script>
+</body>
+</html>

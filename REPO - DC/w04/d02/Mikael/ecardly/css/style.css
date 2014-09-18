@@ -1,0 +1,56 @@
+body {
+  background-color: #d6d6d6;
+  color: #000000;
+
+}
+
+.page .header {
+  background-image: url("../images/background.jpg");
+  height: 165px;
+  margin: 0 0 75px 0;
+  text-align: center;
+}
+
+.page .main {
+  background-color: white;
+  float: left;
+  margin: 0 20px 0 300px;
+  padding: 15px;
+  width: 600px;
+}
+
+.page a {
+  color: #cc6633;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.page .download {
+  text-transform: uppercase;
+}
+
+.complementary {
+  background-color: white;
+  float: left;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+
+}
+
+.complementary ul {
+  text-align: left;
+}
+
+.complementary img {
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.footer {
+  clear: both;
+  padding: 20px;
+  text-align: center;
+}
+

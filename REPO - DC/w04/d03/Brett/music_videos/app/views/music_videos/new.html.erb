@@ -1,0 +1,29 @@
+<h1>Add a rad Music Video</h1>
+
+<form action="/music_videos" method="post">
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+  <label>
+    Title:
+    <input type="text" name="title">
+  </label>
+
+  <label>
+    Artist:
+    <input type="text" name="artist">
+  </label>
+
+  <label>
+    Year:
+    <input type="integer" name="year">
+  </label>
+
+  <label>
+    Video URL:
+    <input type="text" name="video_url">
+  </label>
+
+  <input type="submit" value="Add Video">
+
+</form>

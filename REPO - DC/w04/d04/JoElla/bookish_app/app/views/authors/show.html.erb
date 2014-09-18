@@ -1,0 +1,11 @@
+<h1>Author Profile</h1>
+<ul>
+  <li><%= @author.name %></li>
+  <li><%= @author.gender %></li>
+</ul>
+
+<form action="/authors/<%= @author.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>I'd rather not have this author around.</button>
+</form>

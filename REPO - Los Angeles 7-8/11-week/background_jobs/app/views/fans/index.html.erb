@@ -1,0 +1,27 @@
+<h1>Listing fans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fans.each do |fan| %>
+      <tr>
+        <td><%= fan.email %></td>
+        <td><%= link_to 'Show', fan %></td>
+        <td><%= link_to 'Edit', edit_fan_path(fan) %></td>
+        <td><%= link_to 'Destroy', fan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fan', new_fan_path %>

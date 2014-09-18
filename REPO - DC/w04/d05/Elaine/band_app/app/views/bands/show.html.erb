@@ -1,0 +1,19 @@
+<!-- All Superheros Link -->
+<%= link_to "All Bands",bands_path %>
+
+<h1>Band: <%= @band.name %></h1>
+<p><b>Genre: </b><%= @band.genre %></p>
+
+<p><b>Has explicit lyrics: </b><%= @band.explicit_lyrics == true ? "Yes" : "No" %></p>
+<p><b>Video: </b></p>
+
+<p><iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/<%= @youtube_id %>" frameborder="0" allowfullscreen></iframe></p>
+
+
+<!-- Hero Image -->
+
+
+<!-- Hero Edit link -->
+<p><%= link_to "Edit", edit_band_path(@band) %></p>
+<p><%= link_to "Add an Event", new_band_path(@band) %></p>
+<p><%= link_to "Home", root_path %></p>

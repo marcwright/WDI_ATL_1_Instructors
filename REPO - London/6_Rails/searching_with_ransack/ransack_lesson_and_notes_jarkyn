@@ -1,0 +1,367 @@
+##Search with plain Rails
+
+We started of with recalling an example of doing search natively in the cookbook homework:
+
+We defined class method .search in the recipe model:
+
+```
+class Recipe < ActiveRecord::Base
+  attr_accessible :category_id, :description, :instructions, :name
+  belongs_to :category
+  has_and_belongs_to_many :ingredients
+
+  def self.search(query)
+    where("name like ?", "%#{query}%") 
+  end
+end
+```
+
+this method generates and returns an SQL for a wild card query on a 'name' column of recipes table.
+
+and we have the search form in the recipe's index view:
+
+```
+<%= form_tag(recipes_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+   <div class="input-append">
+     <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search Articles" %>
+         <button class="btn" type="submit"><i class="icon-search"></i></button>
+    </div>
+<% end %>
+```
+
+
+this form submits user's query with the params[:search] to '/recipes'. Ituses a GET request, which goes to the index action of recipes controller
+
+in Recipes Controller if we have params[:search], ie if someone submitted the form we will set @recipes based on the query
+
+```
+def index
+    if params[:search]
+      @recipes = Recipe.search(params[:search]).order("created_at DESC")
+    else
+      @recipes = Recipe.order("created_at DESC")
+    end
+  end
+
+```
+
+And this is an example of how we would implement search just relying on functionality of Rails.
+Now, imagine we wanted to allow users to search through other columns within our table
+also
+
+And what about searching through associated models' tables...
+
+How about allowing user to choose which columns or combinations of those columns they want to search through
+
+You can see how rapidly the complexity of the task grows.
+The good thing is that we do have tools to help us get there faster. Ransack is one of them.
+
+### Starter app overview
+
+Lets setup the app:
+
+- _download zip provided_ (this was attached in hipchat)
+
+- _unzip into classwork folder_
+
+- _rake db:migrate, rake db:seed_
+
+Lets get familiar with the app
+
+If we look at the models in the starter app provided you can see an Article model belongs_to class Person via :author and moderator:
+
+```
+class Article < ActiveRecord::Base
+  belongs_to :author, class_name: 'Person'
+  belongs_to :moderator, class_name: 'Person'
+  attr_accessible :content, :published_at, :title, :author_id, :moderator_id
+
+  ...
+
+end
+```
+
+this just means that Article class has 2 associations to class Person, so if __a__ is an instance of Article we can call on our associations like so:
+```
+a.author # this will return associated Person object
+
+a.moderator # this will also return associated Person object
+```
+
+here's our Person model:
+
+```
+class Person < ActiveRecord::Base
+  attr_accessible :account_number, :dob, :name, :title
+  has_many :articles, foreign_key: :author
+  ...
+end
+```
+
+for the purpose of this lesson we only need an articles controller, which is a standard CRUD controller, nothing different there.
+
+and, finally, this is what we have in our index view at the moment:
+
+
+```
+	<h1>Articles</h1>
+
+	<ul>
+  		<% @articles.each do |article| %>
+    	<li>
+      		<%= article_row(article) %>
+    	</li>
+  		<% end %>
+	</ul>
+```
+
+### Including ransack
+
+Now let's get to the meat of it.
+
+in Gemfile:
+
+```
+gem 'ransack'
+```
+
+then in the command line run: 
+
+_bundle_
+
+_rbenv rehash_
+
+Now we should be able to use all the power of ransack
+
+Key features:
+
+- search through one or more columns on the model
+- we can search through columns of associated models too
+- sorting
+
+
+### Setting up controller action
+
+Let's make sure that our controller is prepared for accepting queries.
+
+I want the search form to be on the index page and results to display there as well, so user's query will come to the index action of article's controller, so we need to implement ransack functionality there; this is what it currently looks like:
+
+```
+def index
+  @articles = Article.all    
+end
+```
+and if I hit '/articles' route all articles will be displayed, nothing new there
+
+we will modify this index action:
+
+```
+def index
+  @q = Article.search(params[:q])
+  @articles = @q.result(distinct: true)
+end
+```
+
+shortly we will build the ransack enabled search form, and that form will be sending the attributes within the params hash, under a _:q_ key. (the key is set by ransack, we can't use any other key to access the attributes sent by the ransack form)
+
+so when the params reaches controller we are calling ransack's .search on the model we are searching through:
+
+```
+@q = Article.search(params[:q])
+```
+
+Here we are setting the _@q_ instance variable, which would hold the search object returned by ransack.
+
+and then we are setting @articles variable to store the result of the query:
+
+```
+@articles = @q.result(distinct: true)
+```
+
+here we are passing in the option into the .result method, this will generate a SELECT DISTINCT sql query. This is optional and mostly useful for querying join tables, which can at times return duplicate results. 
+(caveat from ransack: using SORT with SELECT DISTINCT on a JOIN TABLE within ransack will error for most databases as an invalid SQL, this is however not that common)
+
+### Setting up form
+
+Now, lets build the form in out index view:
+
+```
+<%= search_form_for @q do |f| %>
+  <p>
+    <%= f.label :title_cont %>
+    <%= f.text_field :title_cont %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+```
+
+here we are using ransack's helper method _search_form_for_, and passing the search object @q into it. This sets up our form's action and method and also set's up a key :q within params where the info submitted via the form will be available.
+
+lets look at the set up for the search field (a text input):
+
+<%= f.text_field :title_cont %>
+
+we are passing :title_cont to the form builder
+
+this is telling ransack that we want to search through the _title_ column entries on our model's table and the type of search we are using is _contains_ (the wildcard search); 
+so anything in the title column that contains what user submits will be returned as a result of the search. Ransack is generating the SQL command which is then run on our model.
+so after the search is performed and our index is re-rendered the @articles is containing the result of the search and only these are displayed:
+
+
+
+### Searching through associations
+
+do you remember how we had to do joins in SQL to look through associated records, now we can just take advantage of simple ransack syntax to perform searches on the associations of our model.
+
+one of the associations on our Article model is belongs_to :author; 
+_author_ is our association, meaning we can call .author on an instance of Article and this would return a Person class object associated to it.
+
+so if a predicate for searching through the current model just needs a column name in front of itself, to search through our association the predicate needs the name of the association (_author_) and then column name (_name_) so to look through the names on the author association this is what we need to pass into the form builder:
+
+```
+	<p>
+    	<%= f.label :author_name_start %>
+    	<%= f.text_field :author_name_start %>
+  	</p>
+```
+
+### _predicates
+
+predicates allow us to specify the type of search, depending on what we want, do we want an exact match, or somehting that only contains the query string etc
+
+Ransack has a lot of _predicates_, so its easy to have variety of searches. The one we just used for author association is a __start_ predicate, so it looks for all entries that start with the string that was submitted through the form.
+
+you can find list of predicates here: 
+https://github.com/activerecord-hackery/ransack/wiki/Basic-Searching
+
+
+### Combining columns
+
+we can combine columns to search through using _or_:
+
+```
+	<p>
+    	<%= f.label :title_or_content_cont %>
+    	<%= f.text_field :title_or_content_cont %>
+  	</p>
+```
+this would search through both _title_ and _content_ columns 
+(note that seed data in of the starter app didn't have content filled in for articles, only the title, so if you were to run this you won't see any difference atm)
+
+### Sorting
+This is a super easy way to create a sort link:
+
+all we need to do is to add this to the index.html.erb:
+
+```
+	<button><%= sort_link @q, :title %></button>
+	<button><%= sort_link @q, :published_at %></button>
+```
+
+here we are passing our search object to the _sort_link_ helper available from ransack, and we also indicate the column that we want to sort by; in this case I am creating two links: one to sort by title, the other to sort by published date.
+
+### Dynamic search fields
+
+One of the ransack's advanced features is that we can give power to the user, by allowing them to choose which of the model columns they want to search through. The idea is that ransack will help us generate columns of a model table as a select box, so that user can pick the column(s) they want to search through.
+
+This is how we do it:
+
+in articles_controller add a line:
+
+```
+	def index
+	    ...
+	    @q.build_condition
+	end
+```
+
+and the form in index.html.erb will now look more complex:
+
+
+```
+	<%= search_form_for @q do |f| %>
+		# this is 
+		<%= f.condition_fields do |c|%>
+	    <div class="field">
+	    # this is building the select option for all attributes of the model we working with:
+	    <%= c.attribute_fields do |a| %> 
+	        <%= a.attribute_select %>  	      		<% end %>
+	  # this gives us the select options for types of searches (predicates):
+	    <%= c.predicate_select %> 
+      	<%= c.value_fields do |v| %>
+        	<%= v.text_field :value %>
+      	<% end %>
+	    </div>
+	    <% end %>
+	  <%= f.submit %>
+	<% end %>
+```
+
+### Advanced mode
+
+What you should end up with now are the dynamically generated search fields for each columns of the model Article.
+We can even extend this further and build in dynamic fields for the asociations too, we just need to tweak the form slightly:
+
+
+```
+	<%= search_form_for @q do |f| %>
+		...
+		...
+	        <%= a.attribute_select, associations: [:author] %>  
+	  	... 
+	  	...
+	<% end %>
+```
+
+Once you have done that you should see that among the select options you will see the columns of the associated model.
+
+This is great, we can give the power to the user and allow them to have their own custom search.
+
+There's one issue with this: our form is making a GET request to articles#index. And GET requests were not designed to carry a lot of queries with them, therefore to be able to carry all of the information submitted with the dynamic setup we need to change the request into the POST. Here's what we need:
+
+in the routes.rb:
+
+```
+	match 'search', to: 'articles#search', via: [:get, :post], as: :search
+```
+
+in articles_controller we add a method that handles the post to '/search' and then executes index action:
+
+```
+    def search
+      index
+      render :index
+    end
+```
+
+in the index.html.erb we need to tweak the form:
+
+```
+    <%= search_form_for @q, url: search_articles_path, html: {:method => :post} do |f| %>
+    ...
+    ...
+```
+
+
+So now we can be certain that we can handle user's extensive searches. This is only necessary for the dynamic searches as we don't know how much the user might include. If you pre-define the search fields as we did initially it won't be necessary to change the request to POST.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

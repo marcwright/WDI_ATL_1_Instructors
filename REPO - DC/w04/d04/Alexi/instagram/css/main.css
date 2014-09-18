@@ -1,0 +1,33 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  background: url("../images/bgtile.png") repeat-x;
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0px;
+}
+
+.page {
+  margin: 0 auto;
+  width: 800px;
+
+}
+
+.main {
+  background: url("../images/frame.png") no-repeat;
+  min-height: 284px;
+  padding: 40px;
+  width: 424px;
+}
+
+.main h2 {
+  margin-top: 0px;
+
+}
+
+.page img {
+  width: 260px;
+}

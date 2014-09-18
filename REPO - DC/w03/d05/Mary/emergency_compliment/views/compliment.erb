@@ -1,0 +1,7 @@
+<h1>
+<% if @name != nil %>
+<%= @name %>,  <%= @compliments.sample.downcase %>
+<% else %>
+<%= @compliments.sample %>
+<% end %>
+</h1>

@@ -1,0 +1,26 @@
+<h1>Songs</h1>
+
+<form>
+  <fieldset>
+    <legend>New Song</legend>
+    <label>
+      Title
+      <input type="text" name="title">
+      <input type="submit" value="Save">
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+<% @songs.each do |song| %>
+  <li data-song-id= "<%= song.id %>">
+    <%= song.title %>, by <%= song.artist %><br>
+    <% if song.preview_url %>
+      <audio controls>
+        <source src="<%= song.preview_url %>">
+      </audio>
+      <span>&times;</span>
+    <% end %>
+  </li>
+<% end %>
+</ul>

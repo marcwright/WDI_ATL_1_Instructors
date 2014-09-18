@@ -1,0 +1,108 @@
+/*
+
+Style Hints:
+
+Body Font Size = 14px
+	 Font Family = "Times New Roman", serif
+	 Font Color = black
+	 Background: #F3EBE9
+
+H1 Font Size = 50px
+   Font Family = Arial, Helvetica, sans-serif
+   Text-transform: uppercase;
+   color: #FFFFFF;	(White)
+
+H2: Font Size = 18px
+	Text-Transform: uppercase;
+	Font-Family: cursive, Helvetica, sans-serif;
+
+*/
+
+/* Portfolio Master Styles */
+
+body {
+  background: url('../images/pattern1.png') no-repeat;
+  background-size: cover;
+  font: 14px/1.4em;
+  font-family: 'Varela Round', sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.2em;
+  margin: 10px;
+}
+
+small {
+  color: black;
+  display: block;
+  font-size: 15px;
+}
+
+
+/* Portfolio Classes */
+
+.container {
+  background: rgba(255,255,255,0.85);
+  display: block;
+  margin: 20px auto 20px;
+  max-width: 980px;
+  width: 60%;
+}
+
+.header {
+  background: rgba(202, 34, 31, 0.95);
+  padding: 10px 5px 20px;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.main {
+  padding: 20px 10px;
+}
+
+.main h2 {
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  font-size: 24px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.main img {
+  border: 3px solid grey;
+  margin-top: 5px;
+  max-width: 173px;
+  padding: 1px;
+}
+
+.main .img-container {
+  display: block;
+  margin-right: auto;
+  margin-right: auto;
+}
+
+.footer {
+  background: rgba(202, 34, 31, 0.95);
+  padding: 10px 5px 20px;
+  color: white;
+  text-align: right;
+}
+
+.footer p {
+  padding: 0 10px;
+}
+
+.footer a {
+  background: rgba(0,0,0,0.4);
+  color: white;
+}
+
+.footer a:hover

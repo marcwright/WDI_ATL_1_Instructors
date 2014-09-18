@@ -1,0 +1,15 @@
+body {
+  font-family: 'Helvetica';
+}
+
+button {
+  color: white;
+  background: black;
+  border: none;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+
+}

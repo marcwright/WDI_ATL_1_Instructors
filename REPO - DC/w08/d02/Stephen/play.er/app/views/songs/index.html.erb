@@ -1,0 +1,31 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-06-10 11:41:55
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-06-10 17:23:33
+
+ -->
+
+<h1>all songs you're considering</h1>
+
+<form>
+  <fieldset>
+    <legend>new song</legend>
+    <label>
+      title
+      <input type="text" name="title" id="title">
+      <input type="submit" value="add it!">
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li data-song-id='<%= song.id %>'>
+      <%= song.title %> by <%= song.artist %>
+      <audio controls><source src="<%= song.preview_url %>"></audio>
+      <span>bye bye</span>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,4 @@
+<% @entries.each do |entry| %>
+  <h2>Author: <%= entry.author %>.<br>Posted on <%= entry.date_taken %></h2>
+  <img src="<%= entry.photo_url %>" height=400px width=400px>
+<% end %>

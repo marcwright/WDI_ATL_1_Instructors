@@ -1,0 +1,11 @@
+
+
+<% if movie.title %>
+
+    <p><%= movie.title %></p>
+
+<% end %>
+
+<%= form_for song, method: 'delete' do |f| %>
+  <%= f.submit "Remove Song", id: "delete-song-#{song.id}" %>
+<% end %>

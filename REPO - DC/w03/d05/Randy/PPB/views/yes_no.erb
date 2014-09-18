@@ -1,0 +1,11 @@
+<h1><%= @yes_no_ques_array[@number] %></h1>
+
+<% if @number < 2 %>
+  <a href="/yes_no/<%= @number + 1 %>" >YES</a>
+  <a href="/done/<%= @number %> ">NO</a>
+
+<% elsif @number == 2 %>
+  <a href="/done/3" >YES</a>
+  <a href="/done/<%= @number %>" >NO</a>
+
+<% end %>

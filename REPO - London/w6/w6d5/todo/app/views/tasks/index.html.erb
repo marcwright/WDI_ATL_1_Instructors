@@ -1,0 +1,92 @@
+<div class="span3 left">
+
+  <div class = "logo">
+    <%=image_tag("ticklogo.png", alt: "Logo Image")%>
+  </div>
+  
+
+  <div class = "intro">
+
+    <br/>
+
+    <%=button_to 'New Task', new_task_path, { method: "get", class: "btn btn-large btn-info" } %>
+
+    <br/>
+
+    <%= form_tag tasks_path, method: :get, remote: true, id: :search_form do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+
+  </div>
+
+  <div class = "description">
+  </div>
+
+</div>
+
+<div class="span8 offset1 main">
+
+  <div class="row">
+
+    <div class="span4" id="tasks-list">
+
+      <div id="tasks-high">
+        <h3>High Priority</h3>
+        <ul>
+          <% @tasks_high.each do |task| %>
+            <li class="high" id="task_<%=task.id%>" data-task_id="<%=task.id%>"><%= link_to task.title.upcase, task %></li>
+          <% end %>
+        </ul>
+        <br />
+      </div>
+
+      <div id="tasks-medium">
+        <h3>Medium Priority</h3>
+
+        <ul>
+          <% @tasks_medium.each do |task| %>
+            <li class="medium"><%= link_to task.title.upcase, task %></li>
+          <% end %>
+      </ul>
+    </div>
+
+      <br/>
+
+      <div id="tasks-low">
+      <h3>Low Priority</h3>
+
+        <ul>
+          <% @tasks_low.each do |task| %>
+            <li class="low"><%= link_to task.title.upcase, task %></li>
+          <% end %>
+        </ul>
+      </div>
+      <br/>
+
+      <h3>Completed Tasks</h3>
+
+      <ul id="tasks-completed">
+        <% @tasks_completed.each do |task| %>
+            <li class="completed"><%= link_to task.title.upcase, task %></li>
+          </tr>
+        <% end %>
+      </ul>
+
+      <br/>
+    </div>
+
+    <div class="span4" id="tasks-today">
+
+      <h3>Tasks for Today</h3>
+      <ol>
+        <% @tasks_today.each do |task| %>
+          <li class="<%= task.priority.downcase %>"><%= link_to task.title.upcase, task %></li>
+        <% end %>
+      </ol>
+
+  </div>
+
+</div>

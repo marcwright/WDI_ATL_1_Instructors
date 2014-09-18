@@ -1,0 +1,26 @@
+Return all musicals
+  musicals = Musical.all
+
+Find the first musical in the table
+  musical = Musical.first
+
+Find a musical by its title
+  wicked = Musical.find_by(title: 'Wicked')
+
+Find all musicals composed by Richard Rodgers
+  Musical.where(composer: 'Richard Rodgers')
+  Musical.where("composer = 'Richard Rodgers'")
+
+Order the musicals by year
+  Musical.reorder('year')
+  Musical.order(:year)
+
+Descending
+  Musical.order(year: :desc)
+
+Final all musicals more recent than 1980
+  find = Musical.where('year > 1980')
+
+BONUS:
+Return a list of just the titles of the musicals (without using .map)
+  titles = Musical.select('title')

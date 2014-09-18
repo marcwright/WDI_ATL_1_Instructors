@@ -1,0 +1,21 @@
+<h1>Add a character to the book</h1>
+<form action="/books/<%= @book_id %>/characters" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <label>
+    Name:
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    Gender:
+    <input type="date" name="gender">
+  </label>
+
+  <label>
+    Quirk:
+    <input type="text" name="quirk">
+  </label>
+
+  <button>Add this character</button>
+</form>

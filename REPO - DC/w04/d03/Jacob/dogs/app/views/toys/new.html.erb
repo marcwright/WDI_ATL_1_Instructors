@@ -1,0 +1,11 @@
+<h1>form for creating a new toy</h1>
+<form action="/dogs/<%= @dog_id %>/toys" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity%>">
+  <label for="name-attribute">Name:</label>
+  <input id ="name-attribute" type="text" name="name">
+
+  <label for="photo-url-attribute">Photo URL:</label>
+  <input id="photo-url-attribute" type="text" name="photo_url">
+
+  <input type="submit" value="Create Toy">
+</form>

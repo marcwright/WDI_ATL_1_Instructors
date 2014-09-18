@@ -1,0 +1,42 @@
+body {
+  font: 100%/1.4 "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  background: #000;
+}
+
+.page {
+  border-radius: 2px;
+  width: 30em;
+  margin: 0 auto;
+  padding: 1em;
+  background: #fff;
+}
+
+ol {
+  margin-bottom: 0;
+}
+
+ol li {
+  margin-bottom: 0.5em;
+}
+
+ol img {
+  position: relative;
+  top: 0.3em;
+  margin-right: 0.5em;
+}
+
+h1 {
+  margin: 1em auto;
+  display: block;
+  width: 181px;
+  height: 100px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background:url(../images/logo.jpg);
+}
+
+h2 {
+  margin: 0 auto;
+  text-align: center;
+}

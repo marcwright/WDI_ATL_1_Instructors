@@ -1,0 +1,138 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+body {
+  background-color: #D8D8D8;
+  font-family: Georgia;
+}
+
+form {
+  float: left;
+}
+
+label {
+  padding-left: 10px;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 800px;
+}
+
+.container h1 {
+  font-family: 'Dosis', sans-serif;
+  text-transform: lowercase;
+}
+
+.content {
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.content a:hover {
+  background-color: #D8D8D8;
+}
+
+.content h1 {
+  text-align: right;
+}
+
+.content h2 {
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.content p {
+  text-align: right;
+}
+
+.content ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.content li {
+  font-size: 22px;
+  margin: 30px;
+}
+
+.footer {
+  color: #C0C0C0;
+  font-family: 'Dosis', sans-serif;
+  margin-top: 20px;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.header {
+  text-align: center;
+}
+
+.header li {
+  display: inline-block;
+  font-family: 'Dosis', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.header ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.header a {
+  color: #C0C0C0;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header .logo {
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  text-align: left;
+}
+
+.header .logo a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.video_embed {
+  margin: 25px;
+  margin-left: 0px;
+}
+
+input #state {
+  width: 10px;
+}

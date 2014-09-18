@@ -1,0 +1,44 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  background: url('../images/bgtile.png') repeat-x;
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+}
+
+button{
+background: linear-gradient(#1c5380, #06365f);
+border-radius: 5px;
+height: 33px;
+width: 100px;
+}
+
+
+.content{
+
+  margin: 0 auto;
+  width: 800px;
+}
+
+.header{
+
+
+  text-align: center;
+
+}
+
+
+.image_container {
+  float: left;
+
+.menu {
+  background: url('../images/frame.png') no-repeat;
+  min-height: 284px;
+  float: center;
+  min-width: 504px;
+}

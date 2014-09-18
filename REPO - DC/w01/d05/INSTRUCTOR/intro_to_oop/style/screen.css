@@ -1,0 +1,200 @@
+/* ---------------------------------------------------------------------
+RESET CSS
+Target Browsers: All
+Media Type: Screen
+Author: Eric Meyer
+URL: http://meyerweb.com/eric/tools/css/reset/
+Version: 2.0
+------------------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, embed, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q {	quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:-moz-placeholder {
+	color: #7b8186;
+	text-transform: uppercase;
+}
+::-webkit-input-placeholder {
+	color: #7b8186;
+	text-transform: uppercase;
+}
+html { overflow-y: scroll; }
+textarea { overflow: auto; }
+.oldie img { -ms-interpolation-mode: bicubic; }
+.clear { clear: both;}
+.nav li {
+    display:inline-block;
+    position:relative;
+}
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+/* ---------------------------------------------------------------------
+Presentation styles
+------------------------------------------------------------------------ */
+body {
+	background-color: #fff;
+	font: 32px/1.4em "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2 {
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin: 0 0 50px;
+}
+
+.section h1,
+.section h2 {
+	padding-top: 50px;
+}
+
+a {
+	color:#d84a49;
+}
+
+pre {
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: block;
+	font: 18px/1.4em Monaco, Consolas, 'Lucida Console', monospace;
+	margin: 50px 0;
+	padding: 25px;
+}
+
+code.js,
+code.html {
+	text-shadow: 1px 1px #fff;
+}
+
+code .cmt {
+	color: #999;
+}
+
+code .str {
+	color: #c5350c;
+}
+
+code .kwd,
+code .tag {
+	color: #2A4391;
+}
+
+strong {
+	color: #831518;
+	font-weight:bold;
+}
+
+b {
+	font-weight:bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 75px auto 0;
+	text-align: center;
+	width: 70%;
+}
+
+img.matte {
+	border: 1px solid #000;
+	margin: 0 10px;
+}
+
+img.right {
+	float: right;
+	margin: 50px;
+	margin-right: 0;
+	margin-top: 0;
+}
+
+.page {
+	background-color:#FFF;
+	margin:0 auto;
+	width:100%;
+}
+
+.slide {
+	height: 640px;
+	min-height: 640px;
+	padding: 80px 100px 0;
+	position: relative;
+}
+
+.slide p {
+	color:#999;
+}
+
+.slide ul {
+	list-style: outside disc;
+	margin: 25px 0 25px 0;
+	padding: 0 0 0 25px;
+}
+
+.slide ul li {
+	margin: 20px 0;
+	padding: 0;
+}
+
+.slide ul.tight li {
+	margin: 5px 0;
+}
+
+.slide.section {
+	background-color: #831518;
+	color: #fff;
+	text-align: center;
+}
+
+.section p {
+	color: #fff;
+}
+
+.code {
+	padding-top: 1px;
+}
+
+.code h2 {
+	margin: 25px 0;
+}
+
+.code pre {
+	margin: 0;
+	font-size: 16px;
+}

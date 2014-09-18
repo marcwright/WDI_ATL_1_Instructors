@@ -1,0 +1,17 @@
+<form action="/" method="get">
+  <label>
+    Stock Symbol:
+    <input type="text" name="symbol" placeholder="Enter ticker">
+    <input type="submit" value="Submit">
+  </label>
+</form>
+
+<% if @last_price %>
+  <h2><%= @stock_symbol %></h2>
+  <h2>Last Price: <%= @last_price %></h2>
+  <p>Today's High: <%= @high %></p>
+  <p>Today's Low: <%= @low %></p>
+  <p>Shares Outstanding: <%= @shares %></p>
+<% end %>
+
+<p><%= @error %></p>

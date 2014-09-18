@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Initials</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function nameToInitials(name) {
+        var collection = [];
+        var split_name = name.split(" ");
+        for (var i = 0; i < split_name.length; i++) {
+          collection.push(split_name[i][0]);
+        }
+        return collection.join(".") + ".";
+      }
+
+
+
+    </script>
+  </body>
+</html>

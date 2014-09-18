@@ -1,0 +1,12 @@
+<h1><%= @response_hash["Title"] %></h1>
+
+<img src="<%= @response_hash["Poster"] %>" alt="">
+<p><b>Year: </b><%= @response_hash["Year"] %></p>
+<p><b>Rating: </b><%= @response_hash["imdbRating"] %></p>
+<p><b>Plot: </b><%= @response_hash["Plot"] %></p>
+
+<form action="/movies" method="post">
+  <label>
+    <input type="submit" value="Save Movie">
+  </label>
+</form>

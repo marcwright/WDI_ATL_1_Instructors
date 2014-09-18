@@ -1,0 +1,14 @@
+/ displays the user's name
+- if @name
+  p.big Hello #{ @name },
+- else
+  p.big Hello,
+
+/ displays a random compliment
+p#compliment #{ @rand_compliment }
+
+/ form to submit new compliments to display
+form#compliment_submission[action="/add-compliment" method="post"]
+  label[for="input_compliment"] Submit a new compliment:
+  input#input_compliment[name="compliment" type="text" value=""]
+  input#submit_compliment[type="submit" value="Submit"]

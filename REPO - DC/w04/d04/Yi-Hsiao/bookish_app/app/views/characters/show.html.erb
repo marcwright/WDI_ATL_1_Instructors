@@ -1,0 +1,14 @@
+<h1><%= @character.name %></h1>
+<dl>
+  <dt>Gender:</dt>
+  <dd><%= @character.gender == "m" ? "Male" : "Female" %></dd>
+  <dt>Quirk:</dt>
+  <dd><%= @character.quirk %></dd>
+  <dt>Book Appearances:</dt>
+  <ul>
+    <% @character.books.each do |book| %>
+      <li><%= link_to book.title, book_path %></li>
+    <% end %>
+  </ul>
+</dl>
+<%= link_to "Edit #{@character.name}'s Info", edit_character_path(@character) %>

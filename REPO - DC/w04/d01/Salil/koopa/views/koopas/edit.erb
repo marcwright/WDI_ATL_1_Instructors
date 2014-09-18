@@ -1,0 +1,27 @@
+<h1> Edit <%= @koopa.name %> </h1>
+
+<form action="/koopas/<%= @koopa.id %>" method= "post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Name:
+      <input type="text" name="name" value="<%= @koopa.name %>">
+  </label>
+
+  <label>
+    Color:
+      <input type="text" name="color" value="<%= @koopa.color %>">
+  </label>
+
+  <label>
+    Does your Koopa have a shell?:
+      <input type="checkbox" name="has_shell" <%= @koopa.has_shell ? "checked" : "" %>>
+  </label>
+
+  <label>
+    Photo URL:
+      <input type="text" name="photo_url" value="<%= @koopa.photo_url %>">
+  </label>
+
+  <button>Submit</button>
+</form>

@@ -1,0 +1,19 @@
+<h1>Listing planets</h1>
+
+<table class="pure-table">
+  <tr>
+    <th>Name</th>
+    <th>Orbit</th>
+    <th>Image</th>
+    <th>Diameter</th>
+    <th>Mass</th>
+    <th>Galaxy</th>
+    <th></th>
+  </tr>
+
+<%= render @planets %>
+</table>
+
+<br />
+
+<%= link_to 'New Planet', new_planet_path %>

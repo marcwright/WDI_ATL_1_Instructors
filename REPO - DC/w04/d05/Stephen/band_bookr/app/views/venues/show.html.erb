@@ -1,0 +1,23 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:32:43
+
+ -->
+
+<h1><%= @venue.name %></h1>
+<p><%= @venue.city %>, <%= @venue.state %></p>
+<% if @venue.allows_explicit_lyrics %><p>
+
+  <p>Explicit lyrics are OK<p>
+
+<% else %>
+
+  <p>Explicit lyrics are not OK<p>
+
+<% end %>
+
+<!-- Edit -->
+<div class="edit"><%= link_to "Edit", edit_venue_path(@venue) %></div>

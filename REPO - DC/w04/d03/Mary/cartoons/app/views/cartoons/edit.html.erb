@@ -1,0 +1,27 @@
+
+  <h1>Edit <%= @cartoon.name %>!</h1>
+
+<form action='/cartoons/<%= @cartoon.id %>' method='post'>
+  <input type="hidden" name="_method" value="patch">
+  <input name="authenticity_token" type="hidden" value="<% form_authenticity_token %>" >
+
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @cartoon.name %>">
+  </label>
+  <br>
+  <label>
+    Location:
+    <input type="text" name="location" value=<%= @cartoon.location %>>
+  </label>
+<br>
+  <label>
+    ImageURL:
+    <input type="text" name="image_url" value="<%= @cartoon.image_url %>">
+  </label>
+<br>
+  <input type="submit" value="Edit <%= @cartoon.name %>!">
+
+
+</form>
+

@@ -1,0 +1,18 @@
+<p><img src="<%=@koopa.photo_url%>"></p>
+<h2>Name: <%= @koopa.name %></h2>
+<p>Color: <%= @koopa.color %></p>
+<p><%if @koopa.has_shell == true%>
+I gots a shell :)~
+<%else%>
+Shell-less in Seatle
+<%end%></p>
+
+<%if @koopa.has_shell != true%>
+  <form action="/koopas/<%= @koopa.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Koopa Kill!</button>
+  </form>
+<%end%>
+
+<a href="/koopas/<%= @koopa.id %>/edit">Update</a>
+<a href="/">Back</a>

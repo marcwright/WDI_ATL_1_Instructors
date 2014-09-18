@@ -1,0 +1,47 @@
+body {
+  background-color: grey;
+  background-image: url("http://upload.wikimedia.org/wikipedia/en/7/75/Comic_Art_-_Batman_by_Jim_Lee_%282002%29.png");
+  background-repeat: repeat-y;
+  font: 14px/1.4em Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+}
+
+.container h1 {
+  background-color: red;
+  color: white;
+  height: 120px;
+  line-height: 120px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.container h2 {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+.container h1,
+.container h2,
+.container p {
+  margin: 20px 0;
+  text-align: left;
+}
+
+
+.container img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container ul {
+  list-style-type: disc inside none;
+}

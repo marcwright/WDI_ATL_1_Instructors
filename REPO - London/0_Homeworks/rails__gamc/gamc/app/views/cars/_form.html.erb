@@ -1,0 +1,43 @@
+<%= form_for(@car) do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% @car.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <% [:red, :green, :gray, :black, :white, :blue].each do |colour|%>
+      <div style="background-color:<%= colour%>" class="color-show"></div>
+      <%= f.radio_button :colour, colour %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :max_speed %><br />
+    <%= f.number_field :max_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :released_year %><br />
+    <%= f.number_field :released_year %>
+  </div>
+  <div class="field">
+    <%= f.label :brand %><br />
+    <%= f.text_field :brand %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

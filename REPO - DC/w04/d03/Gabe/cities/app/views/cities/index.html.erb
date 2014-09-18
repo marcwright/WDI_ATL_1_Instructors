@@ -1,0 +1,5 @@
+<h1>Here are all of the cities!</h1>
+<% @cities.each do |city| %>
+<h2><%= city.name %> has an average starting salary for Ruby developers of $<%= city.avg_salary %>.</h2><hr>
+<a href="cities/<%= city.id %>"><img src="<%= city.image_url %>" width="400px" height="300px"></a>
+<% end %>

@@ -1,0 +1,36 @@
+body {
+  background: #000 url('../images/cat-riding-unicorn.jpg') no-repeat;
+  background-size: 100% auto;
+  color: #FFF;
+  font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+.page {
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 10px;
+  padding: 25px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+hr {
+  margin: 50px 0;
+}

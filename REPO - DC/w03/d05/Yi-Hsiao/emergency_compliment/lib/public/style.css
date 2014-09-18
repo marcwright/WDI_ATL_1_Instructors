@@ -1,0 +1,40 @@
+body {
+  color: rgb(31, 31, 31);
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  width: 1280px;
+}
+
+.big {
+  font-size: 64px;
+  margin: 64px;
+}
+
+#compliment {
+  font-size: 128px;
+  line-height: 128px;
+  margin: 0 64px;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  margin: 64px;
+}
+
+#input_compliment {
+  width: 640px;
+  font-size: 16px;
+  padding: 8px;
+  margin: 0 16px;
+}
+
+#submit_compliment {
+  font-size: 16px;
+  background: rgb(127, 127, 127);
+  color: rgb(255, 255, 255);
+  border: 0;
+  padding: 8px;
+}
+

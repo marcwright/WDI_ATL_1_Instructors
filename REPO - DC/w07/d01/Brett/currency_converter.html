@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>Currency Converter</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function dollarsToPounds(dollars) {
+      return console.log("$" + dollars + " is £" +  (dollars * 0.5971).toFixed(2));
+    };
+
+    function poundsToDollars(pounds) {
+      return console.log("£" + pounds + " is $" +  (pounds / 0.5971).toFixed(2));
+    };
+
+    function currencyConverter(old_curr, new_curr, amount) {
+      var old_curr = prompt("What currency do you have?");
+      var new_curr = prompt("What currency would you like to convert to?");
+      var amount = prompt("How much would you like to convert?")
+      if (old_curr === "dollars" && new_curr === "pounds") {
+        return dollarsToPounds(amount);
+      } else {
+          return poundsToDollars(amount);
+      }
+    }
+  </script>
+</body>
+</html>

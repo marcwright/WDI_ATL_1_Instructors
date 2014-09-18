@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  planet_id: 1
+  is_solid: false
+
+two:
+  name: MyString
+  planet_id: 1
+  is_solid: false

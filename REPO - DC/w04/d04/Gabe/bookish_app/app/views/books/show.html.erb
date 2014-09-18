@@ -1,0 +1,22 @@
+<center><h1>Book Details:</h1>
+<h2>
+</center><%= @book.id %>)<center><br>
+
+Title: <b><%= @book.title %></b><br>
+Release Date: <b><%= @book.release_date %></b><br>
+Genre: <b><%= @book.genre %></b><br>
+
+
+</h2>
+</center>
+
+<hr>
+<a href="/authors"><button>Back to all Authors</button></a>
+<a href="/authors/<%= @book.author_id %>/books"><button>Back to all Books</button></a>
+<hr>
+<a href="/authors/<%= @book.author_id %>/books/<%= @book.id %>/edit"><button>Edit this Book</button></a>
+<a href="/authors/<%= @book.author_id %>/books/<%= @book.id %>/delete"><button>Delete this Book</button></a>
+<hr>
+<a href="/books/<%= @book.id %>/characters"><button>See Characters of this Book</button></a>
+
+<hr>

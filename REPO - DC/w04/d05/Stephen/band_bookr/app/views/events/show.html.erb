@@ -1,0 +1,15 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-16 10:11:56
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 21:22:31
+
+ -->
+
+<h1><%= @event.to_s %></h1>
+<h2><%= @event.date %> at <%= @event.time.strftime("%I:%M%p")  %></h2>
+
+<!-- Edit -->
+<p><%= link_to "Edit", edit_event_path(@event) %></p>
+

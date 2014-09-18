@@ -1,0 +1,18 @@
+<h1>Red-It</h1>
+
+<form>
+  <fieldset>
+    <legend> Add A Post </legend>
+    <label>
+      URL:
+      <input type="text" name="url" />
+    </label>
+    <button>Add</button>
+  </fieldset>
+</form>
+
+<div id="container"></div>
+
+<script type="template" id="article-html">
+  <li><%%= article.get('title') %><span> &#x25B2; </span> <%%= article.get('votes') %></li>
+</script>

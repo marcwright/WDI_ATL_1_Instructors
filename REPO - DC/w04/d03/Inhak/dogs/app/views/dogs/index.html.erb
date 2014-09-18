@@ -1,0 +1,7 @@
+<h1>Here are the dogs!</h1>
+<a href="/about">Such About</a></br>
+
+<% @dogs.each do |dog| %>
+<h2><%= dog.name %> is <%= dog.age %></h2>
+<img src="<%= dog.image_url %>">
+<% end %>

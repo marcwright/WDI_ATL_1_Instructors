@@ -1,0 +1,72 @@
+<div ng-app="accountManager" class="row">
+
+	<h1>Account Manager</h1>
+
+	<div ng-controller="AccountCtrl as account">
+
+		<div class="medium-7 columns">
+			<ul>
+				<li ng-repeat="a in accounts">
+					{{ a.owner_name }}
+					{{ a.ig_account }}
+					{{ a.engagement }}
+
+					<a ng-click="account.obliterate( a )"
+						class="tiny button round alert">
+						x
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<form class="medium-5 columns" ng-submit="account.add()">
+
+			{{ account.newAccount }}
+
+		  <div class="row">
+
+		    <div class="large-12 columns">
+		      <div class="row collapse prefix-radius">
+		        <div class="small-3 columns">
+		          <span class="prefix">Owner</span>
+		        </div>
+		        <div class="small-9 columns">
+					<input type="text" placeholder="Value"
+			          	ng-model="newAccount.owner_name">
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="large-12 columns">
+		      <div class="row collapse prefix-radius">
+		        <div class="small-3 columns">
+		          <span class="prefix">@IG-account</span>
+		        </div>
+		        <div class="small-9 columns">
+				<input type="text" placeholder="Value" 
+		          	ng-model="newAccount.ig_account">
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="large-12 columns">
+		      <div class="row collapse prefix-radius">
+		        <div class="small-3 columns">
+		          <span class="prefix">Engagement</span>
+		        </div>
+		        <div class="small-9 columns">
+		          <input type="number" placeholder="%"
+		          	ng-model="newAccount.engagement">
+		        </div>
+		      </div>
+		    </div>
+
+		    <div class="large-12 columns">
+				<input type="submit" class="button radius expand">
+		    </div>
+		    
+		  </div>
+		</form>
+
+	</div>
+</div>

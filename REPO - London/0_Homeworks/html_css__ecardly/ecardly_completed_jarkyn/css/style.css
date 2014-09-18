@@ -1,0 +1,133 @@
+
+/* Box Model Hack - to define the total width of the object*/
+* { box-sizing: border-box; }
+
+body { 
+  background: #d6d6d6 url('../images/background.jpg') repeat-x; 
+  /* this is en equivalent of doing:
+  background-color: #d6d6d6;
+  backgorund-image: url('../images/background.jpg');
+  background-repeat: repeat-x; */
+  
+  font-size: 12px;
+  line-height: 1.5;
+  /* setting font-size and line-height for the whole body means body's decsendants will inherit this size, unless the specificty is higher for these descendants elsewhere
+
+  this saves me having to specify font-size for everything, but i only need to override what i need
+  */
+}     
+
+.wrapper {
+  width: 940px;
+  margin: 0 auto; 
+
+  /* this is how we center a block-level element, by applying margin: 0 auto; 
+
+  the sole purpose of my div with class .wrapper to wrap and keep all of the content within specified width, so when I center this element all the content inside is centered with it
+
+  for margin: 0 auto to make a difference, the element you are centering needs to have a width set;
+  */
+}
+
+h1 {
+  background: url(../images/logo.png) no-repeat;
+  height: 213px;
+  width: 216px;
+  margin: 10px auto 40px;
+
+  /* below i am using image-replacement technique for this h1, look it up! */
+  text-align: center;
+  text-indent: -100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+main {
+  float: left;
+  width: 640px;
+  background: white;
+  padding: 20px;      
+}
+
+main h2 {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main a {
+  color: red;
+  font-weight: bold;
+}
+
+main a:hover {
+  color: #9E182E;
+}
+
+article img {
+  max-width: 100%;
+}
+
+article {
+  padding-bottom: 40px;
+}
+
+.credits {
+  margin: 0;
+  padding: 7px;
+  border-bottom: 2px solid;
+  border-top: 1px dotted;
+}
+
+aside {
+  float: right;
+  width: 280px;
+  background: white;
+  padding: 25px;
+  line-height: 1.75;
+}
+
+aside h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+aside section {
+  width: 96%;
+  margin: 0 auto;
+
+  /* this styles are here so that my content within the aside is centered  */
+}
+
+aside ul,
+aside ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+aside a {
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+aside a:hover {
+  color: limegreen;
+}
+
+.ads img {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 0;
+  clear: both; 
+  /* this is how i am clearing my collapsing parent, i don't need a clearfix hack because i have footer which follows floated elements while not a float itself */
+}

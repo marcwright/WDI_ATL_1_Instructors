@@ -1,0 +1,72 @@
+<div class="container">
+
+<div class="page-header">
+  <h1>Take a trip</h1>
+</div>
+
+
+
+<form class="form-horizontal" action='/trip' method='get'>
+<fieldset>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="distance">How far are you driving?</label>  
+  <div class="col-md-5">
+  <input id="distance" name="distance" type="text" placeholder="Enter miles" class="form-control input-md" required="" autofocus>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="mpg">What is the fuel efficiency of the car?</label>  
+  <div class="col-md-5">
+  <input id="mpg" name="mpg" type="text" placeholder="Enter miles per gallon" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cost">How much does petrol cost per gallon?</label>  
+  <div class="col-md-5">
+  <input id="cost" name="cost" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="speed">How fast do you drive? </label>  
+  <div class="col-md-5">
+  <input id="speed" name="speed" type="text" placeholder="Enter mph" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">Get the cost</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+<% if @result %>
+<section>
+  <header>
+    <h1>Your trip will cost you £<%= @result %></h1>
+  </header>
+</section>
+<% end %>
+
+
+
+</div>

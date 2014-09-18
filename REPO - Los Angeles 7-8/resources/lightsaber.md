@@ -1,0 +1,3 @@
+This is my Lightsaber. There are many others like it, but this one is mine. My Lightsaber is my best friend. It is my life. I must master it as I must master my life. Without me, my Lightsaber is useless. Without my Lightsaber, I am useless (not really but go along with me here). I must code my Lightsaber true. 
+
+I must code cleaner than my neighbor. I must write SOLID code. I will. Before the Universe I swear this creed: my Lightsaber and myself are defenders of the code, we are the masters of our selves, we are the saviors of open source apps. So be it, until there is no more unclean code.

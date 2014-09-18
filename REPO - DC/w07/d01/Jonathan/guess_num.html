@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>Air Conditioning</title>
+</head>
+<body>
+  <script type='text/javascript'>
+    // var answer = prompt('What is the current temperature?');
+
+
+    // if (answer > 73) {
+    //   console.log('Please turn it down');
+    // } else if (answer < 73) {
+    //   console.log('Too cold in here');
+    // } else {
+    //   console.log('Perfect, keep it at 73');
+    // }
+
+
+    var randomNumber = Math.floor(Math.random()*11);
+    var userGuess = parseInt(prompt("Guess any number from 0 to 10"));
+    while (randomNumber !== userGuess) {
+      userGuess = parseInt(prompt("Incorrrect, please guess again"));
+    }
+    alert("You are correct!");
+
+
+  </script>
+</body>
+</html>

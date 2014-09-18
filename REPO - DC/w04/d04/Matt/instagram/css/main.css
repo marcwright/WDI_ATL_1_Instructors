@@ -1,0 +1,160 @@
+/*// Instagram CSS - Matt Rundo (@runtropolis) //*/
+
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+/* GLobal Styles */
+
+body {
+  background: url('../images/bgtile.png') repeat-x;
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #3f729b;
+}
+
+a:hover {
+  color: #06365f;
+}
+
+/* Class Styles */
+
+.container {
+  margin: 80px auto;
+  max-width: 980px;
+  overflow: auto;
+}
+
+  /* Header */
+
+  .logo {
+    background: url('../images/brand.png') no-repeat;
+    height: 85px;
+    margin: 15px 0;
+    width: 320px;
+  }
+
+    h1.logo {font-size: 0}
+
+    /* Column */
+
+    .col {
+      float: left;
+      margin-left: 24px;
+    }
+
+      /* Column Left */
+
+      .col_left {
+        width: 35%;
+      }
+
+
+      /* Column Right */
+
+      .col_right {
+        max-width: 600px;
+        width: 60%;
+      }
+
+        .col_right h2 {
+          color: #1c5380;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 30px;
+        }
+
+      /* Right Column Elements */
+
+      .col_right .main {
+        background: rgba(255,255,255,1.0);
+        border-radius: 5px;
+        box-shadow: 0 -10px 10px 0px rgba(0,0,0,0.1),
+        3px 0px 4px -3px rgba(0,0,0,0.1),
+        -3px 17px 0px -3px rgba(0,0,0,0);
+        height: 200px;
+        padding: 30px 50px;
+        max-width: 472px;
+      }
+
+        .col_right .main img {
+          margin-right: 15px;
+        }
+
+        .main .copy {
+          margin: 20px 0;
+        }
+
+        .main .copy p {
+          font-size: 18px;
+          margin: 10px 0;
+        }
+
+    /* Footer */
+
+    .footer {
+      color: #aaa;
+      float: left;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 40px 0;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+      .footer li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .footer a {
+        text-decoration: none;
+      }
+
+/* Media Queries */
+
+@media (max-width: 960px) {
+
+  body {
+    margin: 0 auto;
+  }
+
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .col {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 440px;
+  }
+
+    .col_left {
+      display: none;
+    }
+
+    .col_right .main {
+      max-width: 100%;
+      position: absolute;
+    }
+
+      .col_right .main img {
+        margin: 10px 0;
+      }
+
+}
+

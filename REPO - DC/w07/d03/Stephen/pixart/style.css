@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+.brush {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  display: inline-block;
+>>>>>>> 34fb00333b49b43d2d050316475dc5a2a4cd40a5
+=======
+  display: inline-block;
+>>>>>>> 64217c132cc503226a9689b293afd95499ad8863
+=======
+  display: inline-block;
+<<<<<<< Updated upstream
+>>>>>>> ac4a3483155e4c87cf04b43f6c047914c55f565a
+=======
+>>>>>>> 4cb34c273b7f80f8ffdaba4951f66592e85c5392
+>>>>>>> Stashed changes
+  width: 100px;
+  height: 100px;
+  background: #1B4370;
+  margin: 15px auto;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  margin-right: 20px;
+>>>>>>> 34fb00333b49b43d2d050316475dc5a2a4cd40a5
+=======
+  margin-right: 20px;
+>>>>>>> 64217c132cc503226a9689b293afd95499ad8863
+=======
+  margin-right: 20px;
+<<<<<<< Updated upstream
+>>>>>>> ac4a3483155e4c87cf04b43f6c047914c55f565a
+=======
+>>>>>>> 4cb34c273b7f80f8ffdaba4951f66592e85c5392
+>>>>>>> Stashed changes
+}
+
+.square {
+  float: left;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  width: 100px;
+  height: 100px;
+  background: #E7E5DB;
+  margin: 10px;
+=======
+=======
+>>>>>>> 64217c132cc503226a9689b293afd95499ad8863
+=======
+<<<<<<< Updated upstream
+>>>>>>> ac4a3483155e4c87cf04b43f6c047914c55f565a
+=======
+>>>>>>> 4cb34c273b7f80f8ffdaba4951f66592e85c5392
+>>>>>>> Stashed changes
+  width: 10px;
+  height: 10px;
+  background: #E7E5DB;
+  margin: 0px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 34fb00333b49b43d2d050316475dc5a2a4cd40a5
+=======
+>>>>>>> 64217c132cc503226a9689b293afd95499ad8863
+=======
+<<<<<<< Updated upstream
+>>>>>>> ac4a3483155e4c87cf04b43f6c047914c55f565a
+=======
+>>>>>>> 4cb34c273b7f80f8ffdaba4951f66592e85c5392
+>>>>>>> Stashed changes
+}
+
+h1 {
+  font-family: Monoton;
+  font-size: 48px;
+  text-align: center;
+}
+
+.controls {
+  text-align: center;
+}
+
+body {
+  background-image: url('ps_neutral.png');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 34fb00333b49b43d2d050316475dc5a2a4cd40a5
+=======
+}
+>>>>>>> 64217c132cc503226a9689b293afd95499ad8863
+=======
+}
+<<<<<<< Updated upstream
+>>>>>>> ac4a3483155e4c87cf04b43f6c047914c55f565a
+=======
+>>>>>>> 4cb34c273b7f80f8ffdaba4951f66592e85c5392
+>>>>>>> Stashed changes

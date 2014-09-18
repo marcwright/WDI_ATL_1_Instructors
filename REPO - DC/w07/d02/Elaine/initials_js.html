@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>I &hearts; Initials</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+    var name = prompt('Enter your name.')
+    function initials(name){
+      var splitNames = name.split(' ');
+      var collection = [];
+      for(var i = 0; i < splitNames.length; i++){
+        collection.push(splitNames[i][0]);
+      };
+      return collection.join('.');
+    };
+    initials(name);
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<h1>Movies:</h1>
+
+<h2>
+<ul>
+
+
+    <% @output.each do |hash| %>
+      <li><a href="/movies/<%= hash["imdbID"] %>"><%= hash["Title"] %>,
+      <%= hash["Year"] %>,
+      <%= hash["Type"] %>
+    </a></li>
+    <% end %>
+
+
+</ul>
+</h2>
+

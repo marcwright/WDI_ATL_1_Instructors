@@ -1,0 +1,10 @@
+<%= link_to "Home", root_path %>
+
+
+<h1>Events</h1>
+
+<% @events.each do |event|%>
+<h2> <%=link_to event.date, event_path(event) %> </h2>
+<%end%>
+
+

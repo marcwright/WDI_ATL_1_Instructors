@@ -1,0 +1,18 @@
+img {
+  position: absolute;
+  width: 200px;
+  margin-top: 230px;
+  cursor: pointer;
+}
+
+.flip-img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+#img{
+  border: 10px solid #000;
+  border-radius: 100px;
+}
+body{
+background-color: #000;
+}

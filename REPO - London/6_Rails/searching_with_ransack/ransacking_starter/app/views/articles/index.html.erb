@@ -1,0 +1,10 @@
+<h1>Articles#index</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article_row(article) %>
+    </li>
+  <% end %>
+</ul>
+

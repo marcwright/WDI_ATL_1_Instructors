@@ -1,0 +1,7 @@
+<h1>Here are the RollerCoasters!</h1>
+
+<ul>
+  <% @rollers.each do |roller| %>
+    <li><%= roller.name %> is good at <%= roller.speed %></li>
+  <% end %>
+</ul>

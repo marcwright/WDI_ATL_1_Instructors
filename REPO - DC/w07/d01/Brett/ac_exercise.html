@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>Guess the Number</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var current_temp = prompt("What is the current temperature?");
+  var functional = prompt("Is the AC functional?");
+  var desired_temp = prompt("What is the desired temperature?");
+
+  if (current_temp > desired_temp && functional === "yes") {
+    console.log("Turn on the AC please");
+  } else if (current_temp > desired_temp && functional === "no") {
+    console.log("Fix the AC, it's hot!");
+  } else {
+    console.log("Fix the AC whenever... it's cool");
+  }
+  </script>
+</body>
+</html>

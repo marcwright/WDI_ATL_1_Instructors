@@ -1,0 +1,9 @@
+<h1>Author Page</h1>
+<%= @author.name %>
+
+<form action="/authors/<%= @author.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete this Author</button>
+</form>
+

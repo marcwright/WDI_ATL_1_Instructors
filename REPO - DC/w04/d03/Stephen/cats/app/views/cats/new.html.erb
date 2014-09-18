@@ -1,0 +1,19 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 15:11:00
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-14 15:21:00
+
+ -->
+
+<h2>Create a new cat!</h2>
+
+<form action="/cats" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+
+  <label>Name:<input type="text" name="name"></label>
+  <label>Image URL:<input type="text" name="image_url"></label>
+
+  <input type="submit" value="Create a cat!">
+</form>

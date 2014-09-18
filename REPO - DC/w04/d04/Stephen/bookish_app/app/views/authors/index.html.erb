@@ -1,0 +1,23 @@
+<!--
+
+@Author: stephenstanwood
+@Date:   2014-05-14 16:19:40
+@Last Modified by:   stephenstanwood
+@Last Modified time: 2014-05-16 07:41:17
+
+ -->
+
+<h2>All Authors</h2>
+
+<% @authors.each do |a| %>
+  <h3><a href="/authors/<%= a.id %>"><%= a.name %></a>, <%= a.gender %> born on <%= a.dob %>,
+  <%= a.has_pseudonym ? "has a pseudonym " : "doesn't have a pseudonym" %></h3>
+
+  <h4>Books:</h4>
+
+  <ul>
+    <% a.books.each do |b| %>
+    <li><a href="/authors/<%= a.id %>/books/<%= b.id %>"><%= b.title %></a>, released <%= b.release_date %>, genre: <%= b.genre %></li>
+  <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Here are the clowns!</h1>
+
+<ul>
+  <% @clowns.each do |clown| %>
+    <li><%= clown.name %> is good at
+    <%= clown.talent %>
+    <%= clown.is_creepy? %>
+    <img src="<%= clown.image_url %>" height="42" width="42"></li>
+  <% end %>
+</ul

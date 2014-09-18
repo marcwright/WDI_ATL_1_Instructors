@@ -1,0 +1,24 @@
+
+<h1>Kill 'em!</h1>
+
+<form>
+  <fieldset>
+    <legend>New Character</legend>
+    <label>
+      Name
+      <input type="text" name="name">
+      <input type="submit" value="Create">
+      </input>
+    </label>
+  </fieldset>
+</form>
+
+<ul>
+<% @characters.each do |character| %>
+  <li data-character-id="<%= character.id%>" class="<%= character.dead ? "dead" : "" %>">
+    <%= character.name %>
+    <%= check_box_tag :dead, 'yes', character.dead %>
+  </li>
+
+<% end %>
+</ul>

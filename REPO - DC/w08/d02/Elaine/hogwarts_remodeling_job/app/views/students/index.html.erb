@@ -1,0 +1,9 @@
+<h1>Here are the students</h1>
+<% @students.each do |student| %>
+  <div class="student">
+    <h2><%= link_to student.name, house_student_path(student.house.id, student.id) %></h2>
+    <p>House: <%= student.house.name %></p>
+    <p><img src="<%= student.img_url %>"></p>
+  </div>
+<% end %>
+

@@ -1,0 +1,41 @@
+  <html>
+  <head>
+    <style>
+      /* stuff that happens if JS is enabled (ie. _don't_ show the "you've not got js" warning) */
+      .nojs_warning {
+        display: none;
+      }
+
+      
+      /* stuff that happens if JS is disabled (ie. show the "you've not got js" warning, and hide all the buttons that have js events) */
+      .nojs button {
+        display: none;  
+      }
+      .nojs .nojs_warning {
+        display: block;
+      }
+    </style>
+  
+    <script>
+      var myApp = myApp || {}; 
+    
+      myApp.sayHello = function () { 
+                         alert('Hello WDI!'); 
+                       }
+  
+      myApp.setup = function () {
+      var helloButton = document.getElementById('helloButton');
+        helloButton.addEventListener('click', myApp.sayHello);
+      
+        var body = document.getElementById('body');
+        body.className = body.className.replace(/nojs/, '');
+      }
+    
+      document.addEventListener('DOMContentLoaded', myApp.setup);
+    </script>
+  </head>
+  <body class="nojs" id="body">
+    <button id="helloButton">I'm a button with JS event!</button>
+    <p class="nojs_warning">You need JS to view this site best...</p>
+  </body>
+  </html>

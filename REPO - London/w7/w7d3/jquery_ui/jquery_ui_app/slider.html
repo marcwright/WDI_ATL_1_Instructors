@@ -1,0 +1,34 @@
+<html>
+  <head>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+        go=(function() {
+          $( "#slider-range" ).slider({
+// A min range goes from the slider min to one handle. A max range goes from one handle to the slider max.
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 75, 300 ],
+            slide: function( event, ui ) {
+// Triggered on every mouse move during slide. The value provided in the event as ui.value represents the value that the handle will have as a result of the current movement. Canceling the event will prevent the handle from moving and the handle will continue to have its previous value.
+              $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+          });
+          $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Slider</h1>
+    <div>
+      <p>
+        <input id="amount"/>
+      </p>
+       
+      <div id="slider-range"></div>
+    </div>
+  </body>
+</html>

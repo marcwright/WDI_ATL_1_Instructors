@@ -1,0 +1,10 @@
+<h1>Here are the roller coasters!</h1>
+
+<ul>
+  <% @rollercoasters.each do |coaster| %>
+    <li><%= coaster.name %> requires a minimum height of
+    <%= coaster.min_height %> ft and has a top speed of
+    <%= coaster.top_speed %>mph
+    <img src="<%= coaster.image_url %>"></li>
+  <% end %>
+</ul

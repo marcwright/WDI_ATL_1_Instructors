@@ -1,0 +1,15 @@
+<%= @artist.name %><br>
+<img src="<%= @artist.photo_url%>", style="max-width:200px">
+
+<%= @songs.each do |song| %>
+  <li><%= song.title %><br>
+  <a href="<%=@artist.id%>/songs/<%=song.id%>/edit">Edit Song</a></li>
+
+  <%= form_for [@artist, song], method: 'delete' do |f| %>
+    <%= f.submit "Delete Song" %>
+  <% end %>
+<% end %>
+
+<%= form_for @artist, method: 'delete' do |f| %>
+  <%= f.submit "Delete Artist" %>
+<% end %>

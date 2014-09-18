@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+	<script src="main.js"></script>
+		
+	</head>
+	<body x-ng-app="BabyApp" x-ng-controller="BabyController">
+		<h1>Baby App</h1>
+		<ul>
+			<li x-ng-repeat="i in issues">
+			{{i.title}} -- {{i.body}}
+			</li>
+		</ul>
+
+		Title:
+		<input type="text" x-ng-model="title" />
+		<br>
+		Body:
+		<textarea x-ng-model="body" rows="10" cols="80"></textarea>
+
+		<input type="button" x-ng-click="addOne();" value="Add Something!" />
+	</body>
+</html>

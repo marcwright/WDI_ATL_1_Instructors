@@ -1,0 +1,60 @@
+/*$red: #F92672;
+$orange: #FD971F;
+$yellow: #E6DB74;
+$green: #A6E22E;
+$blue: #66D9EF;
+$purple: #AE81FF;
+$black: #272822;
+$white: #F8F8F0;
+$grey: #7C7865;*/
+
+body {
+  font: 16px/1.4 Helvetica, Arial, sans-serif;
+  background: #272822;
+}
+
+.operation {
+  background: white;
+  margin: 0 auto;
+  width: 400px;
+}
+
+h1 {
+  background: #F92672;
+  color: #F8F8F0;
+  left: 0;
+  margin: 0;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.operation .board {
+  position: relative;
+}
+
+.chip {
+  position: absolute;
+}
+
+.breadbasket {
+  left: 190px;
+  top: 300px;
+}
+
+.wishbone {
+  top: 50px;
+  left: 170px;
+}
+
+.heart {
+  top: 80px;
+  right: 130px;
+}
+
+.butterflies {
+  bottom: 120px;
+  right: 150px;
+}

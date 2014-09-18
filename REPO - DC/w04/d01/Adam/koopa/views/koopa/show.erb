@@ -1,0 +1,11 @@
+<h2><%= @koopa.name %></h2>
+
+<p><%= @koopa.name %></p><%= @koopa.color %>
+<img src="<%= @koopa.photo_url %>" >
+
+<form action="/koopas/<%= @koopa.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Get this hoe outta here!</button>
+</form>
+
+<a href="/koopas/<%= @koopa.id %>/edit">Edit this Koopa HERE</a>

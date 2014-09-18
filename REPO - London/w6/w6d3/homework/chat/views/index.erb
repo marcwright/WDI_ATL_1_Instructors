@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>GAChat</title>
+        <script src="jquery-1.11.0.min.js"></script>
+        <script src="gachat.js"></script>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body class="nojs">
+        <h1>GAChat</h1>
+        <p>Welcome to GAChat!</p>
+        <form action="/chat" method="POST">
+          <input type="hidden" name="since" id="since" value="<%= Time.now().to_i %>" />
+          <label for="username">Username</label><input id="username" type="text" name="username" value="<%= @username %>" />
+          <ul class="chat">
+            <% @lines.each do |l| %>
+              <li><span class="username">&lt;<%= l[:username] %>&gt;</span> <span class="message"><%= l[:message] %></span></li>
+            <% end %>
+          </ul>
+          <input type="text" name="message" id="message" placeholder="Type your message here..." /><input type="submit" name="submit" value="Send" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+HTTP ANS SERVICES - LINKS
+Created 2014-07-21 Richard
+
+APACHE
+FYI - Configure Ports:  http://httpd.apache.org/docs/2.4/bind.html
+FYI - Configuration: http://httpd.apache.org/docs/2.4/configuring.html
+USEFUL - .htaccess: http://httpd.apache.org/docs/2.2/howto/htaccess.html
+USEFUL - Rewrite: http://httpd.apache.org/docs/current/rewrite/remapping.html
+
+HTTP REQUESTS:
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+
+PORTS:
+http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+
+HTTP HEADERS
+http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039
+curl -I google.com
+curl -I www.google.com
+chrome / view dev tools / reload page / choose network
+
+cURL
+http://www.moniker.com/service/whois-search?domain=surfer.com
+curl http://www.moniker.com/service/whois-search?domain=surfer.com
+curl google.com
+curl google.com/index.html
+curl www.google.com/index.html
+curl -O www.google.com/index.html
+curl -I lebronjames.com
+curl -I generalassemb.ly
+
+TELNET
+http://www.telnet.org/htm/places.htm
+telnet igormud.com
+telnet google.com 80
+
+-end-

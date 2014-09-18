@@ -1,0 +1,14 @@
+  <h2><%= @entry.author %></h2>
+  <img src="<%= @entry.photo_url %>" style="max-width:400px">
+  <h3><%= @entry.caption %></h3>
+  <h4><%= @entry.created_at %></h4>
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+  <input type="hidden" name="_method" value="delete">
+    <button>Delete this entry</button>
+</form>
+
+<a href="/entries/<%= @entry.id %>/edit">Edit me!</a>
+<br>
+<a href="/entries">GO BACK</a>

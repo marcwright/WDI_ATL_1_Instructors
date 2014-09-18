@@ -1,0 +1,42 @@
+body {
+	border: 2px;
+	margin:  0 0 20px 0;
+}
+
+.container {
+	margin: 0 auto;
+	border: 2px;
+	background: #ddd;
+	display: block;
+	width: 485 px;
+	border: 2px;
+	border-color: red;
+	border-width: 2px;
+
+}
+
+.page     {
+	margin: 0 auto;
+	background color: #ffffff;
+	border: 2px;
+	width: 420px;
+}
+
+
+
+
+
+/*<style>
+
+
+
+</style>
+
+/*	font-family: Veranda, Arial, Helvetica, sans-serif;
+	color: white;
+	border-color: red; 
+	border: 2px;
+	display: block;
+	background-color: gray;
+	margin: 0px;
+	height: 100px;*/

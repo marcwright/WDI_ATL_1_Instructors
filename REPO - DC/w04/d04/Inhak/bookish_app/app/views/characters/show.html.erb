@@ -1,0 +1,10 @@
+<h1>Here is <%= @character.name %></h1>
+
+<p>This character is named <%= @character.name %> </p>
+<p>This character is from the book, <%= @character.book.title %>, written by <%= @character.book.author.name %>
+
+<form action="/books/<%= @character.book_id %>/characters/" method="post">
+  <input type="hidden" name="_method" value="delete">
+    <input name="authenticity_token" type="hidden" value="form_authenticity_token %>">
+  <button>Delete this character</button>
+</form>

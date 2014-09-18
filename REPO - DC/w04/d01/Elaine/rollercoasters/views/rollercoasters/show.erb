@@ -1,0 +1,15 @@
+<h2><%= @rollercoaster.name %></h2>
+<p><%= @rollercoaster.name %> has a top speed of <%= @rollercoaster.top_speed %></p>
+<img src="<%= @rollercoaster.image_url %>">
+
+<form action="/rollercoasters/<%= @rollercoaster.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Remove this rollercoaster</button>
+</form>
+
+<ul>
+  <li><a href="/rollercoasters" class="yes">Back to rollercoasters</a></li>
+  <li><a href="/">Home</a></li>
+</ul>
+
+

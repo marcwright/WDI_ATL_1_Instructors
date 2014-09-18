@@ -1,0 +1,19 @@
+<% if @bottles > 0 %>
+
+<h1><%= @bottles %>
+  bottle<% if @bottles != 1%>s
+  <% end %>
+  of Whiskey on the Wall,
+  <% @bottles %>
+   bottle<% if @bottles != 1%>s
+   <% end %>
+   of Whiskey.</h1>
+<a href="/refrain/<%= @bottles %>" class="yes">NEXXTTT!</a>
+<a href="/" class="no">STOP</a>
+
+<% else %>
+<h1> No Bottles of Whiskey on the wall, no bottles of whiskey!!!! D: </h1>
+
+<a href ="/" class="yes">Restart</a>
+<% end %>
+

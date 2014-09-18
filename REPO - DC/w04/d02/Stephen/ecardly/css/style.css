@@ -1,0 +1,66 @@
+/*
+* @Author: stephenstanwood
+* @Date:   2014-05-13 17:20:56
+* @Last Modified by:   stephenstanwood
+* @Last Modified time: 2014-05-13 19:05:59
+*/
+
+body {
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat-x;
+
+  background-color: #D6D6D6;
+}
+
+a {
+  color: #CC6633;
+}
+
+.container {
+  color: #000000;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: center;
+  width: 800px;
+}
+
+.header {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.content {
+  background-color: #FFFFFF;
+  float: left;
+  margin: 0 auto;
+  margin-right: 20px;
+  padding: 10px;
+  text-align: left;
+  width: 400px;
+}
+
+.blog_post img {
+  width: 380px;
+}
+
+.blog_post .download {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  background-color: #FFFFFF;
+  float: left;
+  text-align: left;
+  width: 200px;
+}
+
+.sidebar img {
+  width: 188px;
+  padding: 5px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}

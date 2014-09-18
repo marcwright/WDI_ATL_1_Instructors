@@ -1,0 +1,7 @@
+<h1>These are the characters on file for
+<% @character.each do |character| %>
+ <i> <%= character.book.title %></i></h1>
+  <ul>
+    <li><%= character.name %></li>
+  </ul>
+  <% end %>

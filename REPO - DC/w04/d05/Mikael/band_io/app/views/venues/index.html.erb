@@ -1,0 +1,12 @@
+<h1>Here is a list of all the venues!</h1>
+
+<ul>
+<!-- list venues -->
+<% @venues.each do |venue| %>
+  <%= link_to venue.name, venue %><br>
+<% end %>
+</ul>
+
+<!-- Add a venue -->
+<p><%= link_to "Add a venue", new_venue_path %></p>
+<p><%= link_to "Add a band", new_band_path %></p>

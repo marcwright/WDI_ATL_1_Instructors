@@ -1,0 +1,104 @@
+/*
+* @Author: stephenstanwood
+* @Date:   2014-06-07 08:17:56
+* @Last Modified by:   stephenstanwood
+* @Last Modified time: 2014-06-07 11:43:16
+*/
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Georgia;
+  font-size: 30px;
+}
+
+.game-board {
+  text-align: center;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+  .game-board .board-row {
+    width: 100%;
+  }
+
+  .game-board .square {
+    background: gray;
+    float: left;
+    font-size: 48px;
+    font-weight: bold;
+    height: 80px;
+    line-height: 1.5em;
+    width: 80px;
+    margin: 10px;
+    padding: 30px;
+  }
+
+.game-state {
+  list-style: none;
+  margin: 20px auto;
+  overflow: auto;
+  width: 90%;
+}
+
+  .game-state li {
+    float: left;
+    margin-right: 3%;
+    width: 30%;
+  }
+
+  .game-state p {
+    margin: 5px 0;
+  }
+
+  .game-state input {
+    background: rgba(255,255,255,0.5);
+    border: 5px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    padding: 10px 15px;
+    width: 80px;
+  }
+
+.game-word {
+  letter-spacing: 10px;
+  font: 100px Courier, mono-spaced;
+  text-align: center;
+}
+
+.game-options {
+  list-style: none;
+  margin: 30px 0;
+  padding-left: 0px;
+  text-align: center;
+}
+
+  .game-options li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .game-options button {
+    background-color: rgba(255,0,51,1);
+    border: 1px solid #f03;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: PFDinTextCompProBold, Impact, Arial;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin: 30px auto;
+    padding:14px;
+  }
+
+  .game-options button:hover {
+    background-color: rgba(255,0,51,0.8);
+  }
+
+.game-result {
+  color: #FFF;
+  margin-bottom: 50px;
+  text-align: center;
+}

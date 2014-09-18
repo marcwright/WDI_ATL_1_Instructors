@@ -1,0 +1,16 @@
+Venues |
+<a href="#">Events</a> |
+<a href="#">Bands</a> |
+
+<h1>Venue List</h1>
+
+<ul>
+<% @venues.each do |venue| %>
+<li><h2><%= venue.name %></h2></li>
+<p><%= venue.city %>, <%= venue.state %></p>
+<p><%= venue.allows_explicit_lyrics %></p>
+<% end %>
+
+<p><%= link_to "New Venue", new_venue_path %> </p>
+</ul>
+

@@ -1,0 +1,4 @@
+<h1>Here are all of the books written by <%= @books.first.author.name %>!</h1>
+<% @books.each do |book| %>
+  <%= book.title %>
+<% end %>
