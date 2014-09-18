@@ -1,0 +1,67 @@
+# Other Settings
+##########################################################################
+
+# =================
+# Shortcuts
+# =================
+# Students can add a shortcut to quickly access their GA folder
+# example: alias wdi="cd ~/Documents/GA/WDI4"
+# TODO: Set these
+export class_repo=""
+alias wdi="cd ~/dev/wdi/"
+
+cdhwfunc() {
+  # takes three args: the week, the day
+  # and an optional third for the user
+  if [ $1 -lt 10 ]
+  then
+    cd ~/dev/wdi/$class_repo/w0$1/d0$2/${3:-Instructor}
+  else
+    cd ~/dev/wdi/$class_repo/w$1/d0$2/${3:-Instructor}
+  fi
+}
+alias cdhw=cdhwfunc
+
+# =================
+# Source Files
+# =================
+# .bash_settings and .bash_prompt should be added to .gitignore_global
+# An extra file where you can create other settings, such as your
+# application usernames or API keys...
+if [ -f ~/.bash_settings ]; then
+  source ~/.bash_settings
+fi
+# An extra file where you can create other settings for your prompt.
+if [ -f ~/.bash_prompt ]; then
+  source ~/.bash_prompt
+fi
+# A welcome prompt with stats for sanity checks
+if [ -f ~/.welcome_prompt ]; then
+  source ~/.welcome_prompt
+fi
+
+# Below here is an area for other commands added by outside programs or
+# commands. Attempt to reserve this area for their use!
+##########################################################################
+
+# ====================================
+# Environmental Variables and API Keys
+# ====================================
+
+export PGHOST=localhost
+
+
+assign(){
+  # path to assignment. defaults to assignment folder.
+  assignment=${1:-"ASSIGNMENT_FILES/"}
+  # get list of directories
+  array=(*/)
+  # copy assignment folder into each student folder
+  for dir in "${array[@]}"; do
+    # don't copy assignment folder into assignment folder
+    if [ "$dir" != "ASSIGNMENT_FILES/" ]
+    then
+      cp -rv $assignment $dir
+    fi
+  done
+}

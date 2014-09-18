@@ -1,0 +1,54 @@
+<div id="vending-app" class="vending">
+  <h1>WDI Brain Fuel</h1>
+  <noscript>Sorry, this application requires JavaScript</noscript>
+
+  <div class="vending-inventory">
+    <h2 class="visuallyhidden">Available Products</h2>
+    <ul class="products" id="products"></ul>
+
+    <h2 class="visuallyhidden">Your Purchases</h2>
+    <a href="#" class="purchases" id="purchases" title="Take your purchases.">
+      <ul></ul>
+    </a>
+  </div>
+
+  <div class="vending-controls">
+    <div class="message" id="message"></div>
+
+    <form class="credit" id="credit">
+      <h2>Add Credit</h2>
+      <ul>
+        <li class="col-66">
+          <input type="text" name="credit" placeholder="Insert Cash">
+        </li>
+        <li class="col-33">
+          <a href="#" class="btn" id="refund">Refund</a>
+        </li>
+      </ul>
+    </form>
+
+    <div class="keypad" id="keypad">
+      <h2>Make Your Selection</h2>
+      <ul>
+        <li class="col-33"><button class="btn" data-key="a">A</button></li>
+        <li class="col-33"><button class="btn" data-key="b">B</button></li>
+        <li class="col-33"><button class="btn" data-key="c">C</button></li>
+        <li class="col-33"><button class="btn" data-key="1">1</button></li>
+        <li class="col-33"><button class="btn" data-key="2">2</button></li>
+        <li class="col-33"><button class="btn" data-key="3">3</button></li>
+        <li class="col-66"><button class="btn" data-key="clear">Clear</a></li>
+      </ul>
+    </div>
+
+    <div class="change">
+      <h2>Take Your Change</h2>
+      <a href="#" id="change" title="Take your change."></a>
+    </div>
+  </div>
+</div>
+
+<%= requirejs_include_tag %>
+<script>
+  require.config({urlArgs: 'bust='+Date.now()});
+  require(['vending/main']);
+</script>

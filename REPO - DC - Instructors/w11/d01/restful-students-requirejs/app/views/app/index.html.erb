@@ -1,0 +1,12 @@
+<div id="students-container" class="students-app">
+  <noscript>
+    <!-- This "noscript" content displays for users without JavaScript. -->
+    <p>Sorry, this application requires JavaScript.</p>
+  </noscript>
+</div>
+
+<%= requirejs_include_tag %>
+<script>
+  require.config({urlArgs: 'bust='+Date.now()});
+  require(['students/main']);
+</script>

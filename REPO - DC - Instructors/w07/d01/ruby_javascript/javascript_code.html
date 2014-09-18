@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I &hearts; Javascript!</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  // JAVASCRIPT
+  // Comments with //
+
+  // Variables
+  var beep = 'beep';
+
+  // Conditionals
+  var number = 10
+  if (number > 5){
+    console.log('big');
+  } else if (number < 5) {
+    console.log('little');  
+  } else {
+    console.log('must be 5');
+  }
+
+  // Case/Switch Statements
+  var day = 'Tuesday';
+  switch (day){
+    case 'Monday':
+      console.log('Happy coffee');
+      break;
+    case 'Tuesday':
+      console.log('How was that coffee');
+      break;
+    case 'Friday':
+      console.log('I am in love');
+      break;
+    default:
+      console.log('This day does not count');
+  }
+
+  // While Loop
+  var count = 10;
+  while (count > 0){
+    console.log(count);
+    count--;
+  }
+
+  ///////////////////////
+
+  // Functions
+
+  // named
+  function add(x, y){
+    return (x + y);
+  };
+
+  var add = function add(x, y){
+    return (x + y);
+  };
+
+  // anonymous 
+  var multiply = function(x, y){
+    return (x * y);
+  };
+
+
+  // Arrays
+  var myNameArray  = ['Adam', 'Elaine', 'Tom'];
+  myNameArray[0];
+  myNameArray.push('Matt')
+
+
+  // Iteration
+  var dwarves = ['Doc', 'Grumpy', 'Happy', 'Sleepy', 'Bashful', 'Sneezy', 'Dopey'];
+
+  for (var i = 0; i <= dwarves.length; i++) {
+    console.log('Hi HO! I am ' + dwarves[i]);
+  }
+
+  dwarves.forEach(function(dwarf, index){
+    console.log( dwarves[index]  + ' is a part of the gang');
+    console.log( dwarf + ' is a part of the gang');
+  })
+
+
+  ///////////////////
+
+  // Objects
+  var myObject = {name: 'Snow White', age: 20, weakness: 'apples'};
+  myObject['name'];
+  myObject.name;
+
+  var myBird = {
+    name: 'Tweety',
+    chirp: function(){
+      console.log('tweet tweet tweet');
+    },
+    fly: function(){
+      console.log('I am like a bird.  I want to fly away.  I dont know where my home is. I dont know where my soul is.')
+    },
+    greet: function(){
+      console.log('Hi my name is ' + this.name)
+    }
+  };
+
+  myBird.fly();
+  myBird['fly']();
+  myBird.greet();
+
+</script>
+</body>
+</html>

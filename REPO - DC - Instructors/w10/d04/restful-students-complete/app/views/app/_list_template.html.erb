@@ -1,0 +1,12 @@
+<div class="header">
+  <h1>Students Directory</h1>
+</div>
+<form class="create">
+  <input type="text" name="name" placeholder="Enter a student name...">
+  <button class="primary" id="student-add" title="Add">+</button>
+</form>
+<ul id="students-list" class="students-list">
+  <%% students.each(function(student) { %>
+    <li><a href="#students/<%%= student.get('id') %>"><%%= student.get('name') %></a></li>
+  <%% }) %>
+</ul>

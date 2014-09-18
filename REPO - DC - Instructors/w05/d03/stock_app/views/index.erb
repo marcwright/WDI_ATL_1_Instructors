@@ -1,0 +1,8 @@
+<form action="/" method="get">
+  <input type="text" name="stock_symbol" placeholder="Name" required>
+  <button>Submit</button>
+</form>
+
+<% if !@stock_symbol.nil? %>
+  <%= erb :results %>
+<% end %>

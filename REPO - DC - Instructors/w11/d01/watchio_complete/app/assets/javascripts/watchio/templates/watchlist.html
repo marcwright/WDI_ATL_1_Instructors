@@ -1,0 +1,6 @@
+<% collection.each(function(model) { %>
+  <li><a href="#movies/<%= model.get('imdb_id') %>"><%= model.get('title') %></a></li>
+<% }) %>
+<% if (!collection.length) { %>
+  <li>Your watchlist is empty.</li>
+<% } %>

@@ -1,0 +1,11 @@
+<% products.each(function(product) {
+if (product.get('name')) { %>
+<li class="product">
+  <span class="code"><%= product.get('code') %></span>
+  <span class="name"><%= product.get('name') %></span>
+  <span class="price"><%= product.price() %></span>
+  <span class="quantity <%= product.get('quantity') ? '' : 'empty' %>">
+    <%= product.get('quantity') %>
+  </span>
+</li>
+<% }}) %>
