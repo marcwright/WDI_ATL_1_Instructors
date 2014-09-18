@@ -175,7 +175,7 @@
 		- SCRUM
 	- Tools
 		- Github Collab
-		- Pivitol Tracker
+		- Pivotal Tracker
 		- Jira
 	- Productive disagreement
 	- Design / UX / Wireframes
@@ -191,20 +191,20 @@
 
 **Võidupüha (Estonian Victory Day) (job shadowing?)
 
-##Week 10 - Backbone
+##Week 10 - Angular
 
 - Model/View Separation
 	- Examples & diagramming
 	- MV* tools research (Angular, Backbone, Ember, Knockout)
-- Backbone Models & Collections
+- Angular Models & Collections
 	- FE-persistance (local storage, cookies)
 	- REST / CRUD
 	- Validation
-- Backbone Views
+- Angular Views
 	- "The truth is in the model"	- J. Ashkenas
 	- Linked versus instanced view elements
 	- Client-side templating
-- Backbone Routers
+- Angular Routers
 	- Deep links
 	- Client-side routes / pushState
 
