@@ -7,14 +7,14 @@ This lesson takes about an hour, to an hour-and-a-half, depending on the discuss
 - Surprise! Tell the class about the person next to you. 1 min each
 
 ## Class Culture
-- how do they want to treat each other?
-- how do they want to work together?
-- how do they want to be treated by the instructor team?
-- how do they want to treat the instructor team?
-- what do they want to do about mobiles/facebook?
-- what do they want to do if someone misses classes?
-- Break into groups (4-ish) and get them to discuss what they want their training to be like - 5-10mins
-- Discuss their answers - 15mins
+- how do you want to treat each other?
+- how do you want to work together?
+- how do you want to be treated by the instructor team?
+- how do you want to treat the instructor team?
+- what do you want to do about mobiles/facebook?
+- what do you want to do if someone misses classes?
+- Break into groups and discuss what you want your training to be like - 5-10mins
+- Discuss your answers - 15mins
 
 Previous rules:
 
