@@ -3,7 +3,6 @@
 console.log('hello');
 
 function changeLight(light, color) {
-    $('#traffic-light').show();
     $('.bulb').css('backgroundColor', 'black');
     $(light).css('backgroundColor', color);
 }
@@ -20,9 +19,12 @@ $('#goButton').click(function() {
     changeLight('#goLight', 'green');
 });
 
-$('#testButton').click(function (){
-    $('#traffic-light').hide();
-});
+// $('#testButton').click(function (){
+//     $('#traffic-light').hide();
+// });
+
+
+
 
 // function showStopLight() {
 //     $('#traffic-light').show();
