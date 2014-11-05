@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS clubbers;
+
 CREATE TABLE clubbers (
   id serial PRIMARY KEY,
   name varchar(100) NOT NULL,

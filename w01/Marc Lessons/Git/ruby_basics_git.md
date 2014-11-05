@@ -168,8 +168,21 @@ http://ndpsoftware.com/git-cheatsheet.html#loc=index;
 ** Objectives **
 
 - Explain the difference between Git and Github
+
+		Git is a revision control system, a tool to manage your source code history. GitHub is a hosting service for Git repositories. So they are not the same thing: Git the tool, GitHub the service for projects that uses Git.
+			
+		Also, you don't have to use a remote service like github if all you want is version control - local git is just fine for that. Remote repositories are for backup and collaboration.
+
 - Explain the difference between a fork, clone
+
+		Yes Fork is a clone on the server side. It emerged because, you cannot push to others' copies without their permission. What they do is make a copy of it for you (fork), where you will have write permission as well.
+
+		In the future if the actual owner or others users with a fork like your changes they can pull it back to their own repo. Alternatively you can send them a "pull-request".
+
 - Explain the difference between a fetch, merge and pull
+
+		In the simplest terms, git pull does a git fetch followed by a git merge
+
 - Diagram and explain how contributing to an open source project on Github works (or our homework submission process)
 
 ** Activity **

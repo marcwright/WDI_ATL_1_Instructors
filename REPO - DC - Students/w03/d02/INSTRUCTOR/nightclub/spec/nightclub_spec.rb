@@ -57,35 +57,35 @@ describe Clubber do
     end
   end
 
-  context "#gender_ratio validation" do
-    before {
-      clubber.name = "Leslie"
-      clubber.age = 21
-    }
+  # context "#gender_ratio validation" do
+  #   before {
+  #     clubber.name = "Leslie"
+  #     clubber.age = 21
+  #   }
 
-    after {
-      Clubber.destroy_all()
-    }
+  #   after {
+  #     Clubber.destroy_all()
+  #   }
 
-    it "should always be valid for females" do
-      clubber.gender = "f"
-      clubber.valid?
-      expect( clubber.errors.has_key?(:gender_ratio) ).to eq false
-    end
+  #   it "should always be valid for females" do
+  #     clubber.gender = "f"
+  #     clubber.valid?
+  #     expect( clubber.errors.has_key?(:gender_ratio) ).to eq false
+  #   end
 
-    it "should be invalid for males when ratio is below 2:1" do
-      clubber.gender = "m"
-      clubber.valid?
-      expect( clubber.errors.has_key?(:gender_ratio) ).to eq true
-    end
+  #   it "should be invalid for males when ratio is below 2:1" do
+  #     clubber.gender = "m"
+  #     clubber.valid?
+  #     expect( clubber.errors.has_key?(:gender_ratio) ).to eq true
+  #   end
 
-    it "should be valid for males when ratio is at least 2:1" do
-      Clubber.create(name: "Sally", age: 21, gender: 'f')
-      clubber.gender = "m"
-      clubber.valid?
-      expect( clubber.errors.has_key?(:gender_ratio) ).to eq false
-    end
-  end
+  #   it "should be valid for males when ratio is at least 2:1" do
+  #     Clubber.create(name: "Sally", age: 21, gender: 'f')
+  #     clubber.gender = "m"
+  #     clubber.valid?
+  #     expect( clubber.errors.has_key?(:gender_ratio) ).to eq false
+  #   end
+  # end
 
   context "#format_gender" do
     it "should return 'female' when gender is 'f'" do

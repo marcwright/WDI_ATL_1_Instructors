@@ -2,10 +2,11 @@
 
 C-3PO is a well-known protocol droid from the Star Wars universe, famed for having a frantic resolve and for directing snappy emotional outbursts at his droid life-mate, R2-D2. Your task is to write a program modelling a simple interaction with C-3PO as he searches for the reclusive Jedi Master, Obi-Wan Kenobi.
 
-**NOTE:** This lesson not only reinforces, but also builds upon what you learned yesterday, so you will likely have to Google a certain bit of Ruby syntax.
 
-1. Create a new Ruby file called `searching_for_obi_wan.rb` in your work folder.
-2. C-3PO should:
+1. Create a new Ruby file called `searching_for_obi_wan.rb`
+
+2.
+ C-3PO should:
    * introduce himself as "C-3P0, human-cyborg relations."
    * ask the user's name
    * print  "It is a pleasure to meet you, **name**. Have you ever met a protocol droid before?"
