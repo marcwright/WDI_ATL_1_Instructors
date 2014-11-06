@@ -11,16 +11,16 @@ function zero() {
 }
 
 function add5() {
-  total = total + 5;
+  total += 5;
   $('#result').html(total);
 }
 
 function add10() {
-  total = total + 10;
+  total += 10;
   $('#result').html(total);
 }
 
 function sub1() {
-  total = total - 1;
+  total -= 1;
   $('#result').html(total);
 }
