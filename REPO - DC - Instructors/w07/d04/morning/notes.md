@@ -6,13 +6,16 @@
 
 
 ####Timeout Demo
-```javascript
+```
+javascript
 setTimeout(function(){
   console.log("(The Release of Mockingjay)")   
 }, 5000)
+
 ```
 ####setInterval Demo
-```javascript
+```
+javascript
 var pronunciation = "poh-TAY-toh"
 
 function debate(){
@@ -23,11 +26,14 @@ function debate(){
 setInterval(debate, 1000);
 setInterval(debate, 1000);
 setInterval(debate, 1000);
+
 ```
 But this is doing way more than it should. We want to clear intervals, for which we use `clearInterval`
 
 ####clearInterval Demo
-```javascript
+```
+
+javascript
 // set intervalIDs to timers
 timerID = setInterval(debate, 1000);
 timerIDTwo = setInterval(debate, 1000);
@@ -36,19 +42,24 @@ timerIDThree = setInterval(debate, 1000);
 clearInterval(timerID);
 clearInterval(timerIDTwo);
 clearInterval(timerIDThree);
+
+
 ```
 
 ## Timer Code Along
 ####Target Elements By ID
-```javascript
+```
+javascript
 var start = document.getElementById("start");
 var title = document.getElementById("timer");
 var reset = document.getElementById("reset");
 var pause = document.getElementById("pause");
+
 ```
 
 ####Add Event Listener to Start Clock
-```javascript
+```
+javascript
 var seconds = 0;
 // variable so we have something for our interval to hook onto in the global space
 var timerID;
@@ -58,17 +69,20 @@ start.addEventListener("click", function(){
   title.textContent = 'Time Elapsed: ' + seconds;
   timerID = setInterval(updateTime, 1000);
 });
+
 ```
 
 ####But we need an updateTime function
-```javascript
+```
+javascript
 function updateTime(){
   seconds++;
   title.textContent = "Time Elapsed: " + seconds;
 }
 ```
 ####Great, lets set up the listener for resetting the watch
-```javascript
+```
+javascript
 // When "Reset" is clicked, the text should return to "Stop Watch"
 reset.addEventListener("click", resetTextAndClearInterval)
 
@@ -80,14 +94,16 @@ function resetTextAndClearInterval(){
 }
 ```
 ####Now let's add the pause functionality
-```javasript
+```
+javasript
 // When "Pause" is clicked, the text should say "Time elapsed: 1", but stop incrementing.
 pause.addEventListener("click", function(){
   clearInterval(timerID);
 }); 
 ```
 ####Final Product
-```javascript
+```
+javascript
 var start = document.getElementById("start");
 var title = document.getElementById("timer");
 var reset = document.getElementById("reset");
@@ -124,7 +140,8 @@ pause.addEventListener("click", function(){
 
 To make The Walker walk across the page, we're going to have to set an interval that continually changes his position within the container element.
 
-```javascript
+```
+javascript
 var leftBorder = 400;
 var rightBorder = 700;
 var theWalker = document.getElementById("img");

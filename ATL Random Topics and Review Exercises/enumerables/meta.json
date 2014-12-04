@@ -1,0 +1,12 @@
+{
+  "description": "Enumeration and Collections in Ruby",
+  "contents": {
+    "i_do": [],
+    "we_do": [],
+    "you_do": []
+  },
+  "technologies": ["ruby", "arrays", "hashes", "iteration", "enumeration"],
+  "resources": [],
+  "lesson_id": "ef36e876-daa0-4877-84ce-d49ebc5e896f",
+  "objective": "Enumerate over a Ruby Collection"
+}
