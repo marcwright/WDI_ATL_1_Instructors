@@ -75,7 +75,7 @@ class Student
   end
   
   def name
-    return @name
+    @name
   end
   
   def name=(name)
