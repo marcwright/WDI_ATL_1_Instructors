@@ -51,7 +51,7 @@ class Student
   end
   
   def name
-    return @name
+    @name
   end
 end
 
@@ -63,31 +63,7 @@ bob.name = "Robert"
 # Error
 ```
 
-A class with public getter and setter methods:
 
-```
-class Student
-  def initialize(name, age=100)
-    @name = name
-    @age = age
-  end
-  
-  def name
-    return @name
-  end
-  
-  def name=(name)
-    @name = name
-  end
-end
-
-bob = Student.new("Bob")
-puts bob.name
-# "Bob"
-
-bob.name = "Robert"
-# "Robert"
-```
 
 A class with public getter and setter methods:
 
@@ -133,15 +109,32 @@ class Student
   end
 
   def say_hello
-    if @age < 18
-      return "sup? I'm #{@name}"
-    else
-      return "Hello, my name is #{@name}"
-    end
+    @age < 18 ? "sup? I'm #{@name}" : "Hello, my name is #{@name}"
+  end
+  
+  def to_s
+    self.name
+  end
+end
+```
+
+A class with attr_accessor:
+
+```
+class Student
+  attr_accessor :name, :age
+  
+  def initialize(name, age=100)
+    @name = name
+    @age = age
   end
 
+  def say_hello
+    @age < 18 ? "sup? I'm #{@name}" : "Hello, my name is #{@name}"
+  end
+  
   def to_s
-    return self.name
+    self.name
   end
 end
 ```
